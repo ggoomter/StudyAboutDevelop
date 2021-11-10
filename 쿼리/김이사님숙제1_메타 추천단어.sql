@@ -1,0 +1,85 @@
+-- 최장공통부분수열  (LCS = 롱기스트 커몬 시퀀스)
+-- 주어진 여러개의 수열의 모든 부분수열들 중 가장 긴것을 찾는 알고리즘
+-- diff 비교 유틸리티의 근간. 생물정보학에서 많이 응용된다.
+-- 
+-- 시간복잡도 = O(수열갯수* 원소갯수)
+
+
+규칙
+1. 띄워쓰기를 기준으로 부분함수 구하기
+2. 띄워쓰기가 없이 인풋이 들어왔다면 모든 부분함수 구하기
+3. jaro_winkler_similarity 앞에서 일치할수록 유사도가 높네.
+
+
+/* 조회 */
+
+WITH INPUT AS(
+	SELECT '환자 입원 일시' AS USERINPUT FROM DUAL
+	UNION ALL
+	SELECT '환자입원일시' AS USERINPUT FROM DUAL
+)
+SELECT META.SEQNO 
+	, META.LOGICAL_WORD 
+	, META.PHYSICAL_WORD 
+	, META.SUMMARY_WORD 
+	, (INPUT.USERINPUT) AS 유저입력
+	, UTL_MATCH.jaro_winkler_similarity(META.LOGICAL_WORD, INPUT.USERINPUT) AS 유사도
+	, META.LOGICAL_WORD 
+FROM META_TABLE META
+   , INPUT;
+
+  
+  /* 삭제 */
+  DELETE  FROM META_TABLE WHERE SEQNO IN (21);
+
+
+INSERT INTO META_TABLE 
+(SEQNO , LOGICAL_WORD, PHYSICAL_WORD, SUMMARY_WORD)
+VALUES
+(META_SEQ.NEXTVAL, '계산할 수 있는', 'calculable', 'calculable');
+
+INSERT INTO META_TABLE 
+(SEQNO , LOGICAL_WORD, PHYSICAL_WORD, SUMMARY_WORD)
+VALUES
+(META_SEQ.NEXTVAL, '계산', 'calcul', 'calcul');
+
+INSERT INTO META_TABLE 
+(SEQNO , LOGICAL_WORD, PHYSICAL_WORD, SUMMARY_WORD)
+VALUES
+(META_SEQ.NEXTVAL, '계산기', 'calculator', 'calculator');
+
+INSERT INTO META_TABLE 
+(SEQNO , LOGICAL_WORD, PHYSICAL_WORD, SUMMARY_WORD)
+VALUES
+(META_SEQ.NEXTVAL, '전자계산기', 'electronic calculator', 'electronic calculator');
+
+INSERT INTO META_TABLE 
+(SEQNO , LOGICAL_WORD, PHYSICAL_WORD, SUMMARY_WORD)
+VALUES
+(META_SEQ.NEXTVAL, '환자', 'patient', 'patient');
+
+INSERT INTO META_TABLE 
+(SEQNO , LOGICAL_WORD, PHYSICAL_WORD, SUMMARY_WORD)
+VALUES
+(META_SEQ.NEXTVAL, '입원', 'Admission', 'Admission');
+
+INSERT INTO META_TABLE 
+(SEQNO , LOGICAL_WORD, PHYSICAL_WORD, SUMMARY_WORD)
+VALUES
+(META_SEQ.NEXTVAL, '일시', 'Date', 'Date');
+
+INSERT INTO META_TABLE 
+(SEQNO , LOGICAL_WORD, PHYSICAL_WORD, SUMMARY_WORD)
+VALUES
+(META_SEQ.NEXTVAL, '일', 'Date', 'Date');
+
+INSERT INTO META_TABLE 
+(SEQNO , LOGICAL_WORD, PHYSICAL_WORD, SUMMARY_WORD)
+VALUES
+(META_SEQ.NEXTVAL, '일', 'Work', 'Work');
+
+
+INSERT INTO META_TABLE 
+(SEQNO , LOGICAL_WORD, PHYSICAL_WORD, SUMMARY_WORD)
+VALUES
+(META_SEQ.NEXTVAL, '환자입원일시', 'PatientAdmissionDate', 'PADATE');

@@ -1,0 +1,81 @@
+오렌지
+계정연결 : ctrl + N
+전체실행 : f5
+블록실행 : ctrl + L
+ui편집모드 : f9
+한라인 실행 : ctrl + k 혹은 ctrl + enter
+테이블 형식 간단히 보기 : alt c
+커서다음으로 문장 모두 실행 : ctrl m
+실행계획 : ctrl e
+테이블 상세컬럼 : alt c
+commit : ctrl   f12
+
+<울트라 에디트 멀티 커서 alt c 한다음 드래그 또는 쉬프트 방향키>-
+UI로 보기 : 메인아이콘의 SCHEMA BROWSER
+자동 채워넣기 : CTRL SPACE
+바꾸기 ctrl r
+여러파일 동시 수정 : 검색 - 파일에서 교체
+한글 깨지는거 :
+[General]
+Allow Multiple Instances - UltraEdit를 여러개 띄울 수 있는 옵션입니다.
+Minimize on Last File Close(마지막파일을 닫을때 최소화) - 활성된(열려진) 파일이 하나 있을 때, 이를 닫을 때는 자동적으로 UltraEdit의 창을 최소화하는 옵션입니다.
+
+<노트패드 멀티 커서>
+alt shft 키보드 아래 또는 alt 마우스로 드래그
+
+
+주석처리 : ctrl -
+주석해제 : ctrl shift -
+
+드래그 영역 소문자 변경 : ctrl u
+드래그 영역 대문자 변경 : ctrl shift u
+
+표준에 맞게 줄맞춤 : ctrl shift f
+다음탭이동 f6
+이전탭이동 shift f6
+
+세션변경 f7
+테이블 정보 보기 : alt c
+테이블 이름으로 자동 select : ctrl + L
+
+접속한 유저 소유의 테이블 조회 : select * from user_tables; (상세)
+또는 select * from tab; (간단)
+ui로 테이블 조회 : alt + f1(view - schema broswer)
+
+실행계획보기 : ctrl e (explain plan)
+sql 통계정보 보기 : ctrl shift s
+
+전체테이블에서 특정 문자열 들어간 컬럼 조회
+select * from all_tab_columns where column_name like '%문자열%';
+
+컬럼 코멘트 조회
+SELECT * FROM USER_COL_COMMENTS
+내 소유말고 모든에서 검색하려면 from all_col_comments
+
+조회 결과 100+로 보이는거 늘리는법 : option - SQL Tool  -
+
+<시노님>
+
+<포트 확인, 죽이기>
+netstat -ano | findstr 8080
+taskkill -f /pid  20056
+
+ps -ef | grep 프로세스명
+kill -9 프로세스아이디
+
+<에러>
+1. 테이블 또는 뷰가 존재하지 않습니다.
+=> 시노님 안써서
+
+<이클립스 다중편집>
+alt shift a
+
+ctrl q ;  가장 마지막 편집점
+<리눅스 하위 디렉토리 자동으로 지우기>
+rm -rf 디렉토리명
+
+sunghunab
+Ljh881854~
+
+<오렌지5.0 바인딩 변수>
+그냥 콜론  :

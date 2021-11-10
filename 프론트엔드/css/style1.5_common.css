@@ -1,0 +1,48 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css);
+a{color:inherit}
+.dimTestDefault{background-color:rgba(0,0,0,.6)}
+.dimTest{background-color:rgba(255,0,0,.4)}
+.bodyDefaultColor{color:#555}
+.primaryColor1{color:#222}
+.primaryColor2{color:#9f7c49}
+.subColor1{color:#f6a43e}
+.subColor2{color:#ede6de}
+.subColor3{color:#bbad9e}
+.subColor4{color:#888}
+.emColor1{color:#925b16}
+.emColor2{color:#ec5026}
+.emColor3{color:#222}
+.titleColor1{color:#222}
+.titleColor2{color:#555}
+.titleColor3{color:#999}
+.titleColor4{color:#fff}
+.lineColor1{color:#222}
+.lineColor2{color:#bbb}
+.lineColor3{color:#e6e6e6}
+.lineColor4{color:#f6f6f6}
+.btnColor2{color:#36353d}
+.btnColor3d{color:#e2d7c8}
+.tblbtnColor1d{color:#e5ddd3}
+.tblbtnColor3b{color:#888}
+.tablethBgColor{color:#f9f9f9}
+.listColor1{color:#999} 
+
+
+.loadingSpinner{position:fixed;top:0;bottom:0;left:0;right:0;z-index:10000;background:rgba(0,0,0,0.3);transition:opacity 0.3s}
+.loadingSpinner[aria-hidden=true]{display:none}
+.loadingSpinner .wrapper{height:100%;display:flex;justify-content:center;align-items:center}
+.loadingSpinner .wrapper .spinner{position:relative;width:60px;height:60px}
+.loadingSpinner .wrapper .spinner div{box-sizing:border-box;display:block;position:absolute;width:60px;height:60px;margin:4px;border:6px solid #fff;border-color:#fff transparent transparent transparent;border-radius:50%;animation:lds-ring 1.2s cubic-bezier(0.5,0,0.5,1) infinite}
+.loadingSpinner .wrapper .spinner div:nth-child(1){animation-delay:-0.45s}
+.loadingSpinner .wrapper .spinner div:nth-child(2){animation-delay:-0.3s}
+.loadingSpinner .wrapper .spinner div:nth-child(3){animation-delay:-0.15s}
+@keyframes lds-ring{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+
+.commonProductList__paging {margin: 100px 0 0;text-align: center;}
+.commonProductList__paging .pageButton {width: 32px;height: 32px;overflow: hidden;vertical-align: middle;font-size:0;line-height:0;}
+.commonProductList__paging .item {display: inline-block;margin: 0 0 0 10px ;width: 32px ;height:32px ;color: #938c88 ;font-size: 12px ;line-height: 32px;vertical-align: middle;}
+.commonProductList__paging .item[aria-current="active"] {background: #3c4b68;color: #fff;}
+.commonProductList__paging .pageButton--first {background: url('/tobe/resource/image/icon/icon_13by11_pagefirst.png') no-repeat 50%;}
+.commonProductList__paging .pageButton--prev {background: url('/tobe/resource/image/icon/icon_13by11_pageprev.png') no-repeat 50%;}
+.commonProductList__paging .pageButton--next {background: url('/tobe/resource/image/icon/icon_13by11_pagenext.png') no-repeat 50%;}
+.commonProductList__paging .pageButton--last {background: url('/tobe/resource/image/icon/icon_13by11_pagelast.png') no-repeat 50%;}

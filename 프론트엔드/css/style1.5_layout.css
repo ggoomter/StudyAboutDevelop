@@ -1,0 +1,586 @@
+@charset "euc-kr";
+#header{position:relative;border-bottom:1px solid #bbb;overflow-x:hidden}
+#header:before{content:"";position:absolute;top:123px;left:0;width:50%;height:58px;background:#9f7c49}
+#header:after{content:"";position:absolute;top:123px;left:auto;width:100%;height:58px;right:-50%;border-bottom:3px solid #9f7c49;background:#222;margin-right:155px}
+#header>.wrap{padding:0 60px}
+#header h1{margin:0 auto;padding:59px 0 29px;width:206px}
+#header h1 a{display:block;height:35px}
+#header #user-nav{position:absolute;top:0;right:60px;font-size:0;line-height:40px}
+#header #user-nav>a{display:inline-block;position:relative;color:#888;font-size:13px;vertical-align:middle}
+#header #user-nav a:first-child:before{display:none}
+#header #search{position:absolute;top:57px;right:60px;z-index:320}
+#header #search .search-wrap{position:relative;padding:0 48px 0 10px;width:328px;border:2px solid #222}
+#header #search .search-wrap label{display:none}
+#header #search .search-wrap input{width:100%;height:37px;color:#999;font-size:14px;border:0 none}
+#header #search .search-wrap button{position:absolute;top:0;right:0;width:48px;height:37px;font-size:0}
+#header #search .search-wrap button i{font-size:22px}
+#header #left-info{position:absolute;top:13px;left:60px}
+#header #left-info .product-status .icon-gnb-shop{margin-right:8px;vertical-align:1px}
+#header #left-info .product-status strong{color:#a06304}
+#header #left-info .banner-area{margin-top:30px}
+#header .fixed-logo{display:none}
+#header #navbar.fixed{position:fixed;width:100%;top:0;left:0;margin-top:0;z-index:330;background-color:#fff;border-bottom:1px solid #bbb}
+#header #navbar.fixed .fixed-logo{display:block;position:absolute;left:60px;top:0;z-index:350}
+#header #navbar.fixed .fixed-logo img{width:138px;height:41px;padding-top:18px}
+#header #navbar.fixed:before{content:"";position:absolute;left:-50%;top:0;width:100%;height:58px;background-color:#9f7c49;z-index:1;margin-left:-35px}
+#header #navbar.fixed:after{content:"";position:absolute;left:50%;top:0;width:100%;height:58px;background-color:#222;margin-left:-35px}
+#header #navbar.fixed>div{position:relative;width:1280px;padding:0 60px;margin:0 auto}
+#header #navbar.fixed #gnb-nav>ul>li>a{line-height:58px;border-bottom:none}
+#header #navbar.fixed .nav-depth01-left{width:570px}
+#header #navbar.fixed .nav-depth01-left li.logo{display:block;width:165px;line-height:55px}
+#header #navbar.fixed .nav-depth01-left li.logo img{vertical-align:sub}
+#header #navbar.fixed .nav-depth01-left>li .depth01>a{margin:15px 26px}
+#header #navbar.fixed .nav-depth01-left>li:first-child+li .depth01>a{margin-left:25px}
+#header #navbar.fixed .nav-depth01-right{width:590px}
+#header #navbar.fixed .nav-depth01-right>li>a{margin:15px 16px}
+#header #navbar.fixed .left-nav{-webkit-box-flex:0;-ms-flex:0 1 545px;flex:0 1 545px;padding-left:178px}
+#header #navbar.fixed .left-nav .depth-nav{width:800%;left:-290%}
+#header #navbar.fixed .right-nav{-webkit-box-flex:0;-ms-flex:0 0 615px;flex:0 0 615px;padding:0 10px 0 20px;position:relative;background-color:#222}
+#header #gnb-nav{position:relative;width:100%;z-index:310;display:-webkit-box;display:-ms-flexbox;display:flex}
+#header #gnb-nav i.fa{vertical-align:baseline}
+#header #gnb-nav:after{content:"";display:block;clear:both}
+#header #gnb-nav>ul{font-size:0}
+#header #gnb-nav>ul>li{display:inline-block;font-size:17px}
+#header #gnb-nav>ul>li>a{display:block;height:58px;color:#fff;line-height:55px;font-weight:700}
+#header #gnb-nav>ul>li>a>span{display:inline-block;position:relative}
+#header #gnb-nav>ul>li>a.active>span:after,#header #gnb-nav>ul>li>a:hover span:after{content:"";position:absolute;bottom:13px;left:-7px;width:calc(100% + 34px);height:2px;background:#fff}
+#header #gnb-nav .left-nav{-webkit-box-flex:0;-ms-flex:0 1 425px;flex:0 1 425px;padding-right:52px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;position:relative;z-index:10;background-color:#9f7c49}
+#header #gnb-nav .left-nav>li>a{padding:0 0 0 8px;position:relative}
+#header #gnb-nav .left-nav>li>a i{border-left-color:#fff;left:auto;top:50%;margin-top:-7px;margin-left:10px}
+#header #gnb-nav .left-nav>li>a i:after{border-left-color:#9f7c49}
+#header #gnb-nav .left-nav>li>a.active>i,#header #gnb-nav .left-nav>li>a:hover i{-webkit-transform:rotate(-90deg);transform:rotate(-90deg)}
+#header #gnb-nav .left-nav>li>a.active+.depth-nav{display:block}
+#header #gnb-nav .left-nav>li .depth-nav{display:none;padding-top:30px;position:absolute;top:100%;width:800%;left:-260%;background:#fff;z-index:10}
+#header #gnb-nav .left-nav>li .depth-nav .wrap{position:relative;width:1160px;min-height:525px;z-index:2}
+#header #gnb-nav .right-nav{padding-left:35px;padding-right:10px;-webkit-box-flex:0;-ms-flex:0 1 735px;flex:0 1 735px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+#header .nav-depth02{z-index:10;width:100%;background-color:#fff}
+#header .nav-depth02 .header-inner{width:100%;height:455px;overflow:hidden}
+#header .nav-depth02 .navbox-tab{margin-bottom:25px}
+#header .nav-depth02 .navbox-tab>li{float:left}
+#header .nav-depth02 .navbox-tab>li>a{display:block;width:158px;height:38px;line-height:38px;border:1px solid #bbb;background-color:#fff;font-size:14px;color:#555;text-align:center}
+#header .nav-depth02 .navbox-tab>li:first-child>a{margin-right:-1px}
+#header .nav-depth02 .navbox-tab>li>a.active{background-color:#4d4d4d;border:1px solid #4d4d4d;color:#fff}
+#header .nav-depth02 .nav-tabbox{display:none}
+#header .nav-depth02 .nav-tabbox.active{display:block}
+#header .nav-depth02 .navbox-left{width:775px;float:left}
+#header .nav-depth02 .navbox-left .brand-list{overflow:hidden}
+#header .nav-depth02 .navbox-left .brand-list li{float:left;width:28px;height:38px;background-color:#f6f6f6;text-align:center;border:1px solid #e6e6e6;border-width:1px 0}
+#header .nav-depth02 .navbox-left .brand-list li a{display:block;line-height:38px;color:#666;font-size:14px}
+#header .nav-depth02 .navbox-left .brand-list li a.active,#header .nav-depth02 .navbox-left .brand-list li a:hover{color:#222}
+#header .nav-depth02 .navbox-left .brand-list li:first-child{width:47px}
+#header .nav-depth02 .navbox-left .brand-listbox-area{height:350px;overflow:auto}
+#header .nav-depth02 .navbox-left .brand-listbox dt{display:none}
+#header .nav-depth02 .navbox-left .brand-listbox dd{border-bottom:1px solid #e6e6e6;padding:25px 0}
+#header .nav-depth02 .navbox-left .brand-listbox dd ul li{float:left;width:189px;text-align:left;text-indent:10px}
+#header .nav-depth02 .navbox-left .brand-listbox dd ul li a{font-size:14px;color:#888;line-height:30px;position:relative;z-index:1}
+#header .nav-depth02 .navbox-left .brand-listbox dd ul li a.active,#header .nav-depth02 .navbox-left .brand-listbox dd ul li a:hover{color:#925b16}
+#header .nav-depth02 .navbox-left .brand-listbox dd ul li a.active:after,#header .nav-depth02 .navbox-left .brand-listbox dd ul li a:hover:after{display:block;content:"";background-color:#ede6de;width:100%;position:absolute;left:0;bottom:0;height:10px;z-index:-1}
+#header .nav-depth02 .navbox-left .seller-left{float:left;width:360px}
+#header .nav-depth02 .navbox-left .seller-right{float:right;width:370px}
+#header .nav-depth02 .navbox-left .seller-right li{float:left;width:175px}
+#header .nav-depth02 .navbox-left .seller-right li:first-child{margin-bottom:20px;margin-right:20px}
+#header .nav-depth02 .navbox-left .seller-right li:first-child+li{margin-bottom:20px}
+#header .nav-depth02 .navbox-left .seller-right li:first-child+li+li{margin-right:20px}
+#header .nav-depth02 .navbox-left .seller-right li a{display:block;width:175px;height:185px}
+#header .nav-depth02 .navbox-left .category-depth01{position:relative;top:-30px;left:-30px;padding-top:25px;height:490px}
+#header .nav-depth02 .navbox-left .category-depth01>li{text-align:left}
+#header .nav-depth02 .navbox-left .category-depth01>li>a{width:210px;display:block;text-align:left;text-indent:30px;line-height:33px;color:#222;font-size:14px}
+#header .nav-depth02 .navbox-left .category-depth01>li.active>a,#header .nav-depth02 .navbox-left .category-depth01>li:hover>a{background-color:#ede6de;color:#925b16}
+#header .nav-depth02 .navbox-left .category-depth01>li .category-depth02{position:absolute;display:none;width:515px;height:420px;left:210px;top:0;padding-top:95px;padding-left:50px;background-color:#fff;border-left:1px solid #e6e6e6}
+#header .nav-depth02 .navbox-left .category-depth01>li.active .category-depth02,#header .nav-depth02 .navbox-left .category-depth01>li:hover .category-depth02{display:block;z-index:1}
+#header .nav-depth02 .navbox-left .category-depth01>li:hover .category-depth02{z-index:2}
+#header .nav-depth02 .navbox-left .category-depth01>li .category-title{font-size:17px;color:#222;line-height:30px;margin-top:20px}
+#header .nav-depth02 .navbox-left .category-depth01>li .category-depth02-list{overflow:hidden;width:335px;margin-top:20px}
+#header .nav-depth02 .navbox-left .category-depth01>li .category-depth02-list li{width:167px;float:left}
+#header .nav-depth02 .navbox-left .category-depth01>li .category-depth02-list li a{line-height:32px;color:#555;font-size:14px;position:relative;z-index:1}
+#header .nav-depth02 .navbox-left .category-depth01>li .category-depth02-list li a.active,#header .nav-depth02 .navbox-left .category-depth01>li .category-depth02-list li a:hover{color:#925b16}
+#header .nav-depth02 .navbox-left .category-depth01>li .category-depth02-list li a.active:after,#header .nav-depth02 .navbox-left .category-depth01>li .category-depth02-list li a:hover:after{display:block;content:"";background-color:#ede6de;width:100%;position:absolute;left:0;bottom:0;height:10px;z-index:-1}
+#header .nav-depth02 .navbox-right{width:300px;float:right;margin-top:65px}
+#header .nav-depth02 .navbox-right .swiper-container{padding-bottom:25px}
+#header .nav-depth02 .navbox-right .swiper-container .swiper-pagination{display:-webkit-box;display:-ms-flexbox;display:flex;width:310px;left:-5px}
+#header .nav-depth02 .navbox-right .swiper-container .swiper-pagination-bullet{margin:0 5px;float:left;border-radius:0;width:100%;height:5px}
+#header .nav-depth02 .navbox-right .swiper-container .swiper-pagination-bullet-active{background-color:#ec5026}
+#header .filter-depth02{width:100%;background-color:#f5f5f5;z-index:10}
+#header .filter-depth02.active{display:block}
+#header .filter-depth02 .header-inner{width:1158px;border:1px solid #bbb;border-width:0 1px;padding-top:30px}
+#header .filter-depth02 .header-inner .filter-box{position:relative;float:left;width:189px;height:360px;overflow:auto;margin-bottom:30px}
+#header .filter-depth02 .header-inner .filter-box.price{display:block;width:199px}
+#header .filter-depth02 .header-inner .filter-box.lineup{width:149px}
+#header .filter-depth02 .header-inner .filter-box.keyword{width:241px}
+#header .filter-depth02 .header-inner .filter-box.keyword dl{padding:30px 0 30px 30px}
+#header .filter-depth02 .header-inner .filter-box.keyword dl dt{margin-bottom:15px;padding:0}
+#header .filter-depth02 .header-inner .filter-box.keyword dl dt input{border:none;width:160px;border-bottom:1px solid #999;font-size:14px;color:#222;line-height:35px;background-color:#f5f5f5}
+#header .filter-depth02 .header-inner .filter-box.keyword dl dt input:-ms-input-placeholder{color:#888}
+#header .filter-depth02 .header-inner .filter-box.keyword dl dt input::-ms-input-placeholder{color:#888}
+#header .filter-depth02 .header-inner .filter-box.keyword dl dt input::-webkit-input-placeholder{color:#888}
+#header .filter-depth02 .header-inner .filter-box.keyword dl dt input::placeholder{color:#888}
+#header .filter-depth02 .header-inner .filter-box.keyword dl dd button{color:#888;line-height:20px;padding:5px;font-size:14px}
+#header .filter-depth02 .header-inner .filter-box dt{font-size:15px;color:#222;padding:0 15px;line-height:30px}
+#header .filter-depth02 .header-inner .filter-box dd{font-size:14px}
+#header .filter-depth02 .header-inner .filter-box dd ul li button{padding:0 15px;color:#555;line-height:30px}
+#header .filter-depth02 .header-inner .filter-box dd ul li button:hover{color:#222;background-color:#e4e2df}
+#header .filter-depth02 .filter-box .filter-bottom.price{width:200px}
+#header .filter-depth02 .filter-box .filter-bottom.lineup{width:142px}
+#header .filter-depth02 .filter-box .filter-bottom.keyword{width:192px}
+#header .filter-depth02 .filter-box .filter-list li button{color:#555;line-height:20px;padding:5px 15px}
+#header .filter-depth02 .filter-box .filter-list li button:hover{color:#222;background-color:#e4e2df}
+#header .filter-depth02 .filter-bottom .filter-select{position:relative;float:left;width:190px;height:63px;border:1px solid #af8d5d;margin-left:-1px;padding:10px 15px;z-index:1}
+#header .filter-depth02 .filter-bottom .filter-select .tit{display:block;font-size:13px;color:#9f7c49;margin-bottom:5px;line-height:18px}
+#header .filter-depth02 .filter-bottom .filter-select .select{display:block;font-size:13px;color:#555;line-height:18px}
+#header .filter-depth02 .filter-bottom .filter-select .close{position:absolute;right:15px;top:15px;width:auto}
+#header .filter-depth02 .filter-bottom .price{width:200px}
+#header .filter-depth02 .filter-bottom .lineup{width:150px}
+#header .filter-depth02 .filter-bottom .keyword{width:244px}
+#header .filter-depth02 .filter-bottom::after{display:block;content:"";clear:both}
+#header .filter-depth02 .filter-bottom .reset{float:left;width:64px;height:63px;background-color:#4d4d4d;color:#fff;text-align:center}
+#header .filter-depth02 .filter-bottom .reset .txt{display:block;color:#fff}
+#header .filter-depth02 .filter-bottom .search{display:block;float:left;width:177px;height:63px;text-align:center;background-color:#9f7c49;color:#fff;font-size:20px}
+#header .filter-depth02 #price-range{position:relative;margin-left:10px;margin-top:20px;width:4px;background:#e6e6e6;border:0}
+#header .filter-depth02 #price-range .ui-slider-handle span{background-color:#f5f5f5;margin:0 0 0 48px;color:#000}
+#header .filter-depth02 .filter-box.price .bubble{position:absolute;left:30px;top:15px;height:auto;width:150px;z-index:1}
+#header .filter-depth02 .filter-box.price .bubble label{display:none}
+#header .filter-depth02 .filter-box.price .bubble input{width:150px;background-color:#e4e2df;line-height:30px;text-indent:5px;font-size:13px;color:#222;font-weight:400;border:none}
+#header .filter-depth02 .filter-box.price .range-list{position:absolute;left:40px;top:0;font-size:14px;color:#555;z-index:0;line-height:25px}
+#header .filter-depth02 .filter-box.price .range-list li{margin-top:42px}
+#header .filter-depth02 .filter-box.price .range-list li:first-child{margin-top:0}
+#header .filter-depth02 .filter-box.price .ui-widget.ui-widget-content{width:4px;border:0;background-color:#e6e6e6}
+#header .filter-depth02 .filter-box.price .ui-slider-vertical .ui-slider-range{position:absolute;width:100%;background-color:#af8d5d}
+#header .filter-depth02 .filter-box.price .ui-state-default,#header .filter-depth02 .filter-box.price .ui-widget-content .ui-state-default,#header .filter-depth02 .filter-box.price .ui-widget-header .ui-state-default{display:block;position:absolute;left:-5px;border-radius:50%;border:4px solid #af8d5d;width:14px;height:14px;background:#fff}
+#header .filter-depth02 .filter-box.price .ui-button{border-radius:50%;border:4px solid #af8d5d;width:14px;height:14px}
+#header .filter-depth02 .filter-box.price .ui-button.ui-state-disabled:active,#header .filter-depth02 .filter-box.price .ui-button.ui-state-disabled:hover{border-radius:50%;border:4px solid #af8d5d;width:14px;height:14px}
+#header .filter-depth02 .filter-box.price .ui-state-active,#header .filter-depth02 .filter-box.price .ui-widget-content .ui-state-active,#header .filter-depth02 .filter-box.price .ui-widget-header .ui-state-active,#header .filter-depth02 .filter-box.price a.ui-button:active{background:#fff}
+#header .filter-box .filter-brand dd ul li button.active{color:#222;background-color:#e4e2df}
+#header .filter-box .filter-list li button.active{color:#222;background-color:#e4e2df}
+#header .filter-depth02 .filter-box .filter-list-box li{margin-top:-1px}
+#header .filter-depth02 .filter-box .filter-list-box li:first-child{margin-top:0}
+#header .filter-depth02 .filter-box .filter-list-box li button{position:relative;font-size:14px;color:#555;border:1px solid #e6e6e6;background-color:#f5f5f5;width:100%;height:72px;text-align:center;line-height:72px}
+#header .filter-depth02 .filter-box .filter-list-box li button.active,#header .filter-depth02 .filter-box .filter-list-box li button:hover{position:relative;border:2px solid #af8d5d;height:72px;line-height:71px;z-index:1}
+#header .filter-box .filter-list-box li .active{position:relative;border:2px solid #af8d5d;height:72px;line-height:71px;z-index:1}
+#header .search-result{background:#fff}
+#header .search-result .inner{width:1020px;margin:0 auto;position:relative}
+#header .search-keyword{font-size:15px;padding-bottom:15px;margin-bottom:10px;border-bottom:2px solid #000;color:#555}
+#header .search-keyword .keyword-title{font-size:26px;color:#222}
+#header .search-keyword .search-count{color:#555;padding:0 10px}
+#header .search-keyword .search-count b{color:#ec5026}
+#header .search-keyword .btn-go-search{color:#555;margin-left:10px}
+#header .search-keyword .btn-go-search:before{content:"";display:inline-block;width:1px;height:14px;background:#555;position:relative;top:3px;left:-10px}
+#header .search-keyword .btn-go-search:hover{font-weight:700}
+#header .search-word{line-height:30px}
+#header .search-word:after{content:"";display:block;clear:both}
+#header .search-word .search-relate{width:700px;float:left}
+#header .search-word .search-title{padding:0 5px;height:20px;line-height:20px;border:1px solid #a38348;color:#a38348;border-radius:20px;font-size:11px;display:inline-block}
+#header .search-word .relate-word{display:inline-block}
+#header .search-word .relate-word a{display:inline-block;padding-left:10px;font-size:13px;color:#888}
+#header .search-word .search-ranking{width:320px;float:left;position:relative}
+#header .search-word .search-ranking:after{content:"";display:block;clear:both}
+#header .rank{height:30px;overflow:hidden;width:235px;float:right;border:1px solid #fff}
+#header .rank li{height:30px;line-height:30px}
+#header .rank li a{display:block;overflow:hidden}
+#header .rank li em{display:inline-block;width:35px;margin-right:5px;color:#888;font-size:14px;text-align:center;font-style:normal}
+#header .rank li em.top{color:#ec5026}
+#header .rank li span{float:left;width:190px;color:#555;font-size:13px;letter-spacing:-1px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+#header .rank li i{float:left;width:30px;text-align:right;font-size:11px;line-height:30px;color:#555}
+#header .rank li .new{color:#ec5026}
+#header .rank li .up{background:url(http://placehold.it/10x10) no-repeat 0 10px;color:#ec5026}
+#header .rank li .down{background:url(http://placehold.it/10x10) no-repeat 0 10px}
+#header .pop-rank{position:absolute;top:0;right:0;background:#fff;border:1px solid #222;display:none;z-index:100}
+#header .pop-rank .rank{height:auto;float:none;border:none}
+#header .pop-rank .rank li:hover{background:#fcf6ee}
+#header .pop-rank .audit-time{background:#f7f8f9;font-size:11px;line-height:30px;color:#999;text-indent:10px}
+#header .search-ranking:hover .pop-rank{display:block}
+#header .search-match{margin-top:35px;width:100%;height:150px;background:#a9947b;text-align:center;position:relative}
+#header .search-match .brand{color:#fff;font-size:20px;line-height:150px}
+#header .search-match .btn-go-list{position:absolute;top:55px;right:60px;color:#fff;font-size:13px;width:155px;height:34px;line-height:34px;border:1px solid #fff}
+#header .search-choice{background:#f7f8f9;padding:30px;margin-top:40px}
+#header .search-choice .select-lang{font-size:16px}
+#header .search-choice .select-lang strong{padding-right:10px}
+#header .search-choice .select-lang a{font-size:13px;display:inline-block;color:#555;margin:0 5px}
+#header .search-choice .select-lang a.active{color:#e85027}
+#header .search-choice .select-lang a+a:before{content:"";display:inline-block;width:1px;height:10px;background:#e6e6e6;position:relative;top:1px;left:-4px}
+#header .search-choice .select-lang a.disabled{color:#ddd}
+#header .list-lang-wrap{margin-top:10px;position:relative}
+#header .list-lang a{display:inline-block;min-width:8px;padding:5px 8px;border:1px solid #eee;background:#fff;color:#555;letter-spacing:-1px}
+#header .list-lang a.active{background:#ec5026;color:#fff}
+#header .list-lang a.disabled{color:#ddd}
+#header .list-brand-wrap{background:#fff;border:1px solid #eee;padding:15px 30px;margin-top:10px;margin-bottom:25px;position:relative}
+#header .list-brand-wrap .btn-more-list{display:block;width:24px;height:24px;background:#a9947b url(http://placehold.it/24x24) no-repeat 0 0;overflow:hidden;text-indent:-100px;position:absolute;bottom:0;right:0}
+#header .list-brand{overflow:hidden;height:70px}
+#header .list-brand.active{height:auto}
+#header .list-brand li{float:left;width:20%;color:#555;line-height:23px;overflow:hidden}
+#header .list-brand li a{color:#555;letter-spacing:-1px;word-spacing:-1px;font-size:13px;position:relative}
+#header .list-brand li a.active{background:url(http://placehold.it/1x23) repeat-x bottom left}
+#header .list-brand li a.active:after{content:"";display:inline-block;width:12px;height:12px;position:absolute;top:5px;right:-14px;color:#ec5026;background:url(http://placehold.it/12x12) no-repeat}
+#header .list-brand li a.disabled{color:#ddd}
+#header .list-category-wrap{margin-top:10px;overflow:hidden}
+#header .list-category-wrap .list-category{position:relative;top:0;left:-5px;width:972px}
+#header .list-category-wrap .list-category:after{content:"";display:block;clear:both}
+#header .list-category a{float:left;width:58px;height:85px;padding:0 4px;text-align:center;font-size:13px;color:#555}
+#header .list-category a span{word-break:keep-all;line-height:15px}
+#header .list-category a.active span{background:url(http://placehold.it/1x23) repeat-x bottom left;position:relative}
+#header .list-category a.active span:after{content:"";display:inline-block;width:12px;height:12px;position:absolute;bottom:2px;right:-14px;color:#ec5026;background:url(http://placehold.it/12x12) no-repeat}
+#header .list-category a.disabled{filter:alpha(opacity=30);zoom:1;opacity:.3}
+#header .list-category .thumb-img{display:block;width:48px;height:48px;margin:0 auto 5px;border-radius:50px;background:url(http://placehold.it/48x48) no-repeat 0 0}
+#header .list-subcategory-wrap{background:#fff;border:1px solid #eee;padding:15px 30px;margin-top:10px;margin-bottom:25px;position:relative}
+#header .list-subcategory li{display:inline-block;padding:0 14px;line-height:23px}
+#header .list-subcategory li a{color:#555;letter-spacing:-1px;word-spacing:-1px;font-size:13px;position:relative}
+#header .list-subcategory li a.active{background:url(http://placehold.it/1x23) repeat-x bottom left}
+#header .list-subcategory li a.active:after{content:"";display:inline-block;width:12px;height:12px;position:absolute;top:5px;right:-14px;color:#ec5026;background:url(http://placehold.it/12x12) no-repeat}
+#header .list-subcategory li a.disabled{color:#ddd}
+#header .search-filter .search-contents{margin-top:40px}
+#header .search-filter .search-big-tabmenu{width:1020px;margin:0 auto 40px}
+#header .search-filter .search-big-tabmenu li{float:left;cursor:pointer;width:510px;height:58px;background:#f6f6f6;border-top:1px solid #e6e6e6;text-align:center;position:relative}
+#header .search-filter .search-big-tabmenu li a{display:block;width:509px;height:58px;line-height:61px;position:relative;left:-1px;top:-1px;border:1px solid #e6e6e6;border-top:0;border-bottom:1px solid #c2c2c2;color:#999;font-size:17px}
+#header .search-filter .search-big-tabmenu li a span{font-size:15px}
+#header .search-filter .search-big-tabmenu li:first-child a{left:0;width:508px}
+#header .search-filter .search-big-tabmenu li.active{height:55px;border-top:4px solid #a38348;background:#fff}
+#header .search-big-tabmenu li:hover{height:55px;border-top:4px solid #a38348;background:#fff}
+#header .search-big-tabmenu li:hover a,#header .search-filter .search-big-tabmenu li.active a{height:55px;line-height:55px;color:#222;z-index:100;border-left:1px solid #c2c2c2;border-right:1px solid #c2c2c2;border-bottom:1px solid #fff!important}
+#header .search-filter .search-big-tabcont{padding-left:240px}
+#header .search-filter .search-big-tabcont .big-cont-box{display:none;position:relative}
+#header .search-small-tabmenu{width:780px;margin:0 auto 10px!important}
+#header .search-small-tabmenu li{float:left;cursor:pointer;width:390px;height:53px;text-align:center;position:relative}
+#header .search-small-tabmenu li a{display:block;width:389px;line-height:18px;padding:17px 0;position:relative;left:-1px;top:-1px;border:1px solid #e6e6e6;color:#555;font-size:13px}
+#header .search-small-tabmenu li a.line{height:36px;padding:8px 0}
+#header .search-small-tabmenu li.active a,#header .search-small-tabmenu li:hover a{border:1px solid #a38348;background:#a38348;color:#fff!important;z-index:100}
+#header .search-small-tabcont .small-cont-box{display:none}
+#header .filter-lnb{position:absolute;top:0;left:-240px;width:200px;border:1px solid #e6e6e6;font-size:14px}
+#header .filter-lnb h3{background:#fafafa;padding:17px 19px;position:relative}
+#header .filter-lnb h3 a{display:block;width:18px;height:18px;text-indent:-1000px;font-size:0;background:url(http://placehold.it/18x18) no-repeat 0 0;overflow:hidden;position:absolute;top:15px;right:15px}
+#header .filter-lnb .filter-box{padding:29px 19px;border-top:1px solid #e6e6e6}
+#header .filter-lnb .filter-box.seleted span{display:inline-block;cursor:pointer;margin-right:30px;color:#555;position:relative}
+#header .filter-lnb .filter-box.seleted span:after{content:"";display:inline-block;width:12px;height:12px;position:absolute;top:3px;right:-14px;background:url(http://placehold.it/12x12) no-repeat}
+#header .filter-lnb .filter-box dt{position:relative;line-height:20px}
+#header .filter-lnb .filter-box dt a{color:#222;font-size:14px;font-weight:700}
+#header .filter-lnb .filter-box dt .icon-button{background:url(http://placehold.it/15x15) no-repeat 0 0;position:absolute;top:0;right:0;display:block;width:15px;height:15px}
+#header .filter-lnb .filter-box dd{margin-top:15px;display:none;color:#555}
+#header .filter-lnb .filter-box input[type=checkbox]{display:none}
+#header .filter-lnb .filter-box input[type=checkbox]+label{display:inline-block;cursor:pointer;position:relative;padding-left:25px;margin-right:15px;line-height:18px;font-size:13px}
+#header .filter-lnb .filter-box input[type=checkbox]+label:before{content:"";display:inline-block;width:15px;height:15px;margin-right:10px;position:absolute;left:0;bottom:1px;background-color:#fff;border:1px solid #e5e5e5}
+#header .filter-lnb .filter-box input[type=checkbox]:checked+label:before{content:"";font-size:14px;font-weight:800;color:#fff;background:#4d4d4d;border:1px solid #4d4d4d;text-align:center;line-height:14px}
+#header .filter-lnb .filter-box input[type=text]{width:158px;height:38px;padding:0;border:1px solid #e6e6e6;border-bottom:none;text-indent:10px}
+#header .filter-lnb .filter-box dd a{color:#555;font-size:12px;text-align:center;background:#fbfbfb;display:block;width:158px;height:30px;line-height:30px;border:1px solid #e6e6e6}
+#header .product-cont .product-sort{width:244px;margin-left:536px;margin-bottom:10px}
+#header .product-sort .sort-sel{display:inline-block;position:relative;min-width:110px;margin-left:10px;text-align:left;z-index:5}
+#header .sort-sel button{width:100%;height:30px;padding:0 0 0 10px;border:none;color:#666;font-size:13px;text-align:left;background:#fff}
+#header .sort-sel button:after{position:absolute;top:12px;right:5px;width:11px;height:7px;background:url(//static.wconcept.co.kr/web/images/common/spr-customer.png) -100px 0 no-repeat;content:""}
+#header .sort-sel button+ul:hover,#header .sort-sel button:hover+ul{display:block}
+#header .sort-sel ul{display:none;position:absolute;top:30px;left:0;width:100%;border:1px solid #b5b5b5;background:#fff}
+#header .sort-sel ul li a{display:block;padding-left:10px;color:#666;font-size:14px;line-height:40px}
+#header .sort-sel ul li:hover{background:#fafafa}
+#header .product-list-wrap{position:relative}
+#header .product-list-wrap .product-list{position:relative;width:810px;top:0;left:-30px}
+#header .search-filter .product-list li{width:238px;float:left;margin:0 0 30px 30px!important;border:1px solid #e6e6e6;position:relative}
+#header .search-filter .product-list li .img{width:238px;height:239px;overflow:hidden;display:block}
+#header .search-filter .product-list li .img .mask{z-index:10;display:block;position:absolute;top:0;left:0;width:100%;height:239px;background:#7a6258;opacity:.6}
+#header .search-filter .product-list li .hover-wrap{position:absolute;top:0;left:0;width:238px;height:239px;text-align:center;display:block;z-index:50}
+#header .search-filter .product-list li .hover-wrap .hover-btn{position:absolute;top:95px;left:0;width:238px;z-index:50}
+#header .search-filter .product-list li .hover-wrap a{display:inline-block;margin:0 3px;width:46px;height:46px;border-radius:50px;overflow:hidden;text-indent:-1000px;background:url(http://placehold.it/46x46) 0 0 no-repeat}
+#header .search-filter .product-list li .product-hover{display:none}
+#header .search-filter .product-list li .heart-hover{display:none}
+#header .search-filter .product-list li .heart-hover .done{width:74px;height:74px;background:url(http://placehold.it/74x74) 0 0 no-repeat;position:absolute;top:80px;left:50%;margin-left:-37px;z-index:50}
+#header .product-list li .text{border-top:1px solid #e6e6e6;padding:19px;height:200px}
+#header .product-list li .text .brand{font-size:14px;line-height:16px;margin-bottom:8px!important;color:#8b714c}
+#header .product-list li .text .brand span{font-size:13px}
+#header .product-list li .text .brand span:before{content:"";display:inline-block;width:1px;height:10px;background:#555;margin:0 8px}
+#header .product-list li .text .product{line-height:20px;color:#555;height:20px;overflow:hidden;margin-bottom:5px;font-size:14px;font-weight:700}
+#header .product-list li .text .brand+.product.multiline{margin-top:8px}
+#header .product-list li .text .multiline{height:40px}
+#header .product-list li .text .price{position:relative;color:#222;height:48px}
+#header .product-list li .text .price .discount-rate{display:block;position:absolute;width:20px;height:35px;padding:25px 30px 0 15px;text-align:center;background:url(http://placehold.it/65x60) no-repeat 0 0;bottom:0;left:0;font-size:16px;color:#925b16}
+#header .product-list li .text .price .base-price{position:absolute;top:0;right:0;font-size:18px;text-decoration:line-through;color:#999;text-align:right}
+#header .product-list li .text .price .base-price span{font-size:13px}
+#header .product-list li .text .price .discount-price{font-size:22px;color:#333;padding-top:26px;text-align:right}
+#header .product-list li .text .price .discount-price span{font-size:14px}
+#header .product-list li .text .labels{margin-top:15px}
+#header .product-list li .text .labels span{display:inline-block;background:url(http://placehold.it/50x20) 0 0 no-repeat;width:50px;height:20px;overflow:hidden;text-indent:-9999px;margin-right:5px}
+#header .product-list li .text-wrap{height:91px;margin-bottom:25px}
+#header .product-list li .shop{font-size:13px;color:#888;line-height:15px}
+#header .product-list li .shop .icon-shop{display:inline-block;width:15px;height:15px;margin-right:5px;background:url(http://placehold.it/15x15) 0 0 no-repeat;overflow:hidden;text-indent:-1000px}
+#header .product-list li .shop .icon-grade{display:inline-block;width:15px;height:15px;margin-left:5px;background:url(http://placehold.it/15x15) 0 0 no-repeat;overflow:hidden;text-indent:-1000px}
+#header .btn-more-list{display:block;width:780px;height:50px;line-height:48px;-webkit-box-sizing:border-box;box-sizing:border-box;border:1px solid #222!important;color:#555;font-size:15px;text-align:center}
+#header .btn-more-list strong{padding-right:30px;background:url(http://placehold.it/15x10) no-repeat right 8px;font-weight:400}
+#header .btn-more-list strong span{color:#999;font-size:13px}
+#header .product-null{padding:200px 0;font-size:18px;text-align:center;color:#555}
+#header .search-filter .recommend-module{padding-top:30px;margin-top:60px;border-top:1px solid #222}
+#header .search-filter .recommend-module .title{font-size:20px;color:#222;padding-bottom:20px;padding-top:0;margin-top:0;border:none}
+#header .product-list-wrap .product-list-04{left:-20px;width:800px}
+#header .search-filter .product-list-04 li{width:178px;margin:0 0 0 20px!important}
+#header .search-filter .product-list-04 li .img{width:178px;height:179px}
+#header .search-filter .product-list-04 li .img .mask{height:179px}
+#header .search-filter .product-list-04 li .text{padding:14px 9px 9px;height:160px}
+#header .search-filter .product-list-04 li .text .brand{font-size:11px;line-height:14px;margin-bottom:5px!important}
+#header .search-filter .product-list-04 li .text .product{line-height:18px;height:18px;font-weight:400}
+#header .search-filter .product-list-04 li .text .multiline{height:36px}
+#header .search-filter .product-list-04 li .text .brand+.product.multiline{margin-top:5px}
+#header .search-filter .product-list-04 li .text .price{height:40px}
+#header .search-filter .product-list-04 li .text .price .discount-price{font-size:17px;padding-top:18px}
+#header .search-filter .product-list-04 li .text .price .discount-price span{font-size:12px}
+#header .search-filter .product-list-04 li .text .price .base-price{font-size:13px}
+#header .search-filter .product-list-04 li .text .price .base-price span{font-size:11px}
+#header .search-filter .product-list-04 li .text .price .discount-rate{width:20px;height:38px;padding:12px 15px 0 15px;bottom:-3px;font-size:13px;background:url(http://placehold.it/50x50) no-repeat 0 0}
+#header .search-filter .product-list-04 li .text .labels span{width:42px;height:16px;background:url(http://placehold.it/42x16) 0 0 no-repeat;margin-right:3px}
+#header .search-filter .product-list-04 li .shop{font-size:11px;line-height:12px}
+#header .search-filter .product-list-04 li .shop .icon-grade,#header .search-filter .product-list-04 li .shop .icon-shop{width:10px;height:10px;background:url(http://placehold.it/10x10) 0 0 no-repeat}
+#header .search-filter .product-list-04 li .text-wrap{margin-bottom:15px;height:74px}
+#header .search-filter .product-list-04 li .hover-wrap{width:178px;height:179px;top:0}
+#header .search-filter .product-list-04 li .hover-wrap .hover-btn{width:178px;top:70px}
+#header .search-filter .product-list-04 li .heart-hover .done{top:50px}
+#header .recommend-empty-wrap{background:#f5f5f5;text-align:center;padding:40px 0}
+#header .recommend-empty-wrap .btn-login{display:block;width:115px;height:30px;line-height:30px;margin:15px auto 0;font-size:13px;color:#555;text-align:center;background:#fff;border:1px solid #e6e6e6}
+#header .recommend-empty-wrap .btn-login span{padding-right:25px;background:url(http://placehold.it/15x12) no-repeat right 5px}
+#header .brand-list-wrap{position:relative}
+#header .brand-list-wrap .swiper-container{width:780px;height:80px;position:relative}
+#header .brand-list-wrap .swiper-slide{text-align:center;font-size:18px;background:#f6f6f6;-webkit-box-sizing:border-box;box-sizing:border-box;border:1px solid #e6e6e6;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+#header .brand-list-wrap .swiper-button-prev{position:absolute;top:50%;width:37px;height:37px;margin-top:-18px;z-index:10;cursor:pointer;background-size:37px 37px;background-position:center;background-repeat:no-repeat;background-image:url(http://placehold.it/37x37);right:auto;left:-20px}
+#header .brand-list-wrap .swiper-button-next{position:absolute;top:50%;width:37px;height:37px;margin-top:-18px;z-index:10;cursor:pointer;background-size:37px 37px;background-position:center;background-repeat:no-repeat;background-image:url(http://placehold.it/37x37);right:-20px;left:auto}
+#header .event-list-wrap .event-list{position:relative;left:-25px;width:805px}
+#header .event-list li{float:left;width:243px;margin:0 0 35px 25px}
+#header .event-list li .img{width:243px;height:150px;position:relative}
+#header .event-list li .img span{position:absolute;left:0;bottom:-5px;display:block;text-align:center;width:70px;height:30px;line-height:30px;color:#fff;font-size:13px;background:#f3be08}
+#header .event-list li .img span.type02{background:#7eacce}
+#header .event-list li .text{padding:10px}
+#header .event-list li .text .brand{font-size:15px;color:#222;line-height:22px;height:22px;overflow:hidden}
+#header .event-list li .text .brand span:before{content:"";display:inline-block;width:1px;height:10px;background:#222;margin:0 8px}
+#header .event-list li .text .info{font-size:12px;color:#888;line-height:16px;height:32px;overflow:hidden}
+#header .search-noitem{padding:120px 0 110px;border-bottom:1px solid #e6e6e6;text-align:center;font-size:20px}
+#header .search-noitem p{font-size:14px;color:#888;line-height:20px;margin-top:10px}
+#header .noitem-contents{padding-left:240px;position:relative}
+#header .noitem-contents .relate-product{margin-top:0;padding-top:40px;border-top:none}
+#header .recommend-keyword{position:absolute;top:40px;left:0;width:200px}
+#header .recommend-keyword .title{font-size:20px;color:#222;padding-bottom:20px}
+#header .recommend-keyword .keyword a{display:inline-block;padding:0 10px;margin-right:5px;margin-bottom:10px;line-height:20px;color:#555;font-size:13px;border:1px solid #e4e4e4;border-radius:20px}
+#header .top-search-box{position:absolute;width:329px;border:1px solid #bbb;top:39px;left:-2px;background-color:#fff;z-index:400}
+#header .top-search-tab li{float:left;width:162px}
+#header .top-search-tab li a{display:block;border-bottom:1px solid #bbb;line-height:40px;text-align:center;color:#999;font-size:13px;background-color:#f9fafc}
+#header .top-search-tab li:first-child{border-right:1px solid #bbb;width:163px}
+#header .top-search-tab li a.active{border-bottom:1px solid #fff;color:#363d4c;background-color:#fff}
+#header .top-rank-list{overflow:hidden}
+#header .top-rank-list li{height:30px;line-height:30px}
+#header .top-rank-list li a{display:block;overflow:hidden}
+#header .top-rank-list li em{display:inline-block;width:35px;margin-right:5px;color:#888;font-size:14px;text-align:center;font-style:normal}
+#header .top-rank-list li em.top{color:#ec5026}
+#header .top-rank-list li span{float:left;width:280px;color:#555;font-size:13px;letter-spacing:-1px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+#header .top-rank-list li i{float:left;width:30px;text-align:right;font-size:11px;line-height:30px;color:#555}
+#header .top-rank-list li .new{color:#ec5026}
+#header .top-rank-list li .up{background:url(http://placehold.it/10x10) no-repeat 0 10px;color:#ec5026}
+#header .top-search-list{overflow:hidden}
+#header .top-search-list li{overflow:hidden;height:30px;line-height:30px}
+#header .top-search-list li .txt{float:left;width:260px;color:#555;font-size:13px;letter-spacing:-1px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;text-indent:15px}
+#header .top-search-list li .close{float:left;width:60px;text-align:right;font-size:11px;line-height:30px;color:#555}
+#header .top-search-list li .close a{display:inline-block;padding:0 10px;color:#555}
+#header .top-search-list li:hover{background:#fcf6ee}
+#header .top-rank-list li .down{background:url(http://placehold.it/10x10) no-repeat 0 10px}
+#header .top-rank{background:#fff;z-index:100;width:325px}
+#header .top-rank .top-rank-list{height:auto;float:none;border:none}
+#header .top-rank .top-rank-list li:hover{background:#fcf6ee}
+#header .search-area .audit-time{position:relative;background:#f9fafc;font-size:11px;line-height:30px;height:30px;color:#555;text-indent:10px;margin-top:5px}
+#header .search-area .audit-time a{color:#555}
+#header .search-area .audit-time .close{display:inline-block;position:absolute;right:10px;bottom:0;font-size:11px;color:#555;line-height:30px}
+#header .search-tab-box{display:none;background-color:#fff;padding-top:5px}
+#header .search-tab-box.active{display:block}
+#header .search-area .none-box{padding:60px 0;text-align:center}
+#header .search-area .none-box>img{display:block;width:56px;margin:0 auto 20px}
+#header .search-area .none-box .none-txt{font-size:13px;color:#888}
+#header .auto-frame-box{position:absolute;width:328px;border:1px solid #bbb;top:39px;left:-2px;background-color:#fff;z-index:400}
+#header .auto-frame-box .auto-frame-bottom{border-top:1px solid #e6e6e6}
+#header .auto-frame-box ul{padding:5px 0}
+#header .auto-frame-box ul li{overflow:hidden;height:30px;line-height:30px}
+#header .auto-frame-box ul li:hover{background:#fcf6ee}
+#header .auto-frame-box ul li .auto-frame-badge{font-size:10px;text-indent:0;display:inline-block;width:50px;line-height:15px;text-align:center;margin-right:10px;color:#9f7c49;border-radius:2px;border:1px solid #d8e2f1;background-color:#f9fafc}
+#header .auto-frame-box ul a{display:block;color:#555;font-size:13px;letter-spacing:-1px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;text-indent:15px}
+#header .auto-frame-box .auto-frame-right{float:right;color:#999;font-size:11px;margin-right:15px}
+#header #quick-search{position:relative}
+#header #quick-search .search-result{position:relative;padding-top:0;padding-right:67px;padding-bottom:0;font-size:0}
+#header #quick-search .search-result button{padding:0 40px 0 15px;width:189px;height:48px;font-size:14px;border-left:1px solid #e6e6e6;text-align:left;position:relative}
+#header #quick-search .search-result button .arrow-bottom{border-left-color:#222;left:auto;right:27px;top:17px}
+#header #quick-search .search-result button:nth-child(4){width:199px}
+#header #quick-search .search-result button:nth-child(5){width:149px}
+#header #quick-search .search-result button:nth-child(6){width:178px}
+#header #quick-search .search-result button:last-child{position:absolute;top:0;right:0;width:48px;height:48px;font-size:0;background:#9f7c49;text-align:center}
+#header #quick-search .search-result button:last-child:after{content:"";border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid #fff;display:block;margin-left:6px;-webkit-transform:rotate(180deg);transform:rotate(180deg)}
+#header #quick-search .search-result button:last-child.active:after{-webkit-transform:rotate(0);transform:rotate(0)}
+#header #quick-search .quick-select{display:none;position:absolute;top:49px;left:-100%;width:300%;background:#f6f6f6}
+#header #quick-search .quick-select.active{display:block;z-index:300}
+#header #quick-search .quick-select:before{content:"";position:absolute;bottom:0;left:0;width:100%;height:1px;background:#bbb}
+#header #quick-search .quick-select .wrap{width:1160px}
+#header.new-header:after,#header.new-header:before{top:130px;height:49px}
+#header.new-header:after{margin-right:254px}
+#header.new-header>.wrap{padding:0;width:1000px}
+#header.new-header h1{margin:0;padding:55px 0 40px}
+#header.new-header h1 a span{display:none;margin-top:10px;line-height:1;font-size:13px;color:#555}
+#header.new-header #left-info{left:0;top:9px}
+#header.new-header #left-info .product-status .icon-gnb-shop{vertical-align:-2px}
+#header.new-header #left-info .product-status strong{font-weight:400}
+#header.new-header #user-nav{top:10px;right:0;line-height:18px}
+#header.new-header #user-nav .quickmenu-area{position:relative;display:inline-block;margin-left:10px;vertical-align:middle;z-index:330}
+#header.new-header #user-nav .quickmenu-area .snsbtn-02{height:20px;line-height:20px;padding:0;font-size:12px;width:90px;color:#fff;background-color:#bbb;text-align:center;vertical-align:middle}
+#header.new-header #user-nav .quickmenu-area>div{display:none;position:absolute;right:0;top:21px;width:180%;background-color:#fff;border:1px solid #e0e0e0;padding:10px}
+#header.new-header.active{overflow-x:visible}
+#header.new-header{overflow-x:hidden}
+#header.new-header.active #user-nav .quickmenu-area .snsbtn-02+div{display:block}
+#header.new-header #user-nav .quickmenu-area>div>ul>li a{display:block;font-size:12px}
+#header.new-header #user-nav .quickmenu-area>div>ul>li a:hover{text-decoration:underline}
+#header.new-header #user-nav .quickmenu-area>div>ul ul{margin:5px 0;padding-left:10px}
+#header.new-header #search{top:58px;right:0}
+#header.new-header #search .search-wrap{padding:0;width:318px;margin-left:auto}
+#header.new-header #search .search-area-related{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:4px}
+#header.new-header #search .search-area-related>a:not(:first-child){margin-left:4px;padding:0 10px}
+#header.new-header #search .search-area{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:38px}
+#header.new-header #search .search-area>div{position:relative}
+#allim_div{width:340px;margin-left:auto;margin-right:auto;text-align:right;position:relative;float:none;height:30px;padding-top:5px}
+.allim-animation-1{-webkit-animation:allim-animation-1 linear infinite 1s;animation:allim-animation-1 linear infinite 1s}
+.allim-animation-2{-webkit-animation:allim-animation-2 linear infinite 1s;animation:allim-animation-2 linear infinite 1s}
+.allim-animation-3{-webkit-animation:allim-animation-3 linear infinite 1s;animation:allim-animation-3 linear infinite 1s}
+.allim-animation-4{-webkit-animation:allim-animation-4 linear infinite 1s;animation:allim-animation-4 linear infinite 1s}
+.allim-animation-5{-webkit-animation:allim-animation-5 linear infinite 1s;animation:allim-animation-5 linear infinite 1s}
+@-webkit-keyframes allim-animation-1{
+0%{border-color:#f6a43e;color:#f6a43e}
+50%{border-color:#ff7b05;color:#ff7b05}
+100%{border-color:#f6a43e;color:#f6a43e}
+}
+@keyframes allim-animation-1{
+0%{border-color:#f6a43e;color:#f6a43e}
+50%{border-color:#ff7b05;color:#ff7b05}
+100%{border-color:#f6a43e;color:#f6a43e}
+}
+@-webkit-keyframes allim-animation-2{
+0%{border-color:#9f7c49;color:#9f7c49}
+50%{border-color:#dc8507;color:#dc8507}
+100%{border-color:#9f7c49;color:#9f7c49}
+}
+@-webkit-keyframes allim-animation-2{
+0%{border-color:#9f7c49;color:#9f7c49}
+50%{border-color:#dc8507;color:#dc8507}
+100%{border-color:#9f7c49;color:#9f7c49}
+}
+@keyframes allim-animation-2{
+0%{border-color:#9f7c49;color:#9f7c49}
+50%{border-color:#dc8507;color:#dc8507}
+100%{border-color:#9f7c49;color:#9f7c49}
+}
+@-webkit-keyframes allim-animation-3{
+0%{border-color:#2b355b;color:#2b355b}
+50%{border-color:#0838ee;color:#0838ee}
+100%{border-color:#2b355b;color:#2b355b}
+}
+@keyframes allim-animation-3{
+0%{border-color:#2b355b;color:#2b355b}
+50%{border-color:#0838ee;color:#0838ee}
+100%{border-color:#2b355b;color:#2b355b}
+}
+@-webkit-keyframes allim-animation-4{
+0%{border-color:#883840;color:#883840}
+50%{border-color:#c21425;color:#c21425}
+100%{border-color:#883840;color:#883840}
+}
+@keyframes allim-animation-4{
+0%{border-color:#883840;color:#883840}
+50%{border-color:#c21425;color:#c21425}
+100%{border-color:#883840;color:#883840}
+}
+@-webkit-keyframes allim-animation-5{
+0%{border-color:#ec5026;color:#ec5026}
+50%{border-color:#c70000;color:#c70000}
+100%{border-color:#ec5026;color:#ec5026}
+}
+@keyframes allim-animation-5{
+0%{border-color:#ec5026;color:#ec5026}
+50%{border-color:#c70000;color:#c70000}
+100%{border-color:#ec5026;color:#ec5026}
+}
+@-webkit-keyframes allim-toggle{
+0%{color:transparent}
+50%{color:#fff}
+100%{color:transparent}
+}
+@keyframes allim-toggle{
+0%{color:transparent}
+50%{color:#fff}
+100%{color:transparent}
+}
+.allim-toggle{-webkit-animation:allim-toggle step-end infinite 1s;animation:allim-toggle step-end infinite 1s}
+#allim_div .icon-text-positive-1{color:#fff;background-color:#c07312;border:none}
+#allim_div .icon-text-positive-2{color:#fff;background-color:#9f7c49;border:none}
+#allim_div .icon-text-positive-5{color:#fff;background-color:#2b355b;border:none}
+#allim_div .icon-text-nagative-2{color:#fff;background-color:#883840;border:none}
+#allim_div .icon-text-nagative-1{color:#fff;background-color:#ec5026;border:none}
+#header.new-header #search .search-area>div select{padding:0 5px 0 10px;height:100%;border:none;background-color:#fff;font-size:13px;-webkit-appearance:none;-moz-appearance:none;appearance:none;color:#555}
+#header.new-header #search .search-area>div select::-ms-expand{display:none}
+#header.new-header #search .search-area>div .arrow-bottom{left:auto;top:50%;right:-10px;margin-top:-5px;border-left-color:#666;-webkit-transform:scale(.5) rotate(90deg);transform:scale(.5) rotate(90deg)}
+#header.new-header #search .search-area>div .arrow-bottom:after{display:none}
+#header.new-header #search .search-area input{padding:0 60px 0 20px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto}
+#header.new-header #gnb-nav .left-nav{position:relative;background-color:transparent;-webkit-box-flex:0;-ms-flex:0 1 227px;flex:0 1 227px;padding-right:19px;-webkit-box-sizing:content-box;box-sizing:content-box}
+#header.new-header #gnb-nav .left-nav:after{content:"";position:absolute;top:0;right:0;width:19px;height:46px;background:url(/src/images/1.5/bg-1.5header-divide.png) no-repeat center}
+#header.new-header #gnb-nav .left-nav>li>a{font-size:15px;font-weight:700;height:50px!important;line-height:50px!important;padding-left:0}
+#header.new-header #gnb-nav .right-nav{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;padding-right:0}
+#header.new-header #gnb-nav .right-nav>li>a{font-size:15px;font-weight:700;height:50px!important;line-height:50px!important;border-bottom:none}
+#header.new-header #quick-search-area{height:34px;border-left:1px solid #ebebeb}
+#header.new-header #quick-search-area:after{display:block;content:"";clear:both}
+#header.new-header #quick-search-area>label[class^=filter-search-]{float:left;width:127px;height:100%;border-right:1px solid #ebebeb;position:relative}
+#header.new-header #quick-search-area>label[class^=filter-search-] select{font-size:13px;width:100%;padding:0 10px;height:100%;border:none;background:0 0;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+#header.new-header #quick-search-area>label[class^=filter-search-] select::-ms-expand{display:none}
+#header.new-header #quick-search-area>label[class^=filter-search-] .arrow-bottom{left:auto;top:10px;right:10px;border-left-color:#222;-webkit-transform:scale(.5) rotate(90deg);transform:scale(.5) rotate(90deg)}
+#header.new-header #quick-search-area>label[class^=filter-search-].filter-search-input{width:237px}
+#header.new-header #quick-search-area>label[class^=filter-search-].filter-search-input input{padding:0 10px;font-size:14px;border:none;height:100%;width:178px}
+#header.new-header #quick-search-area>label[class^=filter-search-].filter-search-input button{opacity:.6;width:34px;height:100%;background-size:18px}
+#header.new-header #navbar.fixed .fixed-logo img{padding-top:8px}
+#header.new-header #navbar.fixed:before{height:50px}
+#header.new-header #navbar.fixed:after{height:50px}
+#header.new-header #navbar.fixed>div{padding:0;width:1000px}
+#header.new-header #navbar.fixed .fixed-logo{left:0}
+#header.new-header #navbar.fixed .left-nav{-ms-flex:0 1 105px;-webkit-box-flex:0;flex:0 1 105px;-webkit-box-sizing:content-box;box-sizing:content-box}
+#header.new-header #navbar.fixed .left-nav:after{height:50px;background-size:cover}
+#header.new-header #navbar.fixed .right-nav{padding-right:0}
+#header.new-header #navbar.fixed #quick-search-area{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+#header.new-header #navbar.fixed #quick-search-area>label{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto}
+#header.new-header #navbar.fixed #quick-search-area>label.filter-search-input input{width:177px}
+#footer{background:#f6f6f6}
+#footer .wrap{width:1160px}
+#footer .private-curation .wrap{padding:28px 440px 28px 300px}
+#footer .private-curation .wrap h2{position:absolute;top:28px;left:0;font-size:36px;line-height:42px}
+#footer .private-curation .wrap .curation{position:relative;padding:0 65px 0 30px;height:42px;border-radius:30px;background:#fff}
+#footer .private-curation .wrap .curation label{display:none}
+#footer .private-curation .wrap .curation input{width:100%;height:42px;border:0 none}
+#footer .private-curation .wrap .curation button{position:absolute;top:0;right:0;width:65px;height:100%}
+#footer .private-curation .wrap .sns-feelway{position:absolute;top:43px;right:0}
+#footer .private-curation .wrap .sns-feelway a{display:inline-block;margin-left:25px}
+#footer .private-curation .wrap .sns-feelway a img{width:30px;height:30px}
+#footer .footer-nav{font-size:0}
+#footer .footer-nav a{display:inline-block;padding:0 17px;color:#555;font-size:14px;line-height:55px}
+#footer .footer-nav a:first-child{padding-left:0}
+#footer .site-info .wrap{padding:69px 0 70px 0}
+#footer .site-info .wrap h2 sub{display:block;margin-top:12px;color:#222;font-size:17px;}
+/* #footer .site-info .wrap .app-area{position:absolute;bottom:30px;right:0;padding:160px 235px 0 0;padding-right:235px;width:570px;height:254px;background:url(/src/images/1.5/bg-phone.png) right bottom no-repeat;z-index:1} */
+#footer .site-info .wrap .app-area:after{content:"";display:block;clear:both}
+#footer .site-info .wrap .app-area .qr-code{float:left}
+#footer .site-info .wrap .app-area .app-store{padding-top:10px;width:210px;font-size:0;float:right}
+#footer .site-info .wrap .app-area .app-store .store{display:inline-block;padding-left:20px;font-size:14px;letter-spacing:-1px}
+#footer .site-info .wrap .app-area .app-store .store.google{background:url(/src/images/1.5/icon-playstore.svg) 0 center no-repeat/15px}
+#footer .site-info .wrap .app-area .app-store .store.apple{margin-left:15px;background:url(/src/images/1.5/icon-apple.svg) 0 center no-repeat/15px}
+#footer .site-info .wrap .app-area .app-store .customer{display:block;margin-top:20px;font-size:15px;line-height:46px;border:1px solid #bbb;text-align:center}
+#footer .site-info .wrap address{margin-top:43px;color:#222;line-height:24px;font-weight:700}
+#footer .site-info .wrap address strong{display:block}
+#footer .site-info .wrap .copyright{margin-top:15px;color:#999;font-size:12px}
+#footer{background:#f6f6f6}
+#footer.new-footer{margin-top:80px;border-top-color:#ebebeb;background-color:#ededed}
+#footer.new-footer .wrap{padding-left:30px;padding-right:30px}
+#footer.new-footer .footer-nav{border-bottom-color:#e0e0e0}
+#footer.new-footer .footer-nav .wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0;width:1000px}
+#footer.new-footer .footer-nav .wrap>div{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:54px}
+#footer.new-footer .footer-nav .wrap>div>a{padding:0;display:block;font-size:14px}
+#footer.new-footer .footer-nav .wrap .sns-feelway>a{line-height:20px}
+#footer.new-footer .footer-nav .wrap .sns-feelway>a:not(:last-child){margin-right:25px}
+#footer.new-footer .site-info .wrap{display:-webkit-box;display:-ms-flexbox;display:flex;padding-left:0;padding-right:0;width:1000px}
+#footer.new-footer .site-info .wrap>div:first-child{-webkit-box-flex:0;-ms-flex:0 0 266px;flex:0 0 266px;margin-right:60px}
+#footer.new-footer .site-info .wrap>div:first-child address{margin-top:30px;font-size:13px;line-height:21px;font-weight:400;letter-spacing:-.045em}
+#footer.new-footer .site-info .wrap>div:first-child address strong{font-weight:inherit}
+#footer.new-footer .site-info .wrap>.company-info{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto}
+#footer.new-footer .site-info .wrap>.company-info>div:first-child{font-size:13px;margin-bottom:10px;line-height:21px;color:#555}
+#footer.new-footer .site-info .wrap>.company-info dl{line-height:21px;margin-bottom:10px}
+#footer.new-footer .site-info .wrap>.company-info dl dt{margin-bottom:5px;font-size:13px;color:#555}
+#footer.new-footer .site-info .wrap>.company-info dl dd{font-size:12px;line-height:21px;color:#999}
+#footer.new-footer .site-info .wrap>.company-info>div:last-child img,#footer.new-footer .site-info .wrap>.company-info>div:last-child>*{vertical-align:middle}
+#footer.new-footer .site-info .wrap>.company-info>div:last-child>a{margin-right:5px;display:inline-block;border:1px solid #bbb;height:25px;line-height:23px;padding:0 12px;color:#999}
+#footer.new-footer .site-info .wrap>.company-info>div:last-child a+span{margin-left:10px}
+.goto_mobile{position:absolute;left:237px;top:52px;height:42px;width:150px;border:1px solid #e6e6e6;background:#fff;text-align:center;color:#555;font-size:14px;line-height:42px}
+.goto_mobile>span{vertical-align:-2px}

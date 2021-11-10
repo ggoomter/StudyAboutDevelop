@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 992px;
+  font-family: "Helvetica";
+}
+
+/* navbar */
+
+.navbar {
+  height: 75px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.navbar #logo {
+  line-height: 75px;
+}
+
+.navbar #logo img {
+  vertical-align: middle;
+}
+
+.navbar #menu {
+  float: right;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar #menu li {
+  float: left;
+  margin-left: 50px;
+  line-height: 75px;
+}
+
+.navbar #menu li a {
+  color: #545454;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/* hero header */
+
+.hero-header {
+  height: calc(100vh - 75px);
+  background-image: url("../images/hero_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.info {
+  width: 380px;
+  position: absolute;
+  left: 15%;
+  top: 100px;
+}
+
+.info h1 {
+  font-size: 52px;
+  color: #4A4A4A;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.info h2 {
+  font-size: 19px;
+  color: #4A4A4A;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.info button {
+  background: #856246;
+  box-shadow: 3px 3px 8px 0 rgba(0,0,0,0.20);
+  border-radius: 5px;
+  padding: 15px 30px;
+  color: white;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+/* popup */
+
+#popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.50);
+  display: none;
+}
+
+#popup-container {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: 4em auto;
+  background: #FFF;
+  border-radius: .25em .25em .4em .4em;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+#popup-container h3 {
+  font-size: 20px;
+  color: #4A4A4A;
+}
+
+#popup-container p {
+  font-size: 20px;
+  color: #797979;
+}
+
+#popup-container button {
+  background: #856246;
+  border-radius: 100px;
+  color: white;
+  padding: 10px 68px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#popup-container .cd-buttons:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#popup-container .cd-buttons li {
+  float: left;
+  width: 50%;
+  list-style: none;
+}

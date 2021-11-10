@@ -1,0 +1,15 @@
+워크벤치에서 줄바꿈으로 보이게 설정 변경
+
+줄바꿈 해결방법 2가지
+1. insert시(넣을때) '\n'을 <br>로 변경해서 넣든가
+2. read시(사용할때) '\n'을 <br>로 변경하든가
+
+2. 방법은 또 2가지 java단 또는 jsp단
+jsp에서 해보자.
+
+읽기 화면의 위에다가 2줄넣고
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<% pageContext.setAttribute("replaceChar", "\n"); %>
+
+밑의 사용할 부분에 
+${fn:replace(paramVO.content, replaceChar, "<br/>")}

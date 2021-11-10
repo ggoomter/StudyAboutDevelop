@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <header>
+        <h1 onmouseover="mOver(this)" onmouseout="mOut(this)" >Lorem Ipsum</h1>
+        <h1>Lorem Ipsum</h1>
+        <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."<br>
+            "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</p>
+    </header>
+    <hr>
+    <section>
+        <h3 class="subTitle" id="Title1">What is Lorem Ipsum?</h3>
+        <p id="para1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+            type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+            passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        <h3>Where does it come from?</h3>
+        <img src="../Lorem-Ipsum.png" id="loremImg" alt="" width=300px;>
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+            Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32
+            and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
+            dolor sit amet..", comes from a line in section 1.10.32.
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by
+            English versions from the 1914 translation by H. Rackham.</p>
+    </section>
+    <test>
+        <button class = "myButton" type="button"    onclick="changetoRed('Title1')"> 색깔변경</button>
+        <button class = "myButton" onclick="myMove2()">움직여</button>
+        <button class = "myButton" onclick="displayDate()">지금시간은?</button>
+        <button class = "myButton" onclick="createNode('newNode')">DOM 노드생성</button>
+        <button class = "myButton" onclick="useClassName()">클래스네임</button>
+        <button class = "myButton" onclick="useCssSelector()">쿼리셀렉터</button>
+        <button class = "myButton" onclick="printScreenSize()">스크린사이즈</button>
+
+        <button id="myBtn">버튼이벤트</button>
+        <p id="demo"></p>
+        <div id ="container">
+            <div id ="animate"></div>
+        </div>
+        <div id="newNode"></div>
+
+
+    </test>
+
+    <style>
+        #loremImg {
+            float: left;
+            margin: 5px;
+            margin-right: 10px;
+        }
+
+        .subTitle{
+            background-color: gray;
+        }
+
+        #container {
+          width: 400px;
+          height: 400px;
+          position: relative;
+          background: #A9F5F2;
+        }
+
+        #animate {
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          background-color: #819FF7;
+          background-image: url(birdDance.gif);
+          background-size: 100%;
+        }
+
+    </style>
+
+    <script src="돔구조.js" charset="utf-8"></script>
+    <!-- <script src="배열.js" charset="utf-8"></script> -->
+    <!-- <script src="JSON공부.js" charset="utf-8"></script> -->
+    <!-- <script src="연산자조건반복.js" charset="utf-8"></script> -->
+    <!-- <script src="영단어맞추기.js" charset="utf-8"></script> -->
+    <!-- <script src="영단어_현호.js" charset="utf-8"></script> -->
+
+</body>
+
+</html>
