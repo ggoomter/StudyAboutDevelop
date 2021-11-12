@@ -185,7 +185,7 @@
     - 선언부(Declaration) : 자바 메서드를 생성.
         - 문법 : <%! 자바메소드 정의 코드 %>
 - #### 4. 액션태그
-- ### 5. 표현언어   (EL표기법)
+- ### 5. 표현언어   (Expression Language : EL표기법)
     자바코드와 HTML의 표현을 섞게되면 복잡해지는데 그것을 쉽게 사용하기 위한 기술
     JSP 2.0부터 사용가능
     - 문법
@@ -264,7 +264,7 @@ Connection, PreparedStatement, ResultSet
 5. [회원가입 페이지디자인] join.jsp
 6. [회원가입 기능 구현]	joinAction.jsp
 7. [세션관리] loginAction.jsp, joinAction.jsp, main.jsp수정, logoutAction.jsp
-8. [메인페이지디자인]9https://www.youtube.com/watch?v=pCqaGoexV5c&list=PLRx0vPvlEmdAZv_okJzox5wj2gG_fNh_6&index=8)
+8. [메인페이지디자인](https://www.youtube.com/watch?v=pCqaGoexV5c&list=PLRx0vPvlEmdAZv_okJzox5wj2gG_fNh_6&index=8)
 9. [게시판 데이터베이스 구축]
 10. [글쓰기 기능]
 11. [글목록 기능]
