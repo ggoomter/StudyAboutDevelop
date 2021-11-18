@@ -212,6 +212,9 @@
         : JSP를 확장시켜주는 기능. 개발자가 직접 개발할 수 있고 해야한다.
     - JSTL (JSP Standard Tag Library)
         : 커스덤 태그중에서 자주 사용하는것들을 별도로 표준화한 태그라이브러리를
+	- <c:if test="${변수>2000}">
+			html내용
+	  </c:if>
 
 
 
@@ -280,6 +283,9 @@ view.jsp(보드 상세내역 보는 화면)에서
 18. [사진첨부] multipart/form-data
 서버에 올리기
 미리보기 보여주기
+19. [페이징](https://blog.naver.com/PostView.nhn?blogId=heartflow89&logNo=221014400238&redirect=Dlog&widgetTypeCall=true&directAccess=false)
+
+
 
 <에러>
 The superclass "javax.servlet.http.HttpServlet" was not found on the Java Build Path

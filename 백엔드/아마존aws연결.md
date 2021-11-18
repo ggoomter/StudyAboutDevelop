@@ -2,6 +2,7 @@
 아이디 ggoomter2@gmail.com
 비밀번호 xxxx3#
 name human_tester
+(ip주소 54.180.120.40)
 
 https://jiwontip.tistory.com/45?category=367314
 1. 아마존 회원가입(무료계정) 전화로 인증번호 4개 치는게 빠름
@@ -18,7 +19,7 @@ https://jiwontip.tistory.com/45?category=367314
 		
 4. 네트워크및 보안 탭
 보안그룹에 가서 inbound규칙 열어주기
-http, https, ssh, 사용자정의(8080)의 모든 ip4
+http, https, ssh,  그리고 오른쪽 2개 추가. 사용자정의(8080)의 모든 ip4, mysql
 이미 열린 보안그룹이 있다면 그거 선택해주면됨.
 5. 왼쪽 사이드바에 탄력적 ip찾아서 할당
 작업 - 탄력적 ip주소 연결(릴리즈는 해제/삭제)
@@ -50,7 +51,7 @@ sudo reboot now (시간이 5분넘게걸림. 대쉬보드에서 2/2 확인 보�
 1. 다운받기 wget 주소.tar.gz		//톰캣에서 링크주소 복사. https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.55/bin/apache-tomcat-9.0.55.tar.gz
 2. 압축풀기 tar -zvxf 압축파일이름.tar.gz
 3. 압축풀린곳의 bin폴더밑의 startup.sh파일 실행
-
+설치위치는 /home/ubuntu/apache-tomcat-9.0.55다.
 
 
 <apt-get 설치방법. 안됨 >
@@ -91,6 +92,9 @@ DB와 어플리케이션을 한서버에 설치해야하는 특별한 제약이 
 2. 생성했으면 dbeaver로 접속해보자.(생성하는데 좀 시간걸림. 너무많이 걸린다싶으면 새로고침)
 Hostname에 엔드포인트 전체 복사해서 입력
 Username은 RDS생성할때 입력했던 마스터 계정
+3. root계정말고 다른계정을 쓴다면 user생성하고 권한주고
+주의해야할점은 localhost뿐만아니라 %에도 줘야한다는 점이다.
+
 
 
 
@@ -102,3 +106,4 @@ Username은 RDS생성할때 입력했던 마스터 계정
 5. putty.exe 실행
 세션의 host에 ip주소넣고
 Connection-SSH-Auth 탭에 방금만든 ppk파일 로드하고 Open
+아이디는 ubuntu
