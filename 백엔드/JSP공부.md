@@ -284,6 +284,7 @@ view.jsp(보드 상세내역 보는 화면)에서
 서버에 올리기
 미리보기 보여주기
 19. [페이징](https://blog.naver.com/PostView.nhn?blogId=heartflow89&logNo=221014400238&redirect=Dlog&widgetTypeCall=true&directAccess=false)
+https://unabated.tistory.com/search/gopage
     1. 몇개씩 보여줄것인지 정하기(기본은 10)
     2. 화면하단에 페이지 리스트 번호 출력하기  ( 예를들어 글이 19개이면 1,2 보여야함)
          1~10이면 1,  11~20이면 1,2     32개면 1,2,3이구나.  규칙파악해서 일반화
@@ -300,3 +301,7 @@ The superclass "javax.servlet.http.HttpServlet" was not found on the Java Build 
 java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
 => Bitnami랑 충돌일어나고있었음
 검색에서 bitnami쳐서 서비스 종료시키면 해결
+
+<확실하게 해야되는것>
+단순히 <%  안에 자바코드안에 선언한 변수는 마찬가지로 <% 밖에 못쓰고
+EL표기법으로 가져올려면 내장객체속에 넣어야한다.
