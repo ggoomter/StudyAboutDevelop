@@ -46,6 +46,9 @@ source /etc/profile로 reload
 sudo reboot now (시간이 5분넘게걸림. 대쉬보드에서 2/2 확인 보고 아래실행)
 재시작했으면 다시 터미널 켜서 echo $JAVA_HOME 확인, javac -version 확인
 
+elastic ip는 서버를 껐다켜도 고정ip로 유지하기. 비용발생한다.
+
+
 톰캣설치
 <wget 설치 방법>
 1. 다운받기 wget 주소.tar.gz		//톰캣에서 링크주소 복사. https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.55/bin/apache-tomcat-9.0.55.tar.gz

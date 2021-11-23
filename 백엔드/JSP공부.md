@@ -202,7 +202,9 @@ JSP페이지에서 프로그래머가 생성하는 과정없이 바로 사용할
     웹브라우저가 전송한 파라미터를 읽어올 수 있는 메서드를 제공하고있다.
     브라우저의 요청 정보를 저장하고 있는 객체
     HTTP헤더와 HTTP바디로 구성되어있다. 웹컨테이너는 HttpServletRequest객체로부터 사용자의 요구사항을 얻어낸다.
-        - String getParameter(String name) : 파라미터 변수 name에 저장된 변수를 얻어내는 메소드로, 이때 변수의 값은 String으로 리턴된다. 
+        - String getParameter(String name) : 파라미터 변수 name에 저장된 변수를 얻어내는 메소드로, 이때 변수의 값은 String으로 리턴된다.
+				파라미터를 찾지 못한 경우 null값을 리턴하기때문에 null인지를 체크안하고 바로 사용하면 예외가 발생하여 500에러가 뜨는것에 유의해야 한다.
+				그러나 밑의 el표기법에서 배울것이지만 EL식에서는 파라미터를 찾지못하면 공백으로 처리하기 때문에 따로 예외처리를 하지 않아도된다.
         - String[] getParameterValues(String name) : 파라미터 변수 name에 저장된 모든 변수값을 얻어내는 메소드. 하나의 이름으로 여러 데이터값을 넘길때 사용한다. checkbox에서 주로 사용된다.
         - Enumeration getParameterNames() :요청에 의해 넘어오는 모든 파라미터 변수를 java.util.Enumeration 타입으로 리턴한다. 
         - getParameterMap()
@@ -233,7 +235,7 @@ JSP페이지에서 프로그래머가 생성하는 과정없이 바로 사용할
     - ### page = 페이지를 구현한 자바 클래스
     - ### config = JSP 페이지에 대한 설정 정보를 저장하고 있는 객체
     - ### exception = 예외가 발생한 경우에 사용되는 객체
-
+	
     ```jsp
     form.jsp 에서
     <form action="경로/viewParameter.jsp" method="post">
@@ -274,25 +276,6 @@ JSP페이지에서 프로그래머가 생성하는 과정없이 바로 사용할
         - 문법 : <%= 표현식%>
 - #### 4. 액션태그
 - ### 5. 표현언어   (Expression Language : EL표기법)
-    자바코드와 HTML의 표현을 섞게되면 복잡해지는데 그것을 쉽게 사용하기 위한 기술
-    JSP 2.0부터 사용가능
-    - 문법
-        ${  표현식 }
-        예1)   객체 접근:              ${ObjectName}
-        예2)   property에 접근:    ${ObjectName.property}
-        예3)
-        ```html
-        <%
-            int a = Integer.parseInt(request.getParameter("a"));
-            int b = Integer.parseInt(request.getParameter("b"));
-        %>
-        a * b = <%= a*b %>
-        ```
-        이것을 표현언어를 사용하면 아래와같이 간결하게 사용할 수 있다.
-        ```html
-        a * b = ${param.a * param.b}
-        ```
-
 - ### 6. JSTL (JSP Standard Tag Library). 표준액션태그와 태그라이브러리
     - 문법
         <jsp:액션태그이름 속성1="값1" 속성2="값2" ... />
@@ -306,34 +289,118 @@ JSP페이지에서 프로그래머가 생성하는 과정없이 바로 사용할
 
 
 
---------------EL, JSTL 심화-------------------
-# EL (Expression Language)
-  - 속성값들을 편리하게 출력하기 위해 사용
-  - JSP에서 Java코드를 쓰지않고도 Java객체를 볼러올 수 있는 언어
-  - null값이 무시되어 null point exception 이 발생하지 않음
-  - String, ArrayList 등으로 형변환도 필요하지 않음. 알아서 숫자는 숫자로, 문자는 문자열로 인식한다.
-  - 에러가 발생하더라도 무시가 되어 사용이 용이
-  - 문법
-  ```javascript
-  //abc는 자바단의 변수다.
-  <%= abc %>     //기존  request.getParameter("name")
-  ${abc}         //이후  ${ param.name }
-  ${empty param.c ? "param is emtpy" : param.c}
-  **중요** param객체의 name이름으로 프로퍼티가 생겨서 거기에 value가 담겨서 넘어오게 된다.
-  유의할점 . 값이 완전 그대로 박히기 때문에 해당 변수를 찾게된다.
-  값으로 쓰려면 ""안에 넣어줘야한다.
-  즉 ${}안에는 자바단의 변수가 아니라 프론트단에 있는 name이 들어가야한다.
-  ```
+-----------------------------------------------
+# EL (Expression Language. 표현언어)
+- 정의 : JSP에서 Java코드를 쓰지않고도 Java객체를 볼러올 수 있는 언어
+- 사용이유 : 속성값들을 편리하게 출력하기 위해 사용. 자바코드와 HTML의 표현을 섞게되면 복잡해지는데 그것을 쉽게 사용하기 위한 기술
+- 문법  **  ${표현식}  **
+- 표현식으로 <%=add%> 쓰는것을 표현언어로 사용하면 ${add}가 된다.
+   그런데 표현식에서는 이를 자바변수명으로 인식하는데, 표현언어에서는 add라는 속성명으로 인식한다.
+- null값이 무시되어 null point exception 이 발생하지 않음. null이면 빈값으로 표현한다.
+- String, ArrayList 등으로 형변환도 필요하지 않음. 알아서 숫자는 숫자로, 문자는 문자열로 인식한다.
+- 에러가 발생하더라도 무시가 되어 사용이 용이
+- 내장객체중에서 속성값을 저장할수있는건 4개(**순서 중요**)(page, request, session, application)
+	pageContext.getAttribute("num1");  ===> ${pageScope.num1}
+	request.getAttribute("num1"); 	   ===> ${requestScope.num1}
+	위와같이 내장객체뒤에 ** Scope ** 을 붙이면 표현언어의 내장객체가 된다.
+	내장객체를 명시하지않고 ${num}으로 표현하면 위의 순서대로 속성값을 얻어와서 출력한다.
 
-# JSTL
-  - Jsp Standard Tag Library
-  - 표준 액션태그로 처리하기 힘든 부분을 담당
-  - 문법
-  ```javascript
-  <%= if%>    //기존
-  <c:if>      //이후
-  ```
+``` html
 
+
+
+- 예제1
+	${abc}         /* ${ param.name } */
+- 예제2
+	${empty param.c ? "param is emtpy" : param.c}
+- 예제3
+	a * b = ${param.a * param.b}
+	/*
+	<%
+		int a = Integer.parseInt(request.getParameter("a"));
+		int b = Integer.parseInt(request.getParameter("b"));
+	%>
+	a * b = <%= a*b %>
+	*/
+```
+- 위에서 보듯이 표현언어에서는 request.getParameter() 대신에 **param**객체를 사용한다.
+empty는 검사할 객체가 null인지 검사하는 연산자. null이면 true를 반환한다.
+eq 연산자는 == 연산자와 같고, 자바에서는 수치형데이터에 대해서만 값을 비교하고 참조형데이터는 참조값을 비교하지만, 
+	EL식에서는 ==연산자는 객체에 사용하더라도 참조가아닌 값을 비교한다.
+**중요** param객체의 name이름으로 프로퍼티가 생겨서 거기에 value가 담겨서 넘어오게 된다.
+유의할점 . 값이 완전 그대로 박히기 때문에 해당 변수를 찾게된다.
+값으로 쓰려면 ""안에 넣어줘야한다.
+즉 ${}안에는 자바단의 변수가 아니라 프론트단에 있는 name이 들어가야한다.
+
+----------------------------------------------------
+
+# JSTL  (Jsp Standard Tag Library)
+- 정의 : JSP에서 사용가능한 표준 태그 라이브러리
+- 사용이유 : JSP코드를 깔끔하고 가독성이 좋게 만든다.
+- 사용하는 방법 : 1. 톰캣 공식 사이트에서 jstl라이브러리(jstl.jar)과 standard.jar 를 다운받아서 WEB-INF/lib 에 넣는다.
+			2. jstl을 사용하려는 페이지에 taglib지시자 디렉티브 작성
+			<%@ taglib prefix="c" url="http://java.sun.com/jsp/jstl/core"" target="_blank">http://java.sun.com/jsp/jstl/core" %>
+			3. 사용
+- 종류 : 
+	- core(기본)          prefix : c     기본URI : http://java.sun.com/jsp/jstl/core
+		태그 : set, remove, if, choose, forEach, forTokens, import, redirect, url, out, catch
+	- format(표현형식)     prefix : fmt    기본URI : http://java.sun.com/jstl/fmt
+	- xml(xml처리)        prefix : x     기본URI : http://java.sun.com/jstl/xml
+	- sql(데이터베이스)      prefix : sql   기본URI : http://java.sun.com/jstl/sql
+	- functions(함수처리)  prefix : fn     기본URI : http://java.sun.com/jsp/jstl/fn
+- 문법
+	** < 프리픽스이름:태그  속성1="값1" 속성2="값2" ... > **
+	
+- 예제1. 속성 설정
+	<c:set var="msg" value="Hello" scope="page" />
+	/* pagecontext.setAttribute("msg", "Hello"); */
+
+	<c:set var="인스턴스명" value="<%= new 패키지주소.생성자() %>">
+	/* 자바빈 객체 생성하는 법 */
+	
+	<c:set target="자바빈객체" property="프로퍼티이름" value="값" >
+	/* 생성한 자바빈객체에서 프로퍼티값 저장하는법 */
+	
+	[의문]<jsp:setProperty> 보다 <c:set>을 써야하는 이유는?
+	=> jsp태그는 빈의 프로퍼티를 설정하는것이 전부다.
+	 c:set은 모든 스코프를 대상으로 프로퍼티를 설정할 수 있다.
+	
+	
+- 예제2. 조건문
+	<c:if test="${param.color == 1}">
+		<span style = "color : red;"> 빨강 </span>
+	</c:if>
+
+- 예제3. 반복문
+	<c:forEach items="${paramValues.season}" var="season">
+		${season}
+	</c:forEach>
+
+	<c:forEach var=”customer” items=”${customers}”>
+		고객 :<c:out value=”${customer}” />
+	</c:forEach>
+
+	<c:forEach var=”k” begin=”1″ end=”50″ step=”1″>
+		<c:out value=”${k%2==0}” />
+	</c:forEach>
+	
+	/* 속성 설명 */
+	- items : 반복할 객체명
+	- begin : 시작 값
+	- end : 종료 값
+	- step : 증가값
+	- var : 변수명
+	- varStatus : 별도의 변수
+
+- 예제4. 회원권한을 id옆에 붙여서 표시하는 방법. 그대로 응용하면 권한에 따라 메뉴 보이게 지정
+	<c:choose>
+	<c:when test="${param.userType == 'admin'}">
+		${param.id}(관리자)
+	</c:when>
+	<c:otherwise>
+		${param.id}(회원)
+	</c:otherwise>
+	</c:choose>
 
 
 ------------------------------------------------------
@@ -436,9 +503,14 @@ EL표기법으로 가져올려면 내장객체속에 넣어야한다.
 선언문에 선언한 변수와 스크립틀릿 변수을 각각선언하고 1씩 더해보면 static처럼 유지되는것을 알수 있다.
 바로 이렇게 첫번째 요청이후 두번째 요청부터는 '서블릿 인스턴스'를 다시 생성하지 않고 이미 메모리에 로딩된 서블릿을 사용하기 때문에 빠르다.
 
-- GetParameter vs GetAttribute     SetParameter  vs SetAttribute
-파라미터는 항상 문자열 형태로만 읽어온다.
+- ** GetParameter vs GetAttribute **     ** SetParameter  vs SetAttribute **
+<parameter>
+	- 리턴타입 : String
+	- 클라이언트의 HTML페이지에서 넘어온 데이터
 
+<attribute>
+	- 리턴타입 : Object
+	- 서블릿간 공유하는 객체의 속성
 -----------------------------<유효성 검사>----------------------------
 1. 
 int age = Integer.parseInt(request.getParameter("age"));
