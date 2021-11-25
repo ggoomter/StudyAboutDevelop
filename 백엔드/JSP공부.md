@@ -295,15 +295,17 @@ JSP페이지에서 프로그래머가 생성하는 과정없이 바로 사용할
 - 사용이유 : 속성값들을 편리하게 출력하기 위해 사용. 자바코드와 HTML의 표현을 섞게되면 복잡해지는데 그것을 쉽게 사용하기 위한 기술
 - 문법  **  ${표현식}  **
 - 표현식으로 <%=add%> 쓰는것을 표현언어로 사용하면 ${add}가 된다.
-   그런데 표현식에서는 이를 자바변수명으로 인식하는데, 표현언어에서는 add라는 속성명으로 인식한다.
+   그런데 **표현식에서는 이를 자바변수명으로 인식하는데, 표현언어에서는 add라는 속성명으로 인식한다.**
+   ** 즉 자동으로 getAttribute를 한다는 말이다. **
 - null값이 무시되어 null point exception 이 발생하지 않음. null이면 빈값으로 표현한다.
 - String, ArrayList 등으로 형변환도 필요하지 않음. 알아서 숫자는 숫자로, 문자는 문자열로 인식한다.
 - 에러가 발생하더라도 무시가 되어 사용이 용이
-- 내장객체중에서 속성값을 저장할수있는건 4개(**순서 중요**)(page, request, session, application)
+- 내장객체중에서 속성값을 저장할수있는건 4개(**순서 중요**)
+	(**page, request, session, application**)
 	pageContext.getAttribute("num1");  ===> ${pageScope.num1}
 	request.getAttribute("num1"); 	   ===> ${requestScope.num1}
 	위와같이 내장객체뒤에 ** Scope ** 을 붙이면 표현언어의 내장객체가 된다.
-	내장객체를 명시하지않고 ${num}으로 표현하면 위의 순서대로 속성값을 얻어와서 출력한다.
+	**내장객체를 명시하지않고 ${num}으로 표현하면 위의 순서대로 속성값을 얻어와서 출력한다.**
 
 ``` html
 
@@ -353,17 +355,20 @@ eq 연산자는 == 연산자와 같고, 자바에서는 수치형데이터에 �
 	
 - 예제1. 속성 설정
 	<c:set var="msg" value="Hello" scope="page" />
-	/* pagecontext.setAttribute("msg", "Hello"); */
+	/* pagecontext.setAttribute("msg", "Hello"); 와 같은 의미*/
 
 	<c:set var="인스턴스명" value="<%= new 패키지주소.생성자() %>">
 	/* 자바빈 객체 생성하는 법 */
 	
-	<c:set target="자바빈객체" property="프로퍼티이름" value="값" >
+	<c:set target="자바빈객체" property="프로퍼티이름" value="값" ></c:set> 
 	/* 생성한 자바빈객체에서 프로퍼티값 저장하는법 */
+	
 	
 	[의문]<jsp:setProperty> 보다 <c:set>을 써야하는 이유는?
 	=> jsp태그는 빈의 프로퍼티를 설정하는것이 전부다.
 	 c:set은 모든 스코프를 대상으로 프로퍼티를 설정할 수 있다.
+	[**속성**] value = 저장할 변수값, target : 저장할 객체명, property : target객체의 멤버변수
+	, var : 저장될 변수명, scope : 저장될 범위
 	
 	
 - 예제2. 조건문
@@ -511,6 +516,17 @@ EL표기법으로 가져올려면 내장객체속에 넣어야한다.
 <attribute>
 	- 리턴타입 : Object
 	- 서블릿간 공유하는 객체의 속성
+	
+#### 서버가 JSP코드를 해석하는 순서 : JAVA -> JSTL -> HTML -> Javascript
+그러므로 **JSTL의 EL에서는 Javascript의 변수에 접근 불가**
+반면에 **Javascript에서는 JSTL의 EL 사용가능**
+
+### **jstl변수와 jsp변수**
+https://rwd337.tistory.com/41
+
+### script 해석
+escapeXml = true 면 무조건 문자열로 해석
+escapeXml = false 면 태그를 해석
 -----------------------------<유효성 검사>----------------------------
 1. 
 int age = Integer.parseInt(request.getParameter("age"));
