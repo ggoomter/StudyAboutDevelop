@@ -11,8 +11,8 @@
         25 = SMTP
         80 = HTTP. 웹서버의 기본 포트. 즉 HTTP프로토콜일 경우 별도의 포트를 지정하지않으면 80
     - 등록된포트(1024~49151) User Ports
-        1434 = MySql
-        1521 = Oracle
+        1434 	= MySql
+        1521  = Oracle
         8080 = Apache Tomcat. 바꾸고싶으면 server.xml에서 변경
     - 동적및 개인포트 (49152~65535)  Dynamic / Private Ports
 
