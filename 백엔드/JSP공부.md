@@ -332,7 +332,19 @@ eq 연산자는 == 연산자와 같고, 자바에서는 수치형데이터에 �
 **중요** param객체의 name이름으로 프로퍼티가 생겨서 거기에 value가 담겨서 넘어오게 된다.
 유의할점 . 값이 완전 그대로 박히기 때문에 해당 변수를 찾게된다.
 값으로 쓰려면 ""안에 넣어줘야한다.
-즉 ${}안에는 자바단의 변수가 아니라 프론트단에 있는 name이 들어가야한다.
+** 중요2 **
+Java => JSTL => HTML => javascript 순서대로 해석한다.
+그래서 자바스크립트에서 JSP 혹은 Spring의 ModelAndView 변수를 사용할 수 있지만 반대로는 어렵다.
+하지만 만약에 JSP 변수 혹은 Spring의 ModelAndView 변수 안에 
+작은따옴표 혹은 큰 따옴표가 있을 경우 예외적인 상황이 발생 된다.
+- 변수안에 싱글 쿼테이션이 있을 경우
+var text = '${helloText}';
+(ex helloText 값은 hello 'Text)
+text의 값은 text = 'hello' Text'; 가 되는데 이렇게 될 경우 브라우저에서 
+Uncaught SyntaxError: Invalid or unexpected token 오류가 발생한다.
+- 더블 쿼테이션의 경우 자바스크립트 변수 text를 var text = "${helloText}"; 로 선언하고 
+helloText안에 더블 쿼테이션이 있다면 위와 같은 오류가 발생하니 주의해야한다.
+**즉 ${}안에는 자바단의 변수가 아니라 프론트단에 있는 name이 들어가야한다.**
 
 ----------------------------------------------------
 
