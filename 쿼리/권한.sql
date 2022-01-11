@@ -1,9 +1,16 @@
 SELECT HOST, USER, AUTHENTICATION_STRING, PLUGIN  FROM MYSQL.USER;
 SELECT * FROM MYSQL.USER;
+SELECT * FROM ALL_USERS;
 
 
-ALTER user 'ggoomter'@localhost IDENTIFIED WITH auth_plugin BY '0070';	-- 비밀번호 변경
+/* 유저 권한 확인*/
+SELECT GRANTEE, GRANTED_ROLE FROM DBA_ROLE_PRIVS WHERE GRANTEE='SCOTT';
+
+
+/* 유저 비밀번호 바꾸기 */
+ALTER USER 'ggoomter'@localhost IDENTIFIED WITH auth_plugin BY '0070';	-- 비밀번호 변경
 ALTER USER 'ggoomter'@'localhost' IDENTIFIED WITH mysql_native_password BY '0070';
+ALTER USER SCOTT IDENTIFIED BY TIGER;
 /*plugin 'auth_plugin' is not loaded*/
 
 

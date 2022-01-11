@@ -1,28 +1,27 @@
---°èÁ¤. ´ë¼Ò¹®ÀÚ ±¸ºÐÇÑ´Ù.
-Àü¿ª µ¥ÀÌÅÍº£ÀÌ½º ÀÌ¸§ : orcl
-Æ÷Æ® : 1521
-SYS 	: ¿À¶óÅ¬ db°ü¸®ÀÚ, super USER.  DATA dictionary ¸¦ °¡Áö°íÀÖÀ½. ÇöÀç ºñ¹ø sys1234
-SYSTEM 	: SYS¿Í µ¿ÀÏÇÏÁö¸¸ DB¸¦ »ý¼ºÇÒ ±ÇÇÑÀÌ ¾øÀ½. ÇöÀç ºñ¹ø sys1234
-SCOTT 	: ¿À¶óÅ¬¿¡¼­ Á¦°øÇÏ´Â »ùÇÃ »ç¿ëÀÚ °èÁ¤. 		±âº» ºñ¹ø : tiger
-ggoomter	: ³»°¡ ÁÖ·Î ¾²´Â °èÁ¤
-		
-
-<°ü¸®ÀÚ·Î Á¢¼Ó>
-À¯Àú id Ä¡´Â°÷¿¡¼­  sys as sysdba
+--ê³„ì •. ì˜¤ë¼í´ 12cë¶€í„°ëŠ” ëŒ€ì†Œë¬¸ìž êµ¬ë¶„í•œë‹¤.
+ì „ì—­ ë°ì´í„°ë² ì´ìŠ¤ ì´ë¦„ : orcl
+í¬íŠ¸ : 1521
+SYS 	: ì˜¤ë¼í´ dbê´€ë¦¬ìž, super USER.  DATA dictionary ë¥¼ ê°€ì§€ê³ ìžˆìŒ. í˜„ìž¬ ë¹„ë²ˆ sys1234
+SYSTEM 	: SYSì™€ ë™ì¼í•˜ì§€ë§Œ DBë¥¼ ìƒì„±í•  ê¶Œí•œì´ ì—†ìŒ. í˜„ìž¬ ë¹„ë²ˆ sys1234
+SCOTT 	: ì˜¤ë¼í´ì—ì„œ ì œê³µí•˜ëŠ” ìƒ˜í”Œ ì‚¬ìš©ìž ê³„ì •. 		ê¸°ë³¸ ë¹„ë²ˆ : tiger
+ggoomter	: ë‚´ê°€ ì£¼ë¡œ ì“°ëŠ” ê³„ì •
 
 
-<ºñ¹Ð¹øÈ£ ¸¸·á Çª´Â°Í. º¸Åë 180ÀÏ>
-1. °ü¸®ÀÚ·Î Á¢¼Ó
+<ê´€ë¦¬ìžë¡œ ì ‘ì†>
+ì¼ë°˜ìœ ì €ì²˜ëŸ¼ ì ‘ì†í•˜ë©´ ì•ˆëœë‹¤.
+ìœ ì € id ì¹˜ëŠ”ê³³ì—ì„œ  ì•„ì´ë”” as sysdba
+
+
+<ë¹„ë°€ë²ˆí˜¸ ë§Œë£Œ í‘¸ëŠ”ê²ƒ. ë³´í†µ 180ì¼>
+1. ê´€ë¦¬ìžë¡œ ì ‘ì†
 connect SYS as sysdba
-2. ¸¸·á±âÇÑ È®ÀÎ
+2. ë§Œë£Œê¸°í•œ í™•ì¸
 select * from dba_profiles where profile = 'DEFAULT';
-3. ¸¸·á±âÇÑ ¹«ÇÑÀ¸·Î º¯°æ
+3. ë§Œë£Œê¸°í•œ ë¬´í•œìœ¼ë¡œ ë³€ê²½
 alter profile default limit password_life_time unlimited;
-4. °èÁ¤ ¶ô ÇØÁ¦
-alter user °èÁ¤¸í account unlock;
+4. ê³„ì • ë½ í•´ì œ
+alter user ê³„ì •ëª… account unlock;
 
 
-<ºñ¹ø º¯°æ>
-alter user °èÁ¤¸í identified by »õºñ¹ø;
-
-
+<ë¹„ë²ˆ ë³€ê²½>
+alter user ê³„ì •ëª… identified by ìƒˆë¹„ë²ˆ;
