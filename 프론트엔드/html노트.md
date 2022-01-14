@@ -42,51 +42,47 @@ HTML이란?
 검사 : validator.w3.org
 
 
-<CSS 셀렉터>
-- 의미 : Cascading Style Sheet. 캐스캐이딩은 작은폭포. 폭포처럼 쏟아지는 물. 연속.   즉 위에서 계속 떨어지는 느낌.
-Author style(코딩으로 넣은거) -> User style(=사용자가 다크모드, 확대, 등) -> Browser
-캐스캐이딩의 연결을 끊는것은 !important
-- 선택자 : html의 어떤 태그를 선택할지 고르는것. html만들때 박스구조로 레이블링을 잘해놓으면 선택하기가 쉽다.
-    그냥 태그,     #아이디,       .클래스 :상태,       []속성
-    자손은 그냥띄우기,    자식은 >  ,  여러개는 ,    , 선택된 태그의 지정된클래스만 : 태그.클래스    /
-    A+B는 A바로옆에 있는 B,     A~B는 A바로옆에있는 B들
+### 다른 파일 가져오기(header, footer)
+https://www.w3schools.com/howto/howto_html_include.asp
+https://seokd.tistory.com/2
+https://sjh836.tistory.com/52
+1. html import
+<link rel="import" href="header.html"> 더이상 지원하지 않음
 
-- 스타일링 : 문법은 매우 간단해서 배울게 없을정도이나 실제로 내가원하는대로 스타일하기는 어렵다.
-선택자 {
-    속성 : 값;
-}
-예를들어  button:hover{
-  color : red;
-  background : baige;
-}
+2. iframe 태그 사용
+<iframe src="./header.html"></iframe>
+문제 : XSS 공격에 취약, 외부스타일 적용 어려움(특히height, 자동스크롤생김),
+  웹크롤링 잘안됨(소스가 숨겨져있어서), 당연히 접근성, 사용성 저하 문제.
+  속도 저하
 
-게임으로 공부 https://flukeout.github.io/ 16번부터 어려움. 18까지만 하면됨. 이후는 퍼블리셔나 22번까지도 괜찮음.
-16. plate apple,plate:only-child가 안됨.  plate apple:only-child, plate pickle:only-child
-부모:first-child = 형제들이 있을때 첫번째
+3. jquery 사용 https://drsggg.tistory.com/270
+$(document).ready(function(){
+    $(#header).load("/header.html");
+    $(#footer).load("/footer.html");
+});
 
-<색상선택방법>
-#rrggbb
-#rrggbbaa,
-#rgb,
-#rgba
-정해진 영어
+4. ajax 사용
+<body>
+     <div data-include-path="footer.html"></div>
 
+    <script>
 
-<css 레이아웃>
-원하는 위치에 원하는 사이즈로 배치하는것이 기본.
-여기서 끝낸다는 마음가짐으로 해야지 아니면 계속 헷갈리고 할때마다 헤매는데 엄청난 시간낭비.
-  <display>
-display block의 대표주자 div,    display inline의 대표주자 span
-inline-block : 한줄에 여러개넣지만 상자처럼. 컨텐츠의 내용과 상관없이.
-  <position>
- ,원래있어야되는자리에서 상대적으로 이동relative, 상자안에서 움직이는 absolute, 윈도우안에서 움직이는 fixed ,
-- 헷갈리는 컨셉 :
-- css의꽃 : Flex box
+        window.addEventListener('load', function() {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function(el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        });
 
-<css를 넣는 3가지 방법.>
-1.인라인 : 태그내에서 수정.
-  <태그 style="color:gray;">
-2.파일 내에서 :  style태그 따로빼서.
-  <style> 내용 </style>
-3.외부 파일로 : style 태그에 경로 myStyle.css
-  전체 스타일을 일관성있게 동시다발적으로 변경할수있어서 제작의 효율성이 높음. 관리가 편함.
+    </script>
+</body>
