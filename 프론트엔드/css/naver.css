@@ -1,0 +1,105 @@
+/* 레이아웃 틀 */
+*{
+    color : green;
+}
+
+html {
+    height: 100%;
+}
+container{
+    display: flex;
+    flex-direction : column;
+    align-items : center;
+}
+
+label{
+    margin-top : 12px;
+    font-size: 18px;
+    font-weight : bold;
+}
+
+.wrapper>span{
+    display : flex;
+    flex-direction : row;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background: #f5f6f7;
+    font-family: Dotum,'돋움',Helvetica,sans-serif;
+}
+
+#logo {
+    height: 44px;
+    cursor: pointer;
+}
+
+input{
+    border: solid 1px #dadada;
+    height: 51px;
+    padding-right: 25px;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+
+
+header {
+    padding-top: 62px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+content {
+    width: 460px;
+}
+
+button{
+    background-color : #2DB400;
+    margin-top: 20px;
+    border : 0px;
+    color : white;
+    font-size : 1.2em;
+    font-weight : bold;
+    height : 40px;
+    width : 250px;
+}
+
+.step_url {
+    position: absolute;
+    top: 16px;
+    right: 13px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #8e8e8e;
+}
+
+.userinput_box {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 51px;
+    border: solid 1px #dadada;
+    padding: 10px 110px 10px 14px;
+    background: #fff;
+}
+
+.int {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 29px;
+    padding-right: 25px;
+    line-height: 29px;
+    border: none;
+    background: #fff;
+}
+
+.box{
+    display: inline-block;
+}
+
+.birth{
+    width : 9.3em;
+}
