@@ -1,0 +1,21 @@
+create table vam_board (
+    bno number,
+    title varchar2(150) not null,
+    content varchar2(2000) not null,
+    writer varchar2(50) not null,
+    regdate date default sysdate,
+    updatedate date default sysdate,
+    constraint pk_board PRIMARY key(bno)
+);
+
+create sequence
+   vam_board_seq
+  increment by 1
+  start with 1;
+  
+insert into vam_board(bno, title, content, writer) values (vam_board_seq.NEXTVAL, '테스트 제목', '테스트 내용', '작가');
+insert into vam_board(bno, title, content, writer) values (vam_board_seq.NEXTVAL, '테스트 제목', '테스트 내용', '작가');
+insert into vam_board(bno, title, content, writer) values (vam_board_seq.NEXTVAL, '테스트 제목', '테스트 내용', '작가');
+ 
+select * from vam_board;
+select * from vam_board where bno = 7;
