@@ -19,3 +19,18 @@ insert into vam_board(bno, title, content, writer) values (vam_board_seq.NEXTVAL
  
 select * from vam_board;
 select * from vam_board where bno = 7;
+
+
+-- 재귀 복사
+insert into vam_board(bno, title,content,writer)(select vam_board_seq.NEXTVAL, title,content, writer from vam_board);
+ 
+-- 행 확인
+select count(*) from vam_board;
+
+-- 페이징. Rownum방식1
+select rn, bno, title, content, writer, regdate, updatedate from(
+        select /*+INDEX_DESC(vam_board pk_board) */ rownum as rn, bno, title, content, writer, regdate, updatedate
+        from vam_board)
+        -- select rownum as rownum as rn, bno, title, content, writer, regdate, updatedate from vam_board order by bno desc
+where rn between 11 and 20;
+COMMIT;

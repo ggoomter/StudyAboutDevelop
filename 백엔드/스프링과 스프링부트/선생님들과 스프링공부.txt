@@ -1,8 +1,8 @@
             <2021.01.18 화요일>
 기존의 스프링 강의 어떻게 했는지 듣기
-WHY, JSP프로젝트의 중요성 
-수업교제 전달(스프링 공부.md,   스프링부트공부.md) 
-https://kimvampa.tistory.com/158?category=843151
+WHY, JSP프로젝트의 중요성
+수업교제 전달(스프링 공부.md,   스프링부트공부.md)
+https://kimvampa.tistory.com/183?category=843151
 STS4설치  (https://kimvampa.tistory.com/150?category=841314)
     알집쓰면 경로길다고 에러뜸.
 STS3플러그인 설치(https://kimvampa.tistory.com/153?category=841314)
@@ -32,7 +32,7 @@ https://mvnrepository.com/
     Oralce 19인 경우 시드명 orcl
 
 
-log4j2 추가 https://kimvampa.tistory.com/63?category=843151  
+log4j2 추가 https://kimvampa.tistory.com/63?category=843151
 
 <에러2> path contains invalid character
 프로젝트위치한 경로에 한글이 있어서 기본내장 xml parser에 한글 해석하는부분이 부족하니 dependency 추가
@@ -59,23 +59,22 @@ create sequence
   increment by 1
   start with 1;
   이걸로 교체
-  
+
  <유의>
  로거선택할때는 slf4j꺼 선택
- 
- 
+
+
 등록기능구현2  https://kimvampa.tistory.com/164?category=843151
  <유의>
  taglib c 추가할때  Missing end tag for "c:out"
  pom.xml에 jstl 의존성 코드있음. 즉, jstl라이브러리는 다운받아짐.
- 아니네. 
+ 아니네.
  해결 : 주석에 <> 있는거 제거함.
- 
- 
- 
+
+
+
                 <2022.01.21 금요일>
-게시판 목록 https://kimvampa.tistory.com/165?category=843151
-게시판 조회 https://kimvampa.tistory.com/166?category=843151
+- 게시판 목록 , 게시판 조회
  <에러1>
  [Oracle] 지원되지 않는 문자집합(클래스 경로에 orai18n.jar 추가) 에러원인과 해결법
 => context.xml에 <JarScanner scanManifest="false"/>를 추가
@@ -85,14 +84,13 @@ create sequence
 			<version>19.3.0.0</version>
 </dependency>
 
- 
- 
+
+
                         <1월 24일 월요일>
-게시글 수정 https://kimvampa.tistory.com/167?category=843151
-게시글 삭제 https://kimvampa.tistory.com/168?category=843151
- 
- 
- 
- 
- 
+- 게시글 수정, 게시글 삭제
+
+ 						<1월 25일 화요일>
+
+
+
  시노님
