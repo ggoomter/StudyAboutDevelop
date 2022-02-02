@@ -8,6 +8,14 @@ create table vam_board (
     constraint pk_board PRIMARY key(bno)
 );
 
+CREATE TABLE vam_user(
+    id varchar2(100),
+    password varchar2(100),
+    name varchar2(100),
+    constraint pk_user PRIMARY key(id)
+);
+
+
 create sequence
    vam_board_seq
   increment by 1
@@ -33,4 +41,10 @@ select rn, bno, title, content, writer, regdate, updatedate from(
         from vam_board)
         -- select rownum as rownum as rn, bno, title, content, writer, regdate, updatedate from vam_board order by bno desc
 where rn between 11 and 20;
+
+
+-- 회원
+SELECT * FROM vam_user;
+insert into vam_user(id, password, name) values ('ggoomter', '0070', '배성원');
+
 COMMIT;

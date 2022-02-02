@@ -23,5 +23,14 @@ alter profile default limit password_life_time unlimited;
 alter user 계정명 account unlock;
 
 
+<사용자 생성>
+CREATE USER 아이디 IDENTIFIED BY 비번;
+
 <비번 변경>
-alter user 계정명 identified by 새비번;
+ALTER USER 계정명 IDENTIFIED BY 새비번;
+
+<사용자 정보조회>
+SELECT * FROM ALL_USERS WHERE USER NAME = '계정명';
+
+<사용자 삭제>
+DROP USER 사용자명;

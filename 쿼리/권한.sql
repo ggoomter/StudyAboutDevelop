@@ -1,3 +1,14 @@
+>오라클에서는 시스템권한, 객체권한으로 분류한다.
+<시스템권한>
+- 문법 : GRANT 시스템권한명 TO 사용자 [WITH ADMIN OPTION];
+WITH ADMIN OPTION을 사용하면 부여받은 권한을 다른사용자에게 부여할수있는 권한을 부여받게된다.
+- 권한취소 : REVOKE 시스템권한 FROM 사용자이름;
+
+<객체 권한>
+특정 사용자가 생성한 테이블, 인덱스, 뷰, 시퀀스 등과 관련된 권한.
+- 문법 : GRANT [객체권한 또는 ALL PRIVILEGES] ON [스키마.객체명] TO [사용자명 또는 역할이름 또는 PUBLIC] [WITH GRANT OPTION];
+예) GRANT INSERT ON TEMP TO ORCLSTUDY;
+
 SELECT HOST, USER, AUTHENTICATION_STRING, PLUGIN  FROM MYSQL.USER;
 SELECT * FROM MYSQL.USER;
 SELECT * FROM ALL_USERS;
@@ -22,6 +33,7 @@ drop user 'ggoomter'@'%';
 FLUSH PRIVILEGES;
 create user 'ggoomter'@'localhost' identified by '0070';
 create user 'ggoomter'@'%' identified by '0070';
+
 SHOW GRANTS FOR 'root'@'localhost';	-- 해당유저의 권한조회
 GRANT ALL PRIVILEGES ON *.* to 'ggoomter'@'localhost'  with grant option; -- 모든권한부여
 GRANT ALL PRIVILEGES ON *.* to 'ggoomter'@'%' with grant option; -- 모든권한부여
@@ -31,7 +43,7 @@ use mysql;
 
 update user set authentication_string=PASSWORD('0070') where User='ggoomter';
 -- 플러그인 바꾸기
-SELECT HOST, USER, AUTHENTICATION_STRING, PLUGIN  FROM MYSQL.USER;	
+SELECT HOST, USER, AUTHENTICATION_STRING, PLUGIN  FROM MYSQL.USER;
 	update user set plugin="mysql_native_password" where User='ggoomter';	-- 이전
 	update user set plugin="caching_sha2_password " where User='ggoomter';	-- 8버전이후
 -- 비번 바꾸기
