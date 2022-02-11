@@ -16,7 +16,7 @@ https://jiwontip.tistory.com/45?category=367314
 		(이미 받은 키가 있으면 그거 선택하면 됨)
 		받은키가 없으면 새 키페어 생성. 텍스트치고 '키페어 다운로드' 하면 .pem 파일 받음.
 		기억하기 쉬운곳에 저장하고 인스턴스 시작.
-		
+
 4. 네트워크및 보안 탭
 보안그룹에 가서 inbound규칙 열어주기
 http, https, ssh,  그리고 오른쪽 2개 추가. 사용자정의(8080)의 모든 ip4, mysql
@@ -69,7 +69,7 @@ elastic ip는 서버를 껐다켜도 고정ip로 유지하기. 비용발생한�
 
 netstat안돼서 설치. sudo apt install net-tools
 netstat -npl	//톰캣 서버 실행중인지 확인
-	
+
 
 톰캣 고양이 화면 뜨는걸 완료했으면 앞으로 할일은 ftp로 프로젝트 파일을 WAS(톰캣)에 올리는것과
 데이터베이스도 내컴퓨터에있던것을 서버에 구축하는것이다.
@@ -94,12 +94,19 @@ DB와 어플리케이션을 한서버에 설치해야하는 특별한 제약이 
 	최종관리자 아이디, 비밀번호 까먹지 않기.
 2. 생성했으면 dbeaver로 접속해보자.(생성하는데 좀 시간걸림. 너무많이 걸린다싶으면 새로고침)
 Hostname에 엔드포인트 전체 복사해서 입력
+ServiceName 에 orcl(19라면)
+Role은 Normal로 아까만들었던 계정으로 접속하면됨.
 Username은 RDS생성할때 입력했던 마스터 계정
+
 3. root계정말고 다른계정을 쓴다면 user생성하고 권한주고
 주의해야할점은 localhost뿐만아니라 %에도 줘야한다는 점이다.
+사용하는 보안그룹(default) 의 inbound 위치 everywhere 추가
 
+human_suwon.naver.com
+비번 xxxx3#
 
-
+오라클root 아이디 : ggoomter
+비번 :하던대로
 
 # putty
 1. [다운로드](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
