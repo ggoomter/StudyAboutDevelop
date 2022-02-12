@@ -4,6 +4,9 @@
 WITH ADMIN OPTION을 사용하면 부여받은 권한을 다른사용자에게 부여할수있는 권한을 부여받게된다.
 - 권한취소 : REVOKE 시스템권한 FROM 사용자이름;
 
+SELECT * FROM ALL_USERS WHERE USERNAME  = 'SCOTT';
+CREATE USER scott IDENTIFIED BY tiger;
+
 <객체 권한>
 특정 사용자가 생성한 테이블, 인덱스, 뷰, 시퀀스 등과 관련된 권한.
 - 문법 : GRANT [객체권한 또는 ALL PRIVILEGES] ON [스키마.객체명] TO [사용자명 또는 역할이름 또는 PUBLIC] [WITH GRANT OPTION];

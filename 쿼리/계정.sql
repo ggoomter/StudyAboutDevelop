@@ -22,6 +22,12 @@ alter profile default limit password_life_time unlimited;
 4. 계정 락 해제
 alter user 계정명 account unlock;
 
+<대소문자>
+11g버전부터 대소문자 구분함;
+그런데 orage나 dbeaver나 이런 툴에서 자동으로 대문자로 바꾸거나 하는 작업이 있음.
+show PARAMETER sec_case;
+
+
 
 <사용자 생성>
 CREATE USER 아이디 IDENTIFIED BY 비번;
@@ -30,7 +36,7 @@ CREATE USER 아이디 IDENTIFIED BY 비번;
 ALTER USER 계정명 IDENTIFIED BY 새비번;
 
 <사용자 정보조회>
-SELECT * FROM ALL_USERS WHERE USER NAME = '계정명';
+SELECT * FROM ALL_USERS WHERE USERNAME = '계정명';
 
 <사용자 삭제>
 DROP USER 사용자명;
