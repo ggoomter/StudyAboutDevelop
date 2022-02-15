@@ -1,3 +1,17 @@
+--tablespace 조회
+select * from dba_tablespaces;
+--tablespace 생성
+create tablespace [테이블스페이스명] datafile 'C:\oraclexe\app\oracle\oradata\XE\[테이블스페이스명].dbf' size 500m;
+--uwer default tablesapce 변경
+alter user ggoomter default tablespace SYSTEM;
+
+--전체 테이블 조회
+select * from all_tables where tablespace_name = 'C##GGOOMTER';
+select * from all_tables where owner = '[유저명]';
+select * from all_tables where tablespace_name = '[테이블스페이스명]';
+
+
+
 --계정. 오라클 12c부터는 대소문자 구분한다.
 전역 데이터베이스 이름 : orcl
 포트 : 1521
@@ -31,6 +45,10 @@ show PARAMETER sec_case;
 
 <사용자 생성>
 CREATE USER 아이디 IDENTIFIED BY 비번;
+--오라클 12c부터 계정이름앞에 c##을 붙여줘야 한다. 따옴표도 없어야 한다.
+CREATE USER c##ggoomter IDENTIFIED BY 0070;
+CREATE USER c##SCOTT IDENTIFIED BY TIGER;
+
 
 <비번 변경>
 ALTER USER 계정명 IDENTIFIED BY 새비번;

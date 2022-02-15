@@ -50,6 +50,7 @@
         (   CSS를 전처리 엔진 형태의 프로그래밍 언어로 변형
             변수, import, Nesting 등 도입. 여전히 스타일이 겹치는 문제는 해결못함.
             모범사례가 없다면 문제를 해결해주기보다는 더 많은 문제를 만들어냄
+            $가 보이면 Sass
         )
     3. BEM
         ( 블록, 요소, 변경자 컨벤션을 사용함으로써 클래스명의 유일함을 보장하여 스타일이 겹치는 위험성을 줄일 수 있게 해줌.
@@ -146,3 +147,31 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
         - vw(viewport width) : 뷰포트의 너비값의 1%
 
 - ### 미디어 쿼리
+
+
+- ## bootstrap 부트스트랩
+    - 사용법 : cdn이나 파일 다운로드하고,   사용하려는 html에 <link> 해주기
+    - 클래스로 디자인을 한다.
+    - 반응형 디자인이 다 적용되어있다.
+
+    - Layout
+        - container
+        <div class="container">  이거 잘쓰면 엄청 좋다.
+
+
+        - grid
+        하나의 행은 12개의 컬럼으로 구성되었다는 컨셉
+        <div class="row">  <div class="col">
+            - xs   < 576px 일때 적용     .col-
+            - sm   >= 576px 일때 적용    .col-sm-
+            - md   >= 768px 일때 적용    .col-md-  많이쓴다.
+            - lg   >= 992px 일때 적용    .col-lg-
+            - xl   >= 1200px 일때 적용   .col-xl-
+            - xxl  >= 1440px 일때 적용   .col-xxl-
+            - 이 숫자를 break point라고 한다.
+        class="col" 로 하면 알아서 col갯수만큼 나눈다.
+        class="col-sm-8" 이런식으로 col-숫자를 하게되면 수동으로 디테일하게 나눈거다.
+    - 색깔
+    primary, secondary, success, danger, warning, info, light, dark
+
+sweetalert

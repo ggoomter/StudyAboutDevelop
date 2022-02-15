@@ -8,6 +8,7 @@ create table vam_board (
     constraint pk_board PRIMARY key(bno)
 );
 
+
 CREATE TABLE vam_user(
     id varchar2(100),
     password varchar2(100),
@@ -15,6 +16,7 @@ CREATE TABLE vam_user(
     constraint pk_user PRIMARY key(id)
 );
 
+SELECT SYSDATE FROM DUAL;
 
 create sequence
    vam_board_seq
@@ -24,6 +26,7 @@ create sequence
 insert into vam_board(bno, title, content, writer) values (vam_board_seq.NEXTVAL, '테스트 제목', '테스트 내용', '작가');
 insert into vam_board(bno, title, content, writer) values (vam_board_seq.NEXTVAL, '테스트 제목', '테스트 내용', '작가');
 insert into vam_board(bno, title, content, writer) values (vam_board_seq.NEXTVAL, '테스트 제목', '테스트 내용', '작가');
+
  
 select * from vam_board;
 select * from vam_board where bno = 7;
@@ -34,7 +37,9 @@ insert into vam_board(bno, title,content,writer)(select vam_board_seq.NEXTVAL, t
  
 -- 행 확인
 select count(*) from vam_board;
-SELECT * FROM VAM_BOARD;
+SELECT * FROM VAM_BOARD ORDER BY bno;
+select * from vam_board where bno = 8;
+
 
 -- 페이징. Rownum방식1
 select rn, bno, title, content, writer, regdate, updatedate from(

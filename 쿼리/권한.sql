@@ -18,8 +18,8 @@ SELECT * FROM ALL_USERS;
 
 
 /* 유저 권한 확인*/
-SELECT GRANTEE, GRANTED_ROLE FROM DBA_ROLE_PRIVS WHERE GRANTEE='SCOTT';
-
+SELECT GRANTEE, GRANTED_ROLE FROM DBA_ROLE_PRIVS WHERE GRANTEE='SYS';
+select * from user_sys_privs ;	--오라클에서 현재 세션의 사용자 권한 확인
 
 /* 유저 비밀번호 바꾸기 */
 ALTER USER 'ggoomter'@localhost IDENTIFIED WITH auth_plugin BY '0070';	-- 비밀번호 변경
@@ -37,10 +37,19 @@ FLUSH PRIVILEGES;
 create user 'ggoomter'@'localhost' identified by '0070';
 create user 'ggoomter'@'%' identified by '0070';
 
+/* 권한 부여 */
 SHOW GRANTS FOR 'root'@'localhost';	-- 해당유저의 권한조회
-GRANT ALL PRIVILEGES ON *.* to 'ggoomter'@'localhost'  with grant option; -- 모든권한부여
+GRANT ALL PRIVILEGES TO super with grant option; -- 모든권한부여
 GRANT ALL PRIVILEGES ON *.* to 'ggoomter'@'%' with grant option; -- 모든권한부여
+GRANT ALL PRIVILEGES TO c##ggoomter with admin option; -- 오라클 모든권한부여
 -- with grant option을 주면 자기가 가진 권한을 남에게 줄수 있음
+
+*.*을 썼을때 공통 사용자 또는 롤 이름이 부적합합니다. 테이블명이 부적합합니다. 디폴트 테이블 스페이스를 설정해주지 않아서 그런것.
+12c부터는 공통계정앞에 c##을 붙이도록 네이밍 규칙이 바뀌었기 되어있기때문에
+(CDB = Containder DB   와 PDB(Pluggable DB)의 개념이 등장했기 때문)
+dbeaver에서도 c## 붙여줘야한다.
+
+
 
 use mysql;
 
