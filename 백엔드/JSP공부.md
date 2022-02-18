@@ -13,14 +13,14 @@
 # JSP를 공부하기 전에 먼저알아야 되는 서블릿
 
 # 서블릿 Servlet
->  - Server + Applet.  자바를 이용하여 웹에서 실행되는 프로그램을 작성하는 기술
+>  - Server + Applet.  자바를 이용하여 웹에서 실행되는 프로그램을 작성하는 기술. 자바코드안에 HTML코드가 있는 하나의 클래스파일.
 >  - 클라이언트의 요청을 받아서 동적으로 그 결과로 HTML을 생성해서 응답으로 반환하는 Servlet쿨래스의 구현 규칙을 지킨 자바 웹 프로그래밍 기술(프로그램).
 >  - 클라이언트가 요청을 하면 그에대한 결과를 다시 전송해주는 역할을 하는 자바프로그램. 확장자는 .java
   - MVC패턴에서 컨트롤러로 이용된다.
   - 초창기 CGI방식 웹서버의 성능개선을 목적으로 썬마이크로시스템스에서 발표하였다.
-	CGI는 멀티프로세스로 동작하기 때문에 다수의 클라이언트 요청이 들어오면 큰 부하가 걸린다.
-	서블릿은 자바 기반이기 때문에 멀티쓰레드로 동작해서 많은 클라이언트의 요청에 더 잘견딘다.
-	또한 JVM위에서 동작하기 때문에 플랫폼 독립적이다.
+    CGI는 멀티프로세스로 동작하기 때문에 다수의 클라이언트 요청이 들어오면 큰 부하가 걸린다.
+    서블릿은 자바 기반이기 때문에 멀티쓰레드로 동작해서 많은 클라이언트의 요청에 더 잘견딘다.
+    또한 JVM위에서 동작하기 때문에 플랫폼 독립적이다.
         *CGI = Common Gateway Interface
   - 브라우저를 통해 자바클래스가 실행되도록 하기 위해서는 javax.servlet.http.HttpServlet을 상속받아 서블릿 클래스를 구현해야한다.
     HttpServlet에 있는 메소드 중 클라이언트 (사용자)가 요청한 정보에 따라 처리해야 할 메소드(doGet, doPost등)를 오버라이딩 해서 구현한다.
@@ -46,6 +46,10 @@
   인스턴스를 다시 생성하는것이 아니라 메모리에 남은 서블릿 인스턴스를 재활용하여 서비스를 제공한다.
   반면에 PHP, ASP는 요청될때마다 인터프리터 방식으로 코드를 재해석한다.
 
+  - [서블릿의 단점]
+  HTML소스를 변경해도 컴파일 다시해줘야됨
+  요청이 달라지면 또 하나의 서블릿 파일 만들어야됨
+  독자적으로 실행되지 못하고 톰캣같은 JSP/Servlet컨테이너에서 실행된다.
 
   - 서블릿 컨테이너
      - 그냥 서버에 서블릿을 만들어서 위치시킨다고 클라이언트의 Request/Response를 처리해줄리가 없다.
@@ -55,11 +59,11 @@
     ```java
      protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    		// TODO Auto-generated method stub
+            // TODO Auto-generated method stub
 
-    		response.getWriter().append("Served at: ").append(request.getContextPath());
+            response.getWriter().append("Served at: ").append(request.getContextPath());
 
-    	}
+        }
     ```
 ### 웹개발
 가장 중요한것은 클라이언트가 어떻게 서버에게 요청하는지와
@@ -69,13 +73,13 @@
 # JSP란
 >  - Java Server Pages
 >  - (HTML에 JAVA코드를 넣어) 동적인 웹페이지를 작성하는데 사용되는 자바의 표준기술
-	쉽게말하면 HTML안에 JAVA코드가 들어있는것. <% 자바코드 %>. 이 <% %> 기호를 스크립트릿이라고 한다.
+    쉽게말하면 HTML안에 JAVA코드가 들어있는것. <% 자바코드 %>. 이 <% %> 기호를 스크립트릿이라고 한다.
 >  - 서블릿의 단점(프론트엔드와 백엔드의 협업이 굉장히 불편)을 보완하고자 만든 서블릿 기반의 스크립트 기술.
     웹서버에서 실행되는 페이지이기 때문에 웹서버가 있어야 실행할 수 있다.
 >  - Servlet기술을 확장한 기술.(서블릿의 모든 기능 + 추가적인 기능)
   - HTML은 브라우저의 번역기가 돌리고, JSP는 톰캣이나 제티같은 WAS가 번역하여 그 결과를 HTML로 변환한다.
-	- WAS에서 JSP실행 -> JSP가 서블릿으로 변환 -> 서블릿에서 HTML생성 -> 클라이언트 응답전송
-	- WAS마다 지원하는 JSP버전이 다르고, JSP버전마다 해당하는 서블릿 버전이 다르다.
+    - WAS에서 JSP실행 -> JSP가 서블릿으로 변환 -> 서블릿에서 HTML생성 -> 클라이언트 응답전송
+    - WAS마다 지원하는 JSP버전이 다르고, JSP버전마다 해당하는 서블릿 버전이 다르다.
 
   - 화면 인터페이스 구현에 너무 많은 코드를 필요로 하는 서블릿을 작성하지 않고도 간편하게 웹프로그래밍을 구현하게 만든 기술
 
@@ -207,8 +211,8 @@
       브라우저의 요청 정보를 저장하고 있는 객체
       HTTP헤더와 HTTP바디로 구성되어있다. 웹컨테이너는 HttpServletRequest객체로부터 사용자의 요구사항을 얻어낸다.
           - String getParameter(String name) : 파라미터 변수 name에 저장된 변수를 얻어내는 메소드로, 이때 변수의 값은 String으로 리턴된다.
-  				파라미터를 찾지 못한 경우 null값을 리턴하기때문에 null인지를 체크안하고 바로 사용하면 예외가 발생하여 500에러가 뜨는것에 유의해야 한다.
-  				그러나 밑의 el표기법에서 배울것이지만 EL표기법에서는 파라미터를 찾지못하면 공백으로 처리하기 때문에 따로 예외처리를 하지 않아도된다.
+                  파라미터를 찾지 못한 경우 null값을 리턴하기때문에 null인지를 체크안하고 바로 사용하면 예외가 발생하여 500에러가 뜨는것에 유의해야 한다.
+                  그러나 밑의 el표기법에서 배울것이지만 EL표기법에서는 파라미터를 찾지못하면 공백으로 처리하기 때문에 따로 예외처리를 하지 않아도된다.
           - String[] getParameterValues(String name) : 파라미터 변수 name에 저장된 모든 변수값을 얻어내는 메소드. 하나의 이름으로 여러 데이터값을 넘길때 사용한다. checkbox에서 주로 사용된다.
           - Enumeration getParameterNames() :요청에 의해 넘어오는 모든 파라미터 변수를 java.util.Enumeration 타입으로 리턴한다.
           - getParameterMap()
@@ -287,9 +291,9 @@
           : JSP를 확장시켜주는 기능. 개발자가 직접 개발할 수 있고 해야한다.
       - JSTL (JSP Standard Tag Library)
           : 커스덤 태그중에서 자주 사용하는것들을 별도로 표준화한 태그라이브러리를
-  	- <c:if test="${변수>2000}">
-  			html내용
-  	  </c:if>
+      - <c:if test="${변수>2000}">
+              html내용
+        </c:if>
 
 
   ----------------------------------------------------
@@ -298,68 +302,68 @@
   - 정의 : JSP에서 사용가능한 표준 태그 라이브러리
   - 사용이유 : JSP코드를 깔끔하고 가독성이 좋게 만든다.
   - 사용하는 방법 : 1. 톰캣 공식 사이트에서 jstl라이브러리(jstl.jar)과 standard.jar 를 다운받아서 WEB-INF/lib 에 넣는다.
-  			2. jstl을 사용하려는 페이지에 taglib지시자 디렉티브 작성
-  			<%@ taglib prefix="c" url="http://java.sun.com/jsp/jstl/core"" target="_blank">http://java.sun.com/jsp/jstl/core" %>
-  			3. 사용
+              2. jstl을 사용하려는 페이지에 taglib지시자 디렉티브 작성
+              <%@ taglib prefix="c" url="http://java.sun.com/jsp/jstl/core"" target="_blank">http://java.sun.com/jsp/jstl/core" %>
+              3. 사용
   - 종류 :
-  	- core(기본)             prefix : c      기본URI : http://java.sun.com/jsp/jstl/core
-  		태그 : set, remove, if, choose, forEach, forTokens, import, redirect, url, out, catch
-  	- format(표현형식)       prefix : fmt    기본URI : http://java.sun.com/jstl/fmt
-  	- xml(xml처리)           prefix : x      기본URI : http://java.sun.com/jstl/xml
-  	- sql(데이터베이스)      prefix : sql    기본URI : http://java.sun.com/jstl/sql
-  	- functions(함수처리)    prefix : fn     기본URI : http://java.sun.com/jsp/jstl/fn
+      - core(기본)             prefix : c      기본URI : http://java.sun.com/jsp/jstl/core
+          태그 : set, remove, if, choose, forEach, forTokens, import, redirect, url, out, catch
+      - format(표현형식)       prefix : fmt    기본URI : http://java.sun.com/jstl/fmt
+      - xml(xml처리)           prefix : x      기본URI : http://java.sun.com/jstl/xml
+      - sql(데이터베이스)      prefix : sql    기본URI : http://java.sun.com/jstl/sql
+      - functions(함수처리)    prefix : fn     기본URI : http://java.sun.com/jsp/jstl/fn
   - 문법
-  	** < 프리픽스이름:태그  속성1="값1" 속성2="값2" ... > **
+      ** < 프리픽스이름:태그  속성1="값1" 속성2="값2" ... > **
 
   - 예제1. 속성 설정
-  	<c:set var="msg" value="Hello" scope="page" />
-  	/* pagecontext.setAttribute("msg", "Hello"); */
+      <c:set var="msg" value="Hello" scope="page" />
+      /* pagecontext.setAttribute("msg", "Hello"); */
 
-  	<c:set var="인스턴스명" value="<%= new 패키지주소.생성자() %>">
-  	/* 자바빈 객체 생성하는 법 */
+      <c:set var="인스턴스명" value="<%= new 패키지주소.생성자() %>">
+      /* 자바빈 객체 생성하는 법 */
 
-  	<c:set target="자바빈객체" property="프로퍼티이름" value="값" >
-  	/* 생성한 자바빈객체에서 프로퍼티값 저장하는법 */
+      <c:set target="자바빈객체" property="프로퍼티이름" value="값" >
+      /* 생성한 자바빈객체에서 프로퍼티값 저장하는법 */
 
-  	[의문]<jsp:setProperty> 보다 <c:set>을 써야하는 이유는?
-  	=> jsp태그는 빈의 프로퍼티를 설정하는것이 전부다.
-  	 c:set은 모든 스코프를 대상으로 프로퍼티를 설정할 수 있다.
+      [의문]<jsp:setProperty> 보다 <c:set>을 써야하는 이유는?
+      => jsp태그는 빈의 프로퍼티를 설정하는것이 전부다.
+       c:set은 모든 스코프를 대상으로 프로퍼티를 설정할 수 있다.
 
 
   - 예제2. 조건문
-  	<c:if test="${param.color == 1}">
-  		<span style = "color : red;"> 빨강 </span>
-  	</c:if>
+      <c:if test="${param.color == 1}">
+          <span style = "color : red;"> 빨강 </span>
+      </c:if>
 
   - 예제3. 반복문
-  	<c:forEach items="${paramValues.season}" var="season">
-  		${season}
-  	</c:forEach>
+      <c:forEach items="${paramValues.season}" var="season">
+          ${season}
+      </c:forEach>
 
-  	<c:forEach var=”customer” items=”${customers}”>
-  		고객 :<c:out value=”${customer}” />
-  	</c:forEach>
+      <c:forEach var=”customer” items=”${customers}”>
+          고객 :<c:out value=”${customer}” />
+      </c:forEach>
 
-  	<c:forEach var=”k” begin=”1″ end=”50″ step=”1″>
-  		<c:out value=”${k%2==0}” />
-  	</c:forEach>
-      	/* 속성 설명 */
-      	- items : 반복할 객체명
-      	- begin : 시작 값
-      	- end : 종료 값
-      	- step : 증가값
-      	- var : 변수명
-      	- varStatus : 별도의 변수
+      <c:forEach var=”k” begin=”1″ end=”50″ step=”1″>
+          <c:out value=”${k%2==0}” />
+      </c:forEach>
+          /* 속성 설명 */
+          - items : 반복할 객체명
+          - begin : 시작 값
+          - end : 종료 값
+          - step : 증가값
+          - var : 변수명
+          - varStatus : 별도의 변수
 
   - 예제4. 회원권한을 id옆에 붙여서 표시하는 방법. 그대로 응용하면 권한에 따라 메뉴 보이게 지정
-  	<c:choose>
-  	<c:when test="${param.userType == 'admin'}">
-  		${param.id}(관리자)
-  	</c:when>
-  	<c:otherwise>
-  		${param.id}(회원)
-  	</c:otherwise>
-  	</c:choose>
+      <c:choose>
+      <c:when test="${param.userType == 'admin'}">
+          ${param.id}(관리자)
+      </c:when>
+      <c:otherwise>
+          ${param.id}(회원)
+      </c:otherwise>
+      </c:choose>
 
     ------------------------------------------------
     # EL (Expression Language. 표현언어)
@@ -392,7 +396,7 @@
 
       ``` html
       - 예제1
-      	${abc}         /* ${ param.name } */
+          ${abc}         /* ${ param.name } */
       - jstl과 el표기법으로 리스트의 반복을 표현하는 코드
       <c:set var="optValue" value="${param.opt}" />
       <c:choose>
@@ -412,7 +416,7 @@
         논리를 보자면 getter/setter 명명규칙에 의거한 param이라는 attribute를 4개 Scope에서 찾기때문에 request에서 걸린것.
       empty는 검사할 객체가 null인지 검사하는 연산자. null이면 true를 반환한다.
       eq 연산자는 == 연산자와 같고, 자바에서는 수치형데이터에 대해서만 값을 비교하고 참조형데이터는 참조값을 비교하지만,
-      	EL식에서는 ==연산자는 객체에 사용하더라도 참조가아닌 값을 비교한다.
+          EL식에서는 ==연산자는 객체에 사용하더라도 참조가아닌 값을 비교한다.
       **중요** param객체의 name이름으로 프로퍼티가 생겨서 거기에 value가 담겨서 넘어오게 된다.
       유의할점 . 값이 완전 그대로 박히기 때문에 해당 변수를 찾게된다.
       값으로 쓰려면 ""안에 넣어줘야한다.
@@ -525,7 +529,7 @@
 
   <attribute>
   - 리턴타입 : Object
-	- 서블릿간 공유하는 객체의 속성
+    - 서블릿간 공유하는 객체의 속성
 ------------------------------<유효성 검사>----------------------------
 1.
 int age = Integer.parseInt(request.getParameter("age"));
