@@ -336,6 +336,14 @@
           <span style = "color : red;"> 빨강 </span>
       </c:if>
 
+      jstl이 없었으면
+      <% if (param.color == 1){
+      %>
+        <span style = "color : red;"> 빨강 </span>
+      <%
+      }
+      %>
+
   - 예제3. 반복문
       <c:forEach items="${paramValues.season}" var="season">
           ${season}
@@ -378,12 +386,13 @@
       - 에러가 발생하더라도 무시가 되어 사용이 용이
       - **표현언어의 내장객체**
         - 스코프
-         **pageScope, requestScope, sessionScope, applicationScope**
+         **pageScope(페이지 하나), requestScope(페이지 둘), sessionScope(설정해놓은 세션 유지기간과 범위), applicationScope(앱 전체)**
           // 원래 pageContext.getAttribute("num1");   이렇게 쓰던것을 el에서는 ${pageScope.num1} 이렇게 사용한다.
+          //   request.getParameter("name");   이렇게 쓰던것을 el에서는 ${requestScope.name} 이렇게 사용한다.
           // 내장객체를 명시하지 않고 ${num1}식으로 사용하면 스코프 순서대로 범위를 탐색한다.
-          // 즉 내장객체중에서 속성값을 저장할수 있는건 4개Scope(page, request, session, application)뿐이라는 말이고
+          // **즉 내장객체중에서 속성값을 저장할수 있는건 4개Scope(page, request, session, application)뿐**이라는 말이고
             EL표기법을 속성값을 표현하기 때문에 표현할수있는 데이터는 저4개에 존재하는 데이터뿐이라는 말.
-            ${}안에는 자바단의 변수를 했다고 해서 표현할수 있는 것이 아니다.
+            ${}안에는 자바단의 변수가 있다고해서 표현할수 있는 것이 아니다.
         - 요청매개변수
           **param**, paramValues
         - 헤더값
