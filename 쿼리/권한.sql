@@ -42,7 +42,12 @@ SHOW GRANTS FOR 'root'@'localhost';	-- 해당유저의 권한조회
 GRANT ALL PRIVILEGES TO super with grant option; -- 모든권한부여
 GRANT ALL PRIVILEGES ON *.* to 'ggoomter'@'%' with grant option; -- 모든권한부여
 GRANT ALL PRIVILEGES TO c##ggoomter with admin option; -- 오라클 모든권한부여
+
+USE BBS;
+grant all privileges on *.* to 'ggoomter'@'localhost'; -- mysql 
+grant all privileges on *.* to 'scott'@'localhost'; -- mysql 
 -- with grant option을 주면 자기가 가진 권한을 남에게 줄수 있음
+-- Access denied for user 'scott'@'%' (using password: YES) 
 
 *.*을 썼을때 공통 사용자 또는 롤 이름이 부적합합니다. 테이블명이 부적합합니다. 디폴트 테이블 스페이스를 설정해주지 않아서 그런것.
 12c부터는 공통계정앞에 c##을 붙이도록 네이밍 규칙이 바뀌었기 되어있기때문에

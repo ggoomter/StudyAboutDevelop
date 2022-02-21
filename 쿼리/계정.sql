@@ -18,7 +18,8 @@ select * from all_tables where tablespace_name = '[테이블스페이스명]';
 SYS 	: 오라클 db관리자, super USER.  DATA dictionary 를 가지고있음. 현재 비번 sys1234
 SYSTEM 	: SYS와 동일하지만 DB를 생성할 권한이 없음. 현재 비번 sys1234
 SCOTT 	: 오라클에서 제공하는 샘플 사용자 계정. 		기본 비번 : tiger
-ggoomter	: 내가 주로 쓰는 계정
+root   : mysql에서 최고 관리자    내 비번 : system1234
+ggoomter	: 내가 주로 쓰는 계정   0070
 
 
 <관리자로 접속>
@@ -45,16 +46,23 @@ show PARAMETER sec_case;
 
 <사용자 생성>
 CREATE USER 아이디 IDENTIFIED BY 비번;
---오라클 12c부터 계정이름앞에 c##을 붙여줘야 한다. 따옴표도 없어야 한다.
 CREATE USER c##ggoomter IDENTIFIED BY 0070;
 CREATE USER c##SCOTT IDENTIFIED BY TIGER;
+-- 오라클 12c부터 계정이름앞에 c##을 붙여줘야 한다. 따옴표도 없어야 한다.
+
+create user ggoomter@localhost identified by '0070';	-- mysql
+create user scott@localhost identified by 'tiger';	-- mysql
+
 
 
 <비번 변경>
 ALTER USER 계정명 IDENTIFIED BY 새비번;
 
 <사용자 정보조회>
-SELECT * FROM ALL_USERS WHERE USERNAME = '계정명';
+SELECT * FROM ALL_USERS WHERE USERNAME = '계정명'; -- oracle
+
+use mysql;
+SELECT * FROM user WHERE user = 'scott';	-- mysql
 
 <사용자 삭제>
 DROP USER 사용자명;
