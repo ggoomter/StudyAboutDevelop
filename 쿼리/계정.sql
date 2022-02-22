@@ -58,8 +58,8 @@ create user scott@localhost identified by 'tiger';	-- mysql
 <비번 변경>
 ALTER USER 계정명 IDENTIFIED BY 새비번;
 
-<사용자 정보조회>
-SELECT * FROM ALL_USERS WHERE USERNAME = '계정명'; -- oracle
+<사용자 정보조회>;
+SELECT * FROM ALL_USERS WHERE USERNAME = 'C##SCOTT'; -- oracle
 
 use mysql;
 SELECT * FROM user WHERE user = 'scott';	-- mysql

@@ -18,7 +18,7 @@ SELECT * FROM ALL_USERS;
 
 
 /* 유저 권한 확인*/
-SELECT GRANTEE, GRANTED_ROLE FROM DBA_ROLE_PRIVS WHERE GRANTEE='SYS';
+SELECT GRANTEE, GRANTED_ROLE FROM DBA_ROLE_PRIVS WHERE GRANTEE='C##SCOTT';
 select * from user_sys_privs ;	--오라클에서 현재 세션의 사용자 권한 확인
 
 /* 유저 비밀번호 바꾸기 */
@@ -41,7 +41,7 @@ create user 'ggoomter'@'%' identified by '0070';
 SHOW GRANTS FOR 'root'@'localhost';	-- 해당유저의 권한조회
 GRANT ALL PRIVILEGES TO super with grant option; -- 모든권한부여
 GRANT ALL PRIVILEGES ON *.* to 'ggoomter'@'%' with grant option; -- 모든권한부여
-GRANT ALL PRIVILEGES TO c##ggoomter with admin option; -- 오라클 모든권한부여
+GRANT ALL PRIVILEGES TO C##SCOTT with admin option; -- 오라클 모든권한부여
 
 USE BBS;
 grant all privileges on *.* to 'ggoomter'@'localhost'; -- mysql 
