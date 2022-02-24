@@ -1,5 +1,6 @@
+DROP TABLE VAM_BOARD ;
 create table vam_board (
-    bno number,
+    bno NUMBER generated always as IDENTITY,
     title varchar2(150) not null,
     content varchar2(2000) not null,
     writer varchar2(50) not null,
@@ -7,6 +8,7 @@ create table vam_board (
     updatedate date default sysdate,
     constraint pk_board PRIMARY key(bno)
 );
+SELECT * FROM VAM_BOARD vb ;
 
 
 CREATE TABLE vam_user(
@@ -18,6 +20,13 @@ CREATE TABLE vam_user(
 
 SELECT SYSDATE FROM DUAL;
 
+
+insert into vam_board(title, content, writer) values ('테스트 제목', '테스트 내용', '작가');
+insert into vam_board(title, content, writer) values ('테스트 제목', '테스트 내용', '작가');
+insert into vam_board(title, content, writer) values ('테스트 제목', '테스트 내용', '작가');
+COMMIT;
+SELECT * FROM VAM_BOARD vb ;
+
 create sequence
    vam_board_seq
   increment by 1
@@ -26,6 +35,7 @@ create sequence
 insert into vam_board(bno, title, content, writer) values (vam_board_seq.NEXTVAL, '테스트 제목', '테스트 내용', '작가');
 insert into vam_board(bno, title, content, writer) values (vam_board_seq.NEXTVAL, '테스트 제목', '테스트 내용', '작가');
 insert into vam_board(bno, title, content, writer) values (vam_board_seq.NEXTVAL, '테스트 제목', '테스트 내용', '작가');
+
 
  
 select * from vam_board ORDER BY bno desc;
