@@ -46,6 +46,7 @@ GRANT ALL PRIVILEGES TO C##SCOTT with admin option; -- 오라클 모든권한부
 USE BBS;
 grant all privileges on *.* to 'ggoomter'@'localhost'; -- mysql 
 grant all privileges on *.* to 'scott'@'localhost'; -- mysql 
+grant all privileges on *.* to 'gganbu'@'localhost'; -- mysql 
 -- with grant option을 주면 자기가 가진 권한을 남에게 줄수 있음
 -- Access denied for user 'scott'@'%' (using password: YES) 
 

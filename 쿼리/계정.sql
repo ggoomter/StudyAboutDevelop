@@ -46,12 +46,14 @@ show PARAMETER sec_case;
 
 <사용자 생성>
 CREATE USER 아이디 IDENTIFIED BY 비번;
+use mysql;
 CREATE USER c##ggoomter IDENTIFIED BY 0070;
 CREATE USER c##SCOTT IDENTIFIED BY TIGER;
 -- 오라클 12c부터 계정이름앞에 c##을 붙여줘야 한다. 따옴표도 없어야 한다.
 
 create user ggoomter@localhost identified by '0070';	-- mysql
 create user scott@localhost identified by 'tiger';	-- mysql
+create user gganbu@localhost identified by 'world';	-- mysql
 
 
 
