@@ -10,22 +10,22 @@
     예) ``` <style> 내용 </style>```
     3. 외부 파일로 : style 태그에 경로 myStyle.css
     전체 스타일을 일관성있게 동시다발적으로 변경할수있어서 제작의 효율성이 높음. 관리가 편함.
-	예)  <link rel="stylesheet" href="join.css">
+    예)  <link rel="stylesheet" href="join.css">
 
 
 - ### CSS 셀렉터
     - 선택자 : html의 어떤 태그를 선택할지 고르는것. html만들때 박스구조로 레이블링을 잘해놓으면 선택하기가 쉽다.
         태그 : 그냥
-		아이디 : #
-		클래스 : .
-		상태 : ::
-		속성 : []
+        아이디 : #
+        클래스 : .
+        상태 : ::
+        속성 : []
         자손 :  그냥띄우기
-	    자식 :  >
-		여러개 :  ,
-		선택된 태그의 지정된클래스만 : 태그.클래스
+        자식 :  >
+        여러개 :  ,
+        선택된 태그의 지정된클래스만 : 태그.클래스
         A바로옆에 있는 B : A+B는
-		A바로옆에있는 B들 : A~B는
+        A바로옆에있는 B들 : A~B는
 
     - 스타일링 : 문법은 매우 간단해서 배울게 없을정도이나 실제로 내가원하는대로 스타일하기는 어렵다.
         선택자 {
@@ -175,3 +175,7 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
     primary, secondary, success, danger, warning, info, light, dark
 
 sweetalert
+
+### 개발자모드에서 바꾼거 바로 저장하는 법
+1. Elements에서 바꾸고 오른쪽에 경로로 들어감
+2. Sources 탭에서 파일 우클릭 - save as
