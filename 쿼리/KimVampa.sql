@@ -17,7 +17,7 @@ CREATE TABLE vam_user(
     name varchar2(100),
     constraint pk_user PRIMARY key(id)
 );
-
+SELECT * FROM vam_user;
 SELECT SYSDATE FROM DUAL;
 
 
@@ -61,12 +61,23 @@ select rn, bno, title, content, writer, regdate, updatedate from(
         -- select rownum as rownum as rn, bno, title, content, writer, regdate, updatedate from vam_board order by bno desc
 where rn between 11 and 20;
 
+SELECT * FROM vam_board;
+/* 제목 검색 */
 select rn, bno, title, content, writer, regdate, updatedate from(
         select /*+INDEX_DESC(vam_board pk_board) */ rownum  as rn, bno, title, content, writer, regdate, updatedate 
-        from vam_board where rownum <= 20) 
+        from vam_board where rownum <= 20  and title like '%새로%') 
 where rn >= 11;
 -- rownum <= 현재페이지에서 보여줄 마지막 인덱스     ==   현재페이지에서 보여줄 첫번째 인덱스 +   한페이지에 보여줄 글의 갯수-1  == 11+10-1 = 20
 --rn >= 현재페이지에서 보여줄 첫번째 인덱스
+
+/* 주제별 검색 */
+select rn, bno, title, content, writer, regdate, updatedate from(
+        select /*+INDEX_DESC(vam_board pk_board) */ rownum  as rn, bno, title, content, writer, regdate, updatedate 
+        from vam_board where rownum <= 20 and 
+        -- 작성자
+        writer like '%mapper test%'    
+        )
+where rn >= 11;
 
 UPDATE vam_board 
 SET title = '새로'

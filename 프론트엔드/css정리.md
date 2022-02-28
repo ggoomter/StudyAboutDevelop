@@ -179,3 +179,10 @@ sweetalert
 ### 개발자모드에서 바꾼거 바로 저장하는 법
 1. Elements에서 바꾸고 오른쪽에 경로로 들어감
 2. Sources 탭에서 파일 우클릭 - save as
+
+- ### Sass
+> Syntactically Awesome StyleSheets
+CSS pre processor로서 CSS의 한계와 단점을 보완하여 가독성이 높고 코드재사용에 유리한 CSS를 생성하기위한 CSS 의 확장판.
+> SASS표기법과 SCSS표기법이 있다.
+Sass3.0부터는 CSS친화적인 SCSS(Sassy CSS)가 기본표기법이다.
+1. 브라우저는 Sass의 문법을 모르기 때문에 .scss파일을 .css파일로 트랜스파일링 하기위한 Sass환경을 설치해야한다.
