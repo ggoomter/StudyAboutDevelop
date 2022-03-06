@@ -59,6 +59,7 @@ create user gganbu@localhost identified by 'world';	-- mysql
 
 <비번 변경>
 ALTER USER 계정명 IDENTIFIED BY 새비번;
+alter user 'root'@'localhost' IDENTIFIED by 'system1234';
 
 <사용자 정보조회>;
 SELECT * FROM ALL_USERS WHERE USERNAME = 'C##SCOTT'; -- oracle
