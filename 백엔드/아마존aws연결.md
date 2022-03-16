@@ -5,27 +5,30 @@ https://victorydntmd.tistory.com/338
 
 
 --- ec2의 가격정책
-1년동안 프리티어는 무료
+1년동안 프리티어는 무료. 
 예약 인스턴스는 1년동안 미리 선금지불하면 최대 75% 할인
 온디맨드는 쓰는만큼 탄력적으로 돈내는거
 업로드는 공짜. 나갈때 돈나감.  한달동안 1기가까지는 무료
 
+### api
+https://docs.aws.amazon.com/
 
 # ec2
 https://jiwontip.tistory.com/45?category=367314
 1. 아마존 회원가입(무료계정) 전화로 인증번호 4개 치는게 빠름
 2. 오른쪽 위 서버 위치 한국으로 옮기기
 3. 가상머신(인스턴스) 시작	(//계정만들자 마자 바로는 안됨)
-    1. freetier만 선택 체크하고 제일위에 있는 ubuntu 선택
+    1. freetier만 선택 체크하고 기본 t2.micro.   //t2는 서비스 유형. micro는 성능.
+    2. AMI(인스턴스 구성을 가진 템플릿) 선택. 제일 익숙한걸로.
         **레드햇, 페도라, centOS계열, amazon linux는 yum사용**
         **데비안, 우분트 계열은 apt-get 사용**
-    2. 넥스트하다보면 디폴트 크기는 8기가인데 30기가 까지 무료로 늘릴수있음.
-    3. 시작하기 누르면 기존키페어 선택또는 키페어 생성 창
+    3. 넥스트하다보면 디폴트 크기는 8기가인데 30기가 까지 무료로 늘릴수있음.
+    4. 시작하기 누르면 기존키페어 선택또는 키페어 생성 창
         (이미 받은 키가 있으면 그거 선택하면 됨)
         받은키가 없으면 새 키페어 생성. 텍스트치고 '키페어 다운로드' 하면 .pem 파일 받음.(퍼블릭키)
         기억하기 쉬운곳에 저장하고 인스턴스 시작.
         비밀번호 대신 이 키페어 파일을 쓸것이고 절대로 잊어버리면 안된다.
-    4. 만들어지면 웹에서 제어하는 화면으로 연결 해볼수 있다.  웹이아니라 직접 내컴퓨터에서 하고 싶으면 SSH클라이언트로 하면된다.
+    5. 만들어지면 웹에서 제어하는 화면으로 연결 해볼수 있다.  웹이아니라 직접 내컴퓨터에서 하고 싶으면 SSH클라이언트로 하면된다.
 
 4. 네트워크및 보안 탭
 해당인스턴스와 연결된 보안그룹에 가서 inbound규칙 열어주기
@@ -67,7 +70,6 @@ https://mozi.tistory.com/191
             export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
             export PATH=$PATH:$JAVA_HOME/bin
             export CLASSPATH=$JAVA_HOME/jre/lib:$JAVA_HOME/lib/tools.jar
-
 
 6.  깃 설치
     sudo yum install -y git
@@ -183,11 +185,9 @@ https://blog.nachal.com/1633
 
 
 
-
-
-
-# RDS
+## RDS
 Relational Database Service
+자동백업(자동 스냅샷)을 하지않도록 유의해야한다. 100만원넘게 나온다.
 아마존에서 디비를 운영하는 2가지 방법이 있다. EC2인스턴스에 직접 설치, 운영하는방법과  RDS를 이용한 인스턴스 생성.
 DB와 어플리케이션을 한서버에 설치해야하는 특별한 제약이 없는한 2번째방법이 좋다.
 1. 서비스 - RDS - 데이터베이스 생성 버튼 클릭
@@ -214,7 +214,7 @@ human_suwon.naver.com
 오라클root 아이디 : ggoomter
 비번 :하던대로
 
-# putty
+### putty
 1. [다운로드](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 2. putty.gen.exe실행
 3. RSA선택후 load후 키 선택
@@ -223,6 +223,14 @@ human_suwon.naver.com
 세션의 host에 ip주소넣고
 Connection-SSH-Auth 탭에 방금만든 ppk파일 로드하고 Open
 아이디는 ubuntu
+
+
+#### IAM
+Identity and Access Management
+RDS 데이터베이스에 접근가능한 사람을 제어한다.
+
+##### VPC
+Vitual Private Cloud. 가상 사설 클라우드.
 
 
 ---

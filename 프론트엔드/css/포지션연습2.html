@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <div class="parent">
+        <p>A line of text</p>
+        <div class="child"></div>
+        <p>More text :D</p>
+      </div>
+    
+
+    <style>
+        .parent {
+        background: aquamarine;
+        height: 75vh;
+        width: 75vw;
+        padding: 1em;
+        }
+
+        .child {
+        background: red;
+        width: 50px;
+        height: 50px;
+
+        }
+    </style>
+
+    <!-- 주석
+        https://www.youtube.com/watch?v=P6UgYq3J3Qs
+    1. 3개 요소가 있다. p, div, p
+    2. .child에 position:absolute; 붙이면? 
+        해당위치 그대로에 새로운 레이어를 넣은것처럼 붕 뜬상태로 존재한다. 
+    3. 이해했으면 top : 0; 을 줘보자. 
+    그럼 static이 아닌 부모를 찾는데 없네? 그럼 body가 부모고 상단으로 딱 붙으란 말이다.
+    4. width, height 다 지우고
+       top, bottom, left 다 0으로 주고 right : 50%주면 오른쪽으로 50% 떨어진만큼 왼쪽을 꽉 채운다.
+    5. top, bottom 0으로 주고
+    width : 100px; 하면 띄같이 생긴다.
+    6. 여기서 부모의 position:relative;하면 그 부모 내에서만 띄가 생긴다.
+    7. top, bottom은 0,    left, right 를 25% 라 하면 가운데에 50%만큼 생긴다.
+    
+    
+    -->
+</body>
+</html>

@@ -1,7 +1,11 @@
+HTML의 본질은 정보
+CSS의 본질은 디자인
+JS의 본질은 기능
+
 - ### 정의
     - Cascading Style Sheet. 캐스캐이딩은 작은폭포. 폭포처럼 쏟아지는 물. 연속.   즉 위에서 계속 떨어지는 느낌.
     - Author style(코딩으로 넣은거) -> User style(=사용자가 다크모드, 확대, 등) -> Browser
-    - 캐스캐이딩의 연결을 끊는것은 !important
+    - 캐스캐이딩의 연결을 끊는것은 !important. 최대한 사용하지 말아야 한다. 
 
 - ### css를 넣는 3가지 방법
     1. 인라인 : 태그내에서 수정.
@@ -16,8 +20,8 @@
 - ### CSS 셀렉터
     - 선택자 : html의 어떤 태그를 선택할지 고르는것. html만들때 박스구조로 레이블링을 잘해놓으면 선택하기가 쉽다.
         태그 : 그냥
-        아이디 : #
         클래스 : .
+        아이디 : #
         상태 : ::
         속성 : []
         자손 :  그냥띄우기
@@ -26,6 +30,7 @@
         선택된 태그의 지정된클래스만 : 태그.클래스
         A바로옆에 있는 B : A+B는
         A바로옆에있는 B들 : A~B는
+        제일 위에 있는거  :    :first-child
 
     - 스타일링 : 문법은 매우 간단해서 배울게 없을정도이나 실제로 내가원하는대로 스타일하기는 어렵다.
         선택자 {
@@ -37,10 +42,27 @@
         }
 
     - 게임으로 공부 (https://flukeout.github.io/)
+    7번 : 최초의 고비
     16번부터 어려움. 18까지만 하면됨. 이후는 퍼블리셔나 22번까지도 괜찮음.
     16. plate apple,plate:only-child가 안됨.  plate apple:only-child, plate pickle:only-child
     부모:first-child = 형제들이 있을때 첫번째
+    답 : plate:apple, plate:pickle
 
+
+- ### display
+  - ##### inline
+  : 줄바꿈없이 한줄에 나란히 배치된다.
+    **★★★★★width, height 속성을 지정해도 무시★★★★★**되고 컨텐츠만큼만 공간을 차지한다. 
+    margin, padding의 **상하간격은 무시**되고 좌우간격만 반영된다.
+    <a>, <span>이 대표적이다.
+  - ##### block
+  : 전후 줄바꿈이 들어간다. 다른엘리먼트들을 다른줄로 밀어내고 혼자 한줄을 차지한다.
+  width, height, margin, padding 속성이 모두 반영된다.
+  <div>, <p>, <h1>이 대표적이다.
+  - ##### inline-block
+  : 기본적으로 inline.
+   그러나 순수 inline에서 불가능한 width, height 지정가능, margin, padding의 상하간격 지정가능.  여러 앨리먼트를 한줄에 정확히 원하는 너비만큼 배치할 수 있기 때문에 레이아웃에 주로 활용한다.
+   <button>, <input>, <select>가 대표적이다.
 
 - ### 변화. 진화
 [참고링크](https://dongwoo.blog/2017/02/07/%EB%B2%88%EC%97%AD-css%EC%9D%98-%EC%A7%84%ED%99%94-css-%EB%B6%80%ED%84%B0-sass-bem-css-%EB%AA%A8%EB%93%88-%EC%8A%A4%ED%83%80%EC%9D%BC%EB%93%9C-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B9%8C/)
@@ -78,23 +100,35 @@
     css선택 게임 https://flukeout.github.io/
 
 - ### 포지션(position)
-문서상의 요소를 배치하는 방법을 지정
-    - static : 디폴트. 부모요소를 기준으로 한 위치.
-    - relative : 자기자신이 원래 있어야할 위치가 기준.
-    - absolute : static속성이 아닌 부모를 기준으로 한 위치. 그런부모가 아무도없다면 body가 기준.
-            일반적인 문서흐름에서의 배치위치를 제거하며 페이지레이아웃에 공간을 배정하지 않는다.
-            (마치 포토샵에서 새로운 레이어를 추가하는 효과와 같다고 생각하면 된다.)
-            컨텐츠만큼만 크기(width, height)를 차지하게 된다.
-            최종위치는 top, right, bottom, left 값이 지정한다.
-            자기콘텐츠만큼만 표현하는것이 디폴트.
-    - fixed : 마찬가지 일반적인 문서흐름에서의 배치위치를 제거하며 페이지레이아웃에 공간을 배정하지 않는다.
-            (마치 포토샵에서 새로운 레이어를 추가하는 효과와 같다고 생각하면 된다.)
-            최종위치는 top, right, bottom, left 값이 지정한다.
-            브라우저 창을 기준으로 스크롤을 내려도 고정됨.
-    - sticky : 부모요소를 기준으로 한 위치를 기준으로 top, right, bottom, left의 오프셋이 적용된다.
-            그위치에 끈끈하게 붙어버린다.
-
+[TCP SCHOOL](http://www.tcpschool.com/css/css_position_position)
+[DaleSeo](https://www.daleseo.com/css-position-absolute/)
+[생활코딩](https://www.youtube.com/watch?v=0kA0mBvumrg)
+-  **offset**(top, right, bottom, left)은 웹페이지상에서 해당요소를 해당기준에서 얼마나 떨어져야 하는지를 결정한다.
+- 문서상의 요소를 배치하는 방법을 지정한다. 아래의 5가지 방식이 있다.
+    - ##### static(정적)
+      - 디폴트(기본값). 단순히 웹 페이지의 흐름에 따라 차례대로 요소를 위치시키는 방식.  오프셋의 영향을 받지 않는다.
+    -  ##### relative(상대)
+       -  정적위치 방식일때 결정되는 위치에서 offset 만큼 이동
+       -  그러므로 부모가 누구든 부모를 참조한다.
+    -  ##### absolute(절대)
+       -  **static방식이 아닌 다른 방식으로 위치가 설정된 조상요소를 기준**으로 위치가 설정되어 공중부양 된다. 그런부모가 아무도없다면 body가 기준.
+       - 일반적인 문서흐름에서 벗어나 독립된 배치문맥을 가진다. (마치 포토샵에서 새로운 레이어). 새로운레이어이기 때문에 어디든지 자유롭게 위치 가능
+         단, 상위 엘리먼트중에 relative가 있다면 그중 가장 가까운 엘리먼트의 내부에서만 자유롭게 배치할 수 있다.
+         즉, 전체 화면이 아닌 해당 상위 엘리먼트를 기준으로 offset 속성(top, left, bottom, right)이 적용
+       - 컨텐츠만큼만 크기(width, height)를 차지하게 된다.
+       - 자기콘텐츠만큼만 표현하는것이 디폴트.
+    -  ##### fixed(고정)
+       -  일반적인 문서흐름에서 벗어나 독립된 배치문맥을 가진다. (마치 포토샵에서 새로운 레이어). 새로운레이어이기 때문에 어디든지 자유롭게 위치 가능
+       -  offset 속성(top, left, bottom, right)이 적용
+       -  브라우저 창을 기준으로 첫위치 그대로 계속 고정
+    - ##### sticky(끈적)
+       - 부모요소를 기준으로 한 위치를 기준으로 top, right, bottom, left의 오프셋이 적용된다.
+       - 최초에는 relative처럼 동작하다가 스크롤이 특정 지점까지 도달하면 fixed속성으로 동작하여 그위치에 끈끈하게 붙어버린다.
+- 겹칠때는 z-index 속성으로 지정한다. 양수와 음수 모두 설정할수있으며 크기가 클수록 앞쪽에 위치하게 된다.
+- HTML의 부모자식 관계이며 CSS를 부모요소 Relative, 자식요소 Absolute로 줬으면 자식은 부모의 바운더리 밖을 넘어갈 수 없다.
+  포지션을 명시하지않으면 부모자식이 함께 움직인다.     right:0, bottom:0 하면 부모의 오른쪽 밑으로 붙는다.
 - #### 가운데정렬 방법들
+http://hong.adfeel.info/frontend/position%EC%9C%BC%EB%A1%9C-%EA%B0%80%EC%9A%B4%EB%8D%B0-%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0/
     1. position:absolute;
        left : 50%;
        top : 50%;
@@ -106,19 +140,19 @@
         부모요소가 변경되면 나도 깨진다.
         그리고  height를 수작업으로 계산하는것이 힘들다.
 
-    2. 선택자{
+    1. 선택자{
         display : flex;
         justify-content : center;
         align-items : center;
     }
 
-    3. vertical-align,  text-align
+    1. vertical-align,  text-align
     단점 : 동일한 레벨의 다른 엘리먼트의 높이에 영향을 받고, 부모엘리먼트의 높이가 변할때 따라서 변하지 않음
 
-    4. line-height    폰트 기반의 아이콘을 중앙정렬할때 간단하게 사용하는 방법
+    1. line-height    폰트 기반의 아이콘을 중앙정렬할때 간단하게 사용하는 방법
     아이콘을 span으로 감싸고 line-height : 보통은 부모엘리먼트의 높이 그대로;
 
-    5. margin : auto;   메인 콘텐츠 컨테이너를 수평 중앙에 둘때 사용.
+    1. margin : auto;   메인 콘텐츠 컨테이너를 수평 중앙에 둘때 사용.
     세로가운데 정렬 하려면 position : absolute;   left : 0;   top:0;
     장점 : 가로 가운데정렬 쉽게 할수 있다.
     단점 : display가 inline이나 inline-block일때 제대로 작동 안함.
@@ -127,7 +161,7 @@
         1. 부모요소에 text-align:center; 추가
         2. img 의 디스플레이 속성을 block으로 바꾼후 margin :auto;
 
-    6. text-align : center
+    1. text-align : center
     엘리먼트안의 구성요소가 inline계열일때 사용. 수평중앙만 맞출수있다.
     line-height 를 통해 수직 중앙도 맞출 수 있다.
 
@@ -186,3 +220,10 @@ CSS pre processor로서 CSS의 한계와 단점을 보완하여 가독성이 높
 > SASS표기법과 SCSS표기법이 있다.
 Sass3.0부터는 CSS친화적인 SCSS(Sassy CSS)가 기본표기법이다.
 1. 브라우저는 Sass의 문법을 모르기 때문에 .scss파일을 .css파일로 트랜스파일링 하기위한 Sass환경을 설치해야한다.
+
+### div사이 간격 없애기
+* {
+   padding : 0px;
+   margin : 0px;
+   font-size: 0px;  
+}
