@@ -7,7 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-div
     <div class="parent">
         <div class="child"></div>
     </div>
@@ -20,7 +19,7 @@ div
         </div>
     </div>
     <div>
-        <span class="parent3">동해물과 백두산이
+        <span class="parent3">
             <span class="child3"></span>
         </span>
     </div>
@@ -106,10 +105,14 @@ div
         }
         
         .child4{
-
+            position: relative;
+            top : 50%;
+            left : 50%;
+            transform:translate(-50%, -50%); 
         }
 
         img{
+  
         }
         /* 남은영역을 하나의 색으로 채우고
         그안에 이미지 하나를 가로, 세로 가운데 정렬. 
@@ -126,10 +129,12 @@ div
         5. 노랑이는 원래 위에서 빨간색 높이만큼 포지셔닝으로 재배치
             position: absolute;
             top : 300px;
-        6. child4에 position: relative; 로 가운데 정렬
+        6. child4에 
+            position: relative;
+            top : 50%;
+            left : 50%;
+            transform:translate(-50%, -50%); 
         */
-/* relative 끼리 서로 영향받는 증상
-img에 postition : absolute주면 깨지는 증상 */
         
 
     </style>
