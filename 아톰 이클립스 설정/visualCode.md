@@ -1,6 +1,17 @@
-vscode
-ctrl shift p 팔렛트
-ctrl , 설정
+사이드바 아이콘 잘 활용하자.
+ctrl p : 파일로 이동  //이클립스의 ctrl shift r
+ctrl shift f : 전체에서 찾기
+    한번에 바꾸기 가능
+ctrl , : 설정
+    윈도우크기 : zoom 검색.   또는 아예 윈도우- 보기탭 의 확대, 축소
+    텍스트크기 : font size 검색. 
+    내모니터 해상도에서 자동 줄바꿈해서 보여주기 : word wrap 검색.  off를 on으로 변경
+ctrl shift p : 명령어 팔레트
+    사이드바 표시
+f5  : 실행
+
+
+왼쪽 사이드바 없애기 : 보기-모양-사이드바표시  (에디트창외의영역 클릭한 상태에서 shift b)
 
 # 플러그인
 왼쪽 테트리스같은 아이콘 = 확장 마켓플레이스 = ctrl shift x

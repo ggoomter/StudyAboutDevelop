@@ -17,25 +17,17 @@
 공부를 할때는 쉽고 효율이 좋은걸 먼저 배워야 한다.
 실습 > a.html만들고 hello world 치고 브라우저에서 띄우기.
 
+#### 강의
+[생활코딩](https://www.youtube.com/watch?v=tZooW6PritE&list=PLuHgQVnccGMDZP7FJ_ZsUrdCGH68ppvPb)
 
 ## HTML의 구조
-실습 > 각자 아무 웹페이지 들어가서 요소 검사.
+실습 > 각자 아무 웹페이지 들어가서 요소 검사 또는 F12누르면 개발자모드.
 헤드(메타정보. 타이틀,  캐릭터셋:문자집합 ASCII, UNICODE 등.   인코딩:문자셋과바이트 매핑규칙. EUC-KR, UTF-8 등).
-바디(HEADER, NAV, MAIN, ASIDE, FOOTER).   W3C. 브라우저.
+바디(HEADER, NAV, MAIN, ASIDE, FOOTER).   눈으로 보이는 부분.
   태그공부 : 콘텐츠를 감싸서 그 정보의 '형식과 구조'를 정의.
   모질라 https://developer.mozilla.org/ko/docs/Web/HTML
   w3스쿨 https://www.w3schools.com/
   tcp스쿨 http://tcpschool.com/
-
-
-  (H1~6, BUTTON, A, IMG 등)
-  이상한 태그를 쓰더라도 브라우저는 에러임을 알지만 문서는 읽을수 있도록 자체적으로 처리하고 보여주기는한다. 실행이 안되는거 아니다.
-  태그는 본질적으로 BOX형태로 이루어져있다.
-    대표적인 BOX TAG : header/nav/footer, main/section/aside, article
-    Box는 Block(공간이 충분해도 한줄에 하나)과 Inline(공간이 허용하는한 한줄에 여러개) 디스플레이로 나뉜다.
-      Block의 예 : header, footer, p, li, table, div, h1~h6
-      Inline의 예 : span, a, img,
-검사 : validator.w3.org
 
 ## 요소 element
 <여는태그 속성="값">컨텐츠<닫는태그>
@@ -43,19 +35,21 @@
 ## 태그
 이상한 태그를 쓰더라도 브라우저는 에러임을 알지만 문서는 읽을수 있도록 자체적으로 처리하고 보여주기는한다. 실행이 안되는거 아니다.
 태그는 본질적으로 BOX형태로 이루어져있다.
+  박스는 컨텐츠(content : 내용)와 보더(border:테두리)가 있고 보더 바깥으로 마진(margin : 여백), 보더 안으로 패딩(padding : 안쪽여백)
   대표적인 BOX TAG : header/nav/footer, main/section/aside, article
   Box는 Block(공간이 충분해도 하나가 한줄을 다 차지한다.)과 Inline(공간이 허용하는한 한줄에 여러개) 디스플레이로 나뉜다.
-    Block의 예 : header, footer, p, li, table, div, h1~h6
+    Block의 예 : div, h1~h6, header, footer, p, li, table
     Inline의 예 : span, a, img,
 ![태그사용율](../이미지/html태그사용율.png)
   - a
-    anchor. html의 가장 중요한 태그. 다른 문서로 이동할수 있게 해준다. 목적지 href 속성이 반드시 필요함
+    anchor 닻. html의 가장 중요한 태그. 다른 문서로 이동할수 있게 해준다. 목적지 href 속성이 반드시 필요함
   - div
-    division의 약자. 구분. 분류.   무색 무취의 태그. 칸이 남아도 자기가 한칸 다쓴다.
+    무색 무취의 태그.block요소의 대표. division의 약자. 구분. 분류.
   - span
-    무색 무취의 태그.    자기 콘텐츠영역만 칸을 쓴다.
+    무색 무취의 태그.Inline요소의 대표. 
   - H1~6
-  - BUTTON
+    Highlight. 제목을 표현할때 쓴다.
+  - buttton
   - Table
     - tr(table row) : 행 추가
     - th(table header)
@@ -67,13 +61,14 @@
     - action 속성 : 어디로 폼데이터를 보낼것인가
     - method 속성 : 어떤 HTTP 메소드를 사용해서 데이터를 보낼것인가
   - input
+    데이터를 입력받을수 있는 태그. 여러가지 datatype이 있다.
   - img , audio, video
   - script
     <script type="text/javascript">내용</script>
     <script type="text/javascript" src="경로"></script>
   - link
     <link href="경로" rel="stylesheet">
-    <link rel="icon" href="favicon.ico">
+    <link href="favicon.ico" rel="icon" >
   - iframe
     <iframe src="삽입할페이지주소"></iframe>
   - canvas, SVG(Scalable Vector Graphics)
@@ -110,6 +105,7 @@ script, meta, title, link
 ## 시멘틱, 중첩을 잘써야 멋진 html을 만든다.
 Sementic : 의미상의.
 HTML의 본질인 '정보의 전달'이라는 본질에 집중한 의미론적 태그
+이유 : SEO, Accessibility, For Developer(개발, 유지보수)
 <article>
 <aside>
 <details>
@@ -128,3 +124,32 @@ HTML의 본질인 '정보의 전달'이라는 본질에 집중한 의미론적 �
 본질이 div이며 클래스의 이름이 nav. 시멘틱하지 않음
 <nav>  이게 시맨틱.
 
+
+### 헷갈리는 HTML 태그와 시멘틱
+[엘리](https://www.youtube.com/watch?v=T7h8O7dpJIg)
+1. article vs section
+article : 이 자체만으로 독립적으로 다른페이지에 보여줬을때 문제 없을 때 사용.
+section : 연관있는 내용 하나
+
+2. i vs em
+em : 강조하는 이탤릭
+i : 시각적으로만 이탤릭
+3. b vs strong
+strong : 중요한 진하게
+b : 시각적으로만 진하게
+
+dl : description list
+dt : description term(title)
+dd : description detail
+
+4. img vs background-image
+img: 페이지내에서 중요한 요소로서 작동될때. 
+background-image : 스타일링 목적일때. 이미지가 없어도 문서의 내용에 지장이 없을때
+
+5. button vs a
+button : 특정한 액션을 위해
+a :  어디론가 이동할때
+
+6. table vs css
+정말 데이터면 table이 좋음
+스타일링을 위한거면 flex나 grid사용

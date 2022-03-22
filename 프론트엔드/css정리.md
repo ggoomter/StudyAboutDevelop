@@ -1,8 +1,13 @@
+# 본질
 HTML의 본질은 정보
 CSS의 본질은 디자인
 JS의 본질은 기능
 
+#### 강의
+[생활코딩](https://www.youtube.com/watch?v=Ok0bBJPtgJI&list=PLuHgQVnccGMAnWgUYiAW2cTzSBywFO75B)
+
 - ### 정의
+
     - Cascading Style Sheet. 캐스캐이딩은 작은폭포. 폭포처럼 쏟아지는 물. 연속.   즉 위에서 계속 떨어지는 느낌.
     - Author style(코딩으로 넣은거) -> User style(=사용자가 다크모드, 확대, 등) -> Browser
     - 캐스캐이딩의 연결을 끊는것은 !important. 최대한 사용하지 말아야 한다. 
@@ -10,9 +15,9 @@ JS의 본질은 기능
 - ### css를 넣는 3가지 방법
     1. 인라인 : 태그내에서 수정.
     예) ```<태그 style="color:gray;">```
-    2. 파일 내에서 :  style태그 따로빼서.
+    1. 파일 내에서 :  style태그 따로빼서.
     예) ``` <style> 내용 </style>```
-    3. 외부 파일로 : style 태그에 경로 myStyle.css
+    1. 외부 파일로 : style 태그에 경로 myStyle.css
     전체 스타일을 일관성있게 동시다발적으로 변경할수있어서 제작의 효율성이 높음. 관리가 편함.
     예)  <link rel="stylesheet" href="join.css">
 
@@ -48,6 +53,9 @@ JS의 본질은 기능
     부모:first-child = 형제들이 있을때 첫번째
     답 : plate:apple, plate:pickle
 
+- #### margin, padding
+컨텐츠를 기준으로 테두리까지의 여백 = padding
+border를 기준으로 바깥으로 여백 = margin
 
 - ### display
   - ##### inline
@@ -125,6 +133,7 @@ JS의 본질은 기능
        - 부모요소를 기준으로 한 위치를 기준으로 top, right, bottom, left의 오프셋이 적용된다.
        - 최초에는 relative처럼 동작하다가 스크롤이 특정 지점까지 도달하면 fixed속성으로 동작하여 그위치에 끈끈하게 붙어버린다.
 - 겹칠때는 z-index 속성으로 지정한다. 양수와 음수 모두 설정할수있으며 크기가 클수록 앞쪽에 위치하게 된다.
+position : relative 일때만 사용가능하다.
 - HTML의 부모자식 관계이며 CSS를 부모요소 Relative, 자식요소 Absolute로 줬으면 자식은 부모의 바운더리 밖을 넘어갈 수 없다.
   포지션을 명시하지않으면 부모자식이 함께 움직인다.     right:0, bottom:0 하면 부모의 오른쪽 밑으로 붙는다.
 - #### 가운데정렬 방법들
@@ -172,20 +181,25 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
     - clear : 상위요소의 float는 유지하면서 float다음에 오는 일반요소에게 float가 적용되지 않도록 함.
         none, left, right, both
     - text-align : block요소에만 지정할 수 있다. 그러면 block안에있는 inline요소에 적용된다.(텍스트만 적용되는것이 아님)
-    - 단위 :
+
+- ### 단위
         - px : pixel.
-        - em 부모 요소의 대문자 너비를 기준으로 상대적인 배수가 적용됨.  자식에 계속 쓰면 계속 배수가 누적되어 적용됨.
+        - em 부모 요소의 대문자 M 너비를 기준으로 상대적인 배수가 적용됨.  자식에 계속 쓰면 계속 배수가 누적되어 적용됨.
         그것을 막기위해 rem(root em) 사용.단위 :
         - % : 부모 요소의 길이를 기준으로 상대적인 값(%)
         - vh(viewport height) : 뷰포트의 높이값의 1%
         - vw(viewport width) : 뷰포트의 너비값의 1%
+        //뷰포트 : Display상의 표시 영역
 
 - ### 미디어 쿼리
 
 
 - ## bootstrap 부트스트랩
-    - 사용법 : cdn이나 파일 다운로드하고,   사용하려는 html에 <link> 해주기
-    - 클래스로 디자인을 한다.
+    - 트위터에서 오픈 소스로 공개한 웹 프론트엔드 프레임워크
+    - 사용법 : 
+        1. cdn이나 파일 다운로드
+        2. 사용하려는 html에 <link> 해주기
+        3. 클래스를 부여하여 디자인
     - 반응형 디자인이 다 적용되어있다.
 
     - Layout
