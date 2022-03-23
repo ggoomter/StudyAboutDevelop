@@ -11,10 +11,12 @@ ctrl shift p : 명령어 팔레트
 f5  : 실행
 
 
+
 왼쪽 사이드바 없애기 : 보기-모양-사이드바표시  (에디트창외의영역 클릭한 상태에서 shift b)
 
 # 플러그인
 왼쪽 테트리스같은 아이콘 = 확장 마켓플레이스 = ctrl shift x
+비쥬얼스튜디오코드 홈페이지의 extensions 선택해서 마켓플레이스의 most popular보면 좋은것들 많다.
 - korean lanauage pack for visual studio code
 - Theme : 테마. ctrl K, ctrl T
 - prettier : 문법 하이라이트.
