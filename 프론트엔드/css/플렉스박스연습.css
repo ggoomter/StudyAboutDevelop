@@ -1,0 +1,54 @@
+*{
+    padding : 0px;
+    margin : 0px;
+}
+
+.container{
+    background-color: beige;
+    height: 100vh;
+    display: flex;
+    flex-direction : row;
+    flex-wrap : wrap-reverse;
+    justify-content : flex-start;   /* 중심축에서 쌓임 */
+    align-items : flex-end;   /* 반대축기준 아이템 배치(시작점) */
+    align-content : flex-start; /*반대축기준 2줄이상 쌓이게 되면 어떻게 쌓을건지 */
+}
+
+.item{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.item1{
+    background-color: #f44336;
+    
+}
+.item2{
+    background-color: #ff9800;
+   
+}
+.item3{
+    background-color: #ffeb3b;
+}
+.item4{
+    background-color: #c0ca33;
+}
+.item5{
+    background-color: #43a047;
+}
+.item6{
+    background-color: #00acc1;
+}
+.item7{
+    background-color: #3949ab;
+}
+.item8{
+    background-color: #5e35b1;
+}
+.item9{
+    background-color: #8e24aa;
+}
+.item10{
+    background-color: #d81b60;
+}

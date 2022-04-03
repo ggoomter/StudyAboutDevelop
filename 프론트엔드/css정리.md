@@ -10,7 +10,7 @@ JS의 본질은 기능
 
     - Cascading Style Sheet. 캐스캐이딩은 작은폭포. 폭포처럼 쏟아지는 물. 연속.   즉 위에서 계속 떨어지는 느낌.
     - Author style(코딩으로 넣은거) -> User style(=사용자가 다크모드, 확대, 등) -> Browser
-    - 캐스캐이딩의 연결을 끊는것은 !important. 최대한 사용하지 말아야 한다. 
+ 
 
 - ### css를 넣는 3가지 방법
     1. 인라인 : 태그내에서 수정.
@@ -36,6 +36,16 @@ JS의 본질은 기능
         A바로옆에 있는 B : A+B는
         A바로옆에있는 B들 : A~B는
         제일 위에 있는거  :    :first-child
+
+    - #### 우선순위
+        - 전체적으로 구체적으로 정할수록 우선순위가 높다.   
+        - 태그 1점 < 클래스 100점 < 아이디 1000점 
+          - 동메달, 은메달, 금메달같은거다. 동메달 아무리 많아도 은메달 하나에게 안된다.
+        - 메달로 변환한 점수가 동급이면 아래가 우선순위가 높다.
+        - 아이디보다 더 센 2놈이 있는데 inline < !important  이 둘은 좀 급이 다른 레벨이다.
+        - 무조건 우선순위가되는 !important는 여러개 쓸수록 그 의미가 퇴색되며 캐스캐이딩의 연결을 끊기 때문에 최대한 사용하지 말아야 한다.
+
+
 
     - 스타일링 : 문법은 매우 간단해서 배울게 없을정도이나 실제로 내가원하는대로 스타일하기는 어렵다.
         선택자 {
@@ -107,6 +117,7 @@ border를 기준으로 바깥으로 여백 = margin
     가상선택자는 부피가 없으므로, 아이콘을 표현할 땐 꼭 너비와 높이를 정해주어야 한다.
     css선택 게임 https://flukeout.github.io/
 
+
 - ### 포지션(position)
 [TCP SCHOOL](http://www.tcpschool.com/css/css_position_position)
 [DaleSeo](https://www.daleseo.com/css-position-absolute/)
@@ -155,8 +166,12 @@ http://hong.adfeel.info/frontend/position%EC%9C%BC%EB%A1%9C-%EA%B0%80%EC%9A%B4%E
         align-items : center;
     }
 
-    1. vertical-align,  text-align
+    1. ### vertical-align,  text-align
     단점 : 동일한 레벨의 다른 엘리먼트의 높이에 영향을 받고, 부모엘리먼트의 높이가 변할때 따라서 변하지 않음
+    //vertical-align. inline또는 table-cell의 수직정렬을 지정함
+            사용가능한값 : baseline, sub, super, tex-top, text-bottom, middle, 길이, 퍼센트, top, bottom
+            초기값 : baseline.  부모의 baseline에 맞추어 해당 엘리먼트의 baseline을 정렬한다.
+            inline-block에서 세로 레이아웃 깨질때 top주면됨.
 
     1. line-height    폰트 기반의 아이콘을 중앙정렬할때 간단하게 사용하는 방법
     아이콘을 span으로 감싸고 line-height : 보통은 부모엘리먼트의 높이 그대로;
@@ -193,6 +208,11 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
 
 - ### 미디어 쿼리
 
+- #### 폰트 바꾸기(글꼴 바꾸기)
+1. cdn으로 구글 폰트 가져오기 (https://fonts.google.com/)
+   language korean하고 원하는 글꼴 선택후 Select this style
+2. link방식이나 import방식 복사해서 style 적용
+3. 원하는 선택자에 font-family: 폰트명  적용
 
 - ## bootstrap 부트스트랩
     - 트위터에서 오픈 소스로 공개한 웹 프론트엔드 프레임워크
@@ -228,12 +248,23 @@ sweetalert
 1. Elements에서 바꾸고 오른쪽에 경로로 들어감
 2. Sources 탭에서 파일 우클릭 - save as
 
-- ### Sass
-> Syntactically Awesome StyleSheets
+- ### Sass   #### SCSS
+> SASS가 먼저생겼고 나중에 SCSS가 생겼지만 서로 완벽하게 호환되고 요즘은 SCSS를 쓴다. SCSS는 SASS의 상위호환.
+> 미세한 표기법의 차이
+- SCSS가 중괄호와 세미콜론을 사용한다. SCSS가 순수CSS와 문법이 같은 방식이라 더 사용하고 이해하기 쉽다.
+> Syntactically Awesome StyleSheets (문법적으로 짱 멋진)
+> Sassy Cascading Style Sheets   (엽기적인. 매우 나이스한. )
 CSS pre processor로서 CSS의 한계와 단점을 보완하여 가독성이 높고 코드재사용에 유리한 CSS를 생성하기위한 CSS 의 확장판.
-> SASS표기법과 SCSS표기법이 있다.
-Sass3.0부터는 CSS친화적인 SCSS(Sassy CSS)가 기본표기법이다.
-1. 브라우저는 Sass의 문법을 모르기 때문에 .scss파일을 .css파일로 트랜스파일링 하기위한 Sass환경을 설치해야한다.
+> 사용이유
+    - 선택자를 만들때 불필요한 부모 요소 선택자를 매번 적지 않아도 된다.
+    - 규모가 큰 프로젝트의 경우에도 일원화된 자동화
+    - 조건문 반복문으로 동적 css 사용가능
+> 단점
+    - CSS로 컴파일을 거쳐야 한다. 라이브서버로 preview안된다. 그런데 vscode의 live sass compiler가 해결해준다.
+> 어떻게 사용하나요?
+[링크](https://inpa.tistory.com/entry/SCSS-%F0%9F%92%8E-SassSCSS-%EB%9E%80-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%BB%B4%ED%8C%8C%EC%9D%BC)
+1. 컴파일환경 구성
+다양한 방법이 있다. SassMeister페이지 접속, Node.js 또는 플러그인, Webpack, Parcel
 
 ### div사이 간격 없애기
 * {

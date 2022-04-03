@@ -73,17 +73,7 @@
     <iframe src="삽입할페이지주소"></iframe>
   - canvas, SVG(Scalable Vector Graphics)
       <canvas id="drawCanvas" style="width:300px; height:200px; border: 1px solid #993300;"></canvas>
-  - Web Storage(localStorage)
-    function clickCounter() {
-        if(typeof(Storage) !== "undefined") {
-            if (localStorage.clickcount) {
-                localStorage.clickcount = Number(localStorage.clickcount) + 1;
-            } else {
-                localStorage.clickcount = 1;
-            }
-            document.getElementById("counter").innerHTML = "카운터의 현재 횟수는 " + localStorage.clickcount + "입니다!";
-        }
-    }
+
 
 ### head
 script, meta, title, link
