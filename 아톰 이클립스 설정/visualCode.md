@@ -10,16 +10,21 @@ ctrl shift p : 명령어 팔레트
     사이드바 표시
 f5  : 실행
 
-
+<tab관련 설정>
+Insert Spaces : 체크하면 탭을 스페이스로 변경.
 
 왼쪽 사이드바 없애기 : 보기-모양-사이드바표시  (에디트창외의영역 클릭한 상태에서 shift b)
 
 # 플러그인
 왼쪽 테트리스같은 아이콘 = 확장 마켓플레이스 = ctrl shift x
 비쥬얼스튜디오코드 홈페이지의 extensions 선택해서 마켓플레이스의 most popular보면 좋은것들 많다.
+
 - korean lanauage pack for visual studio code
 - Theme : 테마. ctrl K, ctrl T
-- prettier : 문법 하이라이트.
+- 포맷터
+  - prettier : 들여쓰기 강제 적용. alt shift f
+  - Beautify : 들여쓰기 조금 자유로운 적용. 
+    단축키 셋팅. File > Preferences > Keyborad Shortcuts > beautify selection 나는 ctrl alt b
 - Mithril Emmet : 에밋
 - dark-plus-syntax
 - HTML CSS Support
@@ -58,7 +63,11 @@ f5  : 실행
 - Settings Sync : 설정동기화. VSCode에 이제 디폴트로 포함됨.
     파일 - 기본설정 - 설정 동기화
     vscode://vscode.github-authentication/did-authenticate?windowid=1&code=9f61fe70af30da335a4b&state=3e5cdc2a-8d04-4a10-abd5-de8544ed9e3d
-    
+
     다른컴퓨터에 받는법
     vsCode 설치후 파일 - 기본설정 - 설정동기화
     동일계정으로 로그인하면 병합 또는 바꾸기 대화상자. 병합.
+
+- 에러
+  - 사용자 설정에 쓸 수 없습니다. 사용자 설정을 열어서 오류/경고를 수정하고 다시 시도하십시오.
+  => json파일에 주석이 있기 때문

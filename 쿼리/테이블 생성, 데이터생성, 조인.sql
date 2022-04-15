@@ -35,9 +35,12 @@ CREATE TABLE DEPT
 
 
 /* 제약조건. pk추가 */
-# ALTER TABLE 테이블명 ADD CONSTRAINT PK명 PRIMARY KEY (컬럼명1, 컬럼명2,...);   -- PK를 생성한다.
+CONSTRAINT [제약조건명] [제약조건]([컬럼명])
+ALTER TABLE 테이블명 ADD CONSTRAINT PK명 PRIMARY KEY (컬럼명1, 컬럼명2,...);   -- PK를 생성한다.
 ALTER TABLE USER ADD CONSTRAINT PK1 PRIMARY KEY(ID);
 ALTER TABLE DEPT ADD CONSTRAINT PK1 PRIMARY KEY(ID);
+CONSTRAINT [FK명] foreign key(FK가 될 컬럼명) references PK가 위치하는 테이블 ([PK컬럼명])
+
 
 /* 데이터입력 */
 /*INSERT INTO 테이블명 VALUES(데이터1, 데이터2, ...)*/

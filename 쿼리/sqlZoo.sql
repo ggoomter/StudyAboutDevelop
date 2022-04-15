@@ -2,8 +2,18 @@
 답 : https://github.com/jisaw/sqlzoo-solutions
 ansi join은 디폴트가 inner join
 
-
+- ### select Name
+답 : https://gogetem.tistory.com/419
+7번 : 첫번째 고비
+  SELECT name FROM world
+    WHERE name LIKE '%a%a%a%'
+9번 : 두번째 고비
 13번문제 재밌음
+15번 맞는데 틀렸다고 함 
+SELECT name, capital, REPLACE(capital, name, '') as extension 
+from world
+where capital like concat('%', name, '_%')
+
 
 ---https://sqlzoo.net/wiki/SELECT_from_WORLD_Tutorial ---
 1. 문제아님
@@ -41,6 +51,7 @@ where continent = 'South America'
 where gdp>1000000000000
 11. 이름과 수도의 문자 수가 같은 이름과 수도를 표시합니다.
 LENGTH 함수를 사용하여 문자열의 문자 수를 찾을 수 있습니다.
+-> LEN 으로 바꿔주기.
 => SELECT name, capital
   FROM world
  WHERE length(name) = LENGTH(capital)
@@ -50,7 +61,7 @@ left 함수를 사용하여 첫 번째 문자를 분리할 수 있다.
 where left(name,1) = left(capital,1)
 and not name = capital
 
-13. 이름에 공백이 없고 모음만 있는 나라를 찾아보세요.
+13. 이름에 공백이 없고 모음이 5개 다들어가되 하나씩만 포함된 나라를 찾아보세요.
 NOT LIKE '%a%' 구를 사용하여 결과에서 문자를 제외할 수 있습니다.
 => SELECT name
    FROM world
@@ -216,9 +227,12 @@ WHERE, GROUP BY, HAVING 순서.
 
 ---------------------------------------------------------------------------------
 --The JOIN operation 후반부부터 좀 어렵다. 여러조건은 on에 괄호
-game에는 id, mdate, stadium, team1, team2
-goal에는 matchid, teamid, player, gtime
-eteam에는 id, teamname, coach
+	[game] 언제 어떤경기장에서 무슨팀끼리 경기했는지
+id	 mdate	 stadium  	team1 	team2
+	[goal]  어떤 경기에서 어떤팀의 누가 언제 골을 넣었는지
+matchid	  teamid	  player	  gtime
+	[eteam] 팀id, 팀이름, 코치
+id	  teamname	  coach
 
 1. 독일이 넣은 골 모두의 matchid, player
 ->SELECT matchid, player FROM goal
@@ -269,19 +283,26 @@ GROUP BY teamname
 -> select stadium, count(player) from game join goal on (matchid = id) group by stadium   그룹바이 한다음 select한다.
 
 11. 중급. For every match involving 'POL', show the matchid, date and the number of goals scored.
-POL'과 관련된 모든 경기에 대해 매치디드, 날짜 및 득점 수를 표시합니다'
+POL'과 관련된 모든 경기에 대해 매치id, 날짜 및 득점 수를 표시합니다'
 ->
 SELECT matchid, mdate, COUNT(player) AS goals
 FROM game
   JOIN goal ON (matchid=id AND (team1 = 'POL' OR team2 = 'POL'))
 GROUP BY matchid, mdate
 
-12.For every match where 'GER' scored, show matchid, match date and the number of goals scored by 'GER'
+12.고. 좋은문제
+For every match where 'GER' scored, show matchid, match date and the number of goals scored by 'GER'
 'GER'이 득점한 모든 경기에 대해 매치ID, 경기 날짜 및 'GER'의 골 수를 표시합니다.
 -> SELECT id, mdate, COUNT(player)
 FROM game
   JOIN goal ON (id=matchid AND (team1 = 'GER' OR team2 = 'GER') AND teamid='GER')
 GROUP BY id, mdate
+-> select matchid, mdate, count(gtime)
+from game
+JOIN goal ON matchid = id
+WHERE (team1 = 'GER' OR team2 = 'GER') AND teamid='GER'
+GROUP BY matchid, mdate
+
 13. 고. 진짜 좋은 고난이도 문제. 이게 최종 목표. case when 사용.
 Notice in the query given every goal is listed. If it was a team1 goal then a 1 appears in score1, otherwise there is a 0. You could SUM this column to get a count of the goals scored by team1. Sort your result by mdate, matchid, team1 and team2.
 -> 각 팀이 기록한 골과 함께 모든 경기를 나열하세요. 이전 연습에서는 설명하지 않았던 "CASE WHEN"을 사용
@@ -300,16 +321,27 @@ SELECT mdate,
        team1,
        SUM(CASE WHEN teamid = team1 THEN 1 ELSE 0 END) AS score1,
        team2,
-       SUM(CASE WHEN teamid = team2 THEN 1 ELSE 0 END) AS score2 FROM
-    game LEFT JOIN goal ON (id = matchid)
-    GROUP BY mdate,team1,team2
-    ORDER BY mdate, matchid, team1, team2
+       SUM(CASE WHEN teamid = team2 THEN 1 ELSE 0 END) AS score2 
+  FROM game
+  LEFT JOIN goal
+    ON (id = matchid)
+GROUP BY mdate,team1,team2
+ORDER BY mdate, matchid, team1, team2
 -> 있어야되는 경기가 없다.
-아 0대 0
+아 0대 0. 엑셀로 뽑아보면 2개 바로 알수 있다.
 골이 없던 경기라도 화면에 보이도록
-
+SELECT mdate,
+       team1,
+       SUM(CASE WHEN teamid = team1 THEN 1 ELSE 0 END) AS score1,
+       team2,
+       SUM(CASE WHEN teamid = team2 THEN 1 ELSE 0 END) AS score2 
+  FROM game
+  LEFT JOIN goal
+    ON (id = matchid)
+GROUP BY mdate,team1,team2
+ORDER BY mdate, team1, team2
 -------------------------------------------------------------------------------
-more join   //join의 on절과 where절의 차이를 잘 모르겠다.
+more join   
 movie : id, title, yr, director, budget, gross
 actor : id, name
 casting : movieid, actorid, ord
