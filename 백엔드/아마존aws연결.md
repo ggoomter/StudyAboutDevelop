@@ -10,6 +10,17 @@ https://victorydntmd.tistory.com/338
 온디맨드는 쓰는만큼 탄력적으로 돈내는거
 업로드는 공짜. 나갈때 돈나감.  한달동안 1기가까지는 무료
 
+## 용어 
+- AMI : Amazon Machine Image. OS, WAS, 앱이 포함된 템플릿
+- IAM : Identify and Access Management.  AWS에서 생성 및 관리하고 있는 모든 서비스를 안전하게 제어하기 위한 계정 관리 서비스
+- SCP : Secure Copy Protocol. 리눅스 운영체제에서 사용하는 파일전송 프로토콜.
+- VPC : Virtual Private Cloud. 가상네트워크제공. 
+        EC2등 서비스자원을 생성하면 기본적으로 생성되며, 사용자별로 VPC에 할당되어 서비스가 이루어진다.
+- RDS : Relational Database Service. 
+- GPL : General Public License
+- AZ : Availability Zone.  가용영역
+- MFA : Multi-Factor Authorization. 인증할때 여러 매체를 활용하는 인증방식.
+
 ### api
 https://docs.aws.amazon.com/
 
@@ -19,7 +30,7 @@ https://jiwontip.tistory.com/45?category=367314
 2. 오른쪽 위 서버 위치 한국으로 옮기기
 3. 가상머신(인스턴스) 시작	(//계정만들자 마자 바로는 안됨)
     1. freetier만 선택 체크하고 기본 t2.micro.   //t2는 서비스 유형. micro는 성능.
-    2. AMI(인스턴스 구성을 가진 템플릿) 선택. 제일 익숙한걸로.
+    2. AMI(인스턴스 구성을 가진 템플릿) 선택. 제일 익숙한걸로. 그런게 없으면 제일 보편적인 우분투
         **레드햇, 페도라, centOS계열, amazon linux는 yum사용**
         **데비안, 우분트 계열은 apt-get 사용**
     3. 넥스트하다보면 디폴트 크기는 8기가인데 30기가 까지 무료로 늘릴수있음.
@@ -215,14 +226,15 @@ human_suwon.naver.com
 비번 :하던대로
 
 ### putty
+SSH접속 프로그램이며 .pem파일을 못읽기 때문에 .ppk파일로 변환하는 작업 해줘야함.
 1. [다운로드](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-2. putty.gen.exe실행
+2. puttygen.exe실행
 3. RSA선택후 load후 키 선택
 4. save private key 경고창 예
 5. putty.exe 실행
 세션의 host에 ip주소넣고
 Connection-SSH-Auth 탭에 방금만든 ppk파일 로드하고 Open
-아이디는 ubuntu
+EC2인스턴스가 우분투일 경우 아이디는 ubuntu
 
 
 #### IAM

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}post_change_list.html{% endblock %}
+
+{% block content %}
+
+    <h1>Post Change - {{user}}</h1>
+    <br>
+
+    <table class="table table-bordered table-sm table-striped">
+
+        <thead>
+        <tr class="table-primary">
+            <th>Title</th>
+            <th>Description</th>
+            <th>Owner</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for item in object_list %}
+        <tr>
+            <td>{{ item.title }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ item.owner }}</td>
+            <td><a href="{% url 'blog:update' item.id %}">Update</a></td>
+            <td><a href="{% url 'blog:delete' item.id %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+
+{% endblock %}
+

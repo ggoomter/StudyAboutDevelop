@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}post_detail.html{% endblock %}
+
+{% block content %}
+    <h2>{{ object.title }}</h2>
+
+    <p>
+        {% if object.get_next %}
+        <a href="{{ object.get_next.get_absolute_url }}" title="View previous post">
+            <i class="fas fa-arrow-circle-left"></i> {{ object.get_next }}
+        </a>
+        {% endif %}
+
+        {% if object.get_previous %}
+        | <a href="{{ object.get_previous.get_absolute_url }}" title="View next post">
+        {{ object.get_previous }} <i class="fas fa-arrow-circle-right"></i>
+        </a>
+        {% endif %}
+    </p>
+
+    <div>{{ object.modify_dt|date:"j F Y" }}</div>
+    <br>
+
+    <div>
+        {{ object.content|linebreaks }}
+    </div>
+{% endblock %}
+

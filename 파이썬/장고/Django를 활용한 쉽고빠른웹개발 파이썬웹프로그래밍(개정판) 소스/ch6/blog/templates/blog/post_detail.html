@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}post_detail.html{% endblock %}
+
+{% block content %}
+    <h2>{{ object.title }}</h2>
+
+    <p>
+        {% if object.get_next %}
+        <a href="{{ object.get_next.get_absolute_url }}" title="View previous post">
+            <i class="fas fa-arrow-circle-left"></i> {{ object.get_next }}
+        </a>
+        {% endif %}
+
+        {% if object.get_previous %}
+        | <a href="{{ object.get_previous.get_absolute_url }}" title="View next post">
+        {{ object.get_previous }} <i class="fas fa-arrow-circle-right"></i>
+        </a>
+        {% endif %}
+    </p>
+
+    <div>{{ object.modify_dt|date:"j F Y" }}</div>
+    <br>
+
+    <div>
+        {{ object.content|linebreaks }}
+    </div>
+
+    <br>
+    <div>
+        <b>TAGS</b> <i class="fas fa-tag"></i>
+        {% load taggit_templatetags2_tags %}
+        {% get_tags_for_object object as "tags" %}
+        {% for tag in tags %}
+        <a href="{% url 'blog:tagged_object_list' tag.name %}">{{tag.name}}</a>
+        {% endfor %}
+	&emsp;
+        <a href="{% url 'blog:tag_cloud' %}"> <span class="btn btn-info btn-sm">TagCloud</span> </a>
+    </div>
+{% endblock %}
+

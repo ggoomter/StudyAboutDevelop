@@ -1,3 +1,24 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+        // 선택영역 색상 변경
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#363062",  //선택된 라인 전체의 백그라운드 색상
+        "editor.selectionBackground": "#827397",      //선택된 영역만의 배경 색상 
+        "editor.wordHighlightBackground": "#ffffff",  //선택된 영역만의 글자 색상
+        "editorCursor.foreground": "#f10808",         //선택된 영역에서의 커서 색상
+    },
+
+    // 주석(comments) 색상 변경
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+        {
+            "scope": "comment",
+            "settings": {
+            "fontStyle": "italic",          //주석의 폰트체를 이탤릭 처리
+            "foreground": "#f3a32b",      //주석의 색상을 변경
+            }
+        }
+        ]
+    },
 }
+

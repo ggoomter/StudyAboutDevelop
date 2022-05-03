@@ -9,6 +9,8 @@ ctrl , : 설정
 ctrl shift p : 명령어 팔레트
     사이드바 표시
 f5  : 실행
+ctrl shift e : 만든 폴더 불러오기
+ctrl ' : 터미널 실행
 
 <tab관련 설정>
 Insert Spaces : 체크하면 탭을 스페이스로 변경.
@@ -71,3 +73,25 @@ Insert Spaces : 체크하면 탭을 스페이스로 변경.
 - 에러
   - 사용자 설정에 쓸 수 없습니다. 사용자 설정을 열어서 오류/경고를 수정하고 다시 시도하십시오.
   => json파일에 주석이 있기 때문
+
+- 주석색깔, 선택한줄 색깔 바꾸기
+-         // 선택영역 색상 변경
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#2d9b33",  //선택된 라인 전체의 백그라운드 색상
+        "editor.selectionBackground": "#f0102e",      //선택된 영역만의 배경 색상 
+        "editor.wordHighlightBackground": "#ffffff",  //선택된 영역만의 글자 색상
+        "editorCursor.foreground": "#f10808",         //선택된 영역에서의 커서 색상
+    },
+
+    // 주석(comments) 색상 변경
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+        {
+            "scope": "comment",
+            "settings": {
+            "fontStyle": "italic",          //주석의 폰트체를 이탤릭 처리
+            "foreground": "#f3a32b",      //주석의 색상을 변경
+            }
+        }
+        ]
+    },

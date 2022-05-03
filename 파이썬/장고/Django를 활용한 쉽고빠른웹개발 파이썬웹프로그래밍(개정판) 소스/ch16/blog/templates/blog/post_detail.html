@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}post_detail.html{% endblock %}
+
+{% block extra-style %}
+<style>
+.post-body {
+    width: 80%;
+    margin: auto;
+    font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+    font-size: 16px;
+}
+</style>
+{% endblock extra-style %}
+
+{% block content %}
+<div class="post-body">
+
+    <h2>{{ object.title }}</h2>
+
+    <p>
+        {% if object.get_next %}
+        <a href="{{ object.get_next.get_absolute_url }}" title="View previous post">
+            <i class="fas fa-arrow-circle-left"></i> {{ object.get_next }}
+        </a>
+        {% endif %}
+
+        {% if object.get_previous %}
+        | <a href="{{ object.get_previous.get_absolute_url }}" title="View next post">
+        {{ object.get_previous }} <i class="fas fa-arrow-circle-right"></i>
+        </a>
+        {% endif %}
+    </p>
+
+    <div>{{ object.modify_dt|date:"j F Y" }}</div>
+    <br>
+
+    <div>
+        {{ object.content|linebreaks }}
+    </div>
+
+    <br>
+    <div>
+        <b>TAGS</b> <i class="fas fa-tag"></i>
+        {% load taggit_templatetags2_tags %}
+        {% get_tags_for_object object as "tags" %}
+        {% for tag in tags %}
+        <a href="{% url 'blog:tagged_object_list' tag.name %}">{{tag.name}}</a>
+        {% endfor %}
+	&emsp;
+        <a href="{% url 'blog:tag_cloud' %}"> <span class="btn btn-info btn-sm">TagCloud</span> </a>
+    </div>
+
+    <br>
+    <div id="disqus_thread"></div>
+
+</div>
+{% endblock %}
+
+{% block extra-script %}
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION
+*  BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:
+*  https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+    this.page.identifier = '{{ disqus_id }}';
+    this.page.url = '{{ disqus_url }}';
+    this.page.title = '{{ disqus_title }}';
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://{{ disqus_short }}.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endblock %}
+

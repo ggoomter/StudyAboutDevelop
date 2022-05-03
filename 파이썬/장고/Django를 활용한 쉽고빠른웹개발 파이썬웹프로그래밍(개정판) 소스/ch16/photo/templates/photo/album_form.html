@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block title %}album_form.html{% endblock %}
+
+{% block content %}
+    <h1>Album-Photo Create/Update - {{user}}</h1>
+    <p class="font-italic">This is a creation or update form for your album using PhotoInlineFormSet.</p>
+
+    {% if form.errors %}
+    <div class="alert alert-danger">
+        <div class="font-weight-bold">Wrong! Please correct the form error(s) below.</div>
+        {{ form.errors }}
+    </div>
+    {% endif %}
+
+    {% if formset.errors %}
+    <div class="alert alert-warning">
+        <div class="font-weight-bold">Wrong! Please correct the formset error(s) below.</div>
+        {% for formerrors in formset.errors %}
+            {{ formerrors }}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if form.is_multipart or formset.is_multipart %}
+    <form enctype="multipart/form-data" action="" method="post">
+    {% else %}
+    <form action="." method="post">
+    {% endif %}
+    {% csrf_token %}
+
+        <h4>create or update album contents</h4>
+
+        <fieldset class="card pt-3">
+
+            <div class="form-group row">
+                {{ form.name|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
+                <div class="col-sm-5">
+                    {{ form.name|add_class:"form-control"|attr:"autofocus" }}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                {{ form.description|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
+                <div class="col-sm-5">
+                    {{ form.description|add_class:"form-control" }}
+                </div>
+            </div>
+
+        </fieldset>
+        <br>
+
+        <h4>create or update photo contents</h4>
+
+        <fieldset class="card pt-3">
+
+            {{ formset.management_form }}
+            {% for form in formset %}
+                {{ form.id }}
+                {# form.album #}
+            <div class="form-group row">
+                {{ form.image|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
+                <div class="col-sm-5">
+                    {{ form.image|add_class:"form-control-file" }}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                {{ form.title|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
+                <div class="col-sm-5">
+                    {{ form.title|add_class:"form-control" }}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                {{ form.description|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
+                <div class="col-sm-8">
+                    {{ form.description|add_class:"form-control"|attr:"rows:3" }}
+                </div>
+            </div>
+
+            <hr>
+            {% endfor %}
+
+        </fieldset>
+
+        <div class="form-group card py-1">
+            <div class="offset-sm-3 col-sm-5">
+                <input type="submit" value="Submit" class="btn btn-info"/>
+            </div>
+        </div>
+
+    </form>
+
+{% endblock %}
+

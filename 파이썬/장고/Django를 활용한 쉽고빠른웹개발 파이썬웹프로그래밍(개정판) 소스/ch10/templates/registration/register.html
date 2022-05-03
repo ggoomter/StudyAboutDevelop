@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block title %}register.html{% endblock %}
+
+{% block content %}
+
+    <h1>New User Registration</h1>
+    <p class="font-italic">Please enter your username and password twice.</p>
+
+    {% if form.errors %}
+    <div class="alert alert-danger">
+        <div class="font-weight-bold">Wrong! Please correct the error(s) below.</div>
+        {{ form.errors }}
+    </div>
+    {% endif %}
+
+    <form action="." method="post" class="card pt-3">{% csrf_token %}
+
+        <div class="form-group row">
+            {{ form.username|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
+            <div class="col-sm-5">
+                {{ form.username|add_class:"form-control"|attr:"autofocus" }}
+            </div>
+        </div>
+        <div class="form-group row">
+            {{ form.password1|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
+            <div class="col-sm-5">
+                {{ form.password1|add_class:"form-control" }}
+            </div>
+        </div>
+        <div class="form-group row">
+            {{ form.password2|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
+            <div class="col-sm-5">
+                {{ form.password2|add_class:"form-control" }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="offset-sm-3 col-sm-5">
+                <input type="submit" value="Register" class="btn btn-info"/>
+            </div>
+        </div>
+
+    </form>
+
+{% endblock %}
+

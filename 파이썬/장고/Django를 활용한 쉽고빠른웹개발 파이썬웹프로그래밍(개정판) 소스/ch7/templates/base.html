@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}Django Web Programming{% endblock %}</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    {% block extra-style %}{% endblock %}
+</head>
+
+<body style="padding-top:90px;">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <span class="navbar-brand mx-5 mb-0 font-weight-bold font-italic">Django - Python Web Programming</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item mx-1 btn btn-primary">
+                <a class="nav-link text-white" href="{% url 'home' %}">Home</a></li>
+            <li class="nav-item mx-1 btn btn-primary">
+                <a class="nav-link text-white" href="{% url 'bookmark:index' %}">Bookmark</a></li>
+            <li class="nav-item mx-1 btn btn-primary">
+                <a class="nav-link text-white" href="{% url 'blog:index' %}">Blog</a></li>
+            <li class="nav-item mx-1 btn btn-primary">
+                <a class="nav-link text-white" href="">Photo</a></li>
+
+            <li class="nav-item dropdown mx-1 btn btn-primary">
+                <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">Util</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{% url 'admin:index' %}">Admin</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{% url 'blog:post_archive' %}">Archive</a>
+                    <a class="dropdown-item" href="">Search</a>
+                </div>
+            </li>
+        </ul>
+
+        <form class="form-inline my-2" action="" method="post"> {% csrf_token %}
+            <input class="form-control mr-sm-2" type="search" placeholder="global search" name="search_word">
+        </form>
+    </div>
+</nav>
+
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+
+{% block footer %}{% endblock %}
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/c998a172fe.js"></script>
+
+{% block extra-script %}{% endblock %}
+
+</body>
+</html>
+
