@@ -22,12 +22,18 @@ JS의 본질은 기능
     예)  <link rel="stylesheet" href="join.css">
 
 
-- ### CSS 셀렉터
+- ### CSS 셀렉터(선택자)
     - 선택자 : html의 어떤 태그를 선택할지 고르는것. html만들때 박스구조로 레이블링을 잘해놓으면 선택하기가 쉽다.
         태그 : 그냥
         클래스 : .
         아이디 : #
-        상태 : ::
+        가상클래스 :   :      예) :active, :hover, :empty, :focus
+        가상요소   :  ::      예) ::after, ::before, ::first-letter
+            꾸밈을 위해서 의미없는 태그를 더 추가해야 될 때, 태그 대신에 가상으로 처리해 주는 쓸모 많은 css 기능
+            :와 ::의 차이는 최신브라우저에서는 상관없다. 그치만 본질에 맞게 쓰는것이 좋다.
+            :before, ::before는 선택한 요소의 첫 자식으로 의사 요소를 하나 생성
+            :after(::after)는 선택한 요소의 맨 마지막 자식으로 의사 요소를 하나 생성
+            의사클래스와 의사요소를 구분하기 위해 CSS3부터 ::after가 도입됨.
         속성 : []
         자손 :  그냥띄우기
         자식 :  >
@@ -36,6 +42,7 @@ JS의 본질은 기능
         A바로옆에 있는 B : A+B는
         A바로옆에있는 B들 : A~B는
         제일 위에 있는거  :    :first-child
+
 
     - #### 우선순위
         - 전체적으로 구체적으로 정할수록 우선순위가 높다.   
@@ -59,7 +66,7 @@ JS의 본질은 기능
     - 게임으로 공부 (https://flukeout.github.io/)
     7번 : 최초의 고비
     16번부터 어려움. 18까지만 하면됨. 이후는 퍼블리셔나 22번까지도 괜찮음.
-    16. plate apple,plate:only-child가 안됨.  plate apple:only-child, plate pickle:only-child
+    1.  plate apple,plate:only-child가 안됨.  plate apple:only-child, plate pickle:only-child
     부모:first-child = 형제들이 있을때 첫번째
     답 : plate:apple, plate:pickle
 
@@ -83,6 +90,7 @@ border를 기준으로 바깥으로 여백 = margin
    <button>, <input>, <select>가 대표적이다.
 
 - ### 변화. 진화
+- 프론트엔드 개발자에게나 중요하다. 백엔드 개발자는 이런게 있다 정도만 알면된다.
 [참고링크](https://dongwoo.blog/2017/02/07/%EB%B2%88%EC%97%AD-css%EC%9D%98-%EC%A7%84%ED%99%94-css-%EB%B6%80%ED%84%B0-sass-bem-css-%EB%AA%A8%EB%93%88-%EC%8A%A4%ED%83%80%EC%9D%BC%EB%93%9C-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B9%8C/)
     1. CSS
         (CSS파일간 값을 공유할 수 없음)
@@ -104,21 +112,6 @@ border를 기준으로 바깥으로 여백 = margin
         (방대한 CSS파일을 관리해야하는것을 해결하기 위해 나온 방법론.
         단점 : 인터렉션이 늦다. JS번들의 크기가 커진다.)
     6. Styled-Component
-
-- ### 선택자
-    .클래스   #아이디
-    :가상클래스(상태)  예) :active, :hover, :empty, :focus
-    ::가상요소
-                꾸밈을 위해서 의미없는 태그를 더 추가해야 될 때, 태그 대신에 가상으로 처리해 주는 쓸모 많은 css 기능
-       예) ::after, ::before, ::first-letter
-    //: vs ::  차이 => 최신브라우저에서는 상관없다. 그치만 본질에 맞게 쓰는것이 좋다.
-    :before, ::before는 선택한 요소의 첫 자식으로 의사 요소를 하나 생성
-    :after(::after)는 선택한 요소의 맨 마지막 자식으로 의사 요소를 하나 생성
-    의사클래스와 의사요소를 구분하기 위해 CSS3부터 ::after가 도입됨.
-    content:'' : 가상선택자에 필수로 들어가는 요소.
-    가상선택자는 부피가 없으므로, 아이콘을 표현할 땐 꼭 너비와 높이를 정해주어야 한다.
-    css선택 게임 https://flukeout.github.io/
-
 
 - ### 포지션(position)
 [TCP SCHOOL](http://www.tcpschool.com/css/css_position_position)
@@ -219,8 +212,8 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
 - ## bootstrap 부트스트랩
     - 트위터에서 오픈 소스로 공개한 웹 프론트엔드 프레임워크
     - 사용법 : 
-        1. cdn이나 파일 다운로드
-        2. 사용하려는 html에 <link> 해주기
+        1. cdn참조 또는 파일 다운로드로 참조(부트스트랩 공식사이트. 버전5는 jqeury의존성 없어졌다. document도 5로 맞춰서 봐라.)
+        2. 참조하고 싶은 디자인 찾기
         3. 클래스를 부여하여 디자인
     - 반응형 디자인이 다 적용되어있다.
 

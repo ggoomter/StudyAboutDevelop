@@ -1,4 +1,5 @@
 사이드바 아이콘 잘 활용하자.
+<단축키>
 ctrl p : 파일로 이동  //이클립스의 ctrl shift r
 ctrl shift f : 전체에서 찾기
     한번에 바꾸기 가능
@@ -11,6 +12,8 @@ ctrl shift p : 명령어 팔레트
 f5  : 실행
 ctrl shift e : 만든 폴더 불러오기
 ctrl ' : 터미널 실행
+ctrl shift \ : 괄호짝 이동
+
 
 <tab관련 설정>
 Insert Spaces : 체크하면 탭을 스페이스로 변경.
@@ -95,3 +98,6 @@ Insert Spaces : 체크하면 탭을 스페이스로 변경.
         }
         ]
     },
+
+    ### conda가상환경이랑 연결
+    ctrl shift p(커맨드팔레트) 누른후 python:select interpreter 찾아서 가상환경 선택

@@ -5,7 +5,7 @@ https://victorydntmd.tistory.com/338
 
 
 --- ec2의 가격정책
-1년동안 프리티어는 무료. 
+1년동안 매달750시간 프리티어는 무료. 
 예약 인스턴스는 1년동안 미리 선금지불하면 최대 75% 할인
 온디맨드는 쓰는만큼 탄력적으로 돈내는거
 업로드는 공짜. 나갈때 돈나감.  한달동안 1기가까지는 무료
@@ -20,9 +20,44 @@ https://victorydntmd.tistory.com/338
 - GPL : General Public License
 - AZ : Availability Zone.  가용영역
 - MFA : Multi-Factor Authorization. 인증할때 여러 매체를 활용하는 인증방식.
+- S3 : Simple Storage Service. 아마존 스토리지 관리를 위한 대표적인 서비스.
 
 ### api
 https://docs.aws.amazon.com/
+
+## ec2에 깃헙 장고 프로젝트 올리기
+참고 : https://nerogarret.tistory.com/46
+readme.md파일 안만들면 로컬리파지터리 그대로 리모트로 올리기 쉽다.
+ubuntu로 ec2까지 만들고 putty로 연결.
+mkdir srv
+sudo chown -R ubuntu:ubuntu /srv/
+git clone [레포지토리 주소]
+WSGI(Web Server Gateway Interface) server를 설치해야한다.
+    가상환경 세팅 sudo apt-get install python3-venv
+    가상환경 만들기 python3 -m venv myvenv
+    가상환경 활성화 가상환경만든 위 풀더에서 source myvenv/bin/activate
+프로젝트 폴더 들어가서 pip3 install -r requirements.txt 로 패키지 설치
+ pip freeze > requirements.txt
+ 하면 현재 환경의 의존 라이브러리들이 저 파일에 써진다.
+ alabaster==0.7.12
+ alembic==1.0.11
+ appnope==0.1.0
+ 이런식으로.
+
+python3 manage.py runserver 0:8080
+퍼블릭dns주소:8080 접속해도 아직 로딩만 되고 페이지 안뜸
+포트열어주고 오면
+setting.py의 ALLOWED_HOSTS = ['*']
+https연결 안되기 때문에 http로 바꾸고 ip주소:8080 해주면 접속된다.
+백그라운드로 실행하려면 
+실행법 : nohup 명령어 &
+종료하는법 : ps -ef | grep 포함문자열
+			kill -9 번호
+
+https접속되게 하려면 SSL인증서 다운받고 nginx(웹서버)나 uWSGI(WAS)에 적용 해야되는데 너무 어려움
+
+
+
 
 # ec2
 https://jiwontip.tistory.com/45?category=367314
@@ -37,9 +72,12 @@ https://jiwontip.tistory.com/45?category=367314
     4. 시작하기 누르면 기존키페어 선택또는 키페어 생성 창
         (이미 받은 키가 있으면 그거 선택하면 됨)
         받은키가 없으면 새 키페어 생성. 텍스트치고 '키페어 다운로드' 하면 .pem 파일 받음.(퍼블릭키)
+        2022년에 보니까 이제 ppk바로 다운로드 생겼네.
         기억하기 쉬운곳에 저장하고 인스턴스 시작.
         비밀번호 대신 이 키페어 파일을 쓸것이고 절대로 잊어버리면 안된다.
-    5. 만들어지면 웹에서 제어하는 화면으로 연결 해볼수 있다.  웹이아니라 직접 내컴퓨터에서 하고 싶으면 SSH클라이언트로 하면된다.
+    5. putty로 접속해보기. 퍼블릭 dns와 ppk파일 연동해서.
+
+
 
 4. 네트워크및 보안 탭
 해당인스턴스와 연결된 보안그룹에 가서 inbound규칙 열어주기
@@ -65,7 +103,9 @@ https://mozi.tistory.com/191
     Connection- SSH - Auth  찾아보기에서 방금만든 .ppk 불러오기
     Session탭에 이름넣고 저장한다음 open
     처음 계정  : 우분투 서버일때는 ubuntu, 아마존 리눅스일때는 ec2-user
-3. 접속했으면 sudo apt update;    sudo yum update;      //현재 깔수있는 프로그램 리스트를 업데이트
+3. 접속했으면 sudo apt update;(우분투)
+    sudo apt-get upgrade;(우분투)
+    sudo yum update;      //현재 깔수있는 프로그램 리스트를 업데이트
 4. 자바 설치 https://kitty-geno.tistory.com/25
     설치가능한 버전 확인 : sudo yum list | grep jdk
     오픈jdk는 1.8버전이 최신이네.. sudo yum install java-1.8.0-oepnjdk
@@ -245,10 +285,37 @@ RDS 데이터베이스에 접근가능한 사람을 제어한다.
 Vitual Private Cloud. 가상 사설 클라우드.
 
 
+#### Beanstalk (EB) 실패
+- 서버에서 개발된 웹 애플리케이션 및 서비스를 간편하게 배포하고 조정할 수 있는 서비스
+- AWS 상에 코드을 업로드하기만 하면 용량 프로비저닝, 로드 밸런싱, Auto Scaling, 애플리케이션 상태 모니터링에 대한 정보를 자동으로 처리해주는 서비스
+1. 프로젝트 준비 :  장고프로젝트가 담긴 깃헙 리파지토리
+1. 아마존 계정준비
+aws회원가입
+서울로 리전 변경
+aws 계정에 IAM사용자를 추가하여 자격증명(Credential) 발급
+>    - aws 콘솔에 로그인 한 뒤 상단 nav의 username을 누르시면 dropdown 메뉴가 나옵니다. 여기서 ‘내 보안 자격증명’ 클릭
+- 사용자이름 seoulHuman   엑세스키(프로그래밍방식) 체크 다음
+- 그룹생성
+  beanstalk검색하고 AWSElasticBeanstalkFullAccess 해라는데 없어서 제일위에꺼
+
+     - 새 액세스 키 만들기. credentials.csv라는 파일이 자동 다운로드
+2. beanstalk생성하고 로컬 zip파일 업로드
+3. 그냥 이렇게만 하면 502 에러뜬다.
+4. https://testdriven.io/blog/django-elastic-beanstalk/ 시키는대로 하다가 django.config 파일의 경로가 달라서 맞춰줌
+5. EB CLI설치
+pip install awsebcli --upgrade --user
+환경변수 PATH 등록 C:\Users\human\AppData\Roaming\Python\Python39\Scripts
+eb --version 으로 깔린거 확인
+eb init -p python-3.6 앱이름
+credentials aws-access-id 랑 넣으라고 함
+csv의 3번째와 4번째
+
 ---
 <샘플 정보>
-human_suwon@naver.com
-아이디 ggoomter2@gmail.com
-비밀번호 xxxx3#
+ggoomter
+human_suwon@naver.com  xxxx3#   328314143063
+ggoomter2@gmail.com  xxxx3#   177318059854 2022년 5월9일 ec2, rds 삭제
 name human_tester
 (ip주소 54.180.120.40)gradle
+
+ggoomterHuman@gmail.com  xxxx3#  2022년 5월9일 ec2생성
