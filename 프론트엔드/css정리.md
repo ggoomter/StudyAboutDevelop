@@ -14,12 +14,12 @@ JS의 본질은 기능
 
 - ### css를 넣는 3가지 방법
     1. 인라인 : 태그내에서 수정.
-    예) ```<태그 style="color:gray;">```
+    예) ```<태그 style="color:gray; font-weight:700">```
     1. 파일 내에서 :  style태그 따로빼서.
     예) ``` <style> 내용 </style>```
     1. 외부 파일로 : style 태그에 경로 myStyle.css
     전체 스타일을 일관성있게 동시다발적으로 변경할수있어서 제작의 효율성이 높음. 관리가 편함.
-    예)  <link rel="stylesheet" href="join.css">
+    예)  <link rel="stylesheet" href="경로와 이름.css">
 
 
 - ### CSS 셀렉터(선택자)
@@ -45,6 +45,7 @@ JS의 본질은 기능
 
 
     - #### 우선순위
+        - 캐스캐이딩의 특성을 가지고있기 때문에 하나의 요소에 여러가지 명령들이 동시에 내려진다. 예를들어 일병이 쓰레기버리고와라, 병장이 이불좀 접어라, 당직사관이 당직실로와라. 
         - 전체적으로 구체적으로 정할수록 우선순위가 높다.   
         - 태그 1점 < 클래스 100점 < 아이디 1000점 
           - 동메달, 은메달, 금메달같은거다. 동메달 아무리 많아도 은메달 하나에게 안된다.
@@ -73,6 +74,8 @@ JS의 본질은 기능
 - #### margin, padding
 컨텐츠를 기준으로 테두리까지의 여백 = padding
 border를 기준으로 바깥으로 여백 = margin
+마진상쇄 : https://velog.io/@raram2/CSS-%EB%A7%88%EC%A7%84-%EC%83%81%EC%87%84Margin-collapsing-%EC%9B%90%EB%A6%AC-%EC%99%84%EB%B2%BD-%EC%9D%B4%ED%95%B4
+2개이상의 블록요소의 상하마진이 겹칠때 큰쪽의 값을 적용하는 브라우저의 렌더링 규칙
 
 - ### display
   - ##### inline
@@ -85,7 +88,7 @@ border를 기준으로 바깥으로 여백 = margin
   width, height, margin, padding 속성이 모두 반영된다.
   <div>, <p>, <h1>이 대표적이다.
   - ##### inline-block
-  : 기본적으로 inline.
+   기본적으로 inline.
    그러나 순수 inline에서 불가능한 width, height 지정가능, margin, padding의 상하간격 지정가능.  여러 앨리먼트를 한줄에 정확히 원하는 너비만큼 배치할 수 있기 때문에 레이아웃에 주로 활용한다.
    <button>, <input>, <select>가 대표적이다.
 

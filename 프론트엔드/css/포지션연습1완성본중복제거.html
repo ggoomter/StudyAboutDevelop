@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent parent1">
+        <div class="child child1"></div>
+    </div>
+    <div class="parent parent2">
+        <div class="child child2"></div>
+    </div>
+    <div class="parent parent4">
+        <div class="child child4" >
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/CSS_text_representation_%28square%29.png" alt="">
+        </div>
+    </div>
+    <div>
+        <span class="parent parent3">
+            <span class="child child3"></span>
+        </span>
+    </div>
+
+    <style>
+        /* 첫번째 방법. absolute와 tranform활용 */
+        * {
+            padding : 0px;
+            margin : 0px;
+            font-size: 0px;
+           }
+
+        .parent{
+            width:300px;
+            height:300px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .child{
+            width:100px;
+            height:100px;
+            position: absolute;
+            top : 50%;
+            left : 50%;
+            transform:translate(-50%, -50%); 
+            display: inline-block;
+        }
+
+        .parent1{
+            background-color: red;
+        }
+        
+        .child1{
+            background-color: blue;
+        }
+
+        /* 두번째방법. margin top, left 활용*/
+        .parent2{
+            background-color: pink;
+        }
+        .child2{
+            background-color: black;
+        }
+
+        /* 세번째방법. inline-block 활용*/
+        .parent3{
+            float:left;
+            background-color: gold;
+            position: absolute;
+            top : 300px;
+        }
+        .child3{
+            background-color: gray;
+            display: block;
+        }
+
+        .parent4{
+            /*  width가 없으면 이미지영역만큼만 차지. 100% 주면 아래로 내려가서 차지. */
+            width:calc(100% - 600px);
+            height:100vh;
+            background-color: aquamarine;
+            position: relative;
+        }
+        
+        .child4{
+            position: relative;
+            top : 50%;
+            left : 50%;
+        }
+
+        img{
+            
+        }
+    
+        
+
+    </style>
+</body>
+</html>

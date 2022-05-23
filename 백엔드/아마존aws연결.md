@@ -5,7 +5,7 @@ https://victorydntmd.tistory.com/338
 
 
 --- ec2의 가격정책
-1년동안 매달750시간 프리티어는 무료. 
+1년동안 매달750시간 프리티어는 무료.
 예약 인스턴스는 1년동안 미리 선금지불하면 최대 75% 할인
 온디맨드는 쓰는만큼 탄력적으로 돈내는거
 업로드는 공짜. 나갈때 돈나감.  한달동안 1기가까지는 무료
@@ -25,45 +25,16 @@ https://victorydntmd.tistory.com/338
 ### api
 https://docs.aws.amazon.com/
 
-## ec2에 깃헙 장고 프로젝트 올리기
-참고 : https://nerogarret.tistory.com/46
-readme.md파일 안만들면 로컬리파지터리 그대로 리모트로 올리기 쉽다.
-ubuntu로 ec2까지 만들고 putty로 연결.
-mkdir srv
-sudo chown -R ubuntu:ubuntu /srv/
-git clone [레포지토리 주소]
-WSGI(Web Server Gateway Interface) server를 설치해야한다.
-    가상환경 세팅 sudo apt-get install python3-venv
-    가상환경 만들기 python3 -m venv myvenv
-    가상환경 활성화 가상환경만든 위 풀더에서 source myvenv/bin/activate
-프로젝트 폴더 들어가서 pip3 install -r requirements.txt 로 패키지 설치
- pip freeze > requirements.txt
- 하면 현재 환경의 의존 라이브러리들이 저 파일에 써진다.
- alabaster==0.7.12
- alembic==1.0.11
- appnope==0.1.0
- 이런식으로.
-
-python3 manage.py runserver 0:8080
-퍼블릭dns주소:8080 접속해도 아직 로딩만 되고 페이지 안뜸
-포트열어주고 오면
-setting.py의 ALLOWED_HOSTS = ['*']
-https연결 안되기 때문에 http로 바꾸고 ip주소:8080 해주면 접속된다.
-백그라운드로 실행하려면 
-실행법 : nohup 명령어 &
-종료하는법 : ps -ef | grep 포함문자열
-			kill -9 번호
-
-https접속되게 하려면 SSL인증서 다운받고 nginx(웹서버)나 uWSGI(WAS)에 적용 해야되는데 너무 어려움
-
 
 
 
 # ec2
+Elastic Computue Cloud. 쉽게말해서 아마존으로부터 컴퓨터를 한대 빌리는것.(호스팅)
 https://jiwontip.tistory.com/45?category=367314
 1. 아마존 회원가입(무료계정) 전화로 인증번호 4개 치는게 빠름
 2. 오른쪽 위 서버 위치 한국으로 옮기기
-3. 가상머신(인스턴스) 시작	(//계정만들자 마자 바로는 안됨)
+3. 서비스 검색창에서 ec2, rds 검색해서 즐겨찾기 하기
+4. 가상머신(인스턴스) 시작	(//계정만들자 마자 바로는 안됨)
     1. freetier만 선택 체크하고 기본 t2.micro.   //t2는 서비스 유형. micro는 성능.
     2. AMI(인스턴스 구성을 가진 템플릿) 선택. 제일 익숙한걸로. 그런게 없으면 제일 보편적인 우분투
         **레드햇, 페도라, centOS계열, amazon linux는 yum사용**
@@ -76,10 +47,22 @@ https://jiwontip.tistory.com/45?category=367314
         기억하기 쉬운곳에 저장하고 인스턴스 시작.
         비밀번호 대신 이 키페어 파일을 쓸것이고 절대로 잊어버리면 안된다.
     5. putty로 접속해보기. 퍼블릭 dns와 ppk파일 연동해서.
+       계정 : ubuntu / 키를 받았기 때문에 비번 필요없음
+
+    ### putty
+    SSH접속 프로그램이며 .pem파일을 못읽기 때문에 .ppk파일로 변환하는 작업 해줘야함.
+    1. [다운로드](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+    2. puttygen.exe실행
+    3. RSA선택후 load후 키 선택
+    4. save private key 경고창 예
+    5. putty.exe 실행
+    세션의 host에 ip주소넣고
+    Connection-SSH-Auth 탭에 방금만든 ppk파일 로드하고 Open
+    EC2인스턴스가 우분투일 경우 아이디는 ubuntu
 
 
 
-4. 네트워크및 보안 탭
+5. 네트워크및 보안 탭
 해당인스턴스와 연결된 보안그룹에 가서 inbound규칙 열어주기
 최소한으로 열어주려면 사용할 http서버와 ssh 20포트 2개 열어주면 된다.
 적당히 열려면 http(all ipv4), https(all ipv4), ssh(22), mysql, oracle 등
@@ -169,6 +152,78 @@ https://mozi.tistory.com/191
 
 11. 웹에서 접속
     동적ip와 포트번호 잘쳐주고 inbound설정해줬으면 들어가짐.
+
+## ec2에 깃헙 장고 프로젝트 올리기
+참고 : https://nerogarret.tistory.com/46
+readme.md파일 안만들면 로컬리파지터리 그대로 리모트로 올리기 쉽다.
+ubuntu로 ec2까지 만들고 putty로 연결.
+mkdir srv
+sudo chown -R ubuntu:ubuntu /srv/
+git clone [레포지토리 주소]
+WSGI(Web Server Gateway Interface) server를 설치해야한다.
+    가상환경 세팅      sudo apt-get install python3-venv
+    가상환경 만들기    python3 -m venv myvenv
+    가상환경 활성화 가상환경만든 위 풀더에서 source myvenv/bin/activate
+
+로컬의 프로젝트 폴더 들어가서 
+ 패키지백업 : pip freeze > requirements.txt
+ 하면 현재 환경의 의존 라이브러리들이 저 파일에 써진다.
+
+우분투에서
+ 패키지설치 : pip3 install -r requirements.txt
+ 
+
+python3 manage.py runserver 0:8080
+퍼블릭dns주소:8080 접속해도 아직 로딩만 되고 페이지 안뜸
+
+1. setting.py의 ALLOWED_HOSTS = ['*']
+
+2. ec2의 보안탭의 인바운드 규칙 tcp 8080 추가해주고
+https연결 안되기 때문에 http로 바꾸고 ip주소:8080 해주면 접속된다.
+
+3. 로그를 보면 400에러뜨면서 http만 제공되는데 hpps로 접속하려고 하고있다고함. https접속되게 하려면 SSL인증서 다운받고 nginx(웹서버)나 uWSGI(WAS)에 적용 해야되는데 너무 어려움. 현재는 주소에 https로 시작하는것을 http로 바꾸면 접속된다.
+
+//백그라운드로 실행하려면 
+실행법 : nohup 명령어 &
+종료하는법 : ps -ef | grep 포함문자열
+			kill -9 번호
+## ec2에 깃헙 장고 프로젝트 올리기
+참고 : https://nerogarret.tistory.com/46
+readme.md파일 안만들면 로컬리파지터리 그대로 리모트로 올리기 쉽다.
+ubuntu로 ec2까지 만들고 putty로 연결.
+mkdir srv
+sudo chown -R ubuntu:ubuntu /srv/
+git clone [레포지토리 주소]
+WSGI(Web Server Gateway Interface) server를 설치해야한다.
+    가상환경 세팅      sudo apt-get install python3-venv
+    가상환경 만들기    python3 -m venv myvenv
+    가상환경 활성화 가상환경만든 위 풀더에서 source myvenv/bin/activate
+
+로컬의 프로젝트 폴더 들어가서 
+ 패키지백업 : pip freeze > requirements.txt
+ 하면 현재 환경의 의존 라이브러리들이 저 파일에 써진다.
+
+우분투에서
+ 패키지설치 : pip3 install -r requirements.txt
+ 
+
+python3 manage.py runserver 0:8080
+퍼블릭dns주소:8080 접속해도 아직 로딩만 되고 페이지 안뜸
+
+1. setting.py의 ALLOWED_HOSTS = ['*']
+
+2. ec2의 보안탭의 인바운드 규칙 tcp 8080 추가해주고
+https연결 안되기 때문에 http로 바꾸고 ip주소:8080 해주면 접속된다.
+
+3. 로그를 보면 400에러뜨면서 http만 제공되는데 hpps로 접속하려고 하고있다고함. https접속되게 하려면 SSL인증서 다운받고 nginx(웹서버)나 uWSGI(WAS)에 적용 해야되는데 너무 어려움. 현재는 주소에 https로 시작하는것을 http로 바꾸면 접속된다.
+
+//백그라운드로 실행하려면 
+실행법 : nohup 명령어 &
+종료하는법 : ps -ef | grep 포함문자열
+			kill -9 번호
+
+
+
 
 
 
@@ -265,16 +320,6 @@ human_suwon.naver.com
 오라클root 아이디 : ggoomter
 비번 :하던대로
 
-### putty
-SSH접속 프로그램이며 .pem파일을 못읽기 때문에 .ppk파일로 변환하는 작업 해줘야함.
-1. [다운로드](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-2. puttygen.exe실행
-3. RSA선택후 load후 키 선택
-4. save private key 경고창 예
-5. putty.exe 실행
-세션의 host에 ip주소넣고
-Connection-SSH-Auth 탭에 방금만든 ppk파일 로드하고 Open
-EC2인스턴스가 우분투일 경우 아이디는 ubuntu
 
 
 #### IAM

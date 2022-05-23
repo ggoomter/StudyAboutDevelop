@@ -20,5 +20,8 @@
         }
         ]
     },
+
+    "editor.scrollbar.verticalScrollbarSize": 40
+   ,"editor.scrollbar.horizontalScrollbarSize": 15
 }
 

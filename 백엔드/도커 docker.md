@@ -139,3 +139,7 @@ dbeaver 다운로드
 c## 안쓰기 위한 룰 추가 ALTER SESSION SET "_ORACLE_SCRIPT" TRUE;
 유저생성, 권한부여
 스키마 새로고침
+
+#### 눈송이 서버(Snowflake Servers)
+눈 결정이 서로 다르듯이 서버들도 서로 다른 모습이라는 말.
+처음에는 각 서버의 차이가 미약하지만, 오래 운영하다보면 거대한 눈덩이가 된다. 

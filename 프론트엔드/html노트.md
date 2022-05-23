@@ -71,6 +71,7 @@
     <link href="경로" rel="stylesheet">
     <link href="favicon.ico" rel="icon" >
   - iframe
+    inline frame의 약자. 웹페이지안에 어떠한 제한없이 또 하나의 웹페이지 삽입
     <iframe src="삽입할페이지주소"></iframe>
   - canvas, SVG(Scalable Vector Graphics)
       <canvas id="drawCanvas" style="width:300px; height:200px; border: 1px solid #993300;"></canvas>
@@ -112,8 +113,23 @@ HTML의 본질인 '정보의 전달'이라는 본질에 집중한 의미론적 �
 <time>
 
 예) <div class="nav">네비게이션</div>
-본질이 div이며 클래스의 이름이 nav. 시멘틱하지 않음
-<nav>  이게 시맨틱.
+본질이 div이며 클래스의 이름이 nav일 뿐이다. 시멘틱하지 않음
+<nav>  이건 태그자체에 navigation이라는 정보를 담고있다. 이게 시맨틱.
+
+
+### 커스텀 태그
+html은 <abcd>같은 태그를 써도 에러 안난다.
+단, 아무런 기능은 일어나지 않는다.
+반면에 메타데이터를 저장해서 의미가 있는 커스텀 태그를 만들수도 있다.
+HTML5부터 data-로 시작하는 속성을 지정할 수 있다.
+<xyx
+  id="electriccars"
+  data-columns="3"
+  data-index-number="12314"
+  data-parent="cars">
+...
+</xyx>
+이렇게 만든 데이터 속성은 순 HTML속성이기 때문에 CSS에서도 접근 가능하다.
 
 
 ### 헷갈리는 HTML 태그와 시멘틱

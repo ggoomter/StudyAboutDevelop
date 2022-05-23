@@ -10,10 +10,24 @@ ctrl , : 설정
 ctrl shift p : 명령어 팔레트
     사이드바 표시
 f5  : 실행
+f12 : 현재열린 파일을 패키지에서 선택
+
 ctrl shift e : 만든 폴더 불러오기
+f12 : 함수정의부로 이동
+ctrl + b : 함수 정의 부분으로 이동
 ctrl ' : 터미널 실행
 ctrl shift \ : 괄호짝 이동
+ctrl k s : 단축키 확인
+ctrl shift p : 명령어 팔레트
+ctrl k f : 자동 정렬
+ctrl alft 화살표 : 열모드
 
+파이썬 패스 에러나면 ctrl shift p 에서 interpreter다 지우고 재설정 하니까 쉽게 고쳐진다.
+
+- 스크롤바 너비 늘리기
+    setting.json에서 
+     "editor.scrollbar.verticalScrollbarSize": 40
+   ,"editor.scrollbar.horizontalScrollbarSize": 15
 
 <tab관련 설정>
 Insert Spaces : 체크하면 탭을 스페이스로 변경.

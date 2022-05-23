@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <div class="parent2">
+        <div class="child2"></div>
+    </div>
+    <div class="parent4">
+        <div class="child4" >
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/CSS_text_representation_%28square%29.png" alt="">
+        </div>
+    </div>
+    <div>
+        <span class="parent3">
+            <span class="child3"></span>
+        </span>
+    </div>
+
+    <style>
+        /* 첫번째 방법. absolute와 tranform활용 */
+        * {
+            padding : 0px;
+            margin : 0px;
+            font-size: 0px;
+   
+        }
+        .parent{
+            width:300px;
+            height:300px;
+            background-color: red;
+            position: relative;
+            display: inline-block;
+        }
+        .child{
+            width:100px;
+            height:100px;
+            background-color: blue;
+            position: absolute;
+            top : 50%;
+            left : 50%;
+            transform:translate(-50%, -50%); 
+            display: inline-block;
+        }
+
+        /* 두번째방법. margin top, left 활용*/
+        .parent2{
+            width:300px;
+            height:300px;
+            background-color: pink;
+            position: relative;
+            display: inline-block;
+        }
+        .child2{
+            width:100px;
+            height:100px;
+            background-color: black;
+            position: absolute;
+            top : 50%;
+            left : 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+            display: inline-block;
+        }
+
+        /* 세번째방법. inline-block 활용*/
+        .parent3{
+            float:left;
+            width:300px;
+            height:300px;
+            background-color: gold;
+            position: absolute;
+            top : 300px;
+            display: block;
+        }
+        .child3{
+            width:100px;
+            height:100px;
+            background-color: gray;
+            position: absolute;
+            top : 50%;
+            left : 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+            display: block;
+        }
+
+        .parent4{
+            /*  width가 없으면 이미지영역만큼만 차지. 100% 주면 아래로 내려가서 차지. */
+            width:calc(100% - 600px);
+            height:100vh;
+            background-color: aquamarine;
+            position: relative;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .child4{
+            position: relative;
+            top : 50%;
+            left : 50%;
+            transform:translate(-50%, -50%); 
+        }
+
+        img{
+            
+        }
+        /* 남은영역을 하나의 색으로 채우고
+        그안에 이미지 하나를 가로, 세로 가운데 정렬. 
+        position 하나만 봐야 되는데 img, position, display가 짬뽕돼있어서 어렵다.
+        
+        1. 현재 parent4가 아래에 위치하는 이유는 width가 100%인데 가로로 할당된 너비를 넘어섰기 때문이다.
+        30%같은걸로 하면 오른쪽에 붙는다.
+        %는 컨테이너 블록 너비의 백분율을 따라간다. 모니터가 크면 고정300씩 2개 600px 을 빼도 상대적으로 작기 때문에 60% 해도 안내려간다.
+   
+        2. div 사이에 공백이 있는데 html상으로 띄워쓴것 때문에 그렇다.
+        3. width:calc(100% - 600px);
+        4. height 를 더 주면 노란색이 그만큼 떨어진다.
+          그래서 3번은 float : left를 줬다.
+        5. 노랑이는 원래 위에서 빨간색 높이만큼 포지셔닝으로 재배치
+            position: absolute;
+            top : 300px;
+        6. child4에 
+            position: relative;
+            top : 50%;
+            left : 50%;
+            transform:translate(-50%, -50%); 
+        */
+        
+
+    </style>
+</body>
+</html>
