@@ -7,9 +7,9 @@ JS의 본질은 기능
 [생활코딩](https://www.youtube.com/watch?v=Ok0bBJPtgJI&list=PLuHgQVnccGMAnWgUYiAW2cTzSBywFO75B)
 
 - ### 정의
-
     - Cascading Style Sheet. 캐스캐이딩은 작은폭포. 폭포처럼 쏟아지는 물. 연속.   즉 위에서 계속 떨어지는 느낌.
     - Author style(코딩으로 넣은거) -> User style(=사용자가 다크모드, 확대, 등) -> Browser
+    - 개발자 모드로 캐스캐이딩 되는거 보여주기
  
 
 - ### css를 넣는 3가지 방법
@@ -123,15 +123,17 @@ border를 기준으로 바깥으로 여백 = margin
 -  **offset**(top, right, bottom, left)은 웹페이지상에서 해당요소를 해당기준에서 얼마나 떨어져야 하는지를 결정한다.
 - 문서상의 요소를 배치하는 방법을 지정한다. 아래의 5가지 방식이 있다.
     - ##### static(정적)
-      - 디폴트(기본값). 단순히 웹 페이지의 흐름에 따라 차례대로 요소를 위치시키는 방식.  오프셋의 영향을 받지 않는다.
+      - 디폴트(기본값). 단순히 웹 페이지의 흐름에 따라 차례대로 요소를 위치시키는 방식.
+      오프셋의 영향을 받지 않는다.
+      웹페이지의 흐름이라는것은 위에서 아래, 왼쪽에서 오른쪽, 부모가 있다면 부모가 기준.
     -  ##### relative(상대)
-       -  정적위치 방식일때 결정되는 위치에서 offset 만큼 이동
-       -  그러므로 부모가 누구든 부모를 참조한다.
+       -  정적위치 방식일때 결정되는 위치에서 offset 만큼 이동. 즉 offset을 쓰지않았다면 자기위치는 static과 같다.
     -  ##### absolute(절대)
-       -  **static방식이 아닌 다른 방식으로 위치가 설정된 조상요소를 기준**으로 위치가 설정되어 공중부양 된다. 그런부모가 아무도없다면 body가 기준.
+       -  **static방식이 아닌 방식으로 위치가 설정된 조상요소를 절대적 기준**으로 삼는다. 때문에 **공중부양** 되면서 다른요소들이 채워진다. 
+       오프셋이 있다면 **부모위치**에서 오프셋만큼 이동한다.
+       그런부모가 아무도없다면 body가 기준.
+       때문에 static이 아닌 부모가 아무도없다면 쉽게 body의 모든요소에 자유롭게 위치할 수 있다.
        - 일반적인 문서흐름에서 벗어나 독립된 배치문맥을 가진다. (마치 포토샵에서 새로운 레이어). 새로운레이어이기 때문에 어디든지 자유롭게 위치 가능
-         단, 상위 엘리먼트중에 relative가 있다면 그중 가장 가까운 엘리먼트의 내부에서만 자유롭게 배치할 수 있다.
-         즉, 전체 화면이 아닌 해당 상위 엘리먼트를 기준으로 offset 속성(top, left, bottom, right)이 적용
        - 컨텐츠만큼만 크기(width, height)를 차지하게 된다.
        - 자기콘텐츠만큼만 표현하는것이 디폴트.
     -  ##### fixed(고정)
@@ -198,13 +200,21 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
 - ### 단위
         - px : pixel.
         - em 부모 요소의 대문자 M 너비를 기준으로 상대적인 배수가 적용됨.  자식에 계속 쓰면 계속 배수가 누적되어 적용됨.
-        그것을 막기위해 rem(root em) 사용.단위 :
+        - rem(root em) 위의 문제를 막기위해사용.단위 :
         - % : 부모 요소의 길이를 기준으로 상대적인 값(%)
         - vh(viewport height) : 뷰포트의 높이값의 1%
         - vw(viewport width) : 뷰포트의 너비값의 1%
         //뷰포트 : Display상의 표시 영역
 
 - ### 미디어 쿼리
+  - 반응형웹(해상도에 반응하여 다르게 보이는 것)을 구현하는 기술
+    - 예) 햄버거메뉴, 기사가 큰화면에서는 3개씩보이다가 작은화면에서는 1개씩 보이는거
+    - 미디어유형 : all, print, screen, speech
+    @media screen and (width: 600px) {
+        body {
+            color: red;
+        }
+    }
 
 - #### 폰트 바꾸기(글꼴 바꾸기)
 1. cdn으로 구글 폰트 가져오기 (https://fonts.google.com/)
@@ -215,9 +225,12 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
 - ## bootstrap 부트스트랩
     - 트위터에서 오픈 소스로 공개한 웹 프론트엔드 프레임워크
     - 사용법 : 
-        1. cdn참조 또는 파일 다운로드로 참조(부트스트랩 공식사이트. 버전5는 jqeury의존성 없어졌다. document도 5로 맞춰서 봐라.)
-        2. 참조하고 싶은 디자인 찾기
-        3. 클래스를 부여하여 디자인
+        1. 구글에서 bootstrap쳐서 공식사이트에 접속
+        2. 왼쪽위 버전확인하고 download버튼 클릭
+        3. cdn참조 또는 파일 다운로드로 참조(부트스트랩 공식사이트. 
+        버전5는 jqeury의존성 없어졌다. document도 5로 맞춰서 봐라.)
+        1. 참조하고 싶은 디자인 찾기
+        2. 클래스를 부여하여 디자인
     - 반응형 디자인이 다 적용되어있다.
 
     - Layout
@@ -239,6 +252,35 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
         class="col-sm-8" 이런식으로 col-숫자를 하게되면 수동으로 디테일하게 나눈거다.
     - 색깔
     primary, secondary, success, danger, warning, info, light, dark
+
+    - 부트스트랩으로 반응형 햄버거 네비 만들어보기
+        <!-- 네비게이션바 -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('main.index') }}">Pybo</a>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">계정생성</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">로그인</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
 
 sweetalert
 
