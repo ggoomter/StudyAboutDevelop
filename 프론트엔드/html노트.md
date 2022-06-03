@@ -49,7 +49,7 @@
   - span
     무색 무취의 태그.Inline요소의 대표. 
   - H1~6
-    Highlight. 제목을 표현할때 쓴다.
+    Highlight. Headlight. 제목을 표현할때 쓴다.
   - buttton
   - Table
     - tr(table row) : 행 추가
@@ -75,6 +75,10 @@
     <iframe src="삽입할페이지주소"></iframe>
   - canvas, SVG(Scalable Vector Graphics)
       <canvas id="drawCanvas" style="width:300px; height:200px; border: 1px solid #993300;"></canvas>
+  - 추가공부
+    - data-
+     사용자가 임의로 명명한 속성임을 표현하는 접두어  
+     예) data-clk="tct.next" 
 
 
 ### head
@@ -97,7 +101,7 @@ script, meta, title, link
 ## 시멘틱, 중첩을 잘써야 멋진 html을 만든다.
 Sementic : 의미상의.
 HTML의 본질인 '정보의 전달'이라는 본질에 집중한 의미론적 태그
-이유 : SEO, Accessibility, For Developer(개발, 유지보수)
+이유 : SEO(Search Engine Optimization. 검색엔진최적화)란 , Accessibility(접근성), For Developer(개발, 유지보수)
 <article>
 <aside>
 <details>
@@ -112,7 +116,22 @@ HTML의 본질인 '정보의 전달'이라는 본질에 집중한 의미론적 �
 <summary>
 <time>
 
-예) <div class="nav">네비게이션</div>
+예1)
+<div class="head1">제목1</div>
+.head1{
+  폰트사이즈 30
+  볼드처리
+  가운데정렬
+}
+위와 아래의 차이.
+<h1>제목1</h1>
+
+눈으로 보이는건 똑같이 만들어도 담고있는 정보가 다르다.
+h1은 가장 중요한 정보라는 의미를 내포하고있고
+클래스로 디자인한것은 디자인 적으로만 큰것 뿐이다.
+
+
+예2) <div class="nav">네비게이션</div>
 본질이 div이며 클래스의 이름이 nav일 뿐이다. 시멘틱하지 않음
 <nav>  이건 태그자체에 navigation이라는 정보를 담고있다. 이게 시맨틱.
 

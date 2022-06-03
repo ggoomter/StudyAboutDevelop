@@ -10,66 +10,80 @@ JS의 본질은 기능
     - Cascading Style Sheet. 캐스캐이딩은 작은폭포. 폭포처럼 쏟아지는 물. 연속.   즉 위에서 계속 떨어지는 느낌.
     - Author style(코딩으로 넣은거) -> User style(=사용자가 다크모드, 확대, 등) -> Browser
     - 개발자 모드로 캐스캐이딩 되는거 보여주기
+    - user agent stylesheet : 브라우저에서 정한 css
  
 
 - ### css를 넣는 3가지 방법
     1. 인라인 : 태그내에서 수정.
     예) ```<태그 style="color:gray; font-weight:700">```
-    1. 파일 내에서 :  style태그 따로빼서.
+    1. 내부파일 :  style태그 따로빼서.
     예) ``` <style> 내용 </style>```
-    1. 외부 파일로 : style 태그에 경로 myStyle.css
+    1. 외부파일 : style 태그에 경로 myStyle.css
     전체 스타일을 일관성있게 동시다발적으로 변경할수있어서 제작의 효율성이 높음. 관리가 편함.
     예)  <link rel="stylesheet" href="경로와 이름.css">
 
 
-- ### CSS 셀렉터(선택자)
-    - 선택자 : html의 어떤 태그를 선택할지 고르는것. html만들때 박스구조로 레이블링을 잘해놓으면 선택하기가 쉽다.
-        태그 : 그냥
-        클래스 : .
-        아이디 : #
-        가상클래스 :   :      예) :active, :hover, :empty, :focus
-        가상요소   :  ::      예) ::after, ::before, ::first-letter
-            꾸밈을 위해서 의미없는 태그를 더 추가해야 될 때, 태그 대신에 가상으로 처리해 주는 쓸모 많은 css 기능
-            :와 ::의 차이는 최신브라우저에서는 상관없다. 그치만 본질에 맞게 쓰는것이 좋다.
-            :before, ::before는 선택한 요소의 첫 자식으로 의사 요소를 하나 생성
-            :after(::after)는 선택한 요소의 맨 마지막 자식으로 의사 요소를 하나 생성
-            의사클래스와 의사요소를 구분하기 위해 CSS3부터 ::after가 도입됨.
-        속성 : []
-        자손 :  그냥띄우기
-        자식 :  >
-        여러개 :  ,
-        선택된 태그의 지정된클래스만 : 태그.클래스
-        A바로옆에 있는 B : A+B는
-        A바로옆에있는 B들 : A~B는
-        제일 위에 있는거  :    :first-child
-
-
-    - #### 우선순위
-        - 캐스캐이딩의 특성을 가지고있기 때문에 하나의 요소에 여러가지 명령들이 동시에 내려진다. 예를들어 일병이 쓰레기버리고와라, 병장이 이불좀 접어라, 당직사관이 당직실로와라. 
-        - 전체적으로 구체적으로 정할수록 우선순위가 높다.   
-        - 태그 1점 < 클래스 100점 < 아이디 1000점 
-          - 동메달, 은메달, 금메달같은거다. 동메달 아무리 많아도 은메달 하나에게 안된다.
-        - 메달로 변환한 점수가 동급이면 아래가 우선순위가 높다.
-        - 아이디보다 더 센 2놈이 있는데 inline < !important  이 둘은 좀 급이 다른 레벨이다.
-        - 무조건 우선순위가되는 !important는 여러개 쓸수록 그 의미가 퇴색되며 캐스캐이딩의 연결을 끊기 때문에 최대한 사용하지 말아야 한다.
-
-
-
-    - 스타일링 : 문법은 매우 간단해서 배울게 없을정도이나 실제로 내가원하는대로 스타일하기는 어렵다.
+- ### 기본 문법 : 문법은 매우 간단해서 배울게 없을정도이나 실제로 내가원하는대로 스타일하기는 어렵다.
         선택자 {
-            속성 : 값;
+            속성1 : 값1,
+            속성2 : 값2
         }
         예를들어  button:hover{
           color : red;
           background : baige;
         }
 
-    - 게임으로 공부 (https://flukeout.github.io/)
+- ### CSS 셀렉터(선택자)
+    - 선택자 : html의 어떤 태그를 선택할지 고르는것. html만들때 박스구조로 레이블링을 잘해놓으면 선택하기가 쉽다.
+        - 태그 : 그냥
+        - 클래스 : .
+        - 아이디 : #
+        - 자손 :  그냥띄우기
+        - 자식 :  >
+        - 여러개 :  ,
+        - 전체 : *
+
+        - 가상클래스 :   :      예) :active, :hover, :empty, :focus
+        - 가상요소   :  ::      예) ::after, ::before, ::first-letter
+            꾸밈을 위해서 의미없는 태그를 더 추가해야 될 때, 태그 대신에 가상으로 처리해 주는 쓸모 많은 css 기능
+            :와 ::의 차이는 최신브라우저에서는 상관없다. 그치만 본질에 맞게 쓰는것이 좋다.
+            :before, ::before는 선택한 요소의 첫 자식으로 의사 요소를 하나 생성
+            :after(::after)는 선택한 요소의 맨 마지막 자식으로 의사 요소를 하나 생성
+            의사클래스와 의사요소를 구분하기 위해 CSS3부터 ::after가 도입됨.
+        - 속성 : []
+        선택된 태그의 지정된클래스만 : 태그.클래스
+        A바로옆에 있는 B  :    A+B는
+        A바로옆에있는 B들 :    A~B는
+        제일 위에 있는거  :    :first-child
+        형제들 중에 A번째 :    선택자:nth-child(A)
+
+- #### 게임으로 공부 (https://flukeout.github.io/)
     7번 : 최초의 고비
     16번부터 어려움. 18까지만 하면됨. 이후는 퍼블리셔나 22번까지도 괜찮음.
     1.  plate apple,plate:only-child가 안됨.  plate apple:only-child, plate pickle:only-child
     부모:first-child = 형제들이 있을때 첫번째
     답 : plate:apple, plate:pickle
+
+
+- #### 우선순위
+        - css는 본질적으로 캐스캐이딩의 특성을 가지고있기 때문에 하나의 요소에 여러가지 명령들이 동시에 내려진다. 
+        예를들어 일병이 쓰레기버리고와라,
+                병장이 이불좀 접어라,
+                당직사관이 당직실로와라. 
+        - 일반적인 범위보다 구체적인 범위가 우선순위가 높다.   
+        - 태그 1점 < 클래스 100점 < 아이디 1000점 
+          - 동메달, 은메달, 금메달같은거다. 동메달 아무리 많아도 은메달 하나에게 안된다.
+        - 메달로 변환한 점수가 동급이면 아래가 우선순위가 높다.
+        예) <div class="myclass yourclass">일때 
+           .myclass에서 빨간색    .yourclass에서 노란색 
+        - <div class="myclass">
+            <div class="yourclass"></div>
+          </div>
+          yourclass에는 초록색,     myclass의 자식인 yourclass 빨간색.
+          //부모와 자식을 비교한게 아니고, B와  A밑의B를 비교한것.
+        - 아이디보다 더 센 2놈이 있는데 inline < !important  이 둘은 좀 급이 다른 레벨이다.
+        - 무조건 우선순위가되는 !important는 여러개 쓸수록 그 의미가 퇴색되며 캐스캐이딩의 연결을 끊기 때문에 최대한 사용하지 말아야 한다.
+
 
 - #### margin, padding
 컨텐츠를 기준으로 테두리까지의 여백 = padding
@@ -78,25 +92,26 @@ border를 기준으로 바깥으로 여백 = margin
 2개이상의 블록요소의 상하마진이 겹칠때 큰쪽의 값을 적용하는 브라우저의 렌더링 규칙
 
 - ### display
+  - 모든 css의 요소는 박스모델인데 크게 인라인과 블록 요소로 나뉜다.
   - ##### inline
-  : 줄바꿈없이 한줄에 나란히 배치된다.
-    **★★★★★width, height 속성을 지정해도 무시★★★★★**되고 컨텐츠만큼만 공간을 차지한다. 
-    margin, padding의 **상하간격은 무시**되고 좌우간격만 반영된다.
-    <a>, <span>이 대표적이다.
+        : 줄바꿈없이 한줄에 나란히 배치된다.
+        **★★★★★width, height 속성을 지정해도 무시★★★★★**되고 컨텐츠만큼만 공간을 차지한다. 
+        margin, padding의 **상하간격은 무시**되고 좌우간격만 반영된다.
+        <a>, <span>이 대표적이다.
   - ##### block
-  : 전후 줄바꿈이 들어간다. 다른엘리먼트들을 다른줄로 밀어내고 혼자 한줄을 차지한다.
-  width, height, margin, padding 속성이 모두 반영된다.
-  <div>, <p>, <h1>이 대표적이다.
+        : 전후 줄바꿈이 들어간다. 다른엘리먼트들을 다른줄로 밀어내고 혼자 한줄을 차지한다.
+        width, height, margin, padding 속성이 모두 반영된다.
+        <div>, <p>, <h1>이 대표적이다.
   - ##### inline-block
-   기본적으로 inline.
-   그러나 순수 inline에서 불가능한 width, height 지정가능, margin, padding의 상하간격 지정가능.  여러 앨리먼트를 한줄에 정확히 원하는 너비만큼 배치할 수 있기 때문에 레이아웃에 주로 활용한다.
-   <button>, <input>, <select>가 대표적이다.
+        : 기본적으로 inline.
+        그러나 순수 inline에서 불가능한 width, height 지정가능, margin, padding의 상하간격 지정가능.  여러 앨리먼트를 한줄에 정확히 원하는 너비만큼 배치할 수 있기 때문에 레이아웃에 주로 활용한다.
+        <button>, <input>, <select>가 대표적이다.
 
 - ### 변화. 진화
 - 프론트엔드 개발자에게나 중요하다. 백엔드 개발자는 이런게 있다 정도만 알면된다.
 [참고링크](https://dongwoo.blog/2017/02/07/%EB%B2%88%EC%97%AD-css%EC%9D%98-%EC%A7%84%ED%99%94-css-%EB%B6%80%ED%84%B0-sass-bem-css-%EB%AA%A8%EB%93%88-%EC%8A%A4%ED%83%80%EC%9D%BC%EB%93%9C-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B9%8C/)
     1. CSS
-        (CSS파일간 값을 공유할 수 없음)
+        (CSS파일간 값을 공유할 수 없음) = 변수값 사용불가
     2. SCSS, Less, Sass
         (   CSS를 전처리 엔진 형태의 프로그래밍 언어로 변형
             변수, import, Nesting 등 도입. 여전히 스타일이 겹치는 문제는 해결못함.
@@ -117,17 +132,18 @@ border를 기준으로 바깥으로 여백 = margin
     6. Styled-Component
 
 - ### 포지션(position)
+에밋 사용  .item.item$*10
 [TCP SCHOOL](http://www.tcpschool.com/css/css_position_position)
 [DaleSeo](https://www.daleseo.com/css-position-absolute/)
 [생활코딩](https://www.youtube.com/watch?v=0kA0mBvumrg)
--  **offset**(top, right, bottom, left)은 웹페이지상에서 해당요소를 해당기준에서 얼마나 떨어져야 하는지를 결정한다.
 - 문서상의 요소를 배치하는 방법을 지정한다. 아래의 5가지 방식이 있다.
     - ##### static(정적)
       - 디폴트(기본값). 단순히 웹 페이지의 흐름에 따라 차례대로 요소를 위치시키는 방식.
       오프셋의 영향을 받지 않는다.
-      웹페이지의 흐름이라는것은 위에서 아래, 왼쪽에서 오른쪽, 부모가 있다면 부모가 기준.
+      웹페이지의 기본 흐름은 위에서 아래, 왼쪽에서 오른쪽, 부모가 있다면 부모를 기존으로 자식결정
     -  ##### relative(상대)
        -  정적위치 방식일때 결정되는 위치에서 offset 만큼 이동. 즉 offset을 쓰지않았다면 자기위치는 static과 같다.
+       -  **offset**(top, right, bottom, left)은 웹페이지상에서 해당요소를 해당기준에서 얼마나 떨어져야 하는지를 결정한다.
     -  ##### absolute(절대)
        -  **static방식이 아닌 방식으로 위치가 설정된 조상요소를 절대적 기준**으로 삼는다. 때문에 **공중부양** 되면서 다른요소들이 채워진다. 
        오프셋이 있다면 **부모위치**에서 오프셋만큼 이동한다.
@@ -196,9 +212,9 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
     - clear : 상위요소의 float는 유지하면서 float다음에 오는 일반요소에게 float가 적용되지 않도록 함.
         none, left, right, both
     - text-align : block요소에만 지정할 수 있다. 그러면 block안에있는 inline요소에 적용된다.(텍스트만 적용되는것이 아님)
-
+    예) .content > img{ float: left }
 - ### 단위
-        - px : pixel.
+        - px : pixel
         - em 부모 요소의 대문자 M 너비를 기준으로 상대적인 배수가 적용됨.  자식에 계속 쓰면 계속 배수가 누적되어 적용됨.
         - rem(root em) 위의 문제를 막기위해사용.단위 :
         - % : 부모 요소의 길이를 기준으로 상대적인 값(%)
@@ -210,11 +226,11 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
   - 반응형웹(해상도에 반응하여 다르게 보이는 것)을 구현하는 기술
     - 예) 햄버거메뉴, 기사가 큰화면에서는 3개씩보이다가 작은화면에서는 1개씩 보이는거
     - 미디어유형 : all, print, screen, speech
-    @media screen and (width: 600px) {
-        body {
-            color: red;
+        @media screen and (max-width: 600px) {
+            body {
+            background-color: olive;
+            }
         }
-    }
 
 - #### 폰트 바꾸기(글꼴 바꾸기)
 1. cdn으로 구글 폰트 가져오기 (https://fonts.google.com/)
@@ -241,15 +257,15 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
         - grid
         하나의 행은 12개의 컬럼으로 구성되었다는 컨셉
         <div class="row">  <div class="col">
-            - xs   < 576px 일때 적용     .col-
-            - sm   >= 576px 일때 적용    .col-sm-
-            - md   >= 768px 일때 적용    .col-md-  많이쓴다.
-            - lg   >= 992px 일때 적용    .col-lg-
-            - xl   >= 1200px 일때 적용   .col-xl-
-            - xxl  >= 1440px 일때 적용   .col-xxl-
+            - xs  xsmall    < 576px 일때 적용     .col-
+            - sm  small     >= 576px 일때 적용    .col-sm-
+            - md  midium    >= 768px 일때 적용    .col-md-  많이쓴다.
+            - lg  large     >= 992px 일때 적용    .col-lg-
+            - xl  xlarge    >= 1200px 일때 적용   .col-xl-
+            - xxl xxlarge   >= 1440px 일때 적용   .col-xxl-
             - 이 숫자를 break point라고 한다.
         class="col" 로 하면 알아서 col갯수만큼 나눈다.
-        class="col-sm-8" 이런식으로 col-숫자를 하게되면 수동으로 디테일하게 나눈거다.
+        class="col-sm-8" 이런식으로 col-숫자를 하게되면 수동으로 디테일하게 나눈거다.  small 사이즈일때 8칸을 차지하도록 css설정.
     - 색깔
     primary, secondary, success, danger, warning, info, light, dark
 

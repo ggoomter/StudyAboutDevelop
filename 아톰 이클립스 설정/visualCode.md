@@ -65,8 +65,8 @@ Insert Spaces : 체크하면 탭을 스페이스로 변경.
 - tabout : 따옴표과 괄호에서 tab키로 빠져나옴
 - Color Highlight : 색깔에 해당색을 표시해줌.
 - **error lens** : 에러를 인라인으로 바로 표시해줌
-- Bracket Pair Colorizer
-- bueaty : 자동 들여쓰기. ctrl shift b
+- Bracket Pair Colorizer2
+- beauty : 자동 들여쓰기. ctrl shift b
 - Highlight Matching Tag
 - Markdown All in One : ctrl shift v
 - Markdown Preview Enhanced : ctrl k, v
@@ -75,12 +75,15 @@ Insert Spaces : 체크하면 탭을 스페이스로 변경.
 - Markdown Shortcuts
 - Markdown Header Coloring  : 헤더에 색깔 표시
 - markdownlint : 마크다운 문법 잡아줌 근데 html태그를 못쓰게 해놓음
-- Copy Markdown As HTML Plugin : 마크다운문서를 html로 변환시켜줌
-- CodeRunner : 코드를 vsCode에서 바로 실행해서 결과를 볼 수 있음
+- Copy Markdown As HTML : 마크다운문서를 html로 변환시켜줌
+- Code Runner : 코드를 vsCode에서 바로 실행해서 결과를 볼 수 있음
   - 출력에 안나오고 터미널에 나온다면 Ctrl +, (설정) 에서 Code-runner:Run In Terminal 체크 해제
   - 한글이 깨지면 NodeJs 재설치 후 vsCode재시작
 - Settings Sync : 설정동기화. VSCode에 이제 디폴트로 포함됨.
-    파일 - 기본설정 - 설정 동기화
+    업로드 : alt shift u
+    
+    다운받기 : 파일 - 기본설정 - 설정 동기화
+    vscode 오른쪽밑에 로그인된 계정있고, 로컬버튼 누르면 원격을 로컬로 덮어쓴다.
     vscode://vscode.github-authentication/did-authenticate?windowid=1&code=9f61fe70af30da335a4b&state=3e5cdc2a-8d04-4a10-abd5-de8544ed9e3d
 
     다른컴퓨터에 받는법
@@ -91,6 +94,7 @@ Insert Spaces : 체크하면 탭을 스페이스로 변경.
   - 사용자 설정에 쓸 수 없습니다. 사용자 설정을 열어서 오류/경고를 수정하고 다시 시도하십시오.
   => json파일에 주석이 있기 때문
 
+- ctrl shift p(명령어팔레트)에서 settings.json 들어가서 아래코드 추가
 - 주석색깔, 선택한줄 색깔 바꾸기
 -         // 선택영역 색상 변경
     "workbench.colorCustomizations": {
