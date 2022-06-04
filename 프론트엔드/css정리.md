@@ -163,9 +163,30 @@ border를 기준으로 바깥으로 여백 = margin
 position : relative 일때만 사용가능하다.
 - HTML의 부모자식 관계이며 CSS를 부모요소 Relative, 자식요소 Absolute로 줬으면 자식은 부모의 바운더리 밖을 넘어갈 수 없다.
   포지션을 명시하지않으면 부모자식이 함께 움직인다.     right:0, bottom:0 하면 부모의 오른쪽 밑으로 붙는다.
-- #### 가운데정렬 방법들
+- #### 가운데정렬(#### 중앙정렬) 방법들  
 http://hong.adfeel.info/frontend/position%EC%9C%BC%EB%A1%9C-%EA%B0%80%EC%9A%B4%EB%8D%B0-%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0/
-    1. position:absolute;
+  1. 인라인, 인라인 블록
+    <수평>
+    text-align : center를 부모에 사용.
+    <수직>
+    padding-top과 padding-bottom에 동일한값
+    패딩을 사용할 수 없는 경우 height 와 line-height에 동일한 값
+
+  2. 블록
+    <수평>
+    너비를 명시적으로 지정 후 margin : auto;
+    너비가 없다면 너비는 full width가 되므로 중앙정렬이 필요없다.
+    <수직>
+    부모 포지션 relative, 자기 포지션 absolute;
+    top:50%;
+    /*요소의 높이의 반(50%) 만큼 위로 이동*/
+    transform: translateY(-50%);
+
+  3. 다수의 블록
+  기본적으로 수직정렬된다.
+  수평정렬 하기 위해서는 부모 블록을 인라인블록으로 변경한 후 부모에 text-align : center;를 해주면된다.
+    
+  2. position:absolute;
        left : 50%;
        top : 50%;
        transform:translate(-50%, -50%);
@@ -176,34 +197,31 @@ http://hong.adfeel.info/frontend/position%EC%9C%BC%EB%A1%9C-%EA%B0%80%EC%9A%B4%E
         부모요소가 변경되면 나도 깨진다.
         그리고  height를 수작업으로 계산하는것이 힘들다.
 
-    1. 선택자{
+  3. 선택자{
         display : flex;
         justify-content : center;
         align-items : center;
     }
 
-    1. ### vertical-align,  text-align
+  4. ### vertical-align,  text-align
     단점 : 동일한 레벨의 다른 엘리먼트의 높이에 영향을 받고, 부모엘리먼트의 높이가 변할때 따라서 변하지 않음
     //vertical-align. inline또는 table-cell의 수직정렬을 지정함
             사용가능한값 : baseline, sub, super, tex-top, text-bottom, middle, 길이, 퍼센트, top, bottom
             초기값 : baseline.  부모의 baseline에 맞추어 해당 엘리먼트의 baseline을 정렬한다.
             inline-block에서 세로 레이아웃 깨질때 top주면됨.
 
-    1. line-height    폰트 기반의 아이콘을 중앙정렬할때 간단하게 사용하는 방법
+  5. line-height    폰트 기반의 아이콘을 중앙정렬할때 간단하게 사용하는 방법
     아이콘을 span으로 감싸고 line-height : 보통은 부모엘리먼트의 높이 그대로;
 
-    1. margin : auto;   메인 콘텐츠 컨테이너를 수평 중앙에 둘때 사용.
-    세로가운데 정렬 하려면 position : absolute;   left : 0;   top:0;
-    장점 : 가로 가운데정렬 쉽게 할수 있다.
-    단점 : display가 inline이나 inline-block일때 제대로 작동 안함.
+  6. 플렉스박스
 
-    - ### 이미지 가운데정렬 대표적 방법 2가지.
+
+
+  - ### 이미지 가운데정렬 대표적 방법 2가지.
         1. 부모요소에 text-align:center; 추가
         2. img 의 디스플레이 속성을 block으로 바꾼후 margin :auto;
 
-    1. text-align : center
-    엘리먼트안의 구성요소가 inline계열일때 사용. 수평중앙만 맞출수있다.
-    line-height 를 통해 수직 중앙도 맞출 수 있다.
+
 
 
 - ### float
@@ -223,10 +241,11 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
         //뷰포트 : Display상의 표시 영역
 
 - ### 미디어 쿼리
-  - 반응형웹(해상도에 반응하여 다르게 보이는 것)을 구현하는 기술
+  - 반응형웹(해상도에 반응하여 다르게 보이는 것)을 구현하는 기술. Responsive Web 
     - 예) 햄버거메뉴, 기사가 큰화면에서는 3개씩보이다가 작은화면에서는 1개씩 보이는거
+    - @media는 서로다른 미디어타입에 각각의 스타일을 지정하는것을 가능하게 한다.
     - 미디어유형 : all, print, screen, speech
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 600px) {  //600이하일때 적용
             body {
             background-color: olive;
             }
