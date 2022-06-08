@@ -22,7 +22,7 @@ ctrl shift p : 명령어 팔레트
 ctrl k f : 자동 정렬
 ctrl alft 화살표 : 열모드
 
-파이썬 패스 에러나면 ctrl shift p 에서 interpreter다 지우고 재설정 하니까 쉽게 고쳐진다.
+파이썬 패스 에러나면 ctrl shift p 에서 python쳐서 interpreter다시 선택. 안되면 다 지우고 재설정 하니까 쉽게 고쳐진다.
 
 - 스크롤바 너비 늘리기
     setting.json에서 
