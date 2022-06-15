@@ -83,7 +83,7 @@ Insert Spaces : 체크하면 탭을 스페이스로 변경.
     업로드 : alt shift u
     
     다운받기 : 파일 - 기본설정 - 설정 동기화
-    vscode 오른쪽밑에 로그인된 계정있고, 로컬버튼 누르면 원격을 로컬로 덮어쓴다.
+    에서 깃헙로그인한다음 로컬바꾸기 누르면 원격을 로컬로 덮어쓴다.
     vscode://vscode.github-authentication/did-authenticate?windowid=1&code=9f61fe70af30da335a4b&state=3e5cdc2a-8d04-4a10-abd5-de8544ed9e3d
 
     다른컴퓨터에 받는법
