@@ -20,7 +20,7 @@
   - 초창기 CGI방식 웹서버의 성능개선을 목적으로 썬마이크로시스템스에서 발표하였다.
     CGI는 멀티프로세스로 동작하기 때문에 다수의 클라이언트 요청이 들어오면 큰 부하가 걸린다.
     서블릿은 자바 기반이기 때문에 멀티쓰레드로 동작해서 많은 클라이언트의 요청에 더 잘견딘다.
-    또한 JVM위에서 동작하기 때문에 플랫폼 독립적이다.
+    또한 JVM위에서 동작하기 때문에 플랫폼(하드웨어, 운영체제)에 독립적이다.
         *CGI = Common Gateway Interface
   - 브라우저를 통해 자바클래스가 실행되도록 하기 위해서는 javax.servlet.http.HttpServlet을 상속받아 서블릿 클래스를 구현해야한다.
     HttpServlet에 있는 메소드 중 클라이언트 (사용자)가 요청한 정보에 따라 처리해야 할 메소드(doGet, doPost등)를 오버라이딩 해서 구현한다.
@@ -71,7 +71,7 @@
 
 ----------------------------------
 # JSP란
->  - Java Server Pages
+>  - Java Server Pages   //자바로만든 웹페이지
 >  - (HTML에 JAVA코드를 넣어) 동적인 웹페이지를 작성하는데 사용되는 자바의 표준기술
     쉽게말하면 HTML안에 JAVA코드가 들어있는것. <% 자바코드 %>. 이 <% %> 기호를 스크립트릿이라고 한다.
 >  - 서블릿의 단점(프론트엔드와 백엔드의 협업이 굉장히 불편)을 보완하고자 만든 서블릿 기반의 스크립트 기술.
@@ -138,6 +138,23 @@
           2. 서블릿으로 변환   : helloworld.jsp -> helloworld_jsp.java
           3. class로 변환      : helloworld_jsp.java -> helloword_jsp.class
           4. 웹브라우저 응답   : HTML형태로 응답
+
+
+##### dynamic web project
+WebContent 폴더는 예전버전 이클립스에 있고 요즘은 webapp폴더가 있음
+서버 생성 또는 연동
+
+##### jsp에 빨간줄 떠있으면
+프로젝트 우클릭 - 설정 - project facets - java - 오른쪽 run time 탭에 서버 클릭
+##### sts에 emmet설치
+상단 Help 클릭 후 install new software 클릭
+'add' 클릭 후 아래 항목들 입력
+Name : Emmet
+http://emmet.io/eclipse/updates
+OK, 체크박스 체크 후 인스톨 진행
+install any way 물어보면 ok 클릭
+restart 할꺼냐고 물어보면 restart
+
 
 ##### 세상 가장 간단한 JSP만들기
   - 톰캣 폴더에 webapps폴더만들고 time.jsp파일 작성하고 시간찍기
@@ -206,6 +223,7 @@
   ## JSP페이지의 구성요소
   - ### 1. 내장객체 9가지 (***중요***)
   JSP페이지에서 프로그래머가 생성하는 과정없이 바로 사용할수 있는 객체.
+  서블릿 컨테이너가 제공한다. 내장객체란말은 선언없이 이미 선언되어 있기에 바로 사용할수 있다는 말
       - ### request
       JSP에서 가장 많이 사용하는 기본객체.
       웹브라우저가 전송한 파라미터를 읽어올 수 있는 메서드를 제공하고있다.
@@ -232,6 +250,7 @@
       - ### session
           getSession(), getRequestedSessionID(), isRequestedSessionIdValid()
       - ### out
+          - jsp페이지가 생성하는 모든 내용은 out객체를 통해 전송된다. 출력 스트림이다.
           - boolean isAutoFlush()                               출력 버퍼가 다 찼을 때 처리 여부를 결정하는 것으로, 자동으로 플러시 할 경우에는 true를 리턴하고, 그렇지 않을 경우 false를 리턴한다.
           - int getBufferSize()                                 출력 버퍼의 전체 크기를 리턴한다.
           - int getRemaining()                                  현재 남아 있는 출력 버퍼의 크기를 리턴한다.
@@ -450,77 +469,63 @@
 
 ### 동빈나 - jsp로 MVC1 따라하기
   [1번](https://windorsky.tistory.com/entry/JSP-%EA%B2%8C%EC%8B%9C%ED%8C%90-%EB%A7%8C%EB%93%A4%EA%B8%B0-1?category=831922)
-
-  1. jdk 15 , tomcat 9 설치, sts설치후 환경변수
-  환경변수 설정, cmd에서 실행시켜보기
-  동일한 폴더에 워크스페이스, 톰캣 지정하자.
-  다이나믹 웹 프로젝트.  WebContent 안에 index.jsp 만들고 실행 확인
-  2. [로그인 화면](https://www.youtube.com/watch?v=MtxFWczSFqU&list=PLRx0vPvlEmdAZv_okJzox5wj2gG_fNh_6&index=2)
-      1. index.jsp(메인)으로 오면 로그인페이지로 강제 이동
-      2. login.jsp
-      헤더영역의 nav 작성
-  3. [mysql로 회원데이터베이스 구축](https://www.youtube.com/watch?v=kN8xRG6UPZM&list=PLRx0vPvlEmdAZv_okJzox5wj2gG_fNh_6&index=3)
-      1. mysql설치
-      2. 테이블 생성
-      create database bbs;
-      use bbs;
-      show databases;
-
-      create table USER(
-          userID varchar(20),
-          userPassword varchar(20),
-          userName varchar(20),
-          userGender varchar(20),
-          userEmail varchar(50),
-          primary key(userID)
-      );
-
-      3. jsp에서 가져오기위한 User클래스 생성 06:00
-      getter/setter 생성
-      이것이 [자바 빈즈](https://opentutorials.org/module/3569/21296)
-
-  4. [로그인 기능 구현](https://www.youtube.com/watch?v=RYo3OGlRoJw&list=PLRx0vPvlEmdAZv_okJzox5wj2gG_fNh_6&index=4)
-  loginAction.jsp
-  데이터베이스에 접근하기 위한 dao생성
-  Connection, PreparedStatement, ResultSet
-  생성자에서 연결하도록
-  5. [회원가입 페이지디자인] join.jsp
-  6. [회원가입 기능 구현]	joinAction.jsp
-  7. [세션관리] loginAction.jsp, joinAction.jsp, main.jsp수정, logoutAction.jsp
-  8. [메인페이지디자인](https://www.youtube.com/watch?v=pCqaGoexV5c&list=PLRx0vPvlEmdAZv_okJzox5wj2gG_fNh_6&index=8)
-  9. [게시판 데이터베이스 구축]
-  10. [글쓰기 기능]
-  11. [글목록 기능]
-  12. [게시글 디테일 조회 기능]
-  13. [게시글 수정 및 삭제]
-  14. [메인페이지 디자인 수정]
-  15. [완성 및 배포]
-  16. [검색]
-  17. [댓글] (https://m.blog.naver.com/2ejhi/222018209920)
-  (https://lkg3796.tistory.com/37)
-  comment라는 이름으로 package만들고 Comment.java, CommentDAO만들기
-  view.jsp(보드 상세내역 보는 화면)에서
-  18. [사진첨부] multipart/form-data
-  서버에 올리기
-  미리보기 보여주기
-  19. [페이징](https://blog.naver.com/PostView.nhn?blogId=heartflow89&logNo=221014400238&redirect=Dlog&widgetTypeCall=true&directAccess=false)
-  https://unabated.tistory.com/search/gopage
-      1. 몇개씩 보여줄것인지 정하기(기본은 10)
-      2. 화면하단에 페이지 리스트 번호 출력하기  ( 예를들어 글이 19개이면 1,2 보여야함)
-           1~10이면 1,  11~20이면 1,2     32개면 1,2,3이구나.  규칙파악해서 일반화
-      3. 페이지처리를 위해 데이터 구축(글 하나하나 화면으로 넣지말고 쿼리로 빨리 넣기)
-      4.
+1. 다이나믹 웹프로젝트 생성
+2. 톰캣 연결
+3. index실행 (web.xml)
+4. time찍어보기
+5. 로그인화면 생성
+6. 회원 db생성
+7. 로그인 기능(loginAction.jsp, userDAO, User) 
+   1. 자바빈즈 이해
+   2. Connection, PreparedStatement, ResultSet
+8. 회원가입 화면 생성
+9. [세션관리] loginAction.jsp, joinAction.jsp, main.jsp수정, logoutAction.jsp
+10. [메인페이지디자인](https://www.youtube.com/watch?v=pCqaGoexV5c&list=PLRx0vPvlEmdAZv_okJzox5wj2gG_fNh_6&index=8)
+11. [게시판 데이터베이스 구축]
+12. [글쓰기 기능]
+13. [글목록 기능]
+14. [게시글 디테일 조회 기능]
+15. [게시글 수정 및 삭제]
+16. [메인페이지 디자인 수정]
+17. [완성 및 배포]
+18. [검색]
+19. [댓글] (https://m.blog.naver.com/2ejhi/222018209920)
+(https://lkg3796.tistory.com/37)
+comment라는 이름으로 package만들고 Comment.java, CommentDAO만들기
+view.jsp(보드 상세내역 보는 화면)에서
+18. [사진첨부] multipart/form-data
+서버에 올리기
+미리보기 보여주기
+19. [페이징](https://blog.naver.com/PostView.nhn?blogId=heartflow89&logNo=221014400238&redirect=Dlog&widgetTypeCall=true&directAccess=false)
+https://unabated.tistory.com/search/gopage
+   1. 몇개씩 보여줄것인지 정하기(기본은 10)
+   2. 화면하단에 페이지 리스트 번호 출력하기  ( 예를들어 글이 19개이면 1,2 보여야함)
+        1~10이면 1,  11~20이면 1,2     32개면 1,2,3이구나.  규칙파악해서 일반화
+   3. 페이지처리를 위해 데이터 구축(글 하나하나 화면으로 넣지말고 쿼리로 빨리 넣기)
+   4.
 
 
   --------------------------------------------------------------
   <에러>
-  The superclass "javax.servlet.http.HttpServlet" was not found on the Java Build Path
+  - The superclass "javax.servlet.http.HttpServlet" was not found on the Java Build Path
   => 서버 설정 잘못된거
 
-  4. 로그인구현할때 Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+  - 500에러useBean의 class 속성을 위한 값 [user.User]은(는) 유효하지 않습니다.
+			: 서버 clean후 재시작
+
+  - 로그인구현할때 Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
   java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
   => Bitnami랑 충돌일어나고있었음
   검색에서 bitnami쳐서 서비스 종료시키면 해결
+
+  - 	java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+  : mysql 드라이버를 다운받지 않았기 때문
+  해결 :  mysql jdbc driver
+  4.8메가 짜리 connector 다운로드
+  프로젝트 src 폴더밑에 lib폴더만들고 거기에 복붙한뒤 클래스패스 추가
+  잘안돼서 tomcat/lib 안에 넣어줌.
+  
+  프로젝트 우클릭 - properties - java build path - Libraries 
 
 -------------------------------<확실하게 해야되는것>----------------------------
 - 단순히 <%  안에 자바코드안에 선언한 변수는 마찬가지로 <% 밖에 못쓰고
