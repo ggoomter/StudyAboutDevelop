@@ -107,11 +107,11 @@
 쉽게는 선언문, 스크립트릿, 표현식 3가지고 복잡하게는 아래와 같다.
   - 지시자    <%@ directive %>
     : 페이지의 속성을 지정한다.  page, include, taglib
-  - 주석    <%-- comment --%>
+  - 주석    <%-- comment --%>     html주석은 <!--  -->   js주석은 //, /*   */
     : html의 주석은 클라이언트에 공개되지만 jsp의 주석은 클라이언트가 볼수없다.
   - 선언    <%! declaration %>
     : 변수, 메소드 선언
-  - 표현식    : <%= expression %>
+  - 표현식(출력식)    : <%= expression %>
     : 결과값 출력, 선언된 메소드나 변수의 "값"만 간단하게 String으로 변환
     서블릿컨테이너는 <%= %>를 만나면 out.print()로 변환한다.
     예를들어 <%= a %>  라고 하면 out.print(a)와 같다. 때문에 안에 ;를 찍어서 a;처럼 기술하면 안된다.
@@ -122,7 +122,7 @@
 
 
 ## JSP가 처리되는 과정
-1. 웹브라우저에 주소 입력
+1. 웹브라우저에 주소 입력(어디다 어떤 요청을 했는지가 담겨있다.)
 2. JSP에 해당하는 서블릿이 없는경우
   1. JSP페이지로부터 자바코드를 생성
   2. 자바코드를 컴파일해서 서블릿 클래스를 생성
@@ -222,17 +222,17 @@ restart 할꺼냐고 물어보면 restart
 
   ## JSP페이지의 구성요소
   - ### 1. 내장객체 9가지 (***중요***)
-  JSP페이지에서 프로그래머가 생성하는 과정없이 바로 사용할수 있는 객체.
+  JSP페이지에서 프로그래머가 정의하거나 생성하는 과정없이 바로 사용할수 있는 객체.
   서블릿 컨테이너가 제공한다. 내장객체란말은 선언없이 이미 선언되어 있기에 바로 사용할수 있다는 말
       - ### request
-      JSP에서 가장 많이 사용하는 기본객체.
+      JSP에서 가장 많이 사용하는 내장객체.
       웹브라우저가 전송한 파라미터를 읽어올 수 있는 메서드를 제공하고있다.
       브라우저의 요청 정보를 저장하고 있는 객체
       HTTP헤더와 HTTP바디로 구성되어있다. 웹컨테이너는 HttpServletRequest객체로부터 사용자의 요구사항을 얻어낸다.
           - String getParameter(String name) : 파라미터 변수 name에 저장된 변수를 얻어내는 메소드로, 이때 변수의 값은 String으로 리턴된다.
                   파라미터를 찾지 못한 경우 null값을 리턴하기때문에 null인지를 체크안하고 바로 사용하면 예외가 발생하여 500에러가 뜨는것에 유의해야 한다.
                   그러나 밑의 el표기법에서 배울것이지만 EL표기법에서는 파라미터를 찾지못하면 공백으로 처리하기 때문에 따로 예외처리를 하지 않아도된다.
-          - String[] getParameterValues(String name) : 파라미터 변수 name에 저장된 모든 변수값을 얻어내는 메소드. 하나의 이름으로 여러 데이터값을 넘길때 사용한다. checkbox에서 주로 사용된다.
+          - String[] getParameterValues(String name) : 파라미터 변수 저장name에 된 모든 변수값을 얻어내는 메소드. 하나의 이름으로 여러 데이터값을 넘길때 사용한다. checkbox에서 주로 사용된다.
           - Enumeration getParameterNames() :요청에 의해 넘어오는 모든 파라미터 변수를 java.util.Enumeration 타입으로 리턴한다.
           - getParameterMap()
 
@@ -243,11 +243,13 @@ restart 할꺼냐고 물어보면 restart
       응답 정보는 HttpServletResponse 객체에 담아보낸다.
       헤더 추가 함수들을 제공하는데 리턴타입은 모두 void다. 응답헤더를 직접설정해야 하는 경우가 많지 않기 때문에 익숙하지 않아서 정리도 하지 않겠다.
       반면에 response객체의 .sendRedirect(String 주소) 는 많이 사용하는 기능이다.
-          - void setHeader(name, value)                         헤더 정보의 값을 수정하는 메소드로, name에 해당하는 헤더 정보를 value값으로 설정한다.
+          - void setHeader(name, value)                         헤더 정보의 값을 수정하는 메소드
+          문자열 name의 이름으로 value의 값을 세팅한다.
           - void setContentType(type)                           웹 브라우저의 요청의 결과로 보일 페이지의 contentType을 설정한다.
           - void sendRedirect(url)                              페이지를 이동시키는 메소드로, url로 주어진 페이지로 제어가 이동한다.
 
       - ### session
+          쿠키와 더불어 데이터를 유지할수있는 기간을 늘려주는 기능
           getSession(), getRequestedSessionID(), isRequestedSessionIdValid()
       - ### out
           - jsp페이지가 생성하는 모든 내용은 out객체를 통해 전송된다. 출력 스트림이다.
@@ -255,7 +257,7 @@ restart 할꺼냐고 물어보면 restart
           - int getBufferSize()                                 출력 버퍼의 전체 크기를 리턴한다.
           - int getRemaining()                                  현재 남아 있는 출력 버퍼의 크기를 리턴한다.
           - void clearBuffer()                                  현재 출력 버퍼에 저장되어 있는 내용을 웹 브라우저에 전송하지 않고 비운다.
-          - String println(str)                                 주어진 str 값을 웹 브라워저에 출력한다. 이때 줄 바꿈은 적용되지 않는다.
+          - String println(str)                                 주어진 str 값을 웹 브라우저에 출력한다. 이때 줄 바꿈은 적용되지 않는다.
           - void flush()                                        현재 출력 버퍼에 저장되어 있는 내용을 웹 브라우저에 전송하고 비운다.
           - void close()                                        현재 출력 버퍼에 저장되어 있는 내용을 웹 브라우저에 전송하고 출력 스트림을 닫는다.
       - ### pageContext = JSP페이지에 대한 정보
@@ -282,7 +284,7 @@ restart 할꺼냐고 물어보면 restart
       - ### application
       - ### out
 
-  - #### 2. 디렉티브(지시어)
+  - ### 2. 디렉티브(지시어)
       - 문법
           <%@ 디렉티브이름 속성1="값1" 속성2="값2" ... %>
 
@@ -295,15 +297,27 @@ restart 할꺼냐고 물어보면 restart
           캐릭터셋을 생략할경우 기본이 ISO-8859-1인데 이것은 한글을 제대로 표현할 수 없다. 그래서 UTF-8로 변경
           캐릭터셋은 대소문자를 구분하지 않고 입력하면 된다.
 
-  - #### 3. 스크립트 요소
+  - ### 3. 스크립트 요소
       - 스크립트릿(Scriptlet) : 자바코드를 실행.    <% %>태그를 스크립트릿이라고 한다.
           - 문법 : <% 자바코드 %>
       - 선언부(Declaration) : 자바 메서드를 생성.
           - 문법 : <%! 자바메소드 정의 코드 %>
       - 표현식(Expression) : 값을 출력
           - 문법 : <%= 표현식 %>
-  - #### 4. 액션태그
+  - ### 4. 액션태그
+      - 서버나 클라이언트에게 어떤 행동을 하도록 명령
+      - <jsp:forward />      //다른페이지로 이동
+      - <jsp:include />      //외부 페이지의 내용을 포함
+      - <jsp:useBean />      //자바빈즈 설정
+      - <jsp:setProperty />  //자바빈즈 프로퍼티의 값 세팅
+      - <jsp:getProperty />  //자바빈즈 프로퍼티 값 읽음
+      - <jsp:plugin />       //자바애플릿 실행
+      - <jsp:param />        //forward, include, plugin태그에 인자 추가
+      - <jsp:attribute />    //동적으로정의된 xml요소의 속성 설정
+      - <jsp:body />         //동적으로정의된 xml요소의 몸체 설정
+      - <jsp:test />         //JSP페이지의 템플릿 텍스트 작성
   - ### 5. 표현언어   (Expression Language : EL표기법)
+        데이터를 쉽고 다양하게 표현하기 위해 JSP의 기본문법을 보완한것.
   - ### 6. JSTL (JSP Standard Tag Library). 표준액션태그와 태그라이브러리
       - 문법
           <jsp:액션태그이름 속성1="값1" 속성2="값2" ... />
@@ -311,6 +325,11 @@ restart 할꺼냐고 물어보면 restart
           : JSP를 확장시켜주는 기능. 개발자가 직접 개발할 수 있고 해야한다.
       - JSTL (JSP Standard Tag Library)
           : 커스덤 태그중에서 자주 사용하는것들을 별도로 표준화한 태그라이브러리를
+      - 원래라면 <% if (변수>200) %>
+                html내용
+                <% else %>
+                html내용
+        저런 귀찮음을 아래와 같이 html의 태그로 자바코드를 쉽게 쓸수있도록 문법을 지원해준다.
       - <c:if test="${변수>2000}">
               html내용
         </c:if>
@@ -321,10 +340,17 @@ restart 할꺼냐고 물어보면 restart
 # JSTL  (Jsp Standard Tag Library)
   - 정의 : JSP에서 사용가능한 표준 태그 라이브러리
   - 사용이유 : JSP코드를 깔끔하고 가독성이 좋게 만든다.
-  - 사용하는 방법 : 1. 톰캣 공식 사이트에서 jstl라이브러리(jstl.jar)과 standard.jar 를 다운받아서 WEB-INF/lib 에 넣는다.
-              2. jstl을 사용하려는 페이지에 taglib지시자 디렉티브 작성
-              <%@ taglib prefix="c" url="http://java.sun.com/jsp/jstl/core"" target="_blank">http://java.sun.com/jsp/jstl/core" %>
-              3. 사용
+  - 사용하는 방법 : 	1. mvnrepository에서 jstl-1.2.jar 다운받고
+	2. 프로젝트 webapp/WEB-INF안에 jar파일 넣기
+	3. 클래스패스에 넣고
+	4. jstl제일 상단에 taglib 선언문 추가
+  <%@ taglib prefix="c" url="http://java.sun.com/jsp/jstl/core"" target="_blank">http://java.sun.com/jsp/jstl/core" %>
+	5. 사용
+   - JSTL에서 변수의 선언 : <c:set var="변수명" value="값"></c:set>
+   - JSTL에서 변수의 사용 :  ${변수명}을 사용한다.
+   - 그냥 코드를 넣는것돠 <c:out >을 통해 코드를 넣는것의 차이
+    : 값에 포함된 문자열에 HTML의 특수문자가 포함된경우 해석하지 않고 문자열 그대로 출력할수있게 해준다.
+
   - 종류 :
       - core(기본)             prefix : c      기본URI : http://java.sun.com/jsp/jstl/core
           태그 : set, remove, if, choose, forEach, forTokens, import, redirect, url, out, catch
@@ -334,6 +360,25 @@ restart 할꺼냐고 물어보면 restart
       - functions(함수처리)    prefix : fn     기본URI : http://java.sun.com/jsp/jstl/fn
   - 문법
       ** < 프리픽스이름:태그  속성1="값1" 속성2="값2" ... > **
+
+  - [JSTL의 변수와 JSP의 변수] (https://intro0517.tistory.com/129)
+    (**중요**)위의 내장객체 page, session, application 중 하나에 담고 써야한다.
+    1. JSTL변수를 JSP에서 사용
+   <c:set var="test" value="테스트" />
+   <%
+      String test = (String)pageContext.getAttribute("test") ;
+   %>
+
+    2. JSP 변수 JSTL에서 사용
+    <%
+      String test = "테스트" ;
+      pageContext.setAttribute("test", test) ;
+    %>
+    <c:out value="${test}" />
+
+
+
+
 
   - 예제1. 속성 설정
       <c:set var="msg" value="Hello" scope="page" />
@@ -372,8 +417,8 @@ restart 할꺼냐고 물어보면 restart
           고객 :<c:out value=”${customer}” />
       </c:forEach>
 
-      <c:forEach var=”k” begin=”1″ end=”50″ step=”1″>
-          <c:out value=”${k%2==0}” />
+      <c:forEach var="k" begin="1" end="50" step="1">
+          <c:out value="${k%2==0}" />
       </c:forEach>
           /* 속성 설명 */
           - items : 반복할 객체명
@@ -398,8 +443,8 @@ restart 할꺼냐고 물어보면 restart
       - 정의 : JSP에서 Java코드를 쓰지않고도 Java객체를 볼러올 수 있는 언어
       - 사용이유 : 속성값들을 편리하게 출력하기 위해 사용. 자바코드와 HTML의 표현을 섞게되면 복잡해지는데 그것을 쉽게 사용하기 위한 기술. JSP 2.0부터 도입된 자바코드로 출력하는 복잡한 표현식을 대체하기 위해 등장.
       - 문법  **${표현식}**
-        - 표현식 :  <%=add%>      표현언어 :  ${add}
-      - 위의 식에서 표현식에서는 add를 자바변수명으로 인식하는데, 표현언어에서는 add라는 속성명으로 인식한다.
+        - 표현식 :  <%=변수명%>      표현언어 :  ${변수명}
+      - **위의 식에서 표현식에서는 자바변수명으로 인식하는데, 표현언어에서는 속성명으로 인식한다. 사실 엄밀하게 뜯어보면 내부적으로 자바빈의 getter메소드가 호출된다.**
       - null값이 무시되어 null point exception 이 발생하지 않음. null이면 빈값으로 표현한다.
       - String, ArrayList 등으로 형변환도 필요하지 않음. 알아서 숫자는 숫자로, 문자는 문자열로 인식한다.
       - 에러가 발생하더라도 무시가 되어 사용이 용이
@@ -410,7 +455,7 @@ restart 할꺼냐고 물어보면 restart
           //   request.getParameter("name");   이렇게 쓰던것을 el에서는 ${requestScope.name} 이렇게 사용한다.
           // 내장객체를 명시하지 않고 ${num1}식으로 사용하면 스코프 순서대로 범위를 탐색한다.
           // **즉 내장객체중에서 속성값을 저장할수 있는건 4개Scope(page, request, session, application)뿐**이라는 말이고
-            EL표기법을 속성값을 표현하기 때문에 표현할수있는 데이터는 저4개에 존재하는 데이터뿐이라는 말.
+            EL표기법은 속성값을 표현하기 때문에 표현할수있는 데이터는 저4개에 존재하는 데이터뿐이라는 말.
             ${}안에는 자바단의 변수가 있다고해서 표현할수 있는 것이 아니다.
         - 요청매개변수
           **param**, paramValues
