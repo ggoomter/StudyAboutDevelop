@@ -528,6 +528,9 @@ restart 할꺼냐고 물어보면 restart
 10. [메인페이지디자인](https://www.youtube.com/watch?v=pCqaGoexV5c&list=PLRx0vPvlEmdAZv_okJzox5wj2gG_fNh_6&index=8)
 11. [게시판 데이터베이스 구축]
 12. [글쓰기 기능]
+rs.next() 안해도된다고 생각하기 쉬움
+bbsDAO에서 getNext(), getDate() 바로 쓰니까 이상하게 java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 0). 에러 발생
+변수에 담아서 사용하면 됨
 13. [글목록 기능]
 14. [게시글 디테일 조회 기능]
 15. [게시글 수정 및 삭제]
@@ -571,6 +574,20 @@ https://unabated.tistory.com/search/gopage
   잘안돼서 tomcat/lib 안에 넣어줌.
   
   프로젝트 우클릭 - properties - java build path - Libraries 
+
+  (** 중요 **)
+  - java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 0).
+  : 구글링하면 ?의 갯수가 안맞거나 "나 '를 잘못쓴 경우밖에 안나온다.
+  근본적인 문제는 하나의 쿼리문에서 다른쿼리를 호출했을때 이전의 pstmt가 종료되지 않고 스택에 남아있기 때문이다. 
+  해결 : finally {
+			try {
+				if(pstmt!=null) {
+					pstmt.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 
 -------------------------------<확실하게 해야되는것>----------------------------
 - 단순히 <%  안에 자바코드안에 선언한 변수는 마찬가지로 <% 밖에 못쓰고

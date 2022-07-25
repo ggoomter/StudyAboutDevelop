@@ -1,3 +1,11 @@
+1. 오라클 데이타베이스명을 확인하는 방법
+SELECT NAME, DB_UNIQUE_NAME FROM v$database;
+
+2. 오라클 SID를 확인하는 방법
+SELECT instance FROM v$thread;
+
+
+
 --tablespace 조회
 select * from dba_tablespaces;
 --tablespace 생성
@@ -71,3 +79,6 @@ SELECT * FROM user WHERE user = 'scott';	-- mysql
 
 <사용자 삭제>
 DROP USER 사용자명;
+예) 
+alter session set "_oracle_script"=true;
+DROP USER ggoomter CASCADE;

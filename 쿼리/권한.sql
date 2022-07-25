@@ -38,10 +38,16 @@ create user 'ggoomter'@'localhost' identified by '0070';
 create user 'ggoomter'@'%' identified by '0070';
 
 /* 권한 부여 */
+with grant option 은  revoke당하면 내가준애들의 권한도 같이 회수
+with admin option 은  revoke당하면 내것만 회수
+grant connect, dba, resource to 유저명 with admin option;
+
 SHOW GRANTS FOR 'root'@'localhost';	-- 해당유저의 권한조회
 GRANT ALL PRIVILEGES TO super with grant option; -- 모든권한부여
 GRANT ALL PRIVILEGES ON *.* to 'ggoomter'@'%' with grant option; -- 모든권한부여
 GRANT ALL PRIVILEGES TO C##SCOTT with admin option; -- 오라클 모든권한부여
+
+
 
 USE BBS;
 grant all privileges on *.* to 'ggoomter'@'localhost'; -- mysql 

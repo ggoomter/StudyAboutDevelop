@@ -17,5 +17,4 @@ while n > thisLast:  #6의배수가 넘설때마다 한바퀴
     count += 1  #6의 배수가 될때마다 한방을 더 거쳐야함
     thisLast += cnt_six
     cnt_six += 6
-print("thisLast", thisLast)
 print(count)

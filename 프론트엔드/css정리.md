@@ -70,7 +70,7 @@ JS의 본질은 기능
         예를들어 일병이 쓰레기버리고와라,
                 병장이 이불좀 접어라,
                 당직사관이 당직실로와라. 
-        - 일반적인 범위보다 구체적인 범위가 우선순위가 높다.   
+        - 일반적으로  넓은적인 범위보다 구체적인 범위가 우선순위가 높다.   
         - 태그 1점 < 클래스 100점 < 아이디 1000점 
           - 동메달, 은메달, 금메달같은거다. 동메달 아무리 많아도 은메달 하나에게 안된다.
         - 메달로 변환한 점수가 동급이면 아래가 우선순위가 높다.
@@ -131,14 +131,14 @@ border를 기준으로 바깥으로 여백 = margin
         단점 : 인터렉션이 늦다. JS번들의 크기가 커진다.)
     6. Styled-Component
 
-- ### 포지션(position)
+- ### 포지션( ## position)
 에밋 사용  .item.item$*10
 [TCP SCHOOL](http://www.tcpschool.com/css/css_position_position)
 [DaleSeo](https://www.daleseo.com/css-position-absolute/)
 [생활코딩](https://www.youtube.com/watch?v=0kA0mBvumrg)
 - 문서상의 요소를 배치하는 방법을 지정한다. 아래의 5가지 방식이 있다.
     - ##### static(정적)
-      - 디폴트(기본값). 단순히 웹 페이지의 흐름에 따라 차례대로 요소를 위치시키는 방식.
+      - 디폴트(기본값). 단순히 웹 페이지의 기본흐름에 따라 차례대로 요소를 위치시키는 방식.
       오프셋의 영향을 받지 않는다.
       웹페이지의 기본 흐름은 위에서 아래, 왼쪽에서 오른쪽, 부모가 있다면 부모를 기존으로 자식결정
     -  ##### relative(상대)
@@ -324,9 +324,24 @@ sweetalert
 2. Sources 탭에서 파일 우클릭 - save as
 
 - ### Sass   #### SCSS
-> SASS가 먼저생겼고 나중에 SCSS가 생겼지만 서로 완벽하게 호환되고 요즘은 SCSS를 쓴다. SCSS는 SASS의 상위호환.
+> SASS가 먼저생겼고 나중에 SCSS가 생겼지만 서로 완벽하게 호환되고 요즘은 SCSS를 쓴다. SCSS는 SASS의 상위호환(슈퍼셋)
 > 미세한 표기법의 차이
 - SCSS가 중괄호와 세미콜론을 사용한다. SCSS가 순수CSS와 문법이 같은 방식이라 더 사용하고 이해하기 쉽다.
+예)
+```SCSS
+.list {
+  width: 100px;
+  float: left;
+  li {
+    color: red;
+    background: url("./image.jpg");
+    &:last-child {
+      margin-right: -10px;
+    }
+  }
+}
+
+```
 > Syntactically Awesome StyleSheets (문법적으로 짱 멋진)
 > Sassy Cascading Style Sheets   (엽기적인. 매우 나이스한. )
 CSS pre processor로서 CSS의 한계와 단점을 보완하여 가독성이 높고 코드재사용에 유리한 CSS를 생성하기위한 CSS 의 확장판.
@@ -338,8 +353,20 @@ CSS pre processor로서 CSS의 한계와 단점을 보완하여 가독성이 높
     - CSS로 컴파일을 거쳐야 한다. 라이브서버로 preview안된다. 그런데 vscode의 live sass compiler가 해결해준다.
 > 어떻게 사용하나요?
 [링크](https://inpa.tistory.com/entry/SCSS-%F0%9F%92%8E-SassSCSS-%EB%9E%80-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%BB%B4%ED%8C%8C%EC%9D%BC)
+웹에서 직접 동작하는것은 CSS뿐이기 때문에 전처리기를 컴파일해서 CSS로 변환해야한다.
 1. 컴파일환경 구성
 다양한 방법이 있다. SassMeister페이지 접속, Node.js 또는 플러그인, Webpack, Parcel
+1. 전처리기 코드 작성
+2. 컴파일
+다양한 방법으로 컴파일이 가능하지만 Node.js를 추천.
+npm install -g node-sass
+node-sass [옵션] <입력파일경로> [출력파일경로]
+예) node-sass scss/main.scss public/main.css
+
+
+또는 빌드 자동화 도구(JavaScript Task Runner)인 Gulp사용
+
+3. 
 
 ### div사이 간격 없애기
 * {
@@ -347,3 +374,8 @@ CSS pre processor로서 CSS의 한계와 단점을 보완하여 가독성이 높
    margin : 0px;
    font-size: 0px;  
 }
+#### Less
+전처리기중에 제일 쉬움. 
+
+##### Stylus
+전처리기중에 제일 만족도 높음

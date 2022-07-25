@@ -180,3 +180,8 @@ a :  어디론가 이동할때
 6. table vs css
 정말 데이터면 table이 좋음
 스타일링을 위한거면 flex나 grid사용
+
+
+//textarea를
+<textarea>요기</textarea>
+요기에 엔터키 해놓고 placeholder안먹힌다고 디버깅 못하기 쉽다.  
