@@ -119,3 +119,6 @@ Insert Spaces : 체크하면 탭을 스페이스로 변경.
 
     ### conda가상환경이랑 연결
     ctrl shift p(커맨드팔레트) 누른후 python:select interpreter 찾아서 가상환경 선택
+
+    ### 인코딩 계속 깨질때
+    환경설정에 auto encoding 검색해서 자동 인코딩 분석 설정 끔
