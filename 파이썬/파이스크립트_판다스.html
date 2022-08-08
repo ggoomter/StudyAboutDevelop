@@ -1,0 +1,91 @@
+<!-- 참고 : https://towardsdatascience.com/create-an-interactive-web-app-with-pyscript-and-pandas-3918ad2dada1 -->
+
+<html> 
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" 
+            href="https://pyscript.net/alpha/pyscript.css" /> 
+        <script defer 
+            src="https://pyscript.net/alpha/pyscript.js"> 
+        </script> 
+        <py-env> 
+            - matplotlib 
+            - pandas
+            - seaborn
+        </py-env> 
+    </head> 
+    <body>
+
+        <div class="jumbotron"> 
+            <h1>날씨 데이터</h1> 
+            <p class="lead"> 
+                2020년 런던 날씨에 대한 일부 그래프 
+            </p> 
+        </div>
+
+        <div class="row"> 
+            <div class="col-sm-2 p-2 ml-4 mb-1"> 
+                <button type="button" class="btn btn-secondary">목록에서 차트 선택: </button> 
+            </div>
+            <div class="col-sm-4 p-2 mr-4 mb-1"> 
+                <select class="form-control" id="select"> 
+                    <option value="Tmax">최대 온도</option> 
+                    <option value="Tmin">최저 온도</option> 
+                    <option value="Sun">일요일</option> 
+                    <option value="Rain">비</option>         
+                </select> 
+            </div> 
+        </div>
+
+        <div class="row"> 
+            <div class="col-sm-6 p-2 그림자 ml-4 mr-4 mb-4 bg-white rounded"> 
+               <div id="chart1"></div> 
+            </div> 
+        </div>
+
+
+        <py-script> 
+
+        # 라이브러리 가져오기
+        import pandas as pd 
+        import matplotlib.pyplot as plt 
+        import seaborn as sns
+        from pyodide.http import open_url
+        
+        
+        # 데이터 가져오기
+        # Pandas 함수의 PyScript 구현은 read_csvURL을 직접 열 수 없으므로
+        url = 'https://raw.githubusercontent.com/alanjones2/uk-historical-weather/main/data/Heathrow.csv'
+        url_content =  open_url(url)
+        df = pd.read_csv(url_content)
+        
+        # 2020년 데이터 필터링 
+        df = df[df['Year']==2020]
+
+        # 차트를 그리는 함수
+        #  id가 chard1인 html요소에 fig 값을 대입
+        def plot(chart): 
+            fig, ax = plt.subplots() 
+            sns.lineplot(y=chart, x="Month", data=df, ax=ax) 
+            pyscript.write ("chart1", fig)
+
+        from js import document
+        from pyodide import create_proxy
+
+        def selectChange(event):
+            choice = document.getElementById("select").value
+            plot(choice)
+
+        def setup():
+            # Create a JsProxy for the callback function
+            change_proxy = create_proxy(selectChange)
+            e = document.getElementById("select")
+            e.addEventListener("change", change_proxy)
+        
+        setup()
+        plot('Tmax')
+
+        </py-script> 
+        
+    </body> 
+</html>
