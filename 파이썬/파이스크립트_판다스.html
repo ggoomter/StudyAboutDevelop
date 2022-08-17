@@ -7,11 +7,14 @@
             href="https://pyscript.net/alpha/pyscript.css" /> 
         <script defer 
             src="https://pyscript.net/alpha/pyscript.js"> 
-        </script> 
+        </script>
+        <script src="https://cdn.jsdelivr.net/pyodide/v0.20.0/full/pyodide.js"></script>
         <py-env> 
             - matplotlib 
-            - pandas
             - seaborn
+            - pandas
+            - scikit-learn
+            - PyMySQL
         </py-env> 
     </head> 
     <body>
@@ -44,47 +47,44 @@
         </div>
 
 
-        <py-script> 
+        <py-script>
+import pymysql
+import pandas as pd
+import pickle
+from sklearn.model_selection import train_test_split
+import os.path
+import sys
+import re
+from datetime import date
 
-        # 라이브러리 가져오기
-        import pandas as pd 
-        import matplotlib.pyplot as plt 
-        import seaborn as sns
-        from pyodide.http import open_url
+
+print('hello world11')
+# 파이썬 메인버전 숫자를 가져옴
+if sys.version_info[0] < 3: 
+    from StringIO import StringIO
+else:
+    from io import StringIO
+
+    
+# Connect to the database
+print("db연결 테스트 시작")
+
+try:
+    connection = pymysql.connect(
+        host = 'localhost',
+        port = 3306,
+        user = 'root',
+        passwd='system123',
+        db='board',
+        connect_timeout = 10,
+        charset='utf8'
+    )
+    <!-- cursor = connection.cursor(pymysql.cursors.DictCursor) -->
+    # db와 상호작용하는 커서객체의 여러 종류중 딕셔너리 형태로 반환받기위해
+    print("db연결 테스트 끝")
+except Exception, e:
+    print(e)
         
-        
-        # 데이터 가져오기
-        # Pandas 함수의 PyScript 구현은 read_csvURL을 직접 열 수 없으므로
-        url = 'https://raw.githubusercontent.com/alanjones2/uk-historical-weather/main/data/Heathrow.csv'
-        url_content =  open_url(url)
-        df = pd.read_csv(url_content)
-        
-        # 2020년 데이터 필터링 
-        df = df[df['Year']==2020]
-
-        # 차트를 그리는 함수
-        #  id가 chard1인 html요소에 fig 값을 대입
-        def plot(chart): 
-            fig, ax = plt.subplots() 
-            sns.lineplot(y=chart, x="Month", data=df, ax=ax) 
-            pyscript.write ("chart1", fig)
-
-        from js import document
-        from pyodide import create_proxy
-
-        def selectChange(event):
-            choice = document.getElementById("select").value
-            plot(choice)
-
-        def setup():
-            # Create a JsProxy for the callback function
-            change_proxy = create_proxy(selectChange)
-            e = document.getElementById("select")
-            e.addEventListener("change", change_proxy)
-        
-        setup()
-        plot('Tmax')
-
         </py-script> 
         
     </body> 

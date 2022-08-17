@@ -20,11 +20,14 @@ Query
 ORM : Obejct Relation Mapping
 객체지향적프로그래밍의 기본단위인 객체
 
-#### 03. 실습을 위한 프로젝트 셋팅
-인텔리제이에서 빨리세팅. Sprint Initializr
+#### 03. 스프링부트 프로젝트생성
+1. 인텔리제이에서 빨리세팅
+Spring Initializr
 그룹 : 패키지명. 도메인의 역순
 아티펙트 : 프로젝트의 이름
 gradle
 jar
 jdk 8버전
 의존성 : Lombok, Spring Web, Sprint Data JPA, H2 Database
+
+2. hello world요청받아서 "hello-world"문자열 리턴하는 RestController만들기
