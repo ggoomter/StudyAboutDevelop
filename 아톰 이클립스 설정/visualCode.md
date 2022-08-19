@@ -16,6 +16,7 @@ ctrl shift e : 만든 폴더 불러오기
 f12 : 함수정의부로 이동
 ctrl + b : 함수 정의 부분으로 이동
 ctrl ' : 터미널 실행
+    기본터미널은 powershell이다. ctrl shift p로 select default Profile해서 Git Bash하는걸 추천. 
 ctrl shift \ : 괄호짝 이동
 ctrl k s : 단축키 확인
 ctrl shift p : 명령어 팔레트

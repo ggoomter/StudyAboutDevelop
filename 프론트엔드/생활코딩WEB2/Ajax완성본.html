@@ -4,13 +4,12 @@
   <title>WEB1 - Welcome</title>
   <meta charset="utf-8">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="colors.js"></script>
+  <!-- <script src="colors.js"></script> -->
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
-  <input id="night_day" type="button" value="night" onclick="
-    nightDayHandler(this);
-  ">
+  <input id="night_day" type="button" value="night" 
+        onclick="nightDayHandler(this)">
   <ol>
     <li onclick="fetch('data/html').then(callbackMe);">HTML</li>
     <li onclick="fetch('data/css').then(callbackMe);">CSS</li>
