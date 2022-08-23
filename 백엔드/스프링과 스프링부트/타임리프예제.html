@@ -1,0 +1,21 @@
+<div class="container" th:if="${not #lists.isEmpty( characterList )}" >
+    <div class="row"  th:each="row, i : ${characterList}">
+        <div class="col-12" th:if="${i.index} % 4 ==0}"></div>
+        <div class="col-3" th:if="${i.index} % 4 != 0">
+          <div class="card">
+             <div class="card-header"
+                th:text="${#temporals.format( row.regDate, 'yyyy-MM-dd' )}"></div>
+             <img th:src="@{${row.filepath}}" alt="" />
+             <div class="card-body">
+                <p class="card-title">
+                   <a th:href="@{/character/view(idx=${row.idx})}"
+                      th:text="${row.name}"></a>
+                </p>
+                <p class="card-text" th:text="${row.title}"></p>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+ container-fluid
