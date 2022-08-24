@@ -103,6 +103,7 @@
   - [jsp include로 영역 나누기](https://n-che-sw.tistory.com/39)
 
 
+
 ## 문법
 쉽게는 선언문, 스크립트릿, 표현식 3가지고 복잡하게는 아래와 같다.
   - 지시자    <%@ directive %>
@@ -600,14 +601,17 @@ https://unabated.tistory.com/search/gopage
   바로 이렇게 첫번째 요청이후 두번째 요청부터는 '서블릿 인스턴스'를 다시 생성하지 않고 이미 메모리에 로딩된 서블릿을 사용하기 때문에 빠르다.
 
 - jsp에서 다른 jsp 가져오는 3가지 방법
-  - <%@ include file="주소" %>
-    정적인 방식. 현재 컨텐츠에 포함시켜 같이 컴파일된다. 상위jsp 변수를 하위에서 쓸수있다.
+  - <%@ include file="주소" %>   //인클루드 디렉티브
+    정적인 방식. 소스실행전에 include되어 같이 컴파일된다. 상위jsp 변수를 하위에서 쓸수있다.
 
-  - <jsp:include page="주소" >
+  - <jsp:include page="주소" flush="true">  //인클루드 액션태그
     서버가 해석한 출력결과(html코드)만 현재 컨텐츠에 포함시킨다.
+    페이지를 모듈화 할때 사용한다.
+    flush는 문서의 출력결과를 항상 버퍼내에서 갱신하라는 말
     
   - <c:import url="주소" />
     <jsp:include>와 같이 출력결과만 포함시키지만 외부자원도 사용가능하다.
+    위의 방법들은 원격지의 jsp는 못가져오는데 이건 가능하게 해준다.
 
 - ** GetParameter vs GetAttribute **     ** SetParameter  vs SetAttribute **
   <parameter>
