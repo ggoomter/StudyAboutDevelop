@@ -108,15 +108,17 @@ border를 기준으로 바깥으로 여백 = margin
         <button>, <input>, <select>가 대표적이다.
 
 - ### 변화. 진화
+- ### 전처리기 ### preProcessor
 - 프론트엔드 개발자에게나 중요하다. 백엔드 개발자는 이런게 있다 정도만 알면된다.
+- CSS에 문법을 익힌것
 [참고링크](https://dongwoo.blog/2017/02/07/%EB%B2%88%EC%97%AD-css%EC%9D%98-%EC%A7%84%ED%99%94-css-%EB%B6%80%ED%84%B0-sass-bem-css-%EB%AA%A8%EB%93%88-%EC%8A%A4%ED%83%80%EC%9D%BC%EB%93%9C-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B9%8C/)
     1. CSS
         (CSS파일간 값을 공유할 수 없음) = 변수값 사용불가
-    2. SCSS, Less, Sass
+    2. ### SCSS, ### Less, ### Sass
         (   CSS를 전처리 엔진 형태의 프로그래밍 언어로 변형
             변수, import, Nesting 등 도입. 여전히 스타일이 겹치는 문제는 해결못함.
             모범사례가 없다면 문제를 해결해주기보다는 더 많은 문제를 만들어냄
-            $가 보이면 Sass
+            $가 보이면 Sass. Sass는 협업할때 좋다.
         )
     3. BEM
         ( 블록, 요소, 변경자 컨벤션을 사용함으로써 클래스명의 유일함을 보장하여 스타일이 겹치는 위험성을 줄일 수 있게 해줌.
@@ -317,7 +319,6 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
 
 
 
-sweetalert
 
 ### 개발자모드에서 바꾼거 바로 저장하는 법
 1. Elements에서 바꾸고 오른쪽에 경로로 들어감
