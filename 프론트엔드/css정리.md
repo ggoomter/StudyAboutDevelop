@@ -40,7 +40,7 @@ JS의 본질은 기능
         - 아이디 : #
         - 자손 :  그냥띄우기
         - 자식 :  >
-        - 여러개 :  ,
+        - 여러개 :  , 
         - 전체 : *
 
         - 가상클래스 :   :      예) :active, :hover, :empty, :focus
@@ -52,17 +52,22 @@ JS의 본질은 기능
             의사클래스와 의사요소를 구분하기 위해 CSS3부터 ::after가 도입됨.
         - 속성 : []
         선택된 태그의 지정된클래스만 : 태그.클래스
-        A바로옆에 있는 B  :    A+B는
-        A바로옆에있는 B들 :    A~B는
+        A바로옆에 있는 B  :    A+B
+        A바로옆에 있는 B들 :    A~B
         제일 위에 있는거  :    :first-child
+        부모의 유일한자식 :    부모 :only-child
+        자기가 마지막자식 :    자기:last-child
         형제들 중에 A번째 :    선택자:nth-child(A)
+        부모의 막내몇번째 :    부모:nth-last-child(몇번째)
 
 - #### 게임으로 공부 (https://flukeout.github.io/)
     7번 : 최초의 고비
+    14까지가 기본.
     16번부터 어려움. 18까지만 하면됨. 이후는 퍼블리셔나 22번까지도 괜찮음.
     1.  plate apple,plate:only-child가 안됨.  plate apple:only-child, plate pickle:only-child
     부모:first-child = 형제들이 있을때 첫번째
     답 : plate:apple, plate:pickle
+    //[해설](https://velog.io/@jaedie/CSS-Diner-%EC%99%84%EB%A3%8C%EB%8B%B5%EC%95%88%EC%9A%94%EC%A0%90%EC%A0%95%EB%A6%AC-13)
 
 
 - #### 우선순위

@@ -47,7 +47,7 @@
   - div
     무색 무취의 태그.block요소의 대표. division의 약자. 구분. 분류.
   - span
-    무색 무취의 태그.Inline요소의 대표. 
+    무색 무취의 태그.Inline요소의 대표. 뼘. 폭
   - H1~6
     Highlight. Headlight. 제목을 표현할때 쓴다.
   - buttton
@@ -63,6 +63,22 @@
     - method 속성 : 어떤 HTTP 메소드를 사용해서 데이터를 보낼것인가
   - input
     데이터를 입력받을수 있는 태그. 여러가지 datatype이 있다.
+    text, password, radio, checkbox, hidden, label,
+    color, date, datetime, email, month, number, range, search, tel, time, url, week
+    min, max 속성
+    ux개선. 특히 모바일. 입력도 안되게 하고 잘못됐을때 제출도 안된다.
+  - label   라벨, 레이블
+    목적 : ux증진
+    2가지 방법이 있다.
+    1. label의 for와 태그의 id를 이어주기
+    2. 그냥 label태그로 감싸기
+    <label>
+      <input type="checkbox" name="color" value="red"> 붉은색
+    </label>
+    <label for="color_blue">
+      <input type="color_blue" type="checkbox" name="color" value="blue"> 파란색
+    </label>
+    
   - img , audio, video
   - script
     <script type="text/javascript">내용</script>
@@ -82,9 +98,16 @@
 
 
 ### head
-script, meta, title, link
+//본문에 대한 설명
+- script
+- meta
+  <meta charset="UTF-8">  이 웹페이지를 열때 utf-8로 열어라
+- title
+  브라우저  제일 위 탭 부분에 표시되는 부분. 검색엔진에서 매우 중요한 요소다. 책으로 치면 표지
+- link
 
 ### body (2시간)
+//본문
   3.1 블록과 인라인
   3.2 태그  140개정도. 의미 있는것만
   3.3 블록 인라인 (30분)
@@ -108,6 +131,7 @@ HTML의 본질인 '정보의 전달'이라는 본질에 집중한 의미론적 �
 <figcaption>
 <figure>
 <footer>
+예전에는 <div id="footer">
 <header>
 <main>
 <mark>
