@@ -11,7 +11,7 @@
 
 
 ### 윈도우 단축키 : win + x
-화면 넘어간거 이동 : ALT SPACE   M   방향키로 이동
+화면 넘어간거 이동 : ALT SPACE M  이후  방향키로 이동
 
 
 #### 메인보드 확인
@@ -22,3 +22,43 @@ Intel Core i5 9400F 2.90Hz
 NVIDIA GeForce GTX 1660
 
 
+#### 브라우저(크롬)
+ctrl h : (history)최근에 본 페이지. 방문기록
+
+
+### 용량 확보
+-- 기초 --
+1. 다운로드 폴더
+2. 카카오톡받은파일
+3. 휴지통 비우기
+4. 안쓰는 프로그램 삭제
+5. 제어판 지운 프로그램과 관계된 덤프파일
+6. 내컴퓨터 - C:\ - Program Files, Windows 에서 일일이 보고 제거
+    WinSxS는 윈도우 업데이트 파일들.  폴더를 통째로 지우지말고 아래방법 사용
+        cmd 관리자모드로 열어서 system32폴더 들어가서
+        dism.exe /online /Cleanup-Image /spsuperseded
+        dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
+
+-- 중급 --
+TreeSize다운
+시스템 - 저장소 - 저장소센스 켬
+    더많은 범주 표시 - 인시파일 제거
+
+
+# 컴퓨터 느려졌을때
+chkdsk /f
+sfc /scannow
+DISM.exe /Online /Cleanup-image /Restorehealth
+
+
+# 개인정보보호
+제어판 - 파일탐색기옵션 - 일반 - 개인정보보호 - 지우기
+    체크2개 해제
+모든앱 - 설정 - 개인설정 - 시작 - 최근에 추가된 앱표시 끔으로 설정
+    가장많이 사용하는 앱표시 끔,
+    시작 점프 목록 및 파일탐색기에서 최근에 연 항목표시 끔
+크롬 : 
+<이미 있는거 지우기>
+    우측상단3개점 - 설정 - 인터넷사용기록삭제 - 고급 - 좌측모든항목체크 - 인터넷사용기록삭제
+<애초에 저장안하기>
+ctrl shift n(시크릿 모드)는 방문기록, 쿠키, 사이트, 입력정보 등이 저장안된다.

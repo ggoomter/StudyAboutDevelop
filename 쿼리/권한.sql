@@ -47,13 +47,12 @@ SHOW GRANTS FOR 'root'@'localhost';	-- 해당유저의 권한조회
 GRANT ALL PRIVILEGES TO super with grant option; -- 모든권한부여
 GRANT ALL PRIVILEGES ON *.* to 'ggoomter'@'%' with grant option; -- 모든권한부여
 GRANT ALL PRIVILEGES TO C##SCOTT with admin option; -- 오라클 모든권한부여
+grant all privileges on *.* to 'ggoomter'@'localhost'; -- mysql에서 기존유저에 권한부여
 
+create user 'root'@'%' identified by 'system123';
+-- 뒤에 identified by 'system123' 가 있으면 권한부여하면서 비밀번호까지 변경하는것
+flush privileges;
 
-
-USE BBS;
-grant all privileges on *.* to 'ggoomter'@'localhost'; -- mysql 
-grant all privileges on *.* to 'scott'@'localhost'; -- mysql 
-grant all privileges on *.* to 'gganbu'@'localhost'; -- mysql 
 -- with grant option을 주면 자기가 가진 권한을 남에게 줄수 있음
 -- Access denied for user 'scott'@'%' (using password: YES) 
 

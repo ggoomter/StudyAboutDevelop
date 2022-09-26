@@ -1,3 +1,17 @@
+# 학습
+udemy 유료강의. AWS Certified Cloud Practitioner CLF-C01 시험     강사 : Stephane Maarek
+
+
+# aws
+200개가 넘는 서비스가 있다.
+12개의 AWS Certified 자격증이 있다.
+![aws자격증](../이미지/aws자격증.PNG)
+기초(Foundational)는 Cloud Practitioner
+그위에 Associate
+그위에 Professional과 Specialty
+
+
+
 > ec2, mysql, github, putty 연동
 https://victorydntmd.tistory.com/338
 
