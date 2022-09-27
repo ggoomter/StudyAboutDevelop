@@ -1,16 +1,115 @@
-# 학습
-udemy 유료강의. AWS Certified Cloud Practitioner CLF-C01 시험     강사 : Stephane Maarek
 
 
 # aws
 200개가 넘는 서비스가 있다.
 12개의 AWS Certified 자격증이 있다.
 ![aws자격증](../이미지/aws자격증.PNG)
-기초(Foundational)는 Cloud Practitioner
-그위에 Associate
-그위에 Professional과 Specialty
+기초(Foundational)레벨에는 Cloud Practitioner
+그 위에 Associate레벨
+그 위에 Professional레벨과 Specialty레벨
+
+---
+# 학습
+udemy 유료강의. AWS Certified Cloud Practitioner CLF-C01 시험     강사 : Stephane Maarek
+
+# 계정생성
+https://portal.aws.amazon.com/billing/signup#/start/email
+2022년 5월9일에 만들어뒀던 ggoomterHuman@gmail.com  xxxx3#  사용해서 학습.
+카드, 핸드폰, 이메일 등 실제유저 확인한다.
+
+### 강의자료 다운로드
+https://courses.datacumulus.com/downloads/certified-cloud-practitioner-zb2/
+
+### 웹사이트 구동원리
+알고있어서 정리안함
+서버 : CPU, RAM, 하드, DB
+      라우터, 스위치, DNS
+
+### 전통적인 서비스
+서버 구매,  창고나 방, 거실 등에 설치,  소프트웨어적 설치, 전기세 지불,   쿨링시스템,   유지보수 인원,
+추가나 교체시 오랜 시간(주문, 연결, 배포),   확장의 어려움(시간, 공간),  문제발생시 대응할 모니터링 팀,
+정전, 지진, 화재 등에 대한 보험
+
+### 클라우딩 컴퓨팅
+컴퓨팅 파워, 데이터베이스 스토리지 , 어플리케이션, 기타 IT 리소스를 온디멘드로 제공하는 것
+핵심은 온디멘드. 필요할때 얻는 것. 요청한만큼만 비용지불. 사용이 끝나면 비용지불도 끝
+정확한 유형과 크기를 프로비저닝 할수 있다.  //사용자의 요구에 맞게 시스템 자원을 할당, 배치, 배포해 두었다가 필요 시 시스템을 즉시 사용할 수 있는 상태로 미리 준비해 두는 것
+Gmail, Dropbox, Netflix 등이 클라우드 서비스
+
+Private Cloud : rackspace
+Public Cloud : MS Azure, Google Cloud, AWS
+Hybrid Cloud : 자체인프라와 Public의 혼용
+
+- 5가지 특징
+1. On-demand self service
+2. Broad network access
+3. Multi-tenancy and resource pooling
+4. Rapid elasticity and scalabiliy
+5. Measured service
+
+- 6가지 장점
+1. Trade capital expense(CAPEX) for operational expense(OPEX)
+2. benefit from massive economies of scale
+3. Stop guessing capacity
+4. Increase speed and agility
+5. Stop spending money running and maintaining data centers
+6. Go global in minutes
+
+- 유형   as a Service의 단축어인 aaS는 고정.  IPS로 기억하자.
+![aws유형](../이미지/aws유형.PNG)
+0. On-premises
+1. Infrastructure as a Service (**IaaS**)   서비스형 인프라
+    네트워킹, 컴퓨터, db저장공간을 원시형태로 제공
+    레고를 조립하듯 높은 유연성
+    예) EC2,  GCP, Azure, 
+2. Platform as a Service (**PaaS**) 서비스형 플랫폼
+    기본인프라를 관리할 필요가 없음
+    배포와 애플리케이션 관리(데이터와 애플리케이션)에만 집중
+    예) Elastic Beanstalk,  Heroku, GCP, Windows Azure
+3. Software as a Service (**SaaS**) 서비스형 소프트웨어
+    서비스제공업체가 완전히 운영하고 관리
+    예) Rekognition,   Gmail, Dropbox, Zoom
+
+## 비용
+3가지 기본가격이지만 모두 종량제(컴퓨팅 시간, 스토리지 양, 네트워크가 나갈때만)
+시간의경과, 1년에 1번, 정액 같은 보기는 아님.
+
+## AWS의 역사
+2002년 Amazon.com 내부에서 시작. 
+아마존의 인프라는 그들의 핵심 역량 중 하나였고 우리가 아니라 다른사람들을 위해 서비스로 출시하면 어떨까?
+2004년 첫번째 서비스인 SQS출시
+2006년 SQS, S3, EC2
+2019년 가트너의 시장조사에 따르면 세계1위 리더이고 시장점유율 47%. 2등인 Microsoft는 22%
 
 
+### AWS 인스트럭터
+https://infrastructure.aws/
+- **리전** : 데이터 센터의 집합. 세계각지에 구역을 나눈 이름. ue-east-1,  eu-west-3 같은것들
+       대부분의 서비스들은 그 리전에 국한된다.
+       선택기준 : 상황에 따라 다르다. (법률, 지연시간, 해당서비스가 그 리전에서 지원하는지, 요금)
+- **가용영역** : 리전내에 존재. 대부분 3개를 가지고있고 최소는 2, 최대는 6.   
+            시드니의 리전은 ap-southeast-2 인데   거기에 가용영역은 ap-southeast-2a, ap-southeast-2b, ap-southeast-2c
+            각각의 가용영역은 여분의 **전원을 갖춘 네트워킹**, **통신기능을 갖춘 데이터 센터**로 이루어져있다.
+            각각의 가용영역들이 재난발생에 대비해 서로 분리되어 있다.
+- **엣지로케이션** : 전송지점. 216개가 넘는 포인트들이 있다.
+
+### 스코프
+글로벌서비스 : IAM(Identity and Access Management), Route 53(DNS service), CloudFront(CDN), WAF(Web Application Firewall)
+리전스코프 : 대부분의 AWS서비스.  EC2, Elastic Beanstalk, Lambda, Rekognition
+
+## 콘솔
+- 오른쪽위 리전선택기 (가장 서비스하기에 가까운 지역 선택)
+  - Global로 돼있을때는 리전을 선택할 필요가 없다는 말. 규칙이라기 보다는 예외
+  - 어느 리전의 콘솔을 보느냐에 따라 컨텐츠가 다르다.
+- 12시방향 검색창
+- 왼쪽위 New EC2 Experience 토글스위치를 통해 과거의 GUI로 변환할 수 있음
+
+### 공동책임모델
+AWS클라우드에서 보안에 대한 책임분배를 정의하는 것
+- AWS의 책임 = SECURITY OF THE CLOUD
+- 개발자의 책임 = SECURITY IN THE CLOUD
+그리고 이용목적제한방침에 동의해야함. 불법적, 공격적, 유해한 콘텐츠, 보안위반, 네트워크 남용, 이메일이나 다른유형의 메세지 남용 안됨.
+---
 
 > ec2, mysql, github, putty 연동
 https://victorydntmd.tistory.com/338
@@ -337,8 +436,14 @@ human_suwon.naver.com
 
 
 #### IAM
-Identity and Access Management
-RDS 데이터베이스에 접근가능한 사람을 제어한다.
+> Identity and Access Management
+- 사용자를 생성하고 그룹에 배치하기 때문에 글로벌 서비스에 해당
+- 루트계정은 오직 계정을 만들때만 사용되어야 한다. 
+- 그룹으로 묶을수있다.  그룹에는 다른그룹은 못들어가고 사용자만 배치할 수 있다.  개발팀, 운영팀 같이
+  - 그룹에 포함되지 않은 사용자는 당연히 있을 수 있다.
+  - 한명이 서로다른 그룹에 속할 수도 있다.
+- 목적 : Permissions(권한)
+- AWS는 최소권한의 원칙을 적용한다. 꼭 필요한 이상의 권한을 주지 않는다.
 
 ##### VPC
 Vitual Private Cloud. 가상 사설 클라우드.
@@ -377,4 +482,3 @@ ggoomter2@gmail.com  xxxx3#   177318059854 2022년 5월9일 ec2, rds 삭제
 name human_tester
 (ip주소 54.180.120.40)gradle
 
-ggoomterHuman@gmail.com  xxxx3#  2022년 5월9일 ec2생성
