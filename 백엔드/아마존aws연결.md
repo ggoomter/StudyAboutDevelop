@@ -437,16 +437,53 @@ human_suwon.naver.com
 
 #### IAM
 > Identity and Access Management
-- 사용자를 생성하고 그룹에 배치하기 때문에 글로벌 서비스에 해당
-- 루트계정은 오직 계정을 만들때만 사용되어야 한다. 
+- 사용자를 생성하고 그룹에 배치하기 때문에 '글로벌 서비스'에 해당
+- **루트계정은 오직 계정을 만들때만 사용되어야 한다.*
+  - 그러므로 aws를 접속하면 가장 먼저 할일을 IAM콘솔에 들어가서 계정을 만드는 일이다.
+  - 그룹만들고 권한 부여하고 
+  - 비번 등 설정하고 Download.csv 다운  //사용자들의 자격증명정보
+  - 대쉬보드에서 AWS Account에 보면 Id와 Alias가 있다.
+  - 개인용 Sign-in URL을 별도로 주기도하고,  로그인할때 IAM user 선택해서 id나 별칭 입력해서 들어올 수도 있다.
+  - 로그인시는 3가지정보(id나별칭, username, 비번)이 필요
 - 그룹으로 묶을수있다.  그룹에는 다른그룹은 못들어가고 사용자만 배치할 수 있다.  개발팀, 운영팀 같이
   - 그룹에 포함되지 않은 사용자는 당연히 있을 수 있다.
   - 한명이 서로다른 그룹에 속할 수도 있다.
 - 목적 : Permissions(권한)
 - AWS는 최소권한의 원칙을 적용한다. 꼭 필요한 이상의 권한을 주지 않는다.
 
+    ##### IAM의 구조
+    - JSON형태
+    - SID : Statement 에 대한 id
+    - Effect : 해당 Statement에 대한 접근을 Allow할지 Deny할지
+    - Principal : 이 정책이 적용될 account/user/role
+    - Action : 이 정책이 허용하고 거부할 액션들
+    - Resource : 이 정책이 적용될 리소스 리스트
+    
+    ##### IAM 실습
+    여러가지 권한줘보고 뺏고 접속하고 기능 실행해보기
+    ##### IAM MFA (Multi Factor Authentication)
+    보안을 높이기 위한 2가지.  비밀번호 정책, 다요소인증
+    ##### MFA 실습
+    IAM콘솔에서 Access management / Account settings / Change password policy
+    root계정일때는 로그인후 오른쪽위 계정이름 / My Security Credentials / MFA
+    Authy = 폰의 QR코드로 인증
+    그 하드웨어를 절대 잊어버리면 안된다.
+
+##### AWS 접속
+이때까지 웹으로만 접속했지만 사실 3가지가 있다.
+1. AWS 콘솔
+2. CLI
+3. SDK
+
+######  엑세스키
+엑세스 키 아이디는 유저네임과 같고
+시크릿 엑세스 키는 패스워드와 같다.
+
+
+
 ##### VPC
 Vitual Private Cloud. 가상 사설 클라우드.
+
 
 
 #### Beanstalk (EB) 실패

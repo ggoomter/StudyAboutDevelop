@@ -46,7 +46,7 @@ grant connect, dba, resource to 유저명 with admin option;
 SHOW GRANTS FOR 'root'@'localhost';	-- 해당유저의 권한조회
 GRANT ALL PRIVILEGES TO super with grant option; -- 모든권한부여
 GRANT ALL PRIVILEGES ON *.* to 'ggoomter'@'%' with grant option; -- 모든권한부여
-GRANT ALL PRIVILEGES TO C##SCOTT with admin option; -- 오라클 모든권한부여
+GRANT ALL PRIVILEGES TO 유저명 with admin option; -- 오라클 모든권한부여
 grant all privileges on *.* to 'ggoomter'@'localhost'; -- mysql에서 기존유저에 권한부여
 
 create user 'root'@'%' identified by 'system123';

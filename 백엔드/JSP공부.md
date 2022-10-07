@@ -10,11 +10,19 @@
 - 데이터베이스
 - IDE
 
+### 설치
+- 에밋 설치 : https://dlagusgh1.tistory.com/391	
+- STS3에 웹개발 플러그인 : 이클립스 마켓플레이스 - web쳐서 - 
+	톱니바퀴모양 Java and Web Developer Tools
+> 개발환경 업데이트가 오류가 날 때에는 아래 디렉토리를 확인해서 삭제하시고 이클립스를 재기동 하시기 바랍니다. 재기동 후에 다시 업데이트를 해보시기 바랍니다.
+p2/org.eclipse.equinox.p2.repository/cache
+
+
 # JSP를 공부하기 전에 먼저알아야 되는 서블릿
 
 # 서블릿 Servlet
 >  - Server + Applet.  자바를 이용하여 웹에서 실행되는 프로그램을 작성하는 기술. 자바코드안에 HTML코드가 있는 하나의 클래스파일.
->  - 클라이언트의 요청을 받아서 동적으로 그 결과로 HTML을 생성해서 응답으로 반환하는 Servlet쿨래스의 구현 규칙을 지킨 자바 웹 프로그래밍 기술(프로그램).
+>  - 클라이언트의 요청을 받아서 동적으로 그 결과로 HTML을 생성해서 응답으로 반환하는 Servlet클래스의 구현 규칙을 지킨 자바 웹 프로그래밍 기술(프로그램).
 >  - 클라이언트가 요청을 하면 그에대한 결과를 다시 전송해주는 역할을 하는 자바프로그램. 확장자는 .java
   - MVC패턴에서 컨트롤러로 이용된다.
   - 초창기 CGI방식 웹서버의 성능개선을 목적으로 썬마이크로시스템스에서 발표하였다.
@@ -33,7 +41,7 @@
   - 브라우저를 통해 외부에서 실행되기 때문에 접근제한자는 반드시 public이여야 한다.
 
   - [동작방식]
-    1. 사용자(클라이언트)가 URL을 입력하면 HTTP Request가 Servlet Container로 전송합니다.
+    1. 사용자(클라이언트)가 URL을 입 력하면 HTTP Request가 Servlet Container로 전송합니다.
     1. 요청을 전송받은 Servlet Container는 HttpServletRequest, HttpServletResponse 객체를 생성합니다.
     1. web.xml을 기반으로 사용자가 요청한 URL이 어느 서블릿에 대한 요청인지 찾습니다.
     1. 해당 서블릿에서 service메소드를 호출한 후 클라이언트의 GET, POST여부에 따라 doGet() 또는 doPost()를 호출합니다.
@@ -105,6 +113,7 @@
 
 
 ## 문법
+기본문법  HTML안에있는 <% 자바소스 %>
 쉽게는 선언문, 스크립트릿, 표현식 3가지고 복잡하게는 아래와 같다.
   - 지시자    <%@ directive %>
     : 페이지의 속성을 지정한다.  page, include, taglib
@@ -143,6 +152,7 @@
 
 ##### dynamic web project
 WebContent 폴더는 예전버전 이클립스에 있고 요즘은 webapp폴더가 있음
+  webapp안에 META-INF와 WEB-INF
 서버 생성 또는 연동
 
 ##### jsp에 빨간줄 떠있으면
@@ -173,6 +183,10 @@ restart 할꺼냐고 물어보면 restart
   </body>
   </html>
   ```
+##### out.println 을 해도 줄안바뀌는 문제
+html코드상으로는 줄바꿈이 되고있지만
+엔터키를 10번을 눌러도 결국 공백 하나로 인식하기 때문에 우리눈에는 공백하나로만 보이는것.
+out.print("<br>"); 로 해결하자.
 
 ##### 조금 어려운 jsp 만들기
   ```html
@@ -231,7 +245,7 @@ restart 할꺼냐고 물어보면 restart
       브라우저의 요청 정보를 저장하고 있는 객체
       HTTP헤더와 HTTP바디로 구성되어있다. 웹컨테이너는 HttpServletRequest객체로부터 사용자의 요구사항을 얻어낸다.
           - String getParameter(String name) : 파라미터 변수 name에 저장된 변수를 얻어내는 메소드로, 이때 변수의 값은 String으로 리턴된다.
-                  파라미터를 찾지 못한 경우 null값을 리턴하기때문에 null인지를 체크안하고 바로 사용하면 예외가 발생하여 500에러가 뜨는것에 유의해야 한다.
+                  파라미터를 찾지 못한 경우 null값을 리턴하기때문에 null인지를 체크안하고 바로 사용하면 예외가 발생하여 500에러가 뜰수있는것에 유의
                   그러나 밑의 el표기법에서 배울것이지만 EL표기법에서는 파라미터를 찾지못하면 공백으로 처리하기 때문에 따로 예외처리를 하지 않아도된다.
           - String[] getParameterValues(String name) : 파라미터 변수 저장name에 된 모든 변수값을 얻어내는 메소드. 하나의 이름으로 여러 데이터값을 넘길때 사용한다. checkbox에서 주로 사용된다.
           - Enumeration getParameterNames() :요청에 의해 넘어오는 모든 파라미터 변수를 java.util.Enumeration 타입으로 리턴한다.
@@ -337,6 +351,27 @@ restart 할꺼냐고 물어보면 restart
 
 
   ----------------------------------------------------
+### 자바빈  ### javaBean
+> 디폴트 생성자와 필드, getter, setter메소드가 있는 클래스의 특별한형태를 말한다. 즉, 단순히 데이터를 저장할 목적으로 만들어진 클래스
+- <jsp:useBean class="kr.co.ggoomter.Member" id="member" scope="page" />
+- 이 코드를 쓰면 아래와 같은 코드가 내부적으로 자동 생성된다.
+```java
+<%
+kr.co.ggoomter.Member member = new kr.co.ggoomter.Member();
+pageContext.setAttribute("member", member);
+%>
+```
+
+- <jsp:getProperty name="member" property="name" />
+- 이 코드를 쓰면 아래와 같은 코드가 내부적으로 자동 생성된다.
+```java
+<%= memeber.getName() %>
+```
+import
+500에러가 뜨는데 WEB-INF/classes폴더 만들고
+프로젝트 자바빌드패스 - source탭 - 디폴트 아웃풋 폴더를 만든 classes폴더로 선택
+
+
 
 # JSTL  (Jsp Standard Tag Library)
   - 정의 : JSP에서 사용가능한 표준 태그 라이브러리
@@ -365,6 +400,7 @@ restart 할꺼냐고 물어보면 restart
   - [JSTL의 변수와 JSP의 변수] (https://intro0517.tistory.com/129)
     (**중요**)위의 내장객체 page, session, application 중 하나에 담고 써야한다.
     1. JSTL변수를 JSP에서 사용
+    //이태그로 생성한 변수는 JSP의 유지보수가 아니라 서블릿 보관소에 저장된다. scope를 생략하면 기본적으로 page에 저장.
    <c:set var="test" value="테스트" />
    <%
       String test = (String)pageContext.getAttribute("test") ;
@@ -440,20 +476,26 @@ restart 할꺼냐고 물어보면 restart
       </c:choose>
 
     ------------------------------------------------
-    # EL (Expression Language. 표현언어)
+    # EL (Expression Language. ## 표현언어)
       - 정의 : JSP에서 Java코드를 쓰지않고도 Java객체를 볼러올 수 있는 언어
-      - 사용이유 : 속성값들을 편리하게 출력하기 위해 사용. 자바코드와 HTML의 표현을 섞게되면 복잡해지는데 그것을 쉽게 사용하기 위한 기술. JSP 2.0부터 도입된 자바코드로 출력하는 복잡한 표현식을 대체하기 위해 등장.
-      - 문법  **${표현식}**
-        - 표현식 :  <%=변수명%>      표현언어 :  ${변수명}
-      - **위의 식에서 표현식에서는 자바변수명으로 인식하는데, 표현언어에서는 속성명으로 인식한다. 사실 엄밀하게 뜯어보면 내부적으로 자바빈의 getter메소드가 호출된다.**
+      - 사용이유 : 식을 계산해서 그 결과를 **출력**.
+        자바코드와 HTML의 표현을 섞게되면 복잡해지는데 그것을 쉽게 사용하기 위한 기술. JSP 2.0부터 도입된 자바코드로 출력하는 복잡한 표현식을 대체하기 위해 등장.
+      - 문법  **${변수}**
+        - 이때까지 써왔던 표현식과는 다른 개념이다.
+          표현식은 자바에 익숙한 초보 JSP개발자들이 웹에서 쓴것.
+          표현식의 문법은 <%=변수%>
+          mvc2 방식에서는 표현식이나 스크립틀릿 대신 표현언어를 사용해야한다.
+      - **표현식에서는 자바변수명으로 인식하는데, 표현언어에서는 속성명으로 인식한다. 사실 엄밀하게 뜯어보면 내부적으로 자바빈의 getter메소드가 호출된다.**
       - null값이 무시되어 null point exception 이 발생하지 않음. null이면 빈값으로 표현한다.
       - String, ArrayList 등으로 형변환도 필요하지 않음. 알아서 숫자는 숫자로, 문자는 문자열로 인식한다.
       - 에러가 발생하더라도 무시가 되어 사용이 용이
       - **표현언어의 내장객체**
         - 스코프
          **pageScope(페이지 하나), requestScope(페이지 둘), sessionScope(설정해놓은 세션 유지기간과 범위), applicationScope(앱 전체)**
-          // 원래 pageContext.getAttribute("num1");   이렇게 쓰던것을 el에서는 ${pageScope.num1} 이렇게 사용한다.
-          //   request.getParameter("name");   이렇게 쓰던것을 el에서는 ${requestScope.name} 이렇게 사용한다.
+          // pageContext.getAttribute("num1");   이렇게 쓰던것을
+            el에서는 ${pageScope.num1} 이렇게 사용한다.
+          // request.getParameter("name");   이렇게 쓰던것을
+            el에서는 ${requestScope.name} 이렇게 사용한다.
           // 내장객체를 명시하지 않고 ${num1}식으로 사용하면 스코프 순서대로 범위를 탐색한다.
           // **즉 내장객체중에서 속성값을 저장할수 있는건 4개Scope(page, request, session, application)뿐**이라는 말이고
             EL표기법은 속성값을 표현하기 때문에 표현할수있는 데이터는 저4개에 존재하는 데이터뿐이라는 말.
@@ -632,8 +674,27 @@ int age = Integer.parseInt(request.getParameter("age"));
 
 
 
-
-
+### DB 컨트롤  DB연결
+0. jdbc드라이버(오라클이라면 ojdbc)를 WEB-INF/lib안에 넣기
+1. 클래스 로더
+   오라클이면 Class.forName("oracle.jdbc.driver.OracleDriver");
+   Mysql이면 Class.forName("com.mysql.jdbc.Driver");
+2. Connection객체
+   Connection conn = DriverManager.getConnection(url, uid, pwd);
+   url의 형태는 jdbc:DBMS명:드라이버명:호스트:포트:디비명;
+   //기억이 안난다면 listener.ora 파일이나 tnsnames.ora 파일 확인
+3. Statement 객체
+   Statement stmt = conn.createStatement();
+   조금 복잡한 쿼리는 PreparedStatement로 ? 매핑
+4. ResultSet 객체.  실행후 결과받기
+   결과가 있는 select인 경우 executeQuery();
+   결과가 없는 나머지일 경우 executeUpdate();
+   next() 현재행에서 한행 앞으로 이동
+   previouse() 현재행에서 한행 뒤로 이동
+   first() 첫번째행의 위치로 이동
+   last()  마지막 행의 위치로 이동
+   보통 while(rs.next()){}  를 쓴다.
+5. 
 
 
 

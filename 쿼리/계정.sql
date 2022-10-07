@@ -53,17 +53,17 @@ show PARAMETER sec_case;
 
 
 <사용자 생성>
-CREATE USER 아이디 IDENTIFIED BY 비번;
-use mysql;
-CREATE USER c##ggoomter IDENTIFIED BY 0070;
-CREATE USER c##SCOTT IDENTIFIED BY TIGER;
 -- 오라클 12c부터 계정이름앞에 c##을 붙여줘야 한다. 따옴표도 없어야 한다.
 -- 예전 방식으로 하고 싶다면 ALTER SESSION SET "_ORACLE_SCRIPT"=true;
+<고전방식>
+CREATE USER 아이디 IDENTIFIED BY 비번;
+<신규방식>
+CREATE USER c##ggoomter IDENTIFIED BY 0070;
 
-
-create user ggoomter@localhost identified by '0070';	-- mysql
-create user scott@localhost identified by 'tiger';	-- mysql
-create user gganbu@localhost identified by 'world';	-- mysql
+<mysql>
+create user ggoomter@localhost identified by '0070';
+create user scott@localhost identified by 'tiger';
+create user gganbu@localhost identified by 'world';
 
 
 
@@ -80,5 +80,5 @@ SELECT * FROM user WHERE user = 'scott';	-- mysql
 <사용자 삭제>
 DROP USER 사용자명;
 예) 
-alter session set "_oracle_script"=true;
+
 DROP USER ggoomter CASCADE;
