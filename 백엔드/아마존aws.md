@@ -106,8 +106,10 @@ https://infrastructure.aws/
 
 ### 공동책임모델
 AWS클라우드에서 보안에 대한 책임분배를 정의하는 것
-- AWS의 책임 = SECURITY OF THE CLOUD
-- 개발자의 책임 = SECURITY IN THE CLOUD
+- 쉽게말해서 인프라 자체에 대한 책임은 AWS, 인프라 사용에 대한 책임은 개발자
+- AWS의 책임 = SECURITY OF THE CLOUD. 인프라스트럭쳐, 구성과 취약성 분석 서비스, 규정 준수
+- 개발자의 책임 = SECURITY IN THE CLOUD, 유저,그룹,역할,책임 관리와 모니터링,   MFA적용,  키 자주 교체,  IAM사용해서 적합한 권한 적용했는지 확인,  엑세스패턴분석,  계정권한검토
+- 
 그리고 이용목적제한방침에 동의해야함. 불법적, 공격적, 유해한 콘텐츠, 보안위반, 네트워크 남용, 이메일이나 다른유형의 메세지 남용 안됨.
 ---
 
@@ -117,11 +119,7 @@ https://victorydntmd.tistory.com/338
 리눅스 폴더 삭제 rm -rf 폴더명
 
 
---- ec2의 가격정책
-1년동안 매달750시간 프리티어는 무료.
-예약 인스턴스는 1년동안 미리 선금지불하면 최대 75% 할인
-온디맨드는 쓰는만큼 탄력적으로 돈내는거
-업로드는 공짜. 나갈때 돈나감.  한달동안 1기가까지는 무료
+
 
 ## 용어 
 - AMI : Amazon Machine Image. OS, WAS, 앱이 포함된 템플릿
@@ -141,25 +139,58 @@ https://docs.aws.amazon.com/
 
 
 
-# ec2
-Elastic Computue Cloud. 쉽게말해서 아마존으로부터 컴퓨터를 한대 빌리는것.(호스팅)
-https://jiwontip.tistory.com/45?category=367314
+# EC2
+> Elastic Computue Cloud. 쉽게말해서 아마존으로부터 컴퓨터를 한대 빌리는것.(호스팅) 가상서버
+> 아마존에서 가장 인기있는 서비스
+- [스프링을 aws에 배포](https://jiwontip.tistory.com/45?category=367314)
+- ec2는 여러 서비스가 합쳐진 큰 서비스다. 
+가상머신렌탈, 가상드라이브에 저장, 일래스틱 로드밸런서, 오토스케일링그룹
+- 운영체제, CPU, RAM, EBS, 네트워킹 설정, 방화벽 규칙설정, 부트스트랩 스크립트
+//부트스트랩은 처음시작할때 한번만 실행. 부팅작업을 자동화. 
 1. 아마존 회원가입(무료계정) 전화로 인증번호 4개 치는게 빠름
 2. 오른쪽 위 서버 위치 한국으로 옮기기
-3. 서비스 검색창에서 ec2, rds 검색해서 즐겨찾기 하기
-4. 가상머신(인스턴스) 시작	(//계정만들자 마자 바로는 안됨)
-    1. freetier만 선택 체크하고 기본 t2.micro.   //t2는 서비스 유형. micro는 성능.
-    2. AMI(인스턴스 구성을 가진 템플릿) 선택. 제일 익숙한걸로. 그런게 없으면 제일 보편적인 우분투
+3. 서비스 검색창에서 ec2 (즐겨찾기도)
+4. Instance탭
+Launch instance
+가상머신(인스턴스) 시작
+(//계정만들자 마자 바로는 안됨)
+    0. 이름과 태그 선택
+    1. Instance type은
+    freetier만 선택 체크하고 기본 t2.micro.   
+    1기가메모리, EBS Only, 낮은 네트워크
+
+    /** EC2명명규칙 
+    //t2는 서비스 유형. micro는 성능.
+    //t2.micro는 vCPU1개
+    예를들어 m5.2xlarge
+    m:인스턴스클래스
+        e로 시작하면 범용? General?
+        c로 시작하면 Compute 고성능
+        m은 메모리최적화
+        s는 Storage최적화
+    5:인스턴스세대
+    2xlarge : 인스턴스 클래스의 크기
+
+    
+    **/
+    1. AMI(인스턴스 구성을 가진 템플릿) 선택
+    기본이미지(운영체제) 선택
+    제일 익숙한걸로. 그런게 없으면 제일 보편적인 우분투
         **레드햇, 페도라, centOS계열, amazon linux는 yum사용**
         **데비안, 우분트 계열은 apt-get 사용**
-    3. 넥스트하다보면 디폴트 크기는 8기가인데 30기가 까지 무료로 늘릴수있음.
-    4. 시작하기 누르면 기존키페어 선택또는 키페어 생성 창
+    2. 넥스트하다보면 디폴트 크기는 8기가인데 30기가 까지 무료로 늘릴수있음.
+    3. 시작하기 누르면 기존키페어 선택또는 키페어 생성 창
+    ssh로 접속하려면 필요하다.
         (이미 받은 키가 있으면 그거 선택하면 됨)
-        받은키가 없으면 새 키페어 생성. 텍스트치고 '키페어 다운로드' 하면 .pem 파일 받음.(퍼블릭키)
+        받은키가 없으면 새 키페어 생성. 
+        암호는 .RSA
+        텍스트치고 '키페어 다운로드' 하면 .pem 파일 받음.(퍼블릭키)
         2022년에 보니까 이제 ppk바로 다운로드 생겼네.
+        (Mac, Linux, Windows 10 이면 .pem)
+        (Windows7,8은 Putty에 사용될 .ppk)
         기억하기 쉬운곳에 저장하고 인스턴스 시작.
         비밀번호 대신 이 키페어 파일을 쓸것이고 절대로 잊어버리면 안된다.
-    5. putty로 접속해보기. 퍼블릭 dns와 ppk파일 연동해서.
+    4. putty로 접속해보기. 퍼블릭 dns와 ppk파일 연동해서.
        계정 : ubuntu / 키를 받았기 때문에 비번 필요없음
 
     ### putty
@@ -173,9 +204,47 @@ https://jiwontip.tistory.com/45?category=367314
     Connection-SSH-Auth 탭에 방금만든 ppk파일 로드하고 Open
     EC2인스턴스가 우분투일 경우 아이디는 ubuntu
 
+5. Security groups(보안그룹) 설정
+//첫번째로 생성하는 보안그룹은 콘솔이 생성한 launch-wizard-1
+Allow SSH traffic from Anywhere
+Allow HTTP traffic from the internet 체크
 
+6. Configure storage
+8GiB gp2 그대로 두기
+프르티어 30기가 SSD까지 허용됨.
+Advanced가서 설정들 확인
 
-5. 네트워크및 보안 탭
+7. Advanced details
+쭉 아래로 가면 User data영역이 있는데
+EC2 인스턴스에 스크립트(명령어)를 전달한다.
+```linux
+#!/bin/bash
+# Use this for your user data
+# install httpd(Linux 2 version)
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
+```
+
+--- ec2의 가격정책
+1년동안 매일 24시간 매달750시간(24시간*31일 =744) 프리티어는 무료.
+예약 인스턴스는 1년동안 미리 선금지불하면 최대 75% 할인
+온디맨드는 쓰는만큼 탄력적으로 돈내는거
+업로드는 공짜. 나갈때 돈나감.  한달동안 1기가까지는 무료
+
+8. 실행
+보통 10초, 늦어도 1분안에 실행된다.
+
+9. 테스트
+인스턴스 대쉬보드에서
+퍼블릭 ip주소 복사해서 쳐보면 처음에 설정했떤 첫페이지 나온다. hell world 프라이빗 아이피
+//https가 아니라 http프로토콜로 해야되는것 확인
+//그러나 인스턴스를 새로시작하면 퍼블릭 ip주소가 바뀐다.
+
+<인스턴스 생성후 설정 변경하는 법>
+1. 네트워크및 보안 탭
 해당인스턴스와 연결된 보안그룹에 가서 inbound규칙 열어주기
 최소한으로 열어주려면 사용할 http서버와 ssh 20포트 2개 열어주면 된다.
 적당히 열려면 http(all ipv4), https(all ipv4), ssh(22), mysql, oracle 등
@@ -300,43 +369,6 @@ https연결 안되기 때문에 http로 바꾸고 ip주소:8080 해주면 접속
 실행법 : nohup 명령어 &
 종료하는법 : ps -ef | grep 포함문자열
 			kill -9 번호
-## ec2에 깃헙 장고 프로젝트 올리기
-참고 : https://nerogarret.tistory.com/46
-readme.md파일 안만들면 로컬리파지터리 그대로 리모트로 올리기 쉽다.
-ubuntu로 ec2까지 만들고 putty로 연결.
-mkdir srv
-sudo chown -R ubuntu:ubuntu /srv/
-git clone [레포지토리 주소]
-WSGI(Web Server Gateway Interface) server를 설치해야한다.
-    가상환경 세팅      sudo apt-get install python3-venv
-    가상환경 만들기    python3 -m venv myvenv
-    가상환경 활성화 가상환경만든 위 풀더에서 source myvenv/bin/activate
-
-로컬의 프로젝트 폴더 들어가서 
- 패키지백업 : pip freeze > requirements.txt
- 하면 현재 환경의 의존 라이브러리들이 저 파일에 써진다.
-
-우분투에서
- 패키지설치 : pip3 install -r requirements.txt
- 
-
-python3 manage.py runserver 0:8080
-퍼블릭dns주소:8080 접속해도 아직 로딩만 되고 페이지 안뜸
-
-1. setting.py의 ALLOWED_HOSTS = ['*']
-
-2. ec2의 보안탭의 인바운드 규칙 tcp 8080 추가해주고
-https연결 안되기 때문에 http로 바꾸고 ip주소:8080 해주면 접속된다.
-
-3. 로그를 보면 400에러뜨면서 http만 제공되는데 hpps로 접속하려고 하고있다고함. https접속되게 하려면 SSL인증서 다운받고 nginx(웹서버)나 uWSGI(WAS)에 적용 해야되는데 너무 어려움. 현재는 주소에 https로 시작하는것을 http로 바꾸면 접속된다.
-
-//백그라운드로 실행하려면 
-실행법 : nohup 명령어 &
-종료하는법 : ps -ef | grep 포함문자열
-			kill -9 번호
-
-
-
 
 
 
@@ -461,6 +493,10 @@ human_suwon.naver.com
     
     ##### IAM 실습
     여러가지 권한줘보고 뺏고 접속하고 기능 실행해보기
+    IAM 역할
+    IAM 왼쪽 사이드에 보면 Roles가 있다. 여러역할중 aws Service만 알면된다.
+    IAM Security Tools에는 2가지가 있는데 IAM Credential Report는 acoount-level에 해당하고
+    IAM Access Advisor는 user-level에 해당한다.
     ##### IAM MFA (Multi Factor Authentication)
     보안을 높이기 위한 2가지.  비밀번호 정책, 다요소인증
     ##### MFA 실습
@@ -475,16 +511,40 @@ human_suwon.naver.com
 2. CLI
 3. SDK
 
-######  엑세스키
+####  엑세스키
 엑세스 키 아이디는 유저네임과 같고
 시크릿 엑세스 키는 패스워드와 같다.
+절대 엑세스키를 공유하지마라.
 
+### CLI
+- AWS서비스를 쉘의 커맨드 라인을 통한 명령어로 상호작용 할수 있게 해주는 툴
+- 리소스를 관리하는 스크립트를 관리해 자동화 할 수 있다.
+- 콘솔대신 사용한다.
+- 윈도우에 설치하려면 그냥 구글이나 aws콭솔에서 CLI검색해서 .msi받으면 됨.  2버전이 사용법은 같으나 성능향상
+- 설치확인 aws --version
+- <실습>
+  - IAM유저로 접속후 Security credentials들어가서 Access key 생성 , 다운로드
+  - aws configure
+  - aws iam list-users
+  
+#### CloudShell 
+- 이 서비스는 모든 리전에서 사용가능한것이 아니기 때문에 한국이라면 아시아태평양(뭄바이), 아시아태평양(도쿄) 활용
+- 화면의 종옆에 있는 프롬프트창 아이콘
+- 글자크기, 테마 등 조정가능
+- 파일 업로드, 다운로드 가능
 
+#### 자격증명보고
+- Credential report - Download Report
+- IAM관리 - Access management - Users - Access Advisor 에서 4시간동안의 활동내역 볼 수 있다.
 
-##### VPC
+#### VPC
 Vitual Private Cloud. 가상 사설 클라우드.
 
-
+## 예산설정
+계정 - My Billing Dashboard
+IAM계정으로 저길 들어가려면 먼저 루트계정으로 접속해 IAM User and Role Access to Billing Information에서 Activate IAM Access에 체크해줘야한다.
+- Billing Console > Budgets > Create budget - 예산잡기 - 알림설정
+- Add Action
 
 #### Beanstalk (EB) 실패
 - 서버에서 개발된 웹 애플리케이션 및 서비스를 간편하게 배포하고 조정할 수 있는 서비스

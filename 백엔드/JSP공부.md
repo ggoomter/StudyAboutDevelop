@@ -730,3 +730,14 @@ int age = Integer.parseInt(request.getParameter("age"));
     ㄴ 검색 엔진 등록 시 frameset 뿐만 아니라 메뉴용 페이지, 콘텐츠용 페이지 까지 함께 크롤링 할 수 있다.
   - 웹접근성 저해의 요인이 될 수 있음으로 남용에 주의해야한다.
   - 프레임 구조가 가지고 있던 장점을 CSS와 jQuery로 해결 할 수 있다.
+
+##### RequestDispatcher  vs  sendRedirect
+> 서블릿에서 jsp페이지로 이동하는 방법 2가지
+- response.sendRedirect("경로")
+  : 데이터없이 페이지만 띄움
+- RequestDispatcher rd = request.getRequestDispatcher("경로");
+  request.setAttribute("키", 밸류);
+  rd.forward(request, response);
+  : 서블릿에서 처리한 데이터를 보낼jsp에 담아서 보냄.
+  request와 response객체를 가지고 이동할 수 있음
+  받는 쪽에서는 request.getAttribute()메소드를 통해 데이터받음
