@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>서울 미세먼지 지도</title>
+	<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+	<style>
+		.area {
+		    position: absolute;
+		    background: #fff;
+		    border: 1px solid #888;
+		    border-radius: 3px;
+		    font-size: 12px;
+		    top: -5px;
+		    left: 15px;
+		    padding:2px;
+		}
+		
+		.info {
+		    font-size: 12px;
+		    padding: 5px;
+		}
+		.info .title {
+		    font-weight: bold;
+		}
+</style>
+</head>
+<body>
+	<div id="map" style="width:800px;height:500px;"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2e8fabd7263671e0cf70992b7ed014d5"></script>
+	
+	<script>
+
+		 
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		    mapOption = { 
+		        center: new kakao.maps.LatLng(37.56667, 126.97806), //위도, 경도
+		        //Lng는 경도       Lat는 위도,   위도 37정도.   경도 126정도.    위도 38도선이 y축
+		        level: 8 // 지도의 확대 레벨.	숫자가 커질수록 더 멀리서 봄. 기본값3
+		    };
+
+		// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+		var map = new kakao.maps.Map(mapContainer, mapOption),
+    		customOverlay = new kakao.maps.CustomOverlay({}),// 맵위에 행정구역을 표시할 오버레이
+    		infowindow = new kakao.maps.InfoWindow({removable: true});
+		
+		
+		//행정구역 구분된 외부데이터 가져오기
+		$.getJSON("./seoulmap.geojson", function(geojson) {
+		    var data = geojson.features;  //type, properties, geometry가 있다.
+		    var coordinates = [];    //좌표 저장할 배열
+		    var name = '';            //행정 구 이름
+		    $.each(data, function(index, val) { //모든 data에 대해서 위치와 값을 사용할수 있고 반복
+		 
+            //헷갈리기 때문에 정렬 잘 된 json 데이터 보고 이해하자.
+		        coordinates = val.geometry.coordinates;	//모든 행정구역을 엘리먼트로  위도, 경도 배열 가져옴
+		        name = val.properties.SIG_KOR_NM;		//행정구역명 가져옴
+		        displayArea(coordinates, name);
+		 
+		    })
+		})
+		
+		
+		
+		var polygons = [];
+		
+		// 다각형을 생상하고 이벤트를 등록하는 함수입니다
+		function displayArea(coordinates, name) {
+			var path = [];
+			var points = [];
+		    $.each(coordinates[0][0], function(index, coordinate) {
+            //중괄호가 아니라 대괄호이기 때문에 coordinates의 원소갯수는 1개임. 대괄호 대괄호 대괄호 누적돼있음
+		        var point = new Object();
+		        point.x = coordinate[0];
+		        point.y = coordinate[1];
+		        points.push(point);
+
+            //위도, 경도 순서로 전달
+		        path.push(new kakao.maps.LatLng(point.y, point.x));            //new kakao.maps.LatLng가 없으면 인식을 못해서 path 배열에 추가
+		    })
+		    
+			
+		    // 다각형을 생성합니다 
+		    var polygon = new kakao.maps.Polygon({
+		        map: map, // 다각형을 표시할 지도 객체
+		        path: path,
+		        strokeWeight: 2,
+		        strokeColor: '#004c80',
+		        strokeOpacity: 0.8,
+		        fillColor: '#fff',
+		        fillOpacity: 0.7 
+		    });
+		    
+		    //console.log(path);
+		    
+			polygons.push(polygon);
+		    
+		    // 다각형에 mouseover 이벤트를 등록하고 이벤트가 발생하면 폴리곤의 채움색을 변경합니다 
+		    // 지역명을 표시하는 커스텀오버레이를 지도위에 표시합니다
+		    kakao.maps.event.addListener(polygon, 'mouseover', function(mouseEvent) {
+		        polygon.setOptions({fillColor: '#09f'});
+
+		        customOverlay.setContent('<div class="area">' + name + '</div>');
+		        
+		        customOverlay.setPosition(mouseEvent.latLng); 
+		        customOverlay.setMap(map);
+		    });
+		
+		    // 다각형에 mousemove 이벤트를 등록하고 이벤트가 발생하면 커스텀 오버레이의 위치를 변경합니다 
+		    kakao.maps.event.addListener(polygon, 'mousemove', function(mouseEvent) {
+		        
+		        customOverlay.setPosition(mouseEvent.latLng); 
+		    });
+		
+		    // 다각형에 mouseout 이벤트를 등록하고 이벤트가 발생하면 폴리곤의 채움색을 원래색으로 변경합니다
+		    // 커스텀 오버레이를 지도에서 제거합니다 
+		    kakao.maps.event.addListener(polygon, 'mouseout', function() {
+		        polygon.setOptions({fillColor: '#fff'});
+		        customOverlay.setMap(null);
+		    }); 
+		
+		    // 다각형에 click 이벤트를 등록하고 이벤트가 발생하면 해당 지역 확대을 확대합니다.
+		    kakao.maps.event.addListener(polygon, 'click', function() {
+		        console.log("폴리곤 클릭");
+		    	// 현재 지도 레벨에서 2레벨 확대한 레벨
+		        var level = map.getLevel()-2;
+		        
+		        // 지도를 클릭된 폴리곤의 중앙 위치를 기준으로 확대합니다
+		        map.setLevel(level, {anchor: centroid(points), animate: {
+		            duration: 350            //확대 애니메이션 시간
+		        }});            
+		 
+		        deletePolygon(polygons);                    //폴리곤 제거      
+		    });
+		    
+
+		}
+		
+	    function deletePolygon(polygons){
+	    	console.log("deletePolygon호출");
+	    	for (var i=0; i < polygons.length; i++){
+	    		polygons[i].setMap(null);
+	    	}
+	    	polygons = [];
+	    }
+	    
+	    
+	    //centroid 알고리즘. 폴리곤 중심좌표 구하기 위함
+	    function centroid(points){
+	    	console.log("centroid 호출");
+	    	var i, j, len, p1, p2, f, area, x, y;
+	    	
+	    	area = x = y = 0;
+	    	
+	    	for (i =0, len = points.length, j = len - 1;   i < len;   j = i++){
+	    		p1 = points[i];
+	    		p2 = points[j];
+	    		
+	    		f = p1.y * p2.x - p2.y * p1.x;
+	    		x += (p1.x + p2.x) * f;
+	    		y += (p1.y + p2.y) * f;
+	    		area += f * 3;
+	    	}
+	    	return new kakao.maps.LatLng(x / area, y / area);
+	    }
+	    
+	    
+		console.log("완전끝");
+	</script>
+
+</body>
+</html>

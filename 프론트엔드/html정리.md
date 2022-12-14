@@ -4,7 +4,7 @@
 "Hypertext Markup Language"
 하이퍼텍스트를 가장 중요한 특징으로 하는 / 마크업이라는 형식을 가진 / 언어.
 하이퍼텍스트 : 하이퍼링크가 걸려있는 텍스트
-하이퍼링크 : 다른 텍스트로 이동할수있는 연결 고리
+하이퍼링크 : 다른 텍스트(문서)로 이동할 수 있는 연결
 
 마크업 : 정보에 '형식과 구조'를 명시하는 것
   예를들어 <h3>제목</h3>   제목이라는 값에 3번째 등급으로 중요한 텍스트라는 구조. 그리고 그렇게 표현하도록 하는 형식.
@@ -49,7 +49,7 @@
   - span
     무색 무취의 태그.Inline요소의 대표. 뼘. 폭
   - H1~6
-    Highlight. Headlight. 제목을 표현할때 쓴다.
+    Highlight. Headlight. 제목을 표현할때 사용
   - buttton
   - Table
     - tr(table row) : 행 추가
@@ -102,6 +102,16 @@
 - script
 - meta
   <meta charset="UTF-8">  이 웹페이지를 열때 utf-8로 열어라
+  - 검색엔진을 위한 키워드 정의
+  <meta name="keyword" content="HTML, meta, tag, element, reference">
+  - 웹페이지에 대한 설명
+  <meta name="description" content="HTML meta tag page">
+  - 문서의 저자
+  <meta name="author" content="TCPSchool">
+  - 5초뒤에 다른 페이지로 리다이렉트
+  <meta http-equiv="refresh" content="5;url=http://www.tcpschool.com">
+  - 모든 장치에서 웹사이트가 잘보이도록 뷰포트 설정
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 - title
   브라우저  제일 위 탭 부분에 표시되는 부분. 검색엔진에서 매우 중요한 요소다. 책으로 치면 표지
 - link
@@ -125,20 +135,20 @@
 Sementic : 의미상의.
 HTML의 본질인 '정보의 전달'이라는 본질에 집중한 의미론적 태그
 이유 : SEO(Search Engine Optimization. 검색엔진최적화)란 , Accessibility(접근성), For Developer(개발, 유지보수)
-<article>
-<aside>
-<details>
-<figcaption>
-<figure>
-<footer>
-예전에는 <div id="footer">
-<header>
-<main>
-<mark>
-<nav>
-<section>
-<summary>
-<time>
+<article> : 글자가 많이 들어간 부분. section안에 위치하는 경우가 대부분
+<aside> : 좌우 사이드 영역
+<details> : 사용자가 보기/숨기기를 선택할수 있는 부가적인 세부사항
+<summary> : details 하위요소로 열기/닫기를 클릭할수있는 요약글자
+<figure> : 사진, 그림, 오디오, 비디오, 코드 등을 담는 부분
+<figcaption> : figure 태그를 설명하는 문구를 담는 부분
+<footer> : 아래의 고정된 푸터 부분
+<header> : 상단의 고정된 헤더 부분
+<main> : 메인 콘텐츠 부분
+<mark> : 형광팬으로 마킹하는 것처럼 표시하는 텍스트
+<nav> : 네비게이션
+<section> : 여러 중심내용을 감싸는 부분
+<summary> : 요약
+<time> : 시간
 
 예1)
 <div class="head1">제목1</div>

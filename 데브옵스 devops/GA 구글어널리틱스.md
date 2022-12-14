@@ -12,6 +12,8 @@
   - Goolge Analytics 4 (GA4)  : 2020년 10월
     이벤트와 매개변수 기반의 모델
 
+# 공부
+[데이터리안](https://www.datarian.io/blog)
 
 # 용어
 - 획득(Acquisition)

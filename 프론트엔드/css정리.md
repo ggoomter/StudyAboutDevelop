@@ -3,6 +3,8 @@ HTML의 본질은 정보
 CSS의 본질은 디자인
 JS의 본질은 기능
 
+> CSS는 많이 알기보다는 자기손에 꼭 맞는 best practice를 찾는것이 중요하다.
+
 #### 강의
 [생활코딩](https://www.youtube.com/watch?v=Ok0bBJPtgJI&list=PLuHgQVnccGMAnWgUYiAW2cTzSBywFO75B)
 
@@ -11,6 +13,8 @@ JS의 본질은 기능
     - Author style(코딩으로 넣은거) -> User style(=사용자가 다크모드, 확대, 등) -> Browser
     - 개발자 모드로 캐스캐이딩 되는거 보여주기
     - user agent stylesheet : 브라우저에서 정한 css
+    한글번역은 사용자 에이전트 스타일시트. 사용자가 명시해두어야 할 속성을 오버라이드 하지 않았거나, html의 최신버전을 알려주지 않아 브라우저가 임의로 설정해둔 것이다.
+    즉, 각 브라우저마다 정해놓은 CSS의 디폴트값 이라고 생각하면 된다.
  
 
 - ### css를 넣는 3가지 방법
@@ -23,7 +27,8 @@ JS의 본질은 기능
     예)  <link rel="stylesheet" href="경로와 이름.css">
 
 
-- ### 기본 문법 : 문법은 매우 간단해서 배울게 없을정도이나 실제로 내가원하는대로 스타일하기는 어렵다.
+### 기본 문법
+문법은 매우 간단해서 배울게 없을정도이나 실제로 내가원하는대로 스타일하기는 어렵다.
         선택자 {
             속성1 : 값1,
             속성2 : 값2
@@ -33,7 +38,7 @@ JS의 본질은 기능
           background : baige;
         }
 
-- ### CSS 셀렉터( ### 선택자)
+### CSS 셀렉터( ### 선택자)
     - 선택자 : html의 어떤 태그를 선택할지 고르는것. html만들때 박스구조로 레이블링을 잘해놓으면 선택하기가 쉽다.
         - 태그 : 그냥
         - 클래스 : .
@@ -71,33 +76,33 @@ JS의 본질은 기능
     //[해설](https://velog.io/@jaedie/CSS-Diner-%EC%99%84%EB%A3%8C%EB%8B%B5%EC%95%88%EC%9A%94%EC%A0%90%EC%A0%95%EB%A6%AC-13)
 
 
-- #### 우선순위
-        - css는 본질적으로 캐스캐이딩의 특성을 가지고있기 때문에 하나의 요소에 여러가지 명령들이 동시에 내려진다. 
-        예를들어 일병이 쓰레기버리고와라,
-                병장이 이불좀 접어라,
-                당직사관이 당직실로와라. 
-        - 일반적으로  넓은적인 범위보다 구체적인 범위가 우선순위가 높다.   
-        - 태그 1점 < 클래스 100점 < 아이디 1000점 
-          - 동메달, 은메달, 금메달같은거다. 동메달 아무리 많아도 은메달 하나에게 안된다.
-        - 메달로 변환한 점수가 동급이면 아래가 우선순위가 높다.
-        예) <div class="myclass yourclass">일때 
-           .myclass에서 빨간색    .yourclass에서 노란색 
-        - <div class="myclass">
-            <div class="yourclass"></div>
-          </div>
-          yourclass에는 초록색,     myclass의 자식인 yourclass 빨간색.
-          //부모와 자식을 비교한게 아니고, B와  A밑의B를 비교한것.
-        - 아이디보다 더 센 2놈이 있는데 inline < !important  이 둘은 좀 급이 다른 레벨이다.
-        - 무조건 우선순위가되는 !important는 여러개 쓸수록 그 의미가 퇴색되며 캐스캐이딩의 연결을 끊기 때문에 최대한 사용하지 말아야 한다.
+### 우선순위
+  - css는 본질적으로 캐스캐이딩의 특성을 가지고있기 때문에 하나의 요소에 여러가지 명령들이 동시에 내려진다. 
+  예를들어 일병이 쓰레기버리고와라,
+          병장이 이불좀 접어라,
+          당직사관이 당직실로와라. 
+  - 일반적으로  넓은적인 범위보다 구체적인 범위가 우선순위가 높다.   
+  - 태그 1점 < 클래스 100점 < 아이디 1000점 
+    - 동메달, 은메달, 금메달같은거다. 동메달 아무리 많아도 은메달 하나에게 안된다.
+  - 메달로 변환한 점수가 동급이면 아래가 우선순위가 높다.
+  예) <div class="myclass yourclass">일때 
+      .myclass에서 빨간색    .yourclass에서 노란색 
+  - <div class="myclass">
+      <div class="yourclass"></div>
+    </div>
+    yourclass에는 초록색,     myclass의 자식인 yourclass 빨간색.
+    //부모와 자식을 비교한게 아니고, B와  A밑의B를 비교한것.
+  - 아이디보다 더 센 2놈이 있는데 inline < !important  이 둘은 좀 급이 다른 레벨이다.
+  - 무조건 우선순위가되는 !important는 여러개 쓸수록 그 의미가 퇴색되며 캐스캐이딩의 연결을 끊기 때문에 최대한 사용하지 말아야 한다.
 
 
-- #### margin, padding
+#### margin, padding
 컨텐츠를 기준으로 테두리까지의 여백 = padding
 border를 기준으로 바깥으로 여백 = margin
 마진상쇄 : https://velog.io/@raram2/CSS-%EB%A7%88%EC%A7%84-%EC%83%81%EC%87%84Margin-collapsing-%EC%9B%90%EB%A6%AC-%EC%99%84%EB%B2%BD-%EC%9D%B4%ED%95%B4
 2개이상의 블록요소의 상하마진이 겹칠때 큰쪽의 값을 적용하는 브라우저의 렌더링 규칙
 
-- ### display
+### display
   - 모든 css의 요소는 박스모델인데 크게 인라인과 블록 요소로 나뉜다.
   - ##### inline
         : 줄바꿈없이 한줄에 나란히 배치된다.
@@ -112,6 +117,7 @@ border를 기준으로 바깥으로 여백 = margin
         : 기본적으로 inline.
         그러나 순수 inline에서 불가능한 width, height 지정가능, margin, padding의 상하간격 지정가능.  여러 앨리먼트를 한줄에 정확히 원하는 너비만큼 배치할 수 있기 때문에 레이아웃에 주로 활용한다.
         <button>, <input>, <select>가 대표적이다.
+        //본질적으로 inline인데 가로세로 너비를 주면 태그사이의 띄어쓰기가 공백으로 인식되어서 공백하나만큼 벌어지는 현상이 생긴다. 부모태그에 font-size:0을 주고 자식에서는 다시 자기가 보일 폰트사이즈를 줘서 해결
 
 - ### 변화. 진화
 - ### 전처리기 ### preProcessor
@@ -120,7 +126,7 @@ border를 기준으로 바깥으로 여백 = margin
 [참고링크](https://dongwoo.blog/2017/02/07/%EB%B2%88%EC%97%AD-css%EC%9D%98-%EC%A7%84%ED%99%94-css-%EB%B6%80%ED%84%B0-sass-bem-css-%EB%AA%A8%EB%93%88-%EC%8A%A4%ED%83%80%EC%9D%BC%EB%93%9C-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B9%8C/)
     1. CSS
         (CSS파일간 값을 공유할 수 없음) = 변수값 사용불가
-    2. ### SCSS, ### Less, ### Sass
+    2. SCSS, Less, Sass
         (   CSS를 전처리 엔진 형태의 프로그래밍 언어로 변형
             변수, import, Nesting 등 도입. 여전히 스타일이 겹치는 문제는 해결못함.
             모범사례가 없다면 문제를 해결해주기보다는 더 많은 문제를 만들어냄
@@ -136,10 +142,11 @@ border를 기준으로 바깥으로 여백 = margin
         단점 : 컴포넌트마다 따로 CSS파일을 만들어줘야 되기 때문에 많은 CSS파일을 관리해야함)
     5. CSS in JS
         (방대한 CSS파일을 관리해야하는것을 해결하기 위해 나온 방법론.
+        리액트와 CSS의 궁합이 좋지 못했던 부분을 이 방법을 통해 해결.
         단점 : 인터렉션이 늦다. JS번들의 크기가 커진다.)
     6. Styled-Component
 
-- ### 포지션( ## position)
+### 포지션( ## position)
 에밋 사용  .item.item$*10
 [TCP SCHOOL](http://www.tcpschool.com/css/css_position_position)
 [DaleSeo](https://www.daleseo.com/css-position-absolute/)
@@ -220,6 +227,12 @@ http://hong.adfeel.info/frontend/position%EC%9C%BC%EB%A1%9C-%EA%B0%80%EC%9A%B4%E
 
   5. line-height    폰트 기반의 아이콘을 중앙정렬할때 간단하게 사용하는 방법
     아이콘을 span으로 감싸고 line-height : 보통은 부모엘리먼트의 높이 그대로;
+    normal : 디폴트. 웹브라우저에서 정한 기본값입니다. 보통 1.2입니다.
+    length : 길이로 줄 높이를 정합니다.
+    number : 글자 크기의 몇 배인지로 줄 높이를 정합니다. 
+    percentage : 글자 크기의 몇 %로 줄 높이로 정합니다.
+    initial : 기본값으로 설정합니다.
+    inherit : 부모 요소의 속성값을 상속받습니다.
 
   6. 플렉스박스
 
@@ -232,14 +245,17 @@ http://hong.adfeel.info/frontend/position%EC%9C%BC%EB%A1%9C-%EA%B0%80%EC%9A%B4%E
 
 
 
-- ### float
+### float
 https://ddorang-d.tistory.com/12
 https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8%B0position-float-inline-block-hyk5xn5nql
-    - 이름에서 느껴지듯이 둥둥 떠다니는 속성
-    - clear : 상위요소의 float는 유지하면서 float다음에 오는 일반요소에게 float가 적용되지 않도록 함.
-        none, left, right, both
-    - text-align : block요소에만 지정할 수 있다. 그러면 block안에있는 inline요소에 적용된다.(텍스트만 적용되는것이 아님)
-    예) .content > img{ float: left }
+  - 이름에서 느껴지듯이 둥둥 떠다니는 속성
+  - clear : 상위요소의 float는 유지하면서 float다음에 오는 일반요소에게 float가 적용되지 않도록 함.
+      none, left, right, both
+  - text-align : block요소에만 지정할 수 있다. 그러면 block안에있는 inline요소에 적용된다.(텍스트만 적용되는것이 아님)
+  예) .content > img{ float: left }
+  - 자식을 모두 float해버리면 둥둥떠서 부모컨테이너에서는 담는것이 없어져서 크기가 쪼그라들수 있다. 그럴때는 부모컨테이너에 content:"";  display:block;  clear:both;
+
+
 - ### 단위
         - px : pixel
         - em 부모 요소의 대문자 M 너비를 기준으로 상대적인 배수가 적용됨.  자식에 계속 쓰면 계속 배수가 누적되어 적용됨.
@@ -249,7 +265,7 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
         - vw(viewport width) : 뷰포트의 너비값의 1%
         //뷰포트 : Display상의 표시 영역
 
-- ### 미디어 쿼리
+### 미디어 쿼리
   - 반응형웹(해상도에 반응하여 다르게 보이는 것)을 구현하는 기술. Responsive Web 
     - 예) 햄버거메뉴, 기사가 큰화면에서는 3개씩보이다가 작은화면에서는 1개씩 보이는거
     - @media는 서로다른 미디어타입에 각각의 스타일을 지정하는것을 가능하게 한다.
@@ -259,6 +275,55 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
             background-color: olive;
             }
         }
+
+- #### transition  전환효과
+> 시작과 끝을 지정하여 중간값을 애니메이션. 
+> 바뀌기 전 상태의 코드에 넣는것이 일반적
+- transition-property : 전환효과를 사용할 속성이름. 기본값 all
+- transition-duration : 전환효과의 지속시간. 기본값 0s
+- transition-timing-function : 타이밍함수지정. 기본값 ease
+    linear(일정하게), ease-in(점점빠르게), ease-out(점점느리게) 기타등등
+- transition-delay : 전환효과의 대기시간설정. 기본값 0s
+단축문법
+  transition : width 1s, background 1s;
+
+- #### transform 변형효과
+> 회전, 변환, 확대, 축소, 이동 등 포토샵의 ctrl t같은
+- 여러 함수들을 공백을 기준으로 연결
+예)
+.box{
+    transform : rotate(20deg) translate(10px, 0);
+}
+- 2d변형효과가 있고 3d변현효과가 있다.
+  - **2D변환함수**
+    - translate(x축이동, y축이동)
+    - scale(x축배수, y축배수),   scale(배수)
+    - rotate(각도)  //단위는 deg
+    - skew(x기울임, y기울임)  //단위는 deg
+    - matrix(n,n,n,n,n,n)  //2차원변환효과. 위의 것을 다 합쳐서 한번에 쓰는함수
+  - **3D변환함수**
+    - translate3d(x, y, z)
+    - translateZ(z)
+    - scale3d(x, y, z)
+    - scaleZ(z)
+    - rotate3d(x, y, z, a)  //x벡터, y벡터, z벡터, 각도
+    - rotateX(x축기준으로 회전각도)
+    - rotateY(y축기준으로 회전각도)
+    - rotateZ(z축기준으로 회전각도)
+    - perspective(n)    //원근법(거리)
+      // 3d로 변한것을 3차원으로 보기위해서 transform 속성의 제일 앞에  **perspective(거리) 호출.**  3d객체들의 원근감을 볼수있게 해준다.
+    - matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n) //3차원변환효과
+
+- 변환속성
+  - transform-origin : 요소변환의 기준점을 설정. 
+      기본값은 50%, 50%, 0.  가운데를 마말한다.
+      0%는 왼쪽위끝, 100%는 오른쪽아래끝
+  - transform-style : 3D변환요소의 자식요소도 3D변환을 사용할지 설정
+      기본값 flat. 사용하지 않음.   반대는 preserve-3d  자식요소도 3D변환 사용
+  - perspective : 하위요소를 관찰하는 원근거리를 설정
+  - perspective-origin : 원근거리의 기준점을 설정
+  - backface-visibility : 3D 변환으로 회전된 요소의 뒷면숨김을 설정
+
 
 - #### 폰트 바꾸기(글꼴 바꾸기)
 1. cdn으로 구글 폰트 가져오기 (https://fonts.google.com/)
@@ -331,28 +396,45 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
 1. Elements에서 바꾸고 오른쪽에 경로로 들어감
 2. Sources 탭에서 파일 우클릭 - save as
 
-- ### Sass   #### SCSS
-> SASS가 먼저생겼고 나중에 SCSS가 생겼지만 서로 완벽하게 호환되고 요즘은 SCSS를 쓴다. SCSS는 SASS의 상위호환(슈퍼셋)
-> 미세한 표기법의 차이
-- SCSS가 중괄호와 세미콜론을 사용한다. SCSS가 순수CSS와 문법이 같은 방식이라 더 사용하고 이해하기 쉽다.
-예)
-```SCSS
-.list {
-  width: 100px;
-  float: left;
-  li {
-    color: red;
-    background: url("./image.jpg");
-    &:last-child {
-      margin-right: -10px;
-    }
-  }
-}
 
-```
-> Syntactically Awesome StyleSheets (문법적으로 짱 멋진)
-> Sassy Cascading Style Sheets   (엽기적인. 매우 나이스한. )
-CSS pre processor로서 CSS의 한계와 단점을 보완하여 가독성이 높고 코드재사용에 유리한 CSS를 생성하기위한 CSS 의 확장판.
+#### 전처리기
+> CSS는 작업이 고도화될수록 선택자의 과용, 연산기능의 한계, 구문의 부재등으로 매우 불편해진다. 그래서 CSS PreProcessor 즉 **CSS전처리기**를 사용한다. 컴파일을 하고 결국 최종적으로는 CSS로 동작하게된다.
+> 즉, CSS의 한계와 단점을 보완하여 가독성이 높고 코드재사용에 유리한 CSS를 생성하기위한 CSS 의 확장판.
+
+- 다양한 컴파일 방법
+  - SassMeister
+    컴파일러를 설치하는게 부담스러울때 사용.
+    웹으로 접속해서 SASS문법을 넣고 변환하면 컴파일 코드를 준다.
+    //Options탭에서  Syntax 선택하고  Compiler를 libsass로 맞추고 돌리기
+  - node-sass
+  - Gulp
+  - Webpack
+  - Parcel
+    웹애플리케이션 번들러. nodejs환경에서만 쓸수있다.
+
+- 예를들어 parcel로 컴파일하는법
+  1. .scss또는 .sass파일 생성하고 그 문법에 맞도록 작성
+  1. 파일을 참조하는 소스에서 <link rel="stylesheet" href="주소">
+  1. nodejs환경에서 cmd열어서 parcel번들러
+  npm init -y     //하면 package.json이 만들어진다.
+  npm install --save-dev parcel-bundler 를 해야되는데 축약형은 아래와 같다.
+  npm -i -D parcel-bundler
+  하면 되고 또다른곳에서는 아래와 같이 알려줌
+  npm install -g node-sass
+  node-sass [옵션] <입력파일경로> [출력파일경로]
+  예) node-sass scss/main.scss public/main.css
+  1. npx parcel index.html    //해석하는데 필요한 모듈들 자동 설치함
+  1. Build끝나면 알려주는 localhost주소로 접속
+
+# 아래 SaSS와 SCSS 혼용해서 문법 적어놔서 명확하게 분리해야함
+
+##### SaSS  (#### SCSS)
+> [블로그](heropy.blog/2018/01/31/sass/)
+> SaSS = Syntactically Awesome StyleSheets (문법적으로 짱 멋진)
+> SCSS = Sassy Cascading Style Sheets   (엽기적인. 매우 나이스한. )
+      SASS + CSS.  SASS컴파일러로 SCSS파일이 CSS파일이 됨
+      SCSS는 **SASS의 상위호환(슈퍼셋)**
+      Sass의 3버전에서 등장
 > 사용이유
     - 선택자를 만들때 불필요한 부모 요소 선택자를 매번 적지 않아도 된다.
     - 규모가 큰 프로젝트의 경우에도 일원화된 자동화
@@ -361,29 +443,226 @@ CSS pre processor로서 CSS의 한계와 단점을 보완하여 가독성이 높
     - CSS로 컴파일을 거쳐야 한다. 라이브서버로 preview안된다. 그런데 vscode의 live sass compiler가 해결해준다.
 > 어떻게 사용하나요?
 [링크](https://inpa.tistory.com/entry/SCSS-%F0%9F%92%8E-SassSCSS-%EB%9E%80-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%BB%B4%ED%8C%8C%EC%9D%BC)
-웹에서 직접 동작하는것은 CSS뿐이기 때문에 전처리기를 컴파일해서 CSS로 변환해야한다.
-1. 컴파일환경 구성
-다양한 방법이 있다. SassMeister페이지 접속, Node.js 또는 플러그인, Webpack, Parcel
-1. 전처리기 코드 작성
-2. 컴파일
-다양한 방법으로 컴파일이 가능하지만 Node.js를 추천.
-npm install -g node-sass
-node-sass [옵션] <입력파일경로> [출력파일경로]
-예) node-sass scss/main.scss public/main.css
+
+<데이터 종류>
+  - Numbers   //단위가 옵션
+  - String    //따옴표가 옵션
+  - Colors
+  - Booleans
+  - Nulls     //null이면 없는값이기 때문에 컴파일 하지 않음
+  - Lists   예) (apple, orange, banana),   apple orange 
+            //()가 있으면 ,로 구분하고 없으면 공백으로 구분
+  - Maps    예) (apple:a, orange:o, banana:b)  
+            //()를 꼭 붙여야한다.
+            
+<문법>
+  - **하위(중첩, 하이라키)구조**
+    그냥 html태그 중첩같이 중괄호 닫히기 전에 넣으면 된다.
+    @at-root 를 쓰면 중첩을 벗어나게 적용된다. 부모에 있는 변수 사용하거나 할때 유용
+    //순수 css로 만들어봤으면 앞의 공통 부모들 얼마나 반복했는지 알거다.
+
+    심지어 속성도 동일한 네임스페이스가 있다면 중첩할 수 있다.
+    예를들어 font-size, font-family속성은 아래와같이 중첩구조로 정의할 수 있다.
+    ```scss
+    .box{
+        font : {
+          size : 10px;
+          family : sans-serif;
+        }
+    };
+    ```
+
+  - **부모선택자** 
+    중첩안에서 &(Ampersand)를 사용하면 현재 블럭이 적용되는 셀렉터(부모 선택자)로 치환된다.
+      예)
+    ```sass
+    .list{
+      li{
+        &:last-child{
+          margin-right:0;
+        }
+      }
+    }
+      ```
+      위같이 코드하면 아래같이 컴파일 된다.
+      ```css
+      .list li:last-child{
+        margin-right:0;
+      }
+      ```
+  - **변수**
+      정의   $변수명 : 값;
+      호출   $변수명
+      유효범위 : {} 내에서만.  당연하게 완전바깥에 있으면 전체에서 사용가능
+      전역변수 : !global 를 값 뒤에 붙여주면 된다.
+      초기화 : !default  를 하면 디폴트값을 설정한다.
+               이미 정의된변수가 있으면 기존변수 값 사용.
+
+  - **표현식**
+    #{...}를 사용하면 문자열 내에서 표현식의 결과 사용
+    예) $foo : bar;
+        $fontsize : 12px;
+    p{
+      font : #{$fontsize}
+      &.#{$foo} { color : red; }
+    }
+
+  - **가져오기**
+    @import
+    Sass나 css를 가져와서 병합한다.
+    
+    - 타입
+    @import "scss경로"   //이름만 있다면
+    @import "http://경로"
+    @import url(경로)
+    @import "파일명" 미디어쿼리규칙
+
+    - 파일분할
+      _파일명.scss 등과 같이 **파일명에 언더바**를 붙이면 컴파일시 .css로 별도 컴파일 하지 않는다.
+      예) header.scss,   side-menu.scss,   main.scss 가 있을때
+         main.scss에서
+         @import "header", "side-menu';     라고 한다음
+         cmd에서
+         node-sass scss --ouput css  라고 하면
+         각각 css파일들이 만들어진다.
+
+         그런데 
+         _header.scss
+         _side-menu.scss
+         main.scss 로 파일을 만들놓고
+         cmd에서
+         node-sass scss --ouput css 라고 하면
+         main.css파일 하나에 합쳐져서 컴파일된다.
+    
+  - **연산**
+  ` +  -  *  /  %  `
+    곱하기는 하나이상의 값이 반드시 순수숫자여야 하고
+    나누기는 오른쪽값이 반드시 순수숫자여야 한다.
+  ` ==  !=  <  >  <=  >= `
+  `  and  or  not  `
+
+  - **재활용**
+  @mixin 이름{ 본문 }    //선언하기.   함수 정의라고 생각하면 된다.
+      매개변수가 있으면 @mixin 이름(매개변수){ 본문 }
+  @include  //포함하기.   함수 호출이라고 생각하면 된다.
+
+  예) 
+  ```css
+  @mixin size ($w, $h){
+    width : $w;
+    height : $h;
+  }
+
+  .box1{
+    @include size(100px, 100px);
+  }
+  .box2{
+    @include size(150px, 150px);
+  }
+  ```
+
+  예2) 디폴트를 주고싶다면
+  ```css
+  @mixin size ($w : 100px, $h:100px){
+    width : $w;
+    height : $h;
+  }
+
+  .box1{
+    @include size;
+  }
+  .box2{
+    @include size($h:300px);
+  }
+  ```
+
+  - 주석
+  둘다 /* ... */와  // 이지만
+  //는 컴파일 되지 않고(CSS에서 안보인다.)   /*...*/은 컴파일 된다.(CSS에서 보인다.)
+  SaSS는 각줄앞에 *을 붙여야하고 *의 줄맞춤도 해줘야한다.
+  **SaSS는 중괄호나 세미콜론이 없어서 범위라는 개념을 들여쓰기로 해줘야하기 때문**
+
+  - @extend
+    부모에 정의해놓은 공통속성을 상속받는 효과
+    예)
+    .message {
+      border: 1px solid #ccc;
+      padding: 10px;
+      color: #333;
+    }
+
+    .success {
+      @extend .message;
+      border-color: green;
+    }
+
+- 흐름제어  
+    - 분기처리
+          @if 표현식 {본문}
+        , @else if 표현식 {본문}
+        , @else {본문}
+    - 반복문
+        @for
+            예) @for $i from 1 through 3 { // 1, 2, 3,에 대해 반복
+        @each
+        @while
 
 
-또는 빌드 자동화 도구(JavaScript Task Runner)인 Gulp사용
+  예)
+  ```SCSS
+  .list {
+    width: 100px;
+    float: left;
+    li {
+      color: red;
+      background: url("./image.jpg");
+      &:last-child {
+        margin-right: -10px;
+      }
+    }
+  }
+  ```
 
-3. 
+<SaSS vs SCSS>
+  차이는 미세한 표기법의 차이
+  - SCSS가 **중괄호**와 **세미콜론**을 사용한다.
+    SCSS가 순수CSS와 문법이 같은 방식이라 더 사용하고 이해하기 쉽다.
+    즉, CSS와 거의 같은 문법으로 SaSS를 지원한다.
+    그래서 공식레퍼런스도 SCSS를 더 선호한다고 하고 사용자수도 더 많다.
+  - 지시어
+  SaSS에서는
+    =으로 정의하고  .으로 사용
+  SCSS에서는
+    @Mixins으로 정의하고 @include 으로 사용
+
+
+##### Less
+전처리기중에 제일 쉬움. 
+
+##### Stylus
+전처리기중에 제일 만족도 높음
+최근에 나와서 성숙도는 떨어짐
+
+
 
 ### div사이 간격 없애기
 * {
    padding : 0px;
    margin : 0px;
-   font-size: 0px;  
+   font-size: 0px;
 }
-#### Less
-전처리기중에 제일 쉬움. 
 
-##### Stylus
-전처리기중에 제일 만족도 높음
+
+### 스크롤 에니메이션
+스크롤해도 컨텐츠가 내려가지 않고 이미지가 변화하는 것
+https://oddcode.tistory.com/155
+
+
+### Figma
+디자이너와 협업을 위해서 제일 많이 쓰는 툴인 Figma를 알아둘 필요가 있다.
+
+# Flex
+플렉스박스.md파일에 따로 정리
+
+# Grid
+그리드.md파일에 따로정리
