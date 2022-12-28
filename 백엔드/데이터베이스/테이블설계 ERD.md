@@ -4,6 +4,7 @@ Entity Realationship Diagram
 
 # 툴
 - erwin : 유료 (실무. 월천만원)
+  erwin없을때 .erwin파일 보는법 : sqldeveloper설치후 file - data modeler - import - Erwin파일
 - erdcloud.com :
   노란색은 pk추가, 파란색은 기본컬럼 추가
   상단아이콘은 테이블복사, 테이블색, 테이블정보, 삭제
