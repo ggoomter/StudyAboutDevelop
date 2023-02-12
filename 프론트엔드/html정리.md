@@ -174,14 +174,31 @@ h1은 가장 중요한 정보라는 의미를 내포하고있고
 html은 <abcd>같은 태그를 써도 에러 안난다.
 단, 아무런 기능은 일어나지 않는다.
 반면에 메타데이터를 저장해서 의미가 있는 커스텀 태그를 만들수도 있다.
-HTML5부터 data-로 시작하는 속성을 지정할 수 있다.
+
+### data-  ### 데이터속성
+- HTML5부터 data-로 시작하는 속성을 지정할 수 있다.
+- 브라우저는 데이터속성에 대해서는 어떠한 행동도 관여하지 않는다.
+- 임의로 만든 속성이기 때문에 html의 기본속성인 value와는 상관이 없다.
+- 장점 : 예전같이 hidden으로 태그를 숨겨두고 데이터를 저장할 필요가 없다.
+- 형태
 <xyx
   id="electriccars"
   data-columns="3"
   data-index-number="12314"
   data-parent="cars">
-...
 </xyx>
+- 예
+<input type="text" data-value="001" id="username">  
+
+- 가져오는 법
+DOM객체의 dataset속성을 참조하여 얻을 수 있다.
+예)
+var input = document.querySelector('#username');                                     
+console.log(input.dataset);
+확인해보면 data-는 빠진채로 존재한다. 그래서 그중에 하나만 뽑을때는 아래와 같이 하면 된다.
+console.log(input.dataset.code);                                                        
+console.log(input.dataset['code']); 
+
 이렇게 만든 데이터 속성은 순 HTML속성이기 때문에 CSS에서도 접근 가능하다.
 
 
