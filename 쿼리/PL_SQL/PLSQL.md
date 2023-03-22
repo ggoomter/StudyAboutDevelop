@@ -1,4 +1,14 @@
-> Procedural Language extension to SQL
+# PL/SQL   vs 프로시저  vs 함수
+- PL/SQL은 프로시저, 트리거를 통해 반복적 수행가능
+- 프로시저는 반복적인 트랜잭션을 수행할 수 있는 PL/SQL블록
+  DB에 미리 컴파일되어 저장되므로 필요할때마다 매번 다시 사용가능
+- 함수
+  매개변수를 받아서 반복적으로 수행하는 PO/SQL 블록
+
+
+
+
+# Procedural Language extension to SQL
 - 오라클에서 SQL을 절차적 언어같이 쓸수있도록 한 언어.
 - 블록구조로 이루어지며 PL/SQL 자신이 컴파일엔진을 포함하고 있다.
 - 서버 프로세서는 PL/SQL블록을 받아서 SQL와 Procedural을 나눠서 SQL은 Sql Statement Executer 로 보낸다.
@@ -21,13 +31,13 @@
     - 형상관리 못한다.
     - 유지보수 힘들다.
 - 문법
-    1. DECLARE (선언부. Variable, Constant, Cursor, Exception 정의)
-    2. BEGIN (필수. 실행부 시작)
+    1. DECLARE (선언부).  Variable, Constant, Cursor, Exception 정의
+    2. BEGIN (필수. 실행부)
       - INTO : 쿼리결과를 변수에 대입
       - 대입은 :=
       - DBMS_OUTPUT.PUT_LINE    DBMS에 결과값 출력
       하려면 SET SERVEROUTPUT ON; 해줘야한다.
-    3. EXCEPTION
+    3. EXCEPTION (예외 처리부)
     4. END (필수. 실행부 끝)
 
 - 예제1
