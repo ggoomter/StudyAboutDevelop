@@ -119,6 +119,9 @@ p2/org.eclipse.equinox.p2.repository/cache
     : 페이지의 속성을 지정한다.  page, include, taglib
   - 주석    <%-- comment --%>     html주석은 <!--  -->   js주석은 //, /*   */
     : html의 주석은 클라이언트에 공개되지만 jsp의 주석은 클라이언트가 볼수없다.
+  //중요. 화면에서는 에러가 아닌데 실제 운영서버에서 프로젝트가 돌아가면 에러나는 경우가 있다.
+    jstl안에서 html주석 넣으면 에러가 난다라고 파악하기 쉬운데, 엄밀하게는
+    ``` <!-- 주석안에 <-- 주석이 있기 때문```
   - 선언    <%! declaration %>
     : 변수, 메소드 선언
   - 표현식(출력식)    : <%= expression %>
