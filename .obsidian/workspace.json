@@ -33,8 +33,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +95,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "백엔드/파이어베이스 firebase.md",
+                "file": "앱/플러터 flutter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "백엔드/파이어베이스 firebase.md",
+                "file": "앱/플러터 flutter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "백엔드/파이어베이스 firebase.md"
+                "file": "앱/플러터 flutter.md"
               }
             }
           },
@@ -204,15 +204,20 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "44cd45d25df22c03",
+  "active": "e177d54584ffccf3",
   "lastOpenFiles": [
+    "무제 파일 1.canvas",
+    "앱/플러터 flutter.md",
+    "무제 파일 2.canvas",
+    "무제 파일 3.canvas",
+    "무제 파일 4.canvas",
+    "무제 파일.canvas",
+    "백엔드/파이어베이스 firebase.md",
     "39.md",
     "29.md",
     "16.md",
     "옵시디언공부/옵시디언공부.md",
     "옵시디언공부/옵시디언.md",
-    "백엔드/파이어베이스 firebase.md",
-    "앱/플러터 flutter.md",
     "옵시디언공부/Obsidian_Logo.jpg.md",
     "ggoomter.css",
     "옵시디언공부/제텔카스텐공부.md",
@@ -227,11 +232,6 @@
     "워드프레스/운영.md",
     "워드프레스/설치.md",
     "워드프레스",
-    "무제 파일 4.canvas",
-    "무제 파일 3.canvas",
-    "무제 파일 2.canvas",
-    "무제 파일 1.canvas",
-    "무제 파일.canvas",
     "개발자.md",
     "README.md",
     "웹개발실력체크.md",
@@ -242,7 +242,6 @@
     "비지니스/숨고-.md",
     "0. 인박스/Untitled.md",
     "0. 인박스/Untitled 2.md",
-    "0. 인박스/.md",
     "1. 영구노트",
     "0. 인박스",
     "비지니스",

@@ -1,0 +1,67 @@
+.path-title-plugin-undo-container {
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 5px;
+	padding-top: 18px;
+	padding-left: 18px;
+	padding-right: 18px;
+}
+
+.path-title-plugin-has-path .view-header-title-container {
+	padding-left: 0px;
+}
+
+.view-header-title-container::after {
+	pointer-events: none;
+}
+
+.path-title-plugin-path-title-container {
+	white-space: pre;
+	word-wrap: normal;
+	float: left;
+	max-width: 50%;
+	position: relative;
+	border-right: 1px solid var(--background-modifier-border);
+	margin-right: 5px;
+}
+
+.path-title-plugin-has-vertical-title .path-title-plugin-path-title-container {
+	max-width: none;
+	max-height: 50%;
+	border-right: 0px solid var(--background-modifier-border);
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.path-title-plugin-has-path .path-title-plugin-path-title {
+	opacity: 75%;
+	overflow-x: scroll;
+	padding-right: 5px;
+}
+
+.path-title-plugin-has-vertical-title .path-title-plugin-path-title {
+	overflow-y: scroll;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.path-title-plugin-has-path .path-title-plugin-path-title::-webkit-scrollbar {
+	display: none;
+}
+
+.path-title-plugin-has-path .path-title-plugin-path-title-container::after {
+	background: linear-gradient(
+		to right,
+		transparent,
+		var(--background-secondary)
+	);
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 5px;
+	height: 100%;
+	pointer-events: none;
+}
+
+.path-title-plugin-has-path .path-title-plugin-path-title-text {
+	font-size: var(--path-title-plugin-font-size);
+}

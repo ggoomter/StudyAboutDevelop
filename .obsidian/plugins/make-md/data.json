@@ -36,7 +36,8 @@
   "deleteFileOption": "trash",
   "expandedFolders": {
     "Obsidian Vault": [
-      "옵시디언공부/템플릿"
+      "옵시디언공부/템플릿",
+      "/"
     ]
   },
   "expandedSpaces": [
@@ -75,7 +76,7 @@
   "spacesSyncTimeoutSeconds": 10,
   "spacesAutoBackup": true,
   "spacesAutoBackupInterval": 10,
-  "spacesAutoBackupLast": 1696130051289,
+  "spacesAutoBackupLast": 1696130453528,
   "spacesUseAlias": false,
   "precreateVaultSpace": true,
   "fmKeyAlias": "aliases",

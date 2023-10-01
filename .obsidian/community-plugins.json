@@ -17,5 +17,7 @@
   "templater-obsidian",
   "obsidian-style-settings",
   "quick-explorer",
-  "obsidian-advanced-slides"
+  "obsidian-advanced-slides",
+  "obsidian-path-title",
+  "obsidian-reveal-active-file"
 ]
