@@ -38,6 +38,9 @@
     "Obsidian Vault": [
       "옵시디언공부/템플릿",
       "/",
+      "추천",
+      "추천",
+      "추천",
       "추천"
     ]
   },
@@ -77,7 +80,7 @@
   "spacesSyncTimeoutSeconds": 10,
   "spacesAutoBackup": true,
   "spacesAutoBackupInterval": 10,
-  "spacesAutoBackupLast": 1696131303949,
+  "spacesAutoBackupLast": 1696131468658,
   "spacesUseAlias": false,
   "precreateVaultSpace": true,
   "fmKeyAlias": "aliases",
