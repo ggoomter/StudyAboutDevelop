@@ -3,7 +3,7 @@
   "showUnsupportedFiles": true,
   "showLineNumber": true,
   "autoConvertHtml": false,
-  "readableLineLength": false,
+  "readableLineLength": true,
   "alwaysUpdateLinks": true,
   "newFileFolderPath": "0. 인박스",
   "newLinkFormat": "absolute",

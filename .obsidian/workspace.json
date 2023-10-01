@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "옵시디언공부/옵시디언.md",
+                "file": "옵시디언공부/Obsidian_Logo.jpg.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "옵시디언공부/옵시디언.md",
+                "file": "옵시디언공부/Obsidian_Logo.jpg.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "옵시디언공부/옵시디언.md",
+                "file": "옵시디언공부/Obsidian_Logo.jpg.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "옵시디언공부/옵시디언.md"
+                "file": "옵시디언공부/Obsidian_Logo.jpg.md"
               }
             }
           },
@@ -197,7 +197,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 395
+    "width": 395,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -218,10 +219,12 @@
   },
   "active": "63a898cd647718ae",
   "lastOpenFiles": [
+    "옵시디언공부/옵시디언.md",
+    "옵시디언공부/Obsidian_Logo.jpg.md",
+    "ggoomter.css",
     "앱/플러터 flutter.md",
     "옵시디언공부/제텔카스텐공부.md",
     "옵시디언공부/옵시디언공부.md",
-    "옵시디언공부/옵시디언.md",
     "옵시디언공부",
     "AI/프롬프트.md",
     "AI/모델.md",
@@ -253,7 +256,6 @@
     "1. 영구노트/이력서.md",
     "0. 인박스/경제계획.md",
     "0. 인박스/주식정리.md",
-    "템플릿/제텔카스텐 템플릿.md",
     "1. 영구노트",
     "0. 인박스",
     "비지니스",
@@ -262,7 +264,6 @@
     "Pasted image 20230918201847.png",
     "Pasted image 20230918201724.png",
     "템플릿",
-    "Pasted image 20230918021126.png",
-    "유튜브"
+    "Pasted image 20230918021126.png"
   ]
 }
