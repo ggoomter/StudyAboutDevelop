@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "stable diffusion webui",
+      "path": "AI/stable diffusion webui.md"
+    },
+    {
+      "basename": "프롬프트",
+      "path": "AI/프롬프트.md"
+    },
+    {
+      "basename": "모델",
+      "path": "AI/모델.md"
+    },
+    {
       "basename": "옵시디언 정리",
       "path": "옵시디언/옵시디언 정리.md"
     },
@@ -137,14 +149,6 @@
       "path": "워드프레스/운영.md"
     },
     {
-      "basename": "stable diffusion webui",
-      "path": "AI/stable diffusion webui.md"
-    },
-    {
-      "basename": "프롬프트",
-      "path": "AI/프롬프트.md"
-    },
-    {
       "basename": "D급",
       "path": "독후감/D급.md"
     },
@@ -179,10 +183,6 @@
     {
       "basename": "무제 파일",
       "path": "무제 파일.md"
-    },
-    {
-      "basename": "모델",
-      "path": "AI/모델.md"
     }
   ],
   "omittedPaths": [],
