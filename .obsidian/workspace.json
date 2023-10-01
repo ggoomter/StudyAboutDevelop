@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "옵시디언/옵시디언 정리.md",
+                "file": "옵시디언/제텔카스텐 정리.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,12 +34,15 @@
             }
           },
           {
-            "id": "5ddc600771571204",
+            "id": "2d78e9bbed28a51a",
             "type": "leaf",
             "state": {
-              "type": "make-folder-view",
+              "type": "markdown",
               "state": {
-                "contextPath": "옵시디언"
+                "file": "옵시디언/Pasted image 20230918021126.png.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           },
@@ -57,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -140,6 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "옵시디언/옵시디언 정리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,6 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "옵시디언/옵시디언 정리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,7 +182,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "옵시디언/옵시디언 정리.md"
+              }
             }
           },
           {
@@ -223,11 +230,12 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "cff9c4c01707ec30",
+  "active": "4bd393b7611bbd7c",
   "lastOpenFiles": [
+    "옵시디언/Pasted image 20230918021126.png.md",
+    "옵시디언/제텔카스텐 정리.md",
     "옵시디언/옵시디언 정리.md",
     "옵시디언/Obsidian_Logo.jpg.md",
-    "옵시디언/제텔카스텐공부.md",
     "데브옵스 devops/배포.md",
     "스마트팩토리/스마트팩토리개념.md",
     "옵시디언/옵시디언.md",
@@ -259,7 +267,6 @@
     "워드프레스/플러그인.md",
     "워드프레스/워드프레스.md",
     "워드프레스/운영.md",
-    "워드프레스/설치.md",
     "워드프레스",
     "Context/spacesLastSync.log",
     "Context",
