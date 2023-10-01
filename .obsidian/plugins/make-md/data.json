@@ -41,7 +41,8 @@
   },
   "expandedSpaces": [
     null,
-    "Obsidian Vault"
+    "Obsidian Vault",
+    null
   ],
   "expandFolderOnClick": true,
   "openFolders": [],
@@ -61,7 +62,7 @@
   "hiddenExtensions": [
     ".mdb"
   ],
-  "newFileLocation": "folder",
+  "newFileLocation": "current",
   "newFileFolderPath": "0. 인박스",
   "inlineBacklinks": false,
   "inlineContext": true,
@@ -74,7 +75,7 @@
   "spacesSyncTimeoutSeconds": 10,
   "spacesAutoBackup": true,
   "spacesAutoBackupInterval": 10,
-  "spacesAutoBackupLast": 1696128244509,
+  "spacesAutoBackupLast": 1696128601057,
   "spacesUseAlias": false,
   "precreateVaultSpace": true,
   "fmKeyAlias": "aliases",

@@ -4,7 +4,8 @@
   "translucency": false,
   "nativeMenus": true,
   "enabledCssSnippets": [
-    "color-extend"
+    "color-extend",
+    "ggoomter"
   ],
   "theme": "moonstone"
 }
