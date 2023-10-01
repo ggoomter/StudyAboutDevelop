@@ -1,8 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "옵시디언 정리",
+      "path": "옵시디언/옵시디언 정리.md"
+    },
+    {
+      "basename": "Obsidian_Logo.jpg",
+      "path": "옵시디언/Obsidian_Logo.jpg.md"
+    },
+    {
+      "basename": "제텔카스텐공부",
+      "path": "옵시디언/제텔카스텐공부.md"
+    },
+    {
+      "basename": "배포",
+      "path": "데브옵스 devops/배포.md"
+    },
+    {
+      "basename": "스마트팩토리개념",
+      "path": "스마트팩토리/스마트팩토리개념.md"
+    },
+    {
       "basename": "옵시디언",
-      "path": "옵시디언공부/옵시디언.md"
+      "path": "옵시디언/옵시디언.md"
     },
     {
       "basename": "파이어베이스 firebase",
@@ -39,14 +59,6 @@
     {
       "basename": "플러터 flutter",
       "path": "앱/플러터 flutter.md"
-    },
-    {
-      "basename": "옵시디언공부",
-      "path": "옵시디언공부/옵시디언공부.md"
-    },
-    {
-      "basename": "Obsidian_Logo.jpg",
-      "path": "옵시디언공부/Obsidian_Logo.jpg.md"
     },
     {
       "basename": "개발자",
@@ -91,10 +103,6 @@
     {
       "basename": "제텔카스텐 템플릿",
       "path": "템플릿/제텔카스텐 템플릿.md"
-    },
-    {
-      "basename": "제텔카스텐공부",
-      "path": "옵시디언공부/제텔카스텐공부.md"
     },
     {
       "basename": "무제 파일 1",

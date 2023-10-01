@@ -13,14 +13,51 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "옵시디언공부/옵시디언.md",
+                "file": "데브옵스 devops/배포.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3b49a7a139280d25",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "옵시디언/옵시디언 정리.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5ddc600771571204",
+            "type": "leaf",
+            "state": {
+              "type": "make-folder-view",
+              "state": {
+                "contextPath": "옵시디언"
+              }
+            }
+          },
+          {
+            "id": "4bd393b7611bbd7c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "옵시디언/옵시디언 정리.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -103,7 +140,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "옵시디언공부/옵시디언.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +156,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "옵시디언공부/옵시디언.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,9 +177,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "옵시디언공부/옵시디언.md"
-              }
+              "state": {}
             }
           },
           {
@@ -170,8 +203,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 395,
-    "collapsed": true
+    "width": 395
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,9 +223,14 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "c930a09cc3eecb58",
+  "active": "cff9c4c01707ec30",
   "lastOpenFiles": [
-    "옵시디언공부/옵시디언.md",
+    "옵시디언/옵시디언 정리.md",
+    "옵시디언/Obsidian_Logo.jpg.md",
+    "옵시디언/제텔카스텐공부.md",
+    "데브옵스 devops/배포.md",
+    "스마트팩토리/스마트팩토리개념.md",
+    "옵시디언/옵시디언.md",
     "백엔드/파이어베이스 firebase.md",
     "추천/추천_개발.md",
     "추천/추천_유튜브_일반.md",
@@ -212,11 +249,8 @@
     "39.md",
     "29.md",
     "16.md",
-    "옵시디언공부/옵시디언공부.md",
-    "옵시디언공부/Obsidian_Logo.jpg.md",
     "ggoomter.css",
-    "옵시디언공부/제텔카스텐공부.md",
-    "옵시디언공부",
+    "옵시디언",
     "AI/프롬프트.md",
     "AI/모델.md",
     "AI/stable diffusion webui.md",
@@ -227,8 +261,6 @@
     "워드프레스/운영.md",
     "워드프레스/설치.md",
     "워드프레스",
-    "개발자.md",
-    "README.md",
     "Context/spacesLastSync.log",
     "Context",
     "1. 영구노트",

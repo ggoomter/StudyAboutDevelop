@@ -25,7 +25,7 @@
   "collapsedTags": [],
   "enableFolderNote": true,
   "folderIndentationLines": true,
-  "revealActiveFile": false,
+  "revealActiveFile": true,
   "spacesStickers": true,
   "spaceRowHeight": 29,
   "spacesDisablePatch": false,
@@ -37,12 +37,10 @@
   "expandedFolders": {
     "Obsidian Vault": [
       "옵시디언공부/템플릿",
-      "추천",
-      "추천",
-      "추천",
-      "추천",
-      "/",
-      "옵시디언공부"
+      "옵시디언공부",
+      "스마트팩토리",
+      "옵시디언",
+      "/"
     ]
   },
   "expandedSpaces": [
@@ -79,9 +77,9 @@
   "inlineContextNameLayout": "vertical",
   "spacesSyncLastUpdated": "Context/spacesLastSync.log",
   "spacesSyncTimeoutSeconds": 10,
-  "spacesAutoBackup": true,
+  "spacesAutoBackup": false,
   "spacesAutoBackupInterval": 10,
-  "spacesAutoBackupLast": 1696131468658,
+  "spacesAutoBackupLast": 1696141221020,
   "spacesUseAlias": false,
   "precreateVaultSpace": true,
   "fmKeyAlias": "aliases",
