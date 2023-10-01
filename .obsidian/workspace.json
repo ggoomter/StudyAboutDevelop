@@ -4,19 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6655b109648dbd7e",
+        "id": "902e1f896c16b57e",
         "type": "tabs",
         "children": [
           {
-            "id": "7dfa91e32e30c389",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "d5151156cad93b2e",
+            "id": "c930a09cc3eecb58",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -28,8 +20,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -200,7 +191,7 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "d5151156cad93b2e",
+  "active": "c930a09cc3eecb58",
   "lastOpenFiles": [
     "옵시디언공부/옵시디언.md",
     "백엔드/파이어베이스 firebase.md",
