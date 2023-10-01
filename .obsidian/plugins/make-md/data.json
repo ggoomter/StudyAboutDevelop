@@ -37,7 +37,8 @@
   "expandedFolders": {
     "Obsidian Vault": [
       "옵시디언공부/템플릿",
-      "/"
+      "/",
+      "추천"
     ]
   },
   "expandedSpaces": [
@@ -76,7 +77,7 @@
   "spacesSyncTimeoutSeconds": 10,
   "spacesAutoBackup": true,
   "spacesAutoBackupInterval": 10,
-  "spacesAutoBackupLast": 1696130708272,
+  "spacesAutoBackupLast": 1696131303949,
   "spacesUseAlias": false,
   "precreateVaultSpace": true,
   "fmKeyAlias": "aliases",

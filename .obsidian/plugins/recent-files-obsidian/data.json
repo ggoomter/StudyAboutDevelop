@@ -2,7 +2,23 @@
   "recentFiles": [
     {
       "basename": "추천_일반",
-      "path": "추천_일반.md"
+      "path": "추천/추천_일반.md"
+    },
+    {
+      "basename": "추천_개발",
+      "path": "추천/추천_개발.md"
+    },
+    {
+      "basename": "추천서비스",
+      "path": "추천/추천서비스.md"
+    },
+    {
+      "basename": "추천",
+      "path": "추천/추천.md"
+    },
+    {
+      "basename": "소속없는 일머리 노하우 신규지식",
+      "path": "소속없는 일머리 노하우 신규지식.md"
     },
     {
       "basename": "파이어베이스 firebase",
