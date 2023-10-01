@@ -4,16 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "961bdb1d4563d5cb",
+        "id": "6655b109648dbd7e",
         "type": "tabs",
         "children": [
           {
-            "id": "e177d54584ffccf3",
+            "id": "7dfa91e32e30c389",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "d5151156cad93b2e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "추천/추천_개발.md",
+                "file": "옵시디언공부/옵시디언.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,59 +29,17 @@
             }
           },
           {
-            "id": "642b99c22bb86333",
+            "id": "5977ce495a3b297a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "make-folder-view",
               "state": {
-                "file": "추천/추천.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fd9b237f6d3a4d27",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "추천/추천_개발.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "809049072a3da5ae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "추천/추천_유튜브_일반.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "44cd45d25df22c03",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "백엔드/파이어베이스 firebase.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "contextPath": "옵시디언공부"
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -156,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "추천/추천_유튜브_일반.md",
+                "file": "옵시디언공부/옵시디언.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -173,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "추천/추천_유튜브_일반.md",
+                "file": "옵시디언공부/옵시디언.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -196,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "추천/추천_유튜브_일반.md"
+                "file": "옵시디언공부/옵시디언.md"
               }
             }
           },
@@ -244,17 +210,18 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "809049072a3da5ae",
+  "active": "d5151156cad93b2e",
   "lastOpenFiles": [
+    "옵시디언공부/옵시디언.md",
+    "백엔드/파이어베이스 firebase.md",
     "추천/추천_개발.md",
-    "추천/추천_유튜브_개발.md",
     "추천/추천_유튜브_일반.md",
+    "추천/추천_유튜브_개발.md",
     "추천/추천기준.md",
     "추천/추천서비스.md",
     "추천/추천.md",
     "소속없는 일머리 노하우 신규지식.md",
     "추천",
-    "백엔드/파이어베이스 firebase.md",
     "앱/플러터 flutter.md",
     "무제 파일 1.canvas",
     "무제 파일 2.canvas",
@@ -265,7 +232,6 @@
     "29.md",
     "16.md",
     "옵시디언공부/옵시디언공부.md",
-    "옵시디언공부/옵시디언.md",
     "옵시디언공부/Obsidian_Logo.jpg.md",
     "ggoomter.css",
     "옵시디언공부/제텔카스텐공부.md",

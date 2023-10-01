@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "추천_유튜브_일반",
-      "path": "추천/추천_유튜브_일반.md"
+      "basename": "옵시디언",
+      "path": "옵시디언공부/옵시디언.md"
+    },
+    {
+      "basename": "파이어베이스 firebase",
+      "path": "백엔드/파이어베이스 firebase.md"
     },
     {
       "basename": "추천_개발",
       "path": "추천/추천_개발.md"
+    },
+    {
+      "basename": "추천_유튜브_일반",
+      "path": "추천/추천_유튜브_일반.md"
     },
     {
       "basename": "추천_유튜브_개발",
@@ -29,20 +37,12 @@
       "path": "소속없는 일머리 노하우 신규지식.md"
     },
     {
-      "basename": "파이어베이스 firebase",
-      "path": "백엔드/파이어베이스 firebase.md"
-    },
-    {
       "basename": "플러터 flutter",
       "path": "앱/플러터 flutter.md"
     },
     {
       "basename": "옵시디언공부",
       "path": "옵시디언공부/옵시디언공부.md"
-    },
-    {
-      "basename": "옵시디언",
-      "path": "옵시디언공부/옵시디언.md"
     },
     {
       "basename": "Obsidian_Logo.jpg",
