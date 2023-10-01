@@ -43,8 +43,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -127,6 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "앱/플러터 flutter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,6 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "앱/플러터 flutter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +165,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "앱/플러터 flutter.md"
+              }
             }
           },
           {
@@ -210,11 +213,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "71445fb3f87d8383",
+  "active": "e177d54584ffccf3",
   "lastOpenFiles": [
+    "앱/플러터 flutter.md",
     "백엔드/파이어베이스 firebase.md",
     "옵시디언공부/옵시디언.md",
-    "앱/플러터 flutter.md",
     "옵시디언공부/Obsidian_Logo.jpg.md",
     "ggoomter.css",
     "옵시디언공부/제텔카스텐공부.md",
