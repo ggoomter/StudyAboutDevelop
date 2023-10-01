@@ -32,22 +32,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "71445fb3f87d8383",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "옵시디언공부/옵시디언공부.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -109,8 +96,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -130,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "옵시디언공부/옵시디언공부.md",
+                "file": "백엔드/파이어베이스 firebase.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "옵시디언공부/옵시디언공부.md",
+                "file": "백엔드/파이어베이스 firebase.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "옵시디언공부/옵시디언공부.md"
+                "file": "백엔드/파이어베이스 firebase.md"
               }
             }
           },
@@ -214,18 +200,22 @@
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
       "kr-book-info-plugin:Add Book Info": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "71445fb3f87d8383",
+  "active": "44cd45d25df22c03",
   "lastOpenFiles": [
+    "39.md",
+    "29.md",
+    "16.md",
+    "옵시디언공부/옵시디언공부.md",
     "옵시디언공부/옵시디언.md",
     "백엔드/파이어베이스 firebase.md",
     "앱/플러터 flutter.md",
     "옵시디언공부/Obsidian_Logo.jpg.md",
     "ggoomter.css",
     "옵시디언공부/제텔카스텐공부.md",
-    "옵시디언공부/옵시디언공부.md",
     "옵시디언공부",
     "AI/프롬프트.md",
     "AI/모델.md",
@@ -253,9 +243,6 @@
     "0. 인박스/Untitled.md",
     "0. 인박스/Untitled 2.md",
     "0. 인박스/.md",
-    "1. 영구노트/이력서.md",
-    "0. 인박스/경제계획.md",
-    "0. 인박스/주식정리.md",
     "1. 영구노트",
     "0. 인박스",
     "비지니스",
