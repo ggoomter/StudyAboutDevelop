@@ -443,6 +443,13 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
     - CSS로 컴파일을 거쳐야 한다. 라이브서버로 preview안된다. 그런데 vscode의 live sass compiler가 해결해준다.
 > 어떻게 사용하나요?
 [링크](https://inpa.tistory.com/entry/SCSS-%F0%9F%92%8E-SassSCSS-%EB%9E%80-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%BB%B4%ED%8C%8C%EC%9D%BC)
+> 설치
+- 온라인 SassMeister 사이트
+- node-sass
+	- npm install -g node-sass
+	- node-sass -w scss파일위치 만들css위치 --output-style compressed
+- vsCode 익스텐션 Live Sass Compiler
+	- .scss 파일을 하나 만들면 편집기 하단에 watch sass 아이콘 보인다.
 
 <데이터 종류>
   - Numbers   //단위가 옵션

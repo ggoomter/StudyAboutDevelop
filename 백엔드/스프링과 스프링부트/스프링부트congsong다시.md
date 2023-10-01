@@ -132,7 +132,7 @@ https://congsong.tistory.com/23
 https://congsong.tistory.com/24
 - HandlerInterceptor 인터페이스를 구현한 LoggerInterceptor 생성
   - 3개의 추상메서드 중 2개. preHandler 과 postHandle 구현
-  - @Slf4j = 롬복에서 제공. 로깅 추상화. 로깅을 직접 하지 않고 로깅 구현체를 찾아 기능을 사용할 수 있게 해줌
+  - @Slf4j = 롬복에서 제공. 로깅 추상화. 로깅을 직접 하지 않고 로깅 구현체를 찾아 기능을 사용할 수 있게 해줌. 쉽게 말해 해당 어노테이션이 선언된 클래스에 자동으로 로그객체를 생성한다. 이름은 log
 - WebMvcConfigurer 인터페이스를 구현한 WebMvcConfig 클래스 생성
   - WebMvcConfigurer 인터페이스를 구현하면 @EnableWebMvc 의 자동설정을 베이스로 개발자가 원하는 설정까지 추가할 수 있음
   - addInterceptors와 excludePathPatterns() =  전달하는 주소와 경로는 인터셉터 호출에서 제외
@@ -333,7 +333,7 @@ https://congsong.tistory.com/44
 게시글에 등록된 파일을 상세 페이지에 출력하는 기능과, 게시글을 수정할 때 파일을 추가/변경/삭제하는 기능, 그리고 기존에 등록된 파일을 그대로 유지하는 기능
 - FileResponse  클래스
 - FileMapper 인터페이스
-- FileMapper XML 쿼리작성
+- FileMapper XML 쿼리작 성
 - FileService에 파일관련 처리 함수
 - FileApiController //API처리 전용
 - view.html 게시글 상세 페이지 수정
@@ -343,3 +343,59 @@ https://congsong.tistory.com/44
 - 수정하는 화면 write.html에 첨부파일 추가/변경/삭제
   - 전역변수의 문제점과 전역변수 피하기 https://sunmerrr.github.io/javascript/globalVariable/
   복잡하고 양 많음
+
+# 27. 파일 업로드/다운로드 3 : 첨부파일 다운
+https://congsong.tistory.com/45
+- 상세페이지에서 파일명을 클릭했을때 해당파일의 id를 컨트롤러로 전달해야함
+- findFileById를 인터페이스, 서비스, 매퍼에 추가
+- 스프링은 Resource 라는 인터페이스 제공. 리소스에 대한 접근을 추상화하기위해 사용.  https://always-develop.tistory.com/37
+- db의 데이터를 이용해서 디스크상에 업로드된 물리적 파일 객체를 읽어와야한다. FileUtils 에 readFileAsResource 메서드 추가.
+- FileApiController 에 FileUtils를 멤버로 선언하고, downloadFile( ) 메서드를 추가
+- view.html - findAllFile( ) 함수수정. 준비중입니다 돼있던에 파일 다운로드 링크 추가
+- 파일 다운로드 테스트
+
+# 28. ORM (**중요**)
+https://congsong.tistory.com/51
+myBatis 이제 그만.
+JPA(Java Persistence API) : 자바진영의 ORM 기술 표준 (인터페이스)
+- JPA 스펙의 대표적인 구현체로는 '하이버네이트'가 있다.
+- Repository 는 Mybatis의 Mapper 역할
+- 참고로 엔티티(Entity) 클래스와 레파지토리(Repository) 인터페이스는 꼭! 같은 패키지에 위치해야 한다.
+- Entity 클래스는 테이블과 레코드 역할을 하는 데이터베이스 그 자체로 생각해야 하고 절대로 요청이나 응답에 사용되어서는 안된다. 그래서 Request, Response 클래스를 따로 구분해서 생성해줘야한다.
+- @Entity
+해당클래스가 테이블과 매핑되는 JPA의 엔티티 클래스임을 의미한다.
+기본적으로 클래스명을 테이블명으로 매핑한다.
+클래스명과 테이블이 다르면 @Table을 선언하고 이름을 넣어준다. 예를들어 @Table(name="jpa_element")
+- @id
+해당멤버가 엔티티의 pk임을 의미.
+보통 db에서는 bigint, 엔티티에서는 Long
+- @GeneratedValue(strategy = GenerationType.IDENTITY)
+PK자동증가
+Mysql같이 auto_increment를 지원하면 이것 사용.
+오라클같이 시퀀스를 이용하면  GenerationType.SEQUENCE 이용.
+GenerationType.AUTO 설정하면 db에서 제공하는 pk생성전략을 가져감
+- Builder
+롬복에서 제공. 생성자 대신에 이용하는 패턴. 
+- @Setter가 없는 이유
+에티티는 테이블 그 자체의 역할을 하기 때문에 컬럼에 대한 setter를 써버리면 객체의 값이 어느 시점에 변경되었는지 알 수가 없다. 때문에 Entity클래스에서는 절대로 set클래스가 존재해서는 안된다.
+- 리파지토리 인터페이스
+JpaRepository 인터페이스를 상속받을때 엔티티클래스의 타입과 pk에 해당하는 데이터타입으로 선언하면
+해당 테이블의 CRUD기능을 사용할 수 있다.
+- Optional
+반복적인 null처리를 피하기 위해서 자바8에서 최초로 도입된 클래스
+
+# 29. 전역 예외처리
+- BoardApiController
+- GlobalExceptionHandler
+  - @RestControllerAdvice
+  컨트롤러 전역에서 발생할 수 있는 예외를 잡아 Throw해준다. @ControllerAdvice에 @ResponseBody가 합쳐진 형태
+  - @ExceptionHandler
+  예외의 타입별로 예외처리
+- 모든 예외를 한곳에서 관리하기 Enum클래스 ErrorCode 생성. 항상 동일한 구조의 포맷을 미리 설계
+- 예외 응답을 처리할 Response 클래스 ErrorResponse 생성
+- Custom 예외 처리용 예외클래스 CustomException 생성  RuntimeException 상속. Unchecked Exception
+- GlobalExceptionHandler 수정
+
+
+# 30. 기능별로 서비스, 컨트롤러 화면까지 전체적으로 구현
+https://congsong.tistory.com/55

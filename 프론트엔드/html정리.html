@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML&#xc774;&#xb780;&quest;</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h2 id="html이란">HTML이란?</h2>
+<p>웹브라우저에서 보여지도록 설계된 문서 -&gt; 웹브라우저에서 보는 문서(화면)<br>
+&quot;Hypertext Markup Language&quot;<br>
+하이퍼텍스트를 가장 중요한 특징으로 하는 / 마크업이라는 형식을 가진 / 언어.<br>
+하이퍼텍스트 : 하이퍼링크가 걸려있는 텍스트<br>
+하이퍼링크 : 다른 텍스트(문서)로 이동할 수 있는 연결</p>
+<p>마크업 : 정보에 '형식과 구조'를 명시하는 것<br>
+예를들어 <h3>제목</h3>   제목이라는 값에 3번째 등급으로 중요한 텍스트라는 구조. 그리고 그렇게 표현하도록 하는 형식.<br>
+마크다운 : 마크업 언어의 일종.  서식에 글쓰는 흐름이 끊기지 않도록 좀더 편하게 쓰도록 만든것.<br>
+예를들어 <h3>제목</h3> 을 ### 제목 으로 쓸수있게함.</p>
+<p>언어란? : 사과라고 하면 사과가 떠오르는것처럼. 링고(일본어)라고 하면 사과가 안떠오르는것 처럼.  서로간의 의사소통에 미리 정해놓은 약속.</p>
+<p>즉 HTML은 다른 웹페이지로 이동할수 있는 <strong>형식과 구조</strong>가 명시된 언어. HTML의 본질은 '정보'<br>
+프로그래밍 언어가 아니라 마크업언어. 굉장히 쉬워서 오늘 하루만에 배울수있다. 그러나 매우 중요하다.<br>
+공부를 할때는 쉽고 효율이 좋은걸 먼저 배워야 한다.<br>
+실습 &gt; a.html만들고 hello world 치고 브라우저에서 띄우기.</p>
+<h4 id="강의">강의</h4>
+<p><a href="https://www.youtube.com/watch?v=tZooW6PritE&amp;list=PLuHgQVnccGMDZP7FJ_ZsUrdCGH68ppvPb">생활코딩</a></p>
+<h2 id="html의-구조">HTML의 구조</h2>
+<p>실습 &gt; 각자 아무 웹페이지 들어가서 요소 검사 또는 F12누르면 개발자모드.<br>
+헤드(메타정보. 타이틀,  캐릭터셋:문자집합 ASCII, UNICODE 등.   인코딩:문자셋과바이트 매핑규칙. EUC-KR, UTF-8 등).<br>
+바디(HEADER, NAV, MAIN, ASIDE, FOOTER).   눈으로 보이는 부분.<br>
+태그공부 : 콘텐츠를 감싸서 그 정보의 '형식과 구조'를 정의.<br>
+모질라 <a href="https://developer.mozilla.org/ko/docs/Web/HTML">https://developer.mozilla.org/ko/docs/Web/HTML</a><br>
+w3스쿨 <a href="https://www.w3schools.com/">https://www.w3schools.com/</a><br>
+tcp스쿨 <a href="http://tcpschool.com/">http://tcpschool.com/</a></p>
+<h2 id="요소-element">요소 element</h2>
+<p>&lt;여는태그 속성=&quot;값&quot;&gt;컨텐츠&lt;닫는태그&gt;</p>
+<h2 id="태그">태그</h2>
+<p>이상한 태그를 쓰더라도 브라우저는 에러임을 알지만 문서는 읽을수 있도록 자체적으로 처리하고 보여주기는한다. 실행이 안되는거 아니다.<br>
+태그는 본질적으로 BOX형태로 이루어져있다.<br>
+박스는 컨텐츠(content : 내용)와 보더(border:테두리)가 있고 보더 바깥으로 마진(margin : 여백), 보더 안으로 패딩(padding : 안쪽여백)<br>
+대표적인 BOX TAG : header/nav/footer, main/section/aside, article<br>
+Box는 Block(공간이 충분해도 하나가 한줄을 다 차지한다.)과 Inline(공간이 허용하는한 한줄에 여러개) 디스플레이로 나뉜다.<br>
+Block의 예 : div, h1~h6, header, footer, p, li, table<br>
+Inline의 예 : span, a, img,<br>
+<img src="file:///c:\Users\ggoom\git\StudyAboutDevelop\%EC%9D%B4%EB%AF%B8%EC%A7%80\html%ED%83%9C%EA%B7%B8%EC%82%AC%EC%9A%A9%EC%9C%A8.png" alt="태그사용율"></p>
+<ul>
+<li>
+<p>a<br>
+anchor 닻. html의 가장 중요한 태그. 다른 문서로 이동할수 있게 해준다. 목적지 href 속성이 반드시 필요함</p>
+</li>
+<li>
+<p>div<br>
+무색 무취의 태그.block요소의 대표. division의 약자. 구분. 분류.</p>
+</li>
+<li>
+<p>span<br>
+무색 무취의 태그.Inline요소의 대표. 뼘. 폭</p>
+</li>
+<li>
+<p>H1~6<br>
+Highlight. Headlight. 제목을 표현할때 사용</p>
+</li>
+<li>
+<p>buttton</p>
+</li>
+<li>
+<p>Table</p>
+<ul>
+<li>tr(table row) : 행 추가</li>
+<li>th(table header)</li>
+<li>td(table data) : 데이터(컬럼) 추가</li>
+<li>(colspan, rowspan)</li>
+</ul>
+</li>
+<li>
+<p>ol, ul (ordered list, unordered list)</p>
+<ul>
+<li>li  (list item)</li>
+</ul>
+</li>
+<li>
+<p>form</p>
+<ul>
+<li>action 속성 : 어디로 폼데이터를 보낼것인가</li>
+<li>method 속성 : 어떤 HTTP 메소드를 사용해서 데이터를 보낼것인가</li>
+</ul>
+</li>
+<li>
+<p>input<br>
+데이터를 입력받을수 있는 태그. 여러가지 datatype이 있다.<br>
+text, password, radio, checkbox, hidden, label,<br>
+color, date, datetime, email, month, number, range, search, tel, time, url, week<br>
+min, max 속성<br>
+ux개선. 특히 모바일. 입력도 안되게 하고 잘못됐을때 제출도 안된다.</p>
+</li>
+<li>
+<p>label   라벨, 레이블<br>
+목적 : ux증진<br>
+2가지 방법이 있다.</p>
+<ol>
+<li>label의 for와 태그의 id를 이어주기</li>
+<li>그냥 label태그로 감싸기<br>
+<label><br>
+<input type="checkbox" name="color" value="red"> 붉은색<br>
+</label><br>
+<label for="color_blue"><br>
+<input type="color_blue" type="checkbox" name="color" value="blue"> 파란색<br>
+</label></li>
+</ol>
+</li>
+<li>
+<p>img , audio, video</p>
+</li>
+<li>
+<p>script</p>
+<script type="text/javascript">내용</script>
+<script type="text/javascript" src="경로"></script>
+</li>
+<li>
+<p>link</p>
+<link href="경로" rel="stylesheet">
+<link href="favicon.ico" rel="icon" >
+</li>
+<li>
+<p>iframe<br>
+inline frame의 약자. 웹페이지안에 어떠한 제한없이 또 하나의 웹페이지 삽입</p>
+<iframe src="삽입할페이지주소"></iframe>
+</li>
+<li>
+<p>canvas, SVG(Scalable Vector Graphics)<br>
+<canvas id="drawCanvas" style="width:300px; height:200px; border: 1px solid #993300;"></canvas></p>
+</li>
+<li>
+<p>추가공부</p>
+<ul>
+<li>data-<br>
+사용자가 임의로 명명한 속성임을 표현하는 접두어<br>
+예) data-clk=&quot;tct.next&quot;</li>
+</ul>
+</li>
+</ul>
+<h3 id="head">head</h3>
+<p>//본문에 대한 설명</p>
+<ul>
+<li>script</li>
+<li>meta<br>
+<meta charset="UTF-8">  이 웹페이지를 열때 utf-8로 열어라
+<ul>
+<li>검색엔진을 위한 키워드 정의<br>
+<meta name="keyword" content="HTML, meta, tag, element, reference"></li>
+<li>웹페이지에 대한 설명<br>
+<meta name="description" content="HTML meta tag page"></li>
+<li>문서의 저자<br>
+<meta name="author" content="TCPSchool"></li>
+<li>5초뒤에 다른 페이지로 리다이렉트<br>
+<meta http-equiv="refresh" content="5;url=http://www.tcpschool.com"></li>
+<li>모든 장치에서 웹사이트가 잘보이도록 뷰포트 설정<br>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></li>
+</ul>
+</li>
+<li>title<br>
+브라우저  제일 위 탭 부분에 표시되는 부분. 검색엔진에서 매우 중요한 요소다. 책으로 치면 표지</li>
+<li>link</li>
+</ul>
+<h3 id="body-2시간">body (2시간)</h3>
+<p>//본문<br>
+3.1 블록과 인라인<br>
+3.2 태그  140개정도. 의미 있는것만<br>
+3.3 블록 인라인 (30분)<br>
+3.4 태그의 중첩과 시멘틱, doctype (30분)<br>
+3.5 특별한 안경 장착. 어떤 웹사이트를 보든 구조를 파악할수있도록<br>
+아무웹페이지 접속해서 우클릭 - 페이지 소스보기. 개발자모드 영역 표시.<br>
+block부분 다시 설명, 마진 패딩   div, span다시 설명<br>
+뭐가 뭔지 하나도 모를겁니다. 오늘 강의들으면 눈에 보인다. 아는만큼 보이는 느낌. 그 즐거움.<br>
+3.6 따라해보기 실습과제 (2시간+과제)<br>
+4시에 과제 첨삭, 질의응답, 접근성, 반응형 웹, 검색엔진최적화</p>
+<h2 id="시멘틱-중첩을-잘써야-멋진-html을-만든다">시멘틱, 중첩을 잘써야 멋진 html을 만든다.</h2>
+<p>Sementic : 의미상의.<br>
+HTML의 본질인 '정보의 전달'이라는 본질에 집중한 의미론적 태그<br>
+이유 : SEO(Search Engine Optimization. 검색엔진최적화)란 , Accessibility(접근성), For Developer(개발, 유지보수)</p>
+<article> : 글자가 많이 들어간 부분. section안에 위치하는 경우가 대부분
+<aside> : 좌우 사이드 영역
+<details> : 사용자가 보기/숨기기를 선택할수 있는 부가적인 세부사항
+<summary> : details 하위요소로 열기/닫기를 클릭할수있는 요약글자
+<figure> : 사진, 그림, 오디오, 비디오, 코드 등을 담는 부분
+<figcaption> : figure 태그를 설명하는 문구를 담는 부분
+<footer> : 아래의 고정된 푸터 부분
+<header> : 상단의 고정된 헤더 부분
+<main> : 메인 콘텐츠 부분
+<mark> : 형광팬으로 마킹하는 것처럼 표시하는 텍스트
+<nav> : 네비게이션
+<section> : 여러 중심내용을 감싸는 부분
+<summary> : 요약
+<time> : 시간
+<p>예1)</p>
+<div class="head1">제목1</div>
+.head1{
+  폰트사이즈 30
+  볼드처리
+  가운데정렬
+}
+위와 아래의 차이.
+<h1>제목1</h1>
+<p>눈으로 보이는건 똑같이 만들어도 담고있는 정보가 다르다.<br>
+h1은 가장 중요한 정보라는 의미를 내포하고있고<br>
+클래스로 디자인한것은 디자인 적으로만 큰것 뿐이다.</p>
+<p>예2) <div class="nav">네비게이션</div><br>
+본질이 div이며 클래스의 이름이 nav일 뿐이다. 시멘틱하지 않음</p>
+<nav>  이건 태그자체에 navigation이라는 정보를 담고있다. 이게 시맨틱.
+<h3 id="커스텀-태그">커스텀 태그</h3>
+<p>html은 <abcd>같은 태그를 써도 에러 안난다.<br>
+단, 아무런 기능은 일어나지 않는다.<br>
+반면에 메타데이터를 저장해서 의미가 있는 커스텀 태그를 만들수도 있다.</p>
+<h3 id="data----데이터속성">data-  ### 데이터속성</h3>
+<ul>
+<li>
+<p>HTML5부터 data-로 시작하는 속성을 지정할 수 있다.</p>
+</li>
+<li>
+<p>브라우저는 데이터속성에 대해서는 어떠한 행동도 관여하지 않는다.</p>
+</li>
+<li>
+<p>임의로 만든 속성이기 때문에 html의 기본속성인 value와는 상관이 없다.</p>
+</li>
+<li>
+<p>장점 : 예전같이 hidden으로 태그를 숨겨두고 데이터를 저장할 필요가 없다.</p>
+</li>
+<li>
+<p>형태<br>
+<xyx
+id="electriccars"
+data-columns="3"
+data-index-number="12314"
+data-parent="cars"><br>
+</xyx></p>
+</li>
+<li>
+<p>예<br>
+<input type="text" data-value="001" id="username"></p>
+</li>
+<li>
+<p>가져오는 법<br>
+DOM객체의 dataset속성을 참조하여 얻을 수 있다.<br>
+예)<br>
+var input = document.querySelector('#username');<br>
+console.log(input.dataset);<br>
+확인해보면 data-는 빠진채로 존재한다. 그래서 그중에 하나만 뽑을때는 아래와 같이 하면 된다.<br>
+console.log(input.dataset.code);<br>
+console.log(input.dataset['code']);</p>
+</li>
+</ul>
+<p>이렇게 만든 데이터 속성은 순 HTML속성이기 때문에 CSS에서도 접근 가능하다.</p>
+<h3 id="헷갈리는-html-태그와-시멘틱">헷갈리는 HTML 태그와 시멘틱</h3>
+<p><a href="https://www.youtube.com/watch?v=T7h8O7dpJIg">엘리</a></p>
+<ol>
+<li>
+<p>article vs section<br>
+article : 이 자체만으로 독립적으로 다른페이지에 보여줬을때 문제 없을 때 사용.<br>
+section : 연관있는 내용 하나</p>
+</li>
+<li>
+<p>i vs em<br>
+em : 강조하는 이탤릭<br>
+i : 시각적으로만 이탤릭</p>
+</li>
+<li>
+<p>b vs strong<br>
+strong : 중요한 진하게<br>
+b : 시각적으로만 진하게</p>
+</li>
+</ol>
+<p>용어를 설명할때 사용하는 3개<br>
+dl : description(definition) list<br>
+dt : description(definition) term(title)<br>
+dd : description(definition) detail</p>
+<ol start="4">
+<li>
+<p>img vs background-image<br>
+img: 페이지내에서 중요한 요소로서 작동될때.<br>
+background-image : 스타일링 목적일때. 이미지가 없어도 문서의 내용에 지장이 없을때</p>
+</li>
+<li>
+<p>button vs a<br>
+button : 특정한 액션을 위해<br>
+a :  어디론가 이동할때</p>
+</li>
+<li>
+<p>table vs css<br>
+정말 데이터면 table이 좋음<br>
+스타일링을 위한거면 flex나 grid사용</p>
+</li>
+</ol>
+<p>//textarea를</p>
+<textarea>요기</textarea>
+<p>요기에 엔터키 해놓고 placeholder안먹힌다고 디버깅 못하기 쉽다.</p>
+
+        
+        
+    </body>
+    </html>
