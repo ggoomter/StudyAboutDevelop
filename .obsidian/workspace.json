@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "앱/플러터 flutter.md",
+                "file": "추천_일반.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "앱/플러터 flutter.md",
+                "file": "추천_일반.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "앱/플러터 flutter.md",
+                "file": "추천_일반.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "앱/플러터 flutter.md"
+                "file": "추천_일반.md"
               }
             }
           },
@@ -207,6 +207,7 @@
   "active": "e177d54584ffccf3",
   "lastOpenFiles": [
     "백엔드/파이어베이스 firebase.md",
+    "추천_일반.md",
     "앱/플러터 flutter.md",
     "무제 파일 1.canvas",
     "무제 파일 2.canvas",
