@@ -146,7 +146,7 @@ border를 기준으로 바깥으로 여백 = margin
         단점 : 인터렉션이 늦다. JS번들의 크기가 커진다.)
     6. Styled-Component
 
-### 포지션( ## position)
+### 포지션 ( ## position)
 에밋 사용  .item.item$*10
 [TCP SCHOOL](http://www.tcpschool.com/css/css_position_position)
 [DaleSeo](https://www.daleseo.com/css-position-absolute/)

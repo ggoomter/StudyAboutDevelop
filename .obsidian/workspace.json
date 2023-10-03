@@ -65,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "데브옵스 devops/플러터 앱배포.md",
+                "file": "프론트엔드/css정리.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -156,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "데브옵스 devops/플러터 앱배포.md",
+                "file": "프론트엔드/css정리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -173,7 +173,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "데브옵스 devops/플러터 앱배포.md",
+                "file": "프론트엔드/css정리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -196,7 +196,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "데브옵스 devops/플러터 앱배포.md"
+                "file": "프론트엔드/css정리.md"
               }
             }
           },
@@ -223,7 +223,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 395
+    "width": 395,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -245,9 +246,9 @@
   },
   "active": "5109cf59491a30c7",
   "lastOpenFiles": [
+    "데브옵스 devops/플러터 앱배포.md",
     "Pasted image 20231003181925.png",
     "데브옵스 devops/배포.md",
-    "데브옵스 devops/플러터 앱배포.md",
     "AI/stable diffusion webui.md",
     "AI/프롬프트.md",
     "AI/모델.md",
