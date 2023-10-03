@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "플러터 앱배포",
+      "path": "데브옵스 devops/플러터 앱배포.md"
+    },
+    {
+      "basename": "배포",
+      "path": "데브옵스 devops/배포.md"
+    },
+    {
       "basename": "stable diffusion webui",
       "path": "AI/stable diffusion webui.md"
     },
@@ -23,10 +31,6 @@
     {
       "basename": "제텔카스텐 정리",
       "path": "옵시디언/제텔카스텐 정리.md"
-    },
-    {
-      "basename": "배포",
-      "path": "데브옵스 devops/배포.md"
     },
     {
       "basename": "스마트팩토리개념",

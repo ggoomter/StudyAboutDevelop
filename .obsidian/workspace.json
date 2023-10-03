@@ -65,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/stable diffusion webui.md",
+                "file": "데브옵스 devops/플러터 앱배포.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -156,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AI/stable diffusion webui.md",
+                "file": "데브옵스 devops/플러터 앱배포.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -173,7 +173,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AI/stable diffusion webui.md",
+                "file": "데브옵스 devops/플러터 앱배포.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -196,7 +196,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AI/stable diffusion webui.md"
+                "file": "데브옵스 devops/플러터 앱배포.md"
               }
             }
           },
@@ -245,14 +245,15 @@
   },
   "active": "5109cf59491a30c7",
   "lastOpenFiles": [
+    "데브옵스 devops/배포.md",
+    "데브옵스 devops/플러터 앱배포.md",
+    "AI/stable diffusion webui.md",
     "AI/프롬프트.md",
     "AI/모델.md",
-    "AI/stable diffusion webui.md",
     "옵시디언/옵시디언 정리.md",
     "옵시디언/Pasted image 20230918021126.png.md",
     "옵시디언/제텔카스텐 정리.md",
     "옵시디언/Obsidian_Logo.jpg.md",
-    "데브옵스 devops/배포.md",
     "스마트팩토리/스마트팩토리개념.md",
     "옵시디언/옵시디언.md",
     "백엔드/파이어베이스 firebase.md",
@@ -279,7 +280,6 @@
     "AI",
     "워드프레스/플러그인.md",
     "워드프레스/워드프레스.md",
-    "워드프레스/운영.md",
     "워드프레스",
     "Context/spacesLastSync.log",
     "Context",
