@@ -73,7 +73,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -135,7 +135,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -155,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "프론트엔드/css정리.md",
+                "file": "옵시디언/옵시디언 정리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,7 +173,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "프론트엔드/css정리.md",
+                "file": "옵시디언/옵시디언 정리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,7 +196,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "프론트엔드/css정리.md"
+                "file": "옵시디언/옵시디언 정리.md"
               }
             }
           },
@@ -242,8 +243,9 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "5109cf59491a30c7",
+  "active": "4bd393b7611bbd7c",
   "lastOpenFiles": [
+    "프론트엔드/css정리.md",
     "데브옵스 devops/플러터 앱배포.md",
     "Pasted image 20231003181925.png",
     "데브옵스 devops/배포.md",
