@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "옵시디언/옵시디언 정리.md",
+                "file": "프론트엔드/플렉스박스.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -156,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "옵시디언/옵시디언 정리.md",
+                "file": "프론트엔드/플렉스박스.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -173,7 +173,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "옵시디언/옵시디언 정리.md",
+                "file": "프론트엔드/플렉스박스.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -196,7 +196,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "옵시디언/옵시디언 정리.md"
+                "file": "프론트엔드/플렉스박스.md"
               }
             }
           },
@@ -245,6 +245,7 @@
   },
   "active": "4bd393b7611bbd7c",
   "lastOpenFiles": [
+    "옵시디언/옵시디언 정리.md",
     "프론트엔드/css정리.md",
     "데브옵스 devops/플러터 앱배포.md",
     "Pasted image 20231003181925.png",
@@ -252,7 +253,6 @@
     "AI/stable diffusion webui.md",
     "AI/프롬프트.md",
     "AI/모델.md",
-    "옵시디언/옵시디언 정리.md",
     "옵시디언/Pasted image 20230918021126.png.md",
     "옵시디언/제텔카스텐 정리.md",
     "옵시디언/Obsidian_Logo.jpg.md",
