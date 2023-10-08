@@ -60,6 +60,19 @@
             }
           },
           {
+            "id": "7d333238980e07b7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "추천/추천_유튜브_일반.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "5109cf59491a30c7",
             "type": "leaf",
             "state": {
@@ -73,7 +86,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -156,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "프론트엔드/플렉스박스.md",
+                "file": "추천/추천_유튜브_일반.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -173,7 +186,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "프론트엔드/플렉스박스.md",
+                "file": "추천/추천_유튜브_일반.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -196,7 +209,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "프론트엔드/플렉스박스.md"
+                "file": "추천/추천_유튜브_일반.md"
               }
             }
           },
@@ -243,8 +256,9 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "4bd393b7611bbd7c",
+  "active": "7d333238980e07b7",
   "lastOpenFiles": [
+    "프론트엔드/플렉스박스.md",
     "옵시디언/옵시디언 정리.md",
     "프론트엔드/css정리.md",
     "데브옵스 devops/플러터 앱배포.md",
@@ -280,7 +294,6 @@
     "옵시디언",
     "AI/AI.md",
     "AI",
-    "워드프레스/플러그인.md",
     "워드프레스",
     "Context/spacesLastSync.log",
     "Context",
