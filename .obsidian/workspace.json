@@ -71,22 +71,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "5109cf59491a30c7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "프론트엔드/css정리.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -169,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "추천/추천_유튜브_일반.md",
+                "file": "프론트엔드/플렉스박스.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,7 +173,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "추천/추천_유튜브_일반.md",
+                "file": "프론트엔드/플렉스박스.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -209,7 +196,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "추천/추천_유튜브_일반.md"
+                "file": "프론트엔드/플렉스박스.md"
               }
             }
           },
@@ -256,11 +243,12 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "7d333238980e07b7",
+  "active": "4bd393b7611bbd7c",
   "lastOpenFiles": [
+    "추천/추천_유튜브_일반.md",
+    "프론트엔드/css정리.md",
     "프론트엔드/플렉스박스.md",
     "옵시디언/옵시디언 정리.md",
-    "프론트엔드/css정리.md",
     "데브옵스 devops/플러터 앱배포.md",
     "Pasted image 20231003181925.png",
     "데브옵스 devops/배포.md",
@@ -274,7 +262,6 @@
     "옵시디언/옵시디언.md",
     "백엔드/파이어베이스 firebase.md",
     "추천/추천_개발.md",
-    "추천/추천_유튜브_일반.md",
     "추천/추천_유튜브_개발.md",
     "추천/추천기준.md",
     "추천/추천서비스.md",
