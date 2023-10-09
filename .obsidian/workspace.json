@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "프론트엔드/플렉스박스.md",
+                "file": "공부/기업, 기업가/무제 파일.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "프론트엔드/플렉스박스.md",
+                "file": "공부/기업, 기업가/무제 파일.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "프론트엔드/플렉스박스.md",
+                "file": "공부/기업, 기업가/무제 파일.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "프론트엔드/플렉스박스.md"
+                "file": "공부/기업, 기업가/무제 파일.md"
               }
             }
           },
@@ -206,8 +206,11 @@
   },
   "active": "4bd393b7611bbd7c",
   "lastOpenFiles": [
-    "데브옵스 devops/배포.md",
     "프론트엔드/플렉스박스.md",
+    "공부/기업, 기업가/무제 파일.md",
+    "공부/기업, 기업가",
+    "공부",
+    "데브옵스 devops/배포.md",
     "프론트엔드/css/플렉스박스연습원본/플렉스박스연습.html",
     "옵시디언/제텔카스텐 정리.md",
     "옵시디언/Pasted image 20230918021126.png.md",
@@ -245,8 +248,6 @@
     "워드프레스",
     "Context/spacesLastSync.log",
     "Context",
-    "1. 영구노트",
-    "0. 인박스",
     "Pasted image 20230918202334.png",
     "Pasted image 20230918202158.png",
     "Pasted image 20230918201847.png",

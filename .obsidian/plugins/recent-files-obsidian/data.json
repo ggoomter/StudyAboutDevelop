@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "무제 파일",
+      "path": "공부/기업, 기업가/무제 파일.md"
+    },
+    {
       "basename": "플렉스박스",
       "path": "프론트엔드/플렉스박스.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Pasted",
       "path": "옵시디언공부/Pasted.md"
-    },
-    {
-      "basename": "무제 파일",
-      "path": "무제 파일.md"
     }
   ],
   "omittedPaths": [],
