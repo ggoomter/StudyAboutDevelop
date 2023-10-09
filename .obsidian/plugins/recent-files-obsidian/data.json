@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "배포",
+      "path": "데브옵스 devops/배포.md"
+    },
+    {
       "basename": "플렉스박스",
       "path": "프론트엔드/플렉스박스.md"
+    },
+    {
+      "basename": "플렉스박스연습",
+      "path": "프론트엔드/css/플렉스박스연습원본/플렉스박스연습.html"
+    },
+    {
+      "basename": "제텔카스텐 정리",
+      "path": "옵시디언/제텔카스텐 정리.md"
+    },
+    {
+      "basename": "Pasted image 20230918021126.png",
+      "path": "옵시디언/Pasted image 20230918021126.png.md"
     },
     {
       "basename": "추천_유튜브_일반",
@@ -21,10 +37,6 @@
       "path": "데브옵스 devops/플러터 앱배포.md"
     },
     {
-      "basename": "배포",
-      "path": "데브옵스 devops/배포.md"
-    },
-    {
       "basename": "stable diffusion webui",
       "path": "AI/stable diffusion webui.md"
     },
@@ -35,14 +47,6 @@
     {
       "basename": "모델",
       "path": "AI/모델.md"
-    },
-    {
-      "basename": "Pasted image 20230918021126.png",
-      "path": "옵시디언/Pasted image 20230918021126.png.md"
-    },
-    {
-      "basename": "제텔카스텐 정리",
-      "path": "옵시디언/제텔카스텐 정리.md"
     },
     {
       "basename": "스마트팩토리개념",
