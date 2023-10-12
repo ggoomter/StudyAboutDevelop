@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "추천/꿈털이의 추천_유튜브_일반.md",
+                "file": "추천/꿈털이의 추천_유튜브_개발.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "추천/꿈털이의 추천_유튜브_일반.md",
+                "file": "추천/꿈털이의 추천_유튜브_개발.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "추천/꿈털이의 추천_유튜브_일반.md",
+                "file": "추천/꿈털이의 추천_유튜브_개발.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "추천/꿈털이의 추천_유튜브_일반.md"
+                "file": "추천/꿈털이의 추천_유튜브_개발.md"
               }
             }
           },
@@ -218,8 +218,10 @@
   },
   "active": "8611dbac6ed9a2f1",
   "lastOpenFiles": [
-    "데브옵스 devops/배포.md",
+    "추천/추천_개발.md",
     "추천/꿈털이의 추천_유튜브_일반.md",
+    "추천/추천.md",
+    "데브옵스 devops/배포.md",
     "추천/추천기준.md",
     "추천/음식/짜장순위.md",
     "추천/음식/짜장/무제 파일.md",
@@ -247,10 +249,8 @@
     "스마트팩토리/스마트팩토리개념.md",
     "옵시디언/옵시디언.md",
     "백엔드/파이어베이스 firebase.md",
-    "추천/추천_개발.md",
-    "추천/추천_유튜브_개발.md",
+    "추천/꿈털이의 추천_유튜브_개발.md",
     "추천/추천서비스.md",
-    "추천/추천.md",
     "추천",
     "무제 파일 1.canvas",
     "무제 파일 2.canvas",
