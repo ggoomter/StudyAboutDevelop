@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "추천기준",
+      "path": "추천/추천기준.md"
+    },
+    {
       "basename": "짜장순위",
       "path": "추천/음식/짜장순위.md"
     },
@@ -79,10 +83,6 @@
     {
       "basename": "추천_유튜브_개발",
       "path": "추천/추천_유튜브_개발.md"
-    },
-    {
-      "basename": "추천기준",
-      "path": "추천/추천기준.md"
     },
     {
       "basename": "추천서비스",
