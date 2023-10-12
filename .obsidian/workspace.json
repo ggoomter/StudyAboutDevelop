@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "추천/추천기준.md",
+                "file": "추천/꿈털이의 추천_유튜브_일반.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "추천/추천기준.md",
+                "file": "추천/꿈털이의 추천_유튜브_일반.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "추천/추천기준.md",
+                "file": "추천/꿈털이의 추천_유튜브_일반.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "추천/추천기준.md"
+                "file": "추천/꿈털이의 추천_유튜브_일반.md"
               }
             }
           },
@@ -218,13 +218,15 @@
   },
   "active": "8611dbac6ed9a2f1",
   "lastOpenFiles": [
+    "데브옵스 devops/배포.md",
+    "추천/꿈털이의 추천_유튜브_일반.md",
+    "추천/추천기준.md",
     "추천/음식/짜장순위.md",
     "추천/음식/짜장/무제 파일.md",
     "추천/음식/짜장",
     "추천/음식",
     "공부/블로그/무제 파일 1.md",
     "공부/블로그/무제 파일.md",
-    "데브옵스 devops/배포.md",
     "공부/블로그/블로그 팁.md",
     "공부/기업, 기업가/무제 파일.md",
     "공부/블로그",
@@ -234,7 +236,6 @@
     "프론트엔드/css/플렉스박스연습원본/플렉스박스연습.html",
     "옵시디언/제텔카스텐 정리.md",
     "옵시디언/Pasted image 20230918021126.png.md",
-    "추천/추천_유튜브_일반.md",
     "프론트엔드/css정리.md",
     "옵시디언/옵시디언 정리.md",
     "데브옵스 devops/플러터 앱배포.md",
@@ -248,7 +249,6 @@
     "백엔드/파이어베이스 firebase.md",
     "추천/추천_개발.md",
     "추천/추천_유튜브_개발.md",
-    "추천/추천기준.md",
     "추천/추천서비스.md",
     "추천/추천.md",
     "추천",
