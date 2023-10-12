@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "공부/기업, 기업가/무제 파일.md",
+                "file": "공부/블로그/블로그 팁.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "임시/스파르타-코드 없이 ai로 웹사이트하나가 뚝딱.md",
+                "file": "공부/블로그/블로그 팁.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "임시/스파르타-코드 없이 ai로 웹사이트하나가 뚝딱.md",
+                "file": "공부/블로그/블로그 팁.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "임시/스파르타-코드 없이 ai로 웹사이트하나가 뚝딱.md"
+                "file": "공부/블로그/블로그 팁.md"
               }
             }
           },
@@ -216,10 +216,11 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "8611dbac6ed9a2f1",
+  "active": "4bd393b7611bbd7c",
   "lastOpenFiles": [
-    "추천/꿈털이의 추천_유튜브_개발.md",
+    "공부/기업, 기업가/아직 안써본 서비스.md",
     "임시/스파르타-코드 없이 ai로 웹사이트하나가 뚝딱.md",
+    "추천/꿈털이의 추천_유튜브_개발.md",
     "추천/추천_개발.md",
     "추천/꿈털이의 추천_유튜브_일반.md",
     "추천/추천.md",
@@ -232,7 +233,6 @@
     "공부/블로그/무제 파일 1.md",
     "공부/블로그/무제 파일.md",
     "공부/블로그/블로그 팁.md",
-    "공부/기업, 기업가/무제 파일.md",
     "공부/블로그",
     "프론트엔드/플렉스박스.md",
     "공부/기업, 기업가",
