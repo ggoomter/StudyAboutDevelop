@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "공부/블로그/블로그 팁.md",
+                "file": "추천/음식/짜장순위.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -102,15 +102,14 @@
             }
           },
           {
-            "id": "cff9c4c01707ec30",
+            "id": "22476e0f3e251735",
             "type": "leaf",
             "state": {
               "type": "mk-file-view",
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -130,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "데브옵스 devops/배포.md",
+                "file": "추천/음식/짜장순위.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "데브옵스 devops/배포.md",
+                "file": "추천/음식/짜장순위.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "데브옵스 devops/배포.md"
+                "file": "추천/음식/짜장순위.md"
               }
             }
           },
@@ -217,15 +216,21 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "6cc5842773af580e",
+  "active": "8611dbac6ed9a2f1",
   "lastOpenFiles": [
-    "공부/기업, 기업가/무제 파일.md",
+    "추천/음식/짜장순위.md",
+    "추천/음식/짜장/무제 파일.md",
+    "추천/음식/짜장",
+    "추천/음식",
+    "공부/블로그/무제 파일 1.md",
+    "공부/블로그/무제 파일.md",
+    "데브옵스 devops/배포.md",
     "공부/블로그/블로그 팁.md",
+    "공부/기업, 기업가/무제 파일.md",
     "공부/블로그",
     "프론트엔드/플렉스박스.md",
     "공부/기업, 기업가",
     "공부",
-    "데브옵스 devops/배포.md",
     "프론트엔드/css/플렉스박스연습원본/플렉스박스연습.html",
     "옵시디언/제텔카스텐 정리.md",
     "옵시디언/Pasted image 20230918021126.png.md",
@@ -246,21 +251,15 @@
     "추천/추천기준.md",
     "추천/추천서비스.md",
     "추천/추천.md",
-    "소속없는 일머리 노하우 신규지식.md",
     "추천",
-    "앱/플러터 flutter.md",
     "무제 파일 1.canvas",
     "무제 파일 2.canvas",
     "무제 파일 3.canvas",
     "무제 파일 4.canvas",
     "무제 파일.canvas",
-    "39.md",
-    "29.md",
     "ggoomter.css",
     "옵시디언",
     "AI",
-    "워드프레스",
-    "Context/spacesLastSync.log",
     "Pasted image 20230918202334.png",
     "Pasted image 20230918202158.png",
     "Pasted image 20230918201847.png",

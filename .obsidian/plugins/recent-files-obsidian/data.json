@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "짜장순위",
+      "path": "추천/음식/짜장순위.md"
+    },
+    {
       "basename": "배포",
       "path": "데브옵스 devops/배포.md"
     },
@@ -191,14 +195,6 @@
     {
       "basename": "A급",
       "path": "독후감/A급.md"
-    },
-    {
-      "basename": "B급",
-      "path": "독후감/B급.md"
-    },
-    {
-      "basename": "Pasted image 20230918021126",
-      "path": "Pasted image 20230918021126.png"
     }
   ],
   "omittedPaths": [],
