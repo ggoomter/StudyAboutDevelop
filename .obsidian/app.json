@@ -7,5 +7,12 @@
   "alwaysUpdateLinks": true,
   "newFileFolderPath": "0. 인박스",
   "newLinkFormat": "absolute",
-  "attachmentFolderPath": "첨부파일"
+  "attachmentFolderPath": "첨부파일",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }
