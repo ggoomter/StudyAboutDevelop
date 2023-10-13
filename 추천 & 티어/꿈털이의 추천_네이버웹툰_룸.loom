@@ -1,0 +1,695 @@
+{
+  "model": {
+    "columns": [
+      {
+        "id": "6c4cd6fc-8d40-4b4a-84a8-c749f7ee474f",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "140px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "챌린저",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mm/dd/yyyy",
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null
+      },
+      {
+        "id": "ee309d3c-86ce-4564-99dc-4c70506c8785",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "140px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "마스터",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mm/dd/yyyy",
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null
+      },
+      {
+        "id": "3b57aa97-bfcd-451f-8a8d-6d2295b74433",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "140px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "플래티넘",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mm/dd/yyyy",
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null
+      },
+      {
+        "id": "f54d541e-0c8a-47f8-b364-389d74ff7cae",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "140px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "골드",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mm/dd/yyyy",
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null
+      },
+      {
+        "id": "33bb325e-3de9-467d-bd81-ebedcd74e688",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "140px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "실버",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mm/dd/yyyy",
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null
+      },
+      {
+        "id": "f8277f56-aedc-4323-8dbf-c2e182e9b091",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "140px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "브론즈",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mm/dd/yyyy",
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null
+      },
+      {
+        "id": "f9bee4a6-e38a-421d-97cc-b2dd1f2b108a",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "140px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "New Column",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mm/dd/yyyy",
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null
+      },
+      {
+        "id": "723e5daa-e187-4ee6-b25e-67f1b7024b35",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "140px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "New Column",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mm/dd/yyyy",
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null
+      }
+    ],
+    "rows": [
+      {
+        "id": "129fbc46-37d9-4144-89e1-28f05fd020fa",
+        "index": 0,
+        "sourceId": null,
+        "creationTime": 1697205888653,
+        "lastEditedTime": 1697206098306,
+        "cells": [
+          {
+            "id": "48567206-d9e7-4caf-86a2-7a9f57ccfddd",
+            "isExternalLink": false,
+            "columnId": "6c4cd6fc-8d40-4b4a-84a8-c749f7ee474f",
+            "dateTime": null,
+            "content": "호랑이형님",
+            "tagIds": []
+          },
+          {
+            "id": "008c30a3-ea03-4c0d-a0bb-eb2a48b40841",
+            "isExternalLink": false,
+            "columnId": "ee309d3c-86ce-4564-99dc-4c70506c8785",
+            "dateTime": null,
+            "content": "고수",
+            "tagIds": []
+          },
+          {
+            "id": "0a526910-c7ca-484d-8064-860d81c8fe3e",
+            "isExternalLink": false,
+            "columnId": "3b57aa97-bfcd-451f-8a8d-6d2295b74433",
+            "dateTime": null,
+            "content": "dfdf",
+            "tagIds": []
+          },
+          {
+            "id": "fddde92e-8774-4d2c-ab0e-1280ad3ae20f",
+            "isExternalLink": false,
+            "columnId": "f54d541e-0c8a-47f8-b364-389d74ff7cae",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "088cf418-fb52-4ff1-8c58-2ae031fe359a",
+            "isExternalLink": false,
+            "columnId": "33bb325e-3de9-467d-bd81-ebedcd74e688",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "57dc5f91-bd35-4389-a827-af584d2219ee",
+            "isExternalLink": false,
+            "columnId": "f8277f56-aedc-4323-8dbf-c2e182e9b091",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "14d831cc-4a72-450b-a57a-41e786fc6c4f",
+            "isExternalLink": false,
+            "columnId": "f9bee4a6-e38a-421d-97cc-b2dd1f2b108a",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "daebd57a-abcc-44f9-8dc3-ed8ed7c8c4b6",
+            "isExternalLink": false,
+            "columnId": "723e5daa-e187-4ee6-b25e-67f1b7024b35",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          }
+        ]
+      },
+      {
+        "id": "00bbb025-216a-4046-97d8-87ef5b943b41",
+        "index": 1,
+        "sourceId": null,
+        "creationTime": 1697206084027,
+        "lastEditedTime": 1697206104121,
+        "cells": [
+          {
+            "id": "c2dc39de-b065-4ced-86d9-850cb90c6a61",
+            "isExternalLink": false,
+            "columnId": "6c4cd6fc-8d40-4b4a-84a8-c749f7ee474f",
+            "dateTime": null,
+            "content": "초인의 시대\n",
+            "tagIds": []
+          },
+          {
+            "id": "ff7f4f42-9bd7-4ff1-9ef0-5b09921bd876",
+            "isExternalLink": false,
+            "columnId": "ee309d3c-86ce-4564-99dc-4c70506c8785",
+            "dateTime": null,
+            "content": "장씨세가 호위무사",
+            "tagIds": []
+          },
+          {
+            "id": "1b118dfa-e2a1-4323-a886-0795104293f9",
+            "isExternalLink": false,
+            "columnId": "3b57aa97-bfcd-451f-8a8d-6d2295b74433",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "e01d267b-5705-4c20-83a3-30f2ecca517a",
+            "isExternalLink": false,
+            "columnId": "f54d541e-0c8a-47f8-b364-389d74ff7cae",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "f6752f14-cb78-477f-8724-2be6df5181bd",
+            "isExternalLink": false,
+            "columnId": "33bb325e-3de9-467d-bd81-ebedcd74e688",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "f2fabf6d-7cdc-475a-9e2a-3267ee09d7b3",
+            "isExternalLink": false,
+            "columnId": "f8277f56-aedc-4323-8dbf-c2e182e9b091",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "eea525be-dae4-4cf4-bbf1-042bead1604a",
+            "isExternalLink": false,
+            "columnId": "f9bee4a6-e38a-421d-97cc-b2dd1f2b108a",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "acce8a11-88ab-4be6-bc2b-05938aa46a02",
+            "isExternalLink": false,
+            "columnId": "723e5daa-e187-4ee6-b25e-67f1b7024b35",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          }
+        ]
+      },
+      {
+        "id": "6376531a-ee03-40e8-b626-f165717f03e3",
+        "index": 2,
+        "sourceId": null,
+        "creationTime": 1697206084651,
+        "lastEditedTime": 1697206114988,
+        "cells": [
+          {
+            "id": "20e84fdf-33de-42a1-8823-df4fe9749cf6",
+            "isExternalLink": false,
+            "columnId": "6c4cd6fc-8d40-4b4a-84a8-c749f7ee474f",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "942c5fe0-5242-47f0-9bd1-743181182233",
+            "isExternalLink": false,
+            "columnId": "ee309d3c-86ce-4564-99dc-4c70506c8785",
+            "dateTime": null,
+            "content": "화산귀환",
+            "tagIds": []
+          },
+          {
+            "id": "47ecddb8-da07-42e7-98b9-9322795d226f",
+            "isExternalLink": false,
+            "columnId": "3b57aa97-bfcd-451f-8a8d-6d2295b74433",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "107cc4cf-d743-4e22-8729-48c0bb145597",
+            "isExternalLink": false,
+            "columnId": "f54d541e-0c8a-47f8-b364-389d74ff7cae",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "5ae3f74f-cf91-41f6-ad2f-5377bef5d261",
+            "isExternalLink": false,
+            "columnId": "33bb325e-3de9-467d-bd81-ebedcd74e688",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "04734434-f464-492f-b76a-3e9b662777bc",
+            "isExternalLink": false,
+            "columnId": "f8277f56-aedc-4323-8dbf-c2e182e9b091",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "ba0435ad-8e70-4657-ac1e-1fa34cea837e",
+            "isExternalLink": false,
+            "columnId": "f9bee4a6-e38a-421d-97cc-b2dd1f2b108a",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "fead5ce6-6fcb-40a7-af31-b5087e250d33",
+            "isExternalLink": false,
+            "columnId": "723e5daa-e187-4ee6-b25e-67f1b7024b35",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          }
+        ]
+      },
+      {
+        "id": "7e5e5086-2e54-481f-86f9-f950098f49f9",
+        "index": 3,
+        "sourceId": null,
+        "creationTime": 1697206085131,
+        "lastEditedTime": 1697206085131,
+        "cells": [
+          {
+            "id": "e4b9953c-6858-460c-a373-48ee3e82eecb",
+            "isExternalLink": false,
+            "columnId": "6c4cd6fc-8d40-4b4a-84a8-c749f7ee474f",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "2060c7f9-6a16-4dca-86e5-c179aaa76868",
+            "isExternalLink": false,
+            "columnId": "ee309d3c-86ce-4564-99dc-4c70506c8785",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "d1b03d68-8072-4c0e-b5c3-066bb75b9931",
+            "isExternalLink": false,
+            "columnId": "3b57aa97-bfcd-451f-8a8d-6d2295b74433",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "cda64229-0679-4c35-930c-45d2acba374a",
+            "isExternalLink": false,
+            "columnId": "f54d541e-0c8a-47f8-b364-389d74ff7cae",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "db507ee7-4c16-4f8f-9fc0-f7da7020e1a1",
+            "isExternalLink": false,
+            "columnId": "33bb325e-3de9-467d-bd81-ebedcd74e688",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "9f05d043-f9bc-476a-9145-a9d235f0e0eb",
+            "isExternalLink": false,
+            "columnId": "f8277f56-aedc-4323-8dbf-c2e182e9b091",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "014648fa-f7d2-4478-9345-65398091747c",
+            "isExternalLink": false,
+            "columnId": "f9bee4a6-e38a-421d-97cc-b2dd1f2b108a",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "49809f0a-662d-4e55-b99c-fce7d583b0a3",
+            "isExternalLink": false,
+            "columnId": "723e5daa-e187-4ee6-b25e-67f1b7024b35",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          }
+        ]
+      },
+      {
+        "id": "6315254a-4679-4033-a2c6-d7551e92cf1a",
+        "index": 4,
+        "sourceId": null,
+        "creationTime": 1697206085627,
+        "lastEditedTime": 1697206085627,
+        "cells": [
+          {
+            "id": "d6b5e1bd-15c9-459e-bc89-87653d58b4c4",
+            "isExternalLink": false,
+            "columnId": "6c4cd6fc-8d40-4b4a-84a8-c749f7ee474f",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "c141ff1e-dfe3-428d-a349-1bec26d8501d",
+            "isExternalLink": false,
+            "columnId": "ee309d3c-86ce-4564-99dc-4c70506c8785",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "1c2e10da-9a84-4916-bb24-257290e4417e",
+            "isExternalLink": false,
+            "columnId": "3b57aa97-bfcd-451f-8a8d-6d2295b74433",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "3b8c9910-3b9d-4e51-b5a9-e841ee9ed0a6",
+            "isExternalLink": false,
+            "columnId": "f54d541e-0c8a-47f8-b364-389d74ff7cae",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "2ca0827c-d994-4120-bdfe-d01b4f893b4b",
+            "isExternalLink": false,
+            "columnId": "33bb325e-3de9-467d-bd81-ebedcd74e688",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "029fa86c-6911-43e4-9f96-7262f1020dd9",
+            "isExternalLink": false,
+            "columnId": "f8277f56-aedc-4323-8dbf-c2e182e9b091",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "0304e954-f2e1-4b9b-96e4-b195bd477f43",
+            "isExternalLink": false,
+            "columnId": "f9bee4a6-e38a-421d-97cc-b2dd1f2b108a",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "9e3576da-0cce-47e0-9195-227212e6b020",
+            "isExternalLink": false,
+            "columnId": "723e5daa-e187-4ee6-b25e-67f1b7024b35",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          }
+        ]
+      },
+      {
+        "id": "8b19b216-d989-40a2-bc53-d91558063d36",
+        "index": 5,
+        "sourceId": null,
+        "creationTime": 1697206086107,
+        "lastEditedTime": 1697206086107,
+        "cells": [
+          {
+            "id": "6a5399c4-6775-46c4-80ed-12eed89ec2db",
+            "isExternalLink": false,
+            "columnId": "6c4cd6fc-8d40-4b4a-84a8-c749f7ee474f",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "3de3c0a5-ef52-4ba0-af91-4b85797d4ca9",
+            "isExternalLink": false,
+            "columnId": "ee309d3c-86ce-4564-99dc-4c70506c8785",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "3654661a-ef4a-4fe6-925c-520629ff5c4e",
+            "isExternalLink": false,
+            "columnId": "3b57aa97-bfcd-451f-8a8d-6d2295b74433",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "7f7d2823-11af-4d5d-84f1-707be6f2440d",
+            "isExternalLink": false,
+            "columnId": "f54d541e-0c8a-47f8-b364-389d74ff7cae",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "5255229a-b93a-42f4-a2fe-bb8487a8202a",
+            "isExternalLink": false,
+            "columnId": "33bb325e-3de9-467d-bd81-ebedcd74e688",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "09cd3feb-b221-44f6-8dc1-19dd0a8c3e28",
+            "isExternalLink": false,
+            "columnId": "f8277f56-aedc-4323-8dbf-c2e182e9b091",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "b8412014-37e9-47bf-b4d9-1bcf63e74a87",
+            "isExternalLink": false,
+            "columnId": "f9bee4a6-e38a-421d-97cc-b2dd1f2b108a",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "4a5ead92-397b-436e-abd9-2042cdbc4820",
+            "isExternalLink": false,
+            "columnId": "723e5daa-e187-4ee6-b25e-67f1b7024b35",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          }
+        ]
+      },
+      {
+        "id": "374c14c6-b0a7-42f8-8030-eba1caadf553",
+        "index": 6,
+        "sourceId": null,
+        "creationTime": 1697206086626,
+        "lastEditedTime": 1697206086626,
+        "cells": [
+          {
+            "id": "96c21dab-8dfe-4755-844f-95f240928cf5",
+            "isExternalLink": false,
+            "columnId": "6c4cd6fc-8d40-4b4a-84a8-c749f7ee474f",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "909fff09-fcb6-4abc-bc3a-a3930c24cb1f",
+            "isExternalLink": false,
+            "columnId": "ee309d3c-86ce-4564-99dc-4c70506c8785",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "b688763e-1fe2-43c9-b68b-c1920659b38c",
+            "isExternalLink": false,
+            "columnId": "3b57aa97-bfcd-451f-8a8d-6d2295b74433",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "30d66e82-23cc-41b8-a8be-8cbe2e24b8e8",
+            "isExternalLink": false,
+            "columnId": "f54d541e-0c8a-47f8-b364-389d74ff7cae",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "3ff84e33-3e4d-4d3d-8634-93efeaf682e9",
+            "isExternalLink": false,
+            "columnId": "33bb325e-3de9-467d-bd81-ebedcd74e688",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "c5feeea4-2ad9-4398-b1ac-c1ea45172ff8",
+            "isExternalLink": false,
+            "columnId": "f8277f56-aedc-4323-8dbf-c2e182e9b091",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "a9d1ae8a-90b9-4754-9e72-da334fed6c80",
+            "isExternalLink": false,
+            "columnId": "f9bee4a6-e38a-421d-97cc-b2dd1f2b108a",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          },
+          {
+            "id": "28478ade-a9f9-4a12-ad92-8a018be278d5",
+            "isExternalLink": false,
+            "columnId": "723e5daa-e187-4ee6-b25e-67f1b7024b35",
+            "dateTime": null,
+            "content": "",
+            "tagIds": []
+          }
+        ]
+      }
+    ],
+    "filters": [],
+    "sources": [],
+    "settings": {
+      "numFrozenColumns": 1,
+      "showCalculationRow": true
+    },
+    "externalRowOrder": []
+  },
+  "pluginVersion": "8.7.2"
+}
