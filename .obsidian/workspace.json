@@ -26,7 +26,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "공부/블로그/블로그 팁.md",
+                "file": "추천 & 티어/꿈털이의 추천_유튜브_개발.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6732636573e960cb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "추천 & 티어/무제 파일.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -129,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "공부/블로그/블로그 팁.md",
+                "file": "추천 & 티어/무제 파일.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "공부/블로그/블로그 팁.md",
+                "file": "추천 & 티어/무제 파일.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "공부/블로그/블로그 팁.md"
+                "file": "추천 & 티어/무제 파일.md"
               }
             }
           },
@@ -216,23 +229,24 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "4bd393b7611bbd7c",
+  "active": "6732636573e960cb",
   "lastOpenFiles": [
+    "추천 & 티어/꿈털이의 추천_유튜브_개발.md",
+    "추천 & 티어/무제 파일.md",
+    "추천 & 티어/꿈털이의 추천_유튜브_일반.md",
+    "추천 & 티어/추천기준.md",
+    "추천 & 티어/추천_개발.md",
+    "추천 & 티어/추천.md",
+    "공부/블로그/블로그 팁.md",
     "공부/기업, 기업가/아직 안써본 서비스.md",
     "임시/스파르타-코드 없이 ai로 웹사이트하나가 뚝딱.md",
-    "추천/꿈털이의 추천_유튜브_개발.md",
-    "추천/추천_개발.md",
-    "추천/꿈털이의 추천_유튜브_일반.md",
-    "추천/추천.md",
     "데브옵스 devops/배포.md",
-    "추천/추천기준.md",
-    "추천/음식/짜장순위.md",
+    "추천 & 티어/음식/짜장순위.md",
     "추천/음식/짜장/무제 파일.md",
     "추천/음식/짜장",
-    "추천/음식",
+    "추천 & 티어/음식",
     "공부/블로그/무제 파일 1.md",
     "공부/블로그/무제 파일.md",
-    "공부/블로그/블로그 팁.md",
     "공부/블로그",
     "프론트엔드/플렉스박스.md",
     "공부/기업, 기업가",
@@ -250,8 +264,7 @@
     "옵시디언/Obsidian_Logo.jpg.md",
     "스마트팩토리/스마트팩토리개념.md",
     "옵시디언/옵시디언.md",
-    "백엔드/파이어베이스 firebase.md",
-    "추천",
+    "추천 & 티어",
     "무제 파일 1.canvas",
     "무제 파일 2.canvas",
     "무제 파일 3.canvas",
