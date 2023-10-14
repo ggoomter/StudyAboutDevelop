@@ -5,6 +5,10 @@
       "path": "프론트엔드/자바스크립트 정리.md"
     },
     {
+      "basename": "nodejs",
+      "path": "프론트엔드/nodejs.md"
+    },
+    {
       "basename": "배포",
       "path": "데브옵스 devops/배포.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "E급",
       "path": "독후감/E급.md"
-    },
-    {
-      "basename": "S급",
-      "path": "독후감/S급.md"
     }
   ],
   "omittedPaths": [],
