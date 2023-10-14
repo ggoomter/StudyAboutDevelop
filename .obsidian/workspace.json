@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "프론트엔드/자바스크립트 정리.md",
+                "file": "공부/독후감/IT서적/2023년.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "876c7ee668248baf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "공부/사람/IT관련.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -102,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "프론트엔드/자바스크립트 정리.md",
+                "file": "공부/사람/IT관련.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "프론트엔드/자바스크립트 정리.md",
+                "file": "공부/사람/IT관련.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "프론트엔드/자바스크립트 정리.md"
+                "file": "공부/사람/IT관련.md"
               }
             }
           },
@@ -198,11 +212,14 @@
       "notion-like-tables:Create loom": false
     }
   },
-  "active": "6cc5842773af580e",
+  "active": "876c7ee668248baf",
   "lastOpenFiles": [
+    "공부/사람/IT관련.md",
+    "공부/독후감/IT서적/2023년.md",
+    "공부/사람",
+    "프론트엔드/자바스크립트 정리.md",
     "공부/독후감",
     "프론트엔드/플렉스박스.md",
-    "프론트엔드/자바스크립트 정리.md",
     "프론트엔드/nodejs.md",
     "데브옵스 devops/배포.md",
     "추천 & 티어/꿈털이의 추천_유튜브_개발.md",
@@ -234,14 +251,11 @@
     "Pasted image 20231003181925.png",
     "AI/stable diffusion webui.md",
     "AI/프롬프트.md",
-    "AI/모델.md",
-    "추천 & 티어",
     "무제 파일 1.canvas",
     "무제 파일 2.canvas",
     "무제 파일 3.canvas",
     "무제 파일 4.canvas",
     "무제 파일.canvas",
-    "ggoomter.css",
     "Pasted image 20230918202334.png",
     "Pasted image 20230918202158.png",
     "Pasted image 20230918201847.png",
