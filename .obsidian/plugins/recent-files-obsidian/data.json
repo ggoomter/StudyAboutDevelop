@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "자바스크립트 정리",
+      "path": "프론트엔드/자바스크립트 정리.md"
+    },
+    {
+      "basename": "배포",
+      "path": "데브옵스 devops/배포.md"
+    },
+    {
+      "basename": "꿈털이의 추천_유튜브_개발",
+      "path": "추천 & 티어/꿈털이의 추천_유튜브_개발.md"
+    },
+    {
       "basename": "추천기준",
       "path": "추천 & 티어/추천기준.md"
     },
@@ -15,14 +27,6 @@
     {
       "basename": "스파르타-코드 없이 ai로 웹사이트하나가 뚝딱",
       "path": "임시/스파르타-코드 없이 ai로 웹사이트하나가 뚝딱.md"
-    },
-    {
-      "basename": "꿈털이의 추천_유튜브_개발",
-      "path": "추천 & 티어/꿈털이의 추천_유튜브_개발.md"
-    },
-    {
-      "basename": "배포",
-      "path": "데브옵스 devops/배포.md"
     },
     {
       "basename": "추천_개발",
@@ -195,10 +199,6 @@
     {
       "basename": "S급",
       "path": "독후감/S급.md"
-    },
-    {
-      "basename": "C급",
-      "path": "독후감/C급.md"
     }
   ],
   "omittedPaths": [],
