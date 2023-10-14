@@ -5,6 +5,10 @@
       "path": "프론트엔드/자바스크립트 정리.md"
     },
     {
+      "basename": "플렉스박스",
+      "path": "프론트엔드/플렉스박스.md"
+    },
+    {
       "basename": "nodejs",
       "path": "프론트엔드/nodejs.md"
     },
@@ -51,10 +55,6 @@
     {
       "basename": "짜장순위",
       "path": "추천 & 티어/음식/짜장순위.md"
-    },
-    {
-      "basename": "플렉스박스",
-      "path": "프론트엔드/플렉스박스.md"
     },
     {
       "basename": "플렉스박스연습",
