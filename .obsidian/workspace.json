@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "공부/사람/IT관련.md",
+                "file": "공부/기업, 기업가/스타트업.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -100,8 +100,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 331,
-    "collapsed": true
+    "width": 331
   },
   "right": {
     "id": "15c0f6e9cfc0fb04",
@@ -117,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "공부/사람/IT관련.md",
+                "file": "공부/기업, 기업가/스타트업.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "공부/사람/IT관련.md",
+                "file": "공부/기업, 기업가/스타트업.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "공부/사람/IT관련.md"
+                "file": "공부/기업, 기업가/스타트업.md"
               }
             }
           },
@@ -216,8 +215,9 @@
   },
   "active": "b842d891169feffe",
   "lastOpenFiles": [
-    "공부/독후감/IT서적/2023년.md",
     "공부/사람/IT관련.md",
+    "공부/기업, 기업가/스타트업.md",
+    "공부/독후감/IT서적/2023년.md",
     "공부/사람",
     "프론트엔드/자바스크립트 정리.md",
     "공부/독후감",
@@ -252,7 +252,6 @@
     "데브옵스 devops/플러터 앱배포.md",
     "Pasted image 20231003181925.png",
     "AI/stable diffusion webui.md",
-    "AI/프롬프트.md",
     "무제 파일 1.canvas",
     "무제 파일 2.canvas",
     "무제 파일 3.canvas",

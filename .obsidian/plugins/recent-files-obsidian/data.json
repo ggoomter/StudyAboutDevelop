@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "스타트업",
+      "path": "공부/기업, 기업가/스타트업.md"
+    },
+    {
       "basename": "IT관련",
       "path": "공부/사람/IT관련.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "플러그인",
       "path": "워드프레스/플러그인.md"
-    },
-    {
-      "basename": "운영",
-      "path": "워드프레스/운영.md"
     }
   ],
   "omittedPaths": [],
