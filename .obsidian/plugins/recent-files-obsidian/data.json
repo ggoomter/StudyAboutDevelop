@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "플렉스박스",
+      "path": "프론트엔드/플렉스박스.md"
+    },
+    {
       "basename": "자바스크립트 정리",
       "path": "프론트엔드/자바스크립트 정리.md"
     },
@@ -15,10 +19,6 @@
     {
       "basename": "IT관련",
       "path": "공부/사람/IT관련.md"
-    },
-    {
-      "basename": "플렉스박스",
-      "path": "프론트엔드/플렉스박스.md"
     },
     {
       "basename": "nodejs",
