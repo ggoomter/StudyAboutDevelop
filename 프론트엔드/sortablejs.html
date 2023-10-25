@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- jsDelivr :: Sortable :: Latest (https://www.jsdelivr.com/package/npm/sortablejs) -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+  
+</head>
+<body>
+  <div id="example1" class="list-group col">
+    <div class="list-group-item" draggable="false" style="">Item 1</div><div class="list-group-item" style="">Item 3</div>
+    <div class="list-group-item" style="">Item 4</div>
+    <div class="list-group-item" draggable="false" style="">Item 5</div><div class="list-group-item" draggable="false" style="">Item 2</div>
+    <div class="list-group-item">Item 6</div>
+  </div>
+
+
+  <ul id="items">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+  </ul>
+</body>
+
+<script>
+
+new Sortable(example1, {
+    animation: 150,
+    ghostClass: 'blue-background-class'
+});
+
+var el = document.getElementById('items');
+var sortable = Sortable.create(el, {/* options */});
+
+</script>
+</html>
