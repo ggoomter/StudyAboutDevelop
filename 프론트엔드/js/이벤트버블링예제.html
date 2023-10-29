@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin : 0;
+      border : 0;
+    }
+    .사각{
+      background-color: cadetblue;
+      width : 100px;
+      height : 100px;
+      border : 1px solid black;
+    }
+  </style>
+</head>
+<body>
+    <div class="애국가">
+      <div class="사각 사각1"  onclick="alert('1절')">
+        동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세
+        <div class="사각 사각2" onclick="alert('2절')">
+          남산위에 저 소나무 철갑을 두른듯 바람서리 불변함은 우리기상일세
+          <div class="사각 사각3">가을 하늘 공활한데 높고구름없이 밝은달은 우리가슴 일편단심일세
+              <div class="사각 사각4">이기상과 이맘으로 충성을 다하여 괴로우나 즐거우나 나라사랑하세</div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+
+
+<script>
+const divs = document.querySelectorAll("div");
+const clickEvent = (e) => {
+  console.log(e.currentTarget.className);
+};
+// divs.forEach((div) => {
+//   div.addEventListener("click", clickEvent);
+// });
+
+
+</script>
+</html>
