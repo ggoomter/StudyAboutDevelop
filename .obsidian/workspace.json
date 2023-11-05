@@ -8,12 +8,25 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3ebec793077a8106",
+            "id": "66cf5ed831948c1b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "프론트엔드/자바스크립트 정리.md",
+                "file": "아톰 이클립스 설정/이클립스 아톰 인텔리제이 파이참 세팅, 플러그인, 단축키.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b1e7fde57b97c81b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "백엔드/스프링과 스프링부트/스프링공부.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,8 +99,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 331,
-    "collapsed": true
+    "width": 331
   },
   "right": {
     "id": "15c0f6e9cfc0fb04",
@@ -103,7 +115,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "프론트엔드/자바스크립트 정리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +131,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "프론트엔드/자바스크립트 정리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "프론트엔드/자바스크립트 정리.md"
+                "file": "옵시디언/음성녹음.md"
               }
             }
           },
@@ -178,8 +188,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 395.5,
-    "collapsed": true
+    "width": 395.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,10 +208,16 @@
       "notion-like-tables:Create loom": false
     }
   },
-  "active": "3ebec793077a8106",
+  "active": "6cc5842773af580e",
   "lastOpenFiles": [
-    "프론트엔드/js/이벤트버블링예제.html",
+    "백엔드/스프링과 스프링부트/스프링부트congsong다시.md",
+    "옵시디언/음성녹음.md",
+    "백엔드/스프링과 스프링부트/무제 파일.md",
+    "백엔드/스프링과 스프링부트/스프링공부.md",
+    "아톰 이클립스 설정/이클립스 아톰 인텔리제이 파이참 세팅, 플러그인, 단축키.md",
+    "백엔드/스프링과 스프링부트/스프링부트 공부.md",
     "프론트엔드/자바스크립트 정리.md",
+    "프론트엔드/js/이벤트버블링예제.html",
     "공부/블로그/블로그 팁.md",
     "프론트엔드/플렉스박스.md",
     "공부/독후감/IT서적/2023년.md",
@@ -231,12 +246,6 @@
     "공부/블로그",
     "공부/기업, 기업가",
     "공부",
-    "프론트엔드/css/플렉스박스연습원본/플렉스박스연습.html",
-    "옵시디언/제텔카스텐 정리.md",
-    "옵시디언/Pasted image 20230918021126.png.md",
-    "프론트엔드/css정리.md",
-    "옵시디언/옵시디언 정리.md",
-    "데브옵스 devops/플러터 앱배포.md",
     "Pasted image 20231003181925.png",
     "무제 파일 1.canvas",
     "무제 파일 2.canvas",

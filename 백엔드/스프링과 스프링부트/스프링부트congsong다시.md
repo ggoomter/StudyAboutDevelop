@@ -354,6 +354,8 @@ https://congsong.tistory.com/45
 - view.html - findAllFile( ) 함수수정. 준비중입니다 돼있던에 파일 다운로드 링크 추가
 - 파일 다운로드 테스트
 
+---
+
 # 28. ORM (**중요**)
 https://congsong.tistory.com/51
 myBatis 이제 그만.
@@ -397,5 +399,5 @@ JpaRepository 인터페이스를 상속받을때 엔티티클래스의 타입과
 - GlobalExceptionHandler 수정
 
 
-# 30. 기능별로 서비스, 컨트롤러 화면까지 전체적으로 구현
+# 30. JPA로 CRUD 전체적으로 구현
 https://congsong.tistory.com/55
