@@ -59,6 +59,7 @@
 
 
 # 3. MariaDB(HikariCP) 연동
+- https://congsong.tistory.com/14
 - MariaDB 설치 : https://congsong.tistory.com/62
 - Dbeaver 등의 쿼리툴에서 MariaDB 커넥션 연결
  Host : localhost
