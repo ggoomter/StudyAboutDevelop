@@ -1,20 +1,132 @@
 {
   "recentFiles": [
     {
-      "basename": "2023년",
-      "path": "공부/독후감/IT서적/2023년.md"
+      "basename": "로그 로거",
+      "path": "백엔드/로그 로거.md"
     },
     {
-      "basename": "카드게임",
-      "path": "언리얼엔진/카드게임.md"
+      "basename": "백엔드공부",
+      "path": "백엔드/백엔드공부.md"
+    },
+    {
+      "basename": "역행자 & 자청",
+      "path": "공부/역행자 & 자청.md"
+    },
+    {
+      "basename": "블로그 팁",
+      "path": "공부/블로그/블로그 팁.md"
+    },
+    {
+      "basename": "스프링부트 공부",
+      "path": "백엔드/스프링과 스프링부트/스프링부트 공부.md"
+    },
+    {
+      "basename": "인프런 김영한 JPA",
+      "path": "백엔드/스프링과 스프링부트/인프런 김영한 JPA.md"
+    },
+    {
+      "basename": "경력 기술",
+      "path": "경력 기술/경력 기술.md"
+    },
+    {
+      "basename": "짜장순위",
+      "path": "추천 & 티어/음식/짜장순위.md"
+    },
+    {
+      "basename": "글감-보헤미안랩소디",
+      "path": "공부/블로그/글감-보헤미안랩소디.md"
+    },
+    {
+      "basename": "스프링공부",
+      "path": "백엔드/스프링과 스프링부트/스프링공부.md"
+    },
+    {
+      "basename": "꿈털이의 추천_유튜브_일반",
+      "path": "추천 & 티어/꿈털이의 추천_유튜브_일반.md"
+    },
+    {
+      "basename": "깃_공부",
+      "path": "깃_공부.md"
+    },
+    {
+      "basename": "몰입 _황농문",
+      "path": "공부/몰입 _황농문.md"
+    },
+    {
+      "basename": "플라스크",
+      "path": "파이썬/플라스크.md"
+    },
+    {
+      "basename": "파이썬",
+      "path": "파이썬/파이썬.md"
+    },
+    {
+      "basename": "면접질문 이력서 자소서",
+      "path": "프로젝트관리/면접질문 이력서 자소서.md"
+    },
+    {
+      "basename": "원데이 부트캠프",
+      "path": "기획/원데이 부트캠프.md"
+    },
+    {
+      "basename": "개념",
+      "path": "언리얼엔진/개념.md"
+    },
+    {
+      "basename": "유데미 언리얼엔진5 강의",
+      "path": "언리얼엔진/유데미 언리얼엔진5 강의.md"
+    },
+    {
+      "basename": "클라우드",
+      "path": "데브옵스 devops/클라우드.md"
+    },
+    {
+      "basename": "읽을책",
+      "path": "공부/읽을책.md"
+    },
+    {
+      "basename": "꿈털이의 추천_영화",
+      "path": "추천 & 티어/꿈털이의 추천_영화.md"
+    },
+    {
+      "basename": "gasil-church",
+      "path": "파이썬/장고/Django를 활용한 쉽고빠른웹개발 파이썬웹프로그래밍(개정판) 소스/ch9/media/photo/2019/08/gasil-church.jpg"
+    },
+    {
+      "basename": "플렉스박스",
+      "path": "프론트엔드/플렉스박스.md"
+    },
+    {
+      "basename": "스프링부트congsong다시",
+      "path": "백엔드/스프링과 스프링부트/스프링부트congsong다시.md"
     },
     {
       "basename": "언리얼5",
       "path": "언리얼엔진/언리얼5.md"
     },
     {
-      "basename": "꿈털이의 추천_영화",
-      "path": "추천 & 티어/꿈털이의 추천_영화.md"
+      "basename": "노하우",
+      "path": "언리얼엔진/노하우.md"
+    },
+    {
+      "basename": "카드게임",
+      "path": "언리얼엔진/카드게임.md"
+    },
+    {
+      "basename": "블루프린트",
+      "path": "언리얼엔진/블루프린트.md"
+    },
+    {
+      "basename": "블루프린트의 씨플플",
+      "path": "언리얼엔진/블루프린트의 씨플플.md"
+    },
+    {
+      "basename": "2023년",
+      "path": "공부/독후감/IT서적/2023년.md"
+    },
+    {
+      "basename": "코딩 동기부여와 면접",
+      "path": "코딩 동기부여와 면접.md"
     },
     {
       "basename": "추천_개발",
@@ -29,28 +141,8 @@
       "path": "추천 & 티어/꿈털이의 추천_유튜브_개발.md"
     },
     {
-      "basename": "꿈털이의 추천_유튜브_일반",
-      "path": "추천 & 티어/꿈털이의 추천_유튜브_일반.md"
-    },
-    {
       "basename": "꿈털이의 추천_네이버웹툰_룸",
       "path": "추천 & 티어/꿈털이의 추천_네이버웹툰_룸.loom"
-    },
-    {
-      "basename": "개념",
-      "path": "언리얼엔진/개념.md"
-    },
-    {
-      "basename": "블루프린트의 씨플플",
-      "path": "언리얼엔진/블루프린트의 씨플플.md"
-    },
-    {
-      "basename": "스프링부트congsong다시",
-      "path": "백엔드/스프링과 스프링부트/스프링부트congsong다시.md"
-    },
-    {
-      "basename": "스프링공부",
-      "path": "백엔드/스프링과 스프링부트/스프링공부.md"
     },
     {
       "basename": "이클립스 아톰 인텔리제이 파이참 세팅, 플러그인, 단축키",
@@ -61,20 +153,8 @@
       "path": "백엔드/스프링과 스프링부트/무제 파일.md"
     },
     {
-      "basename": "스프링부트 공부",
-      "path": "백엔드/스프링과 스프링부트/스프링부트 공부.md"
-    },
-    {
       "basename": "자바스크립트 정리",
       "path": "프론트엔드/자바스크립트 정리.md"
-    },
-    {
-      "basename": "블로그 팁",
-      "path": "공부/블로그/블로그 팁.md"
-    },
-    {
-      "basename": "플렉스박스",
-      "path": "프론트엔드/플렉스박스.md"
     },
     {
       "basename": "스타트업",
@@ -105,10 +185,6 @@
       "path": "공부/기업, 기업가/아직 안써본 서비스.md"
     },
     {
-      "basename": "짜장순위",
-      "path": "추천 & 티어/음식/짜장순위.md"
-    },
-    {
       "basename": "플렉스박스연습",
       "path": "프론트엔드/css/플렉스박스연습원본/플렉스박스연습.html"
     },
@@ -123,82 +199,6 @@
     {
       "basename": "css정리",
       "path": "프론트엔드/css정리.md"
-    },
-    {
-      "basename": "옵시디언 정리",
-      "path": "옵시디언/옵시디언 정리.md"
-    },
-    {
-      "basename": "플러터 앱배포",
-      "path": "데브옵스 devops/플러터 앱배포.md"
-    },
-    {
-      "basename": "stable diffusion webui",
-      "path": "AI/stable diffusion webui.md"
-    },
-    {
-      "basename": "프롬프트",
-      "path": "AI/프롬프트.md"
-    },
-    {
-      "basename": "모델",
-      "path": "AI/모델.md"
-    },
-    {
-      "basename": "스마트팩토리개념",
-      "path": "스마트팩토리/스마트팩토리개념.md"
-    },
-    {
-      "basename": "옵시디언",
-      "path": "옵시디언/옵시디언.md"
-    },
-    {
-      "basename": "파이어베이스 firebase",
-      "path": "백엔드/파이어베이스 firebase.md"
-    },
-    {
-      "basename": "추천서비스",
-      "path": "추천 & 티어/추천서비스.md"
-    },
-    {
-      "basename": "소속없는 일머리 노하우 신규지식",
-      "path": "소속없는 일머리 노하우 신규지식.md"
-    },
-    {
-      "basename": "플러터 flutter",
-      "path": "앱/플러터 flutter.md"
-    },
-    {
-      "basename": "개발자",
-      "path": "개발자.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "웹개발실력체크",
-      "path": "웹개발실력체크.md"
-    },
-    {
-      "basename": "1. 영구노트",
-      "path": "1. 영구노트/1. 영구노트.md"
-    },
-    {
-      "basename": "마크다운연습",
-      "path": "0. 인박스/마크다운연습.md"
-    },
-    {
-      "basename": "숨고-",
-      "path": "비지니스/숨고-.md"
-    },
-    {
-      "basename": "Untitled",
-      "path": "0. 인박스/Untitled.md"
-    },
-    {
-      "basename": "이력서",
-      "path": "1. 영구노트/이력서.md"
     }
   ],
   "omittedPaths": [],
