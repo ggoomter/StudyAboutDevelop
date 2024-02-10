@@ -119,3 +119,6 @@ public class Team {
 
 Enum은 Ordinal과 String이 있는데 꼭 String
 사용할때는 @Enumerated를 넣어줘야한다.
+
+### 수정
+변경감지가 best practice인데 병합을 많이들 쓴다.

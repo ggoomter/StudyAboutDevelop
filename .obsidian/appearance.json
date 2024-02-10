@@ -7,5 +7,6 @@
     "color-extend",
     "ggoomter"
   ],
-  "theme": "moonstone"
+  "theme": "moonstone",
+  "baseFontSize": 18
 }

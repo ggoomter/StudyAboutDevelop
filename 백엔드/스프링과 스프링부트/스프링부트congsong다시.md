@@ -145,6 +145,7 @@ https://congsong.tistory.com/25
 - execution 구문은 포인트컷을 지정하는데 접근제어자, 리턴타입, 파라미터 타입, 예외타입, 메서드 등을 조합해서 정교하게 지정할 수 있다.
 - ProceedingJoinPoint 인터페이스는 JoinPoint 인터페이스를 상속
   JoinPoint인터페이스는 getArgs, getKind, getSignature, getTarget, getThis 메소드를 포함한다.
+  - signature
 
 # 12.5 트랜잭션
 PostService 의 수정과 삽입에 있는 @Transactional

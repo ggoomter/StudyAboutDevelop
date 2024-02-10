@@ -14,7 +14,7 @@
   "contextEnabled": true,
   "saveAllContextToFrontmatter": true,
   "editorFlowStyle": "seamless",
-  "autoOpenFileContext": true,
+  "autoOpenFileContext": false,
   "activeView": "root",
   "hideFrontmatter": true,
   "activeSpace": "",
