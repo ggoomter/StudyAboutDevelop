@@ -8,64 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7d3a2b778b74cd60",
+            "id": "ccb35c45319f4498",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "코딩 동기부여와 면접.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "92501bc2dd8d4604",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "국비학원.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d441d88bd87dfd26",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "공부/역행자 & 자청.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "612832acf0e3ff0b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "백엔드/스프링과 스프링부트/스프링부트congsong다시.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cec16eaf9e430ab7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "백엔드/스프링과 스프링부트/스프링공부.md",
+                "file": "외주,사업/워드프레스.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -78,72 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "공부/블로그/블로그 팁.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b215e1c8f204d4cb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "쿼리/쿼리공부.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6f124e7ccd821014",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "공부법.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4dc6627656219bca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "공부/읽을책.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bd594c8564239435",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "공부/왜 책을 읽어야 하는가.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5d73586ef1073693",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "업무자동화/업무자동화 수업.md",
+                "file": "머신러닝 딥러닝/생활코딩 머신러닝 실습편 with 파이썬 텐서플로.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -151,7 +34,7 @@
             }
           }
         ],
-        "currentTab": 10
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -217,7 +100,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 323.5,
+    "collapsed": true
   },
   "right": {
     "id": "15c0f6e9cfc0fb04",
@@ -233,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "업무자동화/업무자동화 수업.md",
+                "file": "머신러닝 딥러닝/생활코딩 머신러닝 실습편 with 파이썬 텐서플로.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -250,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "업무자동화/업무자동화 수업.md",
+                "file": "머신러닝 딥러닝/생활코딩 머신러닝 실습편 with 파이썬 텐서플로.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -273,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "업무자동화/업무자동화 수업.md"
+                "file": "머신러닝 딥러닝/생활코딩 머신러닝 실습편 with 파이썬 텐서플로.md"
               }
             }
           },
@@ -306,7 +190,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -317,7 +201,6 @@
     "hiddenItems": {
       "switcher:퀵 스위처 열기": false,
       "graph:그래프 뷰 열기": false,
-      "canvas:새 캔버스 만들기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
       "markdown-importer:마크다운 형식 가져오기 열기": false,
@@ -325,64 +208,65 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "kr-book-info-plugin:Add Book Info": false,
       "templater-obsidian:Templater": false,
       "obsidian-advanced-slides:Show Slide Preview": false,
-      "notion-like-tables:Create loom": false
+      "notion-like-tables:Create loom": false,
+      "kr-book-info-plugin:Add Book Info": false,
+      "canvas:새 캔버스 만들기": false
     }
   },
-  "active": "6cc5842773af580e",
+  "active": "1c06d123711f4cd5",
   "lastOpenFiles": [
-    "공부/왜 책을 읽어야 하는가.md",
-    "공부/몰입 _황농문.md",
-    "공부/읽을책.md",
+    "머신러닝 딥러닝/context.mdb",
+    "머신러닝 딥러닝/인공지능.md",
+    "공부/블로그/블로그 팁.md",
     "업무자동화/업무자동화 수업.md",
+    "외주,사업/워드프레스.md",
+    "코딩 동기부여와 면접.md",
+    "국비학원.md",
+    "공부/역행자 & 자청.md",
+    "백엔드/스프링과 스프링부트/스프링부트congsong다시.md",
+    "공부/독후감/IT서적/트래픽을 쓸어담는 검색엔진 최적화.md",
+    "chatgpt/chatGPT.md",
+    "머신러닝 딥러닝/생활코딩 머신러닝 실습편 with 파이썬 텐서플로.md",
+    "머신러닝 딥러닝/novelAI 인공지능그림.md",
+    "딥러닝/이미지분석.html",
+    "딥러닝/이미지2.jpg",
+    "딥러닝/이미지1.jpg",
+    "딥러닝/이미지.PNG",
+    "딥러닝/보스톤집값.html",
+    "무제 파일.md",
+    "머신러닝 딥러닝/딥러닝 텐서플로우 케라스.md",
+    "쿼리/쿼리공부.md",
+    "공부법.md",
+    "공부/읽을책.md",
+    "공부/왜 책을 읽어야 하는가.md",
+    "공부/독후감/일반/한국의 SNS 부자들.md",
+    "공부/독후감/일반/노르웨이의 숲.md",
+    "Untitled.loom",
+    "공부/독후감/일반",
+    "백엔드/스프링과 스프링부트/스프링공부.md",
+    "공부/몰입 _황농문.md",
     "파이썬/파이썬.md",
     "채용혹한기에 대하는 자세.md",
-    "공부법.md",
     "개발자.md",
-    "백엔드/REST.md",
-    "백엔드/스프링과 스프링부트/스프링공부.md",
-    "쿼리/쿼리공부.md",
-    "공부/블로그/블로그 팁.md",
-    "백엔드/아마존aws.md",
-    "코딩 동기부여와 면접.md",
-    "공부/역행자 & 자청.md",
-    "국비학원.md",
-    "파이썬/빅데이터/20220903 머신러닝 휴먼세미나.md",
-    "취업과 창업 신입등급.md",
-    "워드프레스/운영.md",
-    "경력 기술/경력 기술.md",
-    "백엔드/스프링과 스프링부트/스프링부트congsong다시.md",
-    "공부/독후감/IT서적/2023년.md",
-    "추천 & 티어/꿈털이의 추천_책_마케팅.md",
-    "추천 & 티어/꿈털이의 추천_영화.md",
-    "백엔드/스프링과 스프링부트/인프런 김영한 JPA.md",
     "Pasted image 20240127015335.png",
     "Pasted image 20240127013414.png",
     "Pasted image 20240127013409.png",
     "Pasted image 20240127013406.png",
-    "워드프레스/설치.md",
     "경력 기술",
     "기획",
     "파이썬/장고/Django를 활용한 쉽고빠른웹개발 파이썬웹프로그래밍(개정판) 소스/ch9/media/photo/2019/08/gasil-church.jpg",
     "Pasted image 20231125213851.png",
     "Pasted image 20231125213743.png",
-    "Pasted image 20231125212534.png",
     "공부/독후감/읽을책",
     "추천 & 티어/꿈털이의 추천_네이버웹툰_룸.loom",
     "프론트엔드/js/이벤트버블링예제.html",
     "공부/사람",
-    "공부/독후감",
-    "추천 & 티어/context.mdb",
-    "추천/음식/짜장",
-    "추천 & 티어/음식",
-    "Pasted image 20231003181925.png",
     "무제 파일 1.canvas",
     "무제 파일 2.canvas",
     "무제 파일 3.canvas",
     "무제 파일 4.canvas",
-    "무제 파일.canvas",
-    "Pasted image 20230918202334.png"
+    "무제 파일.canvas"
   ]
 }

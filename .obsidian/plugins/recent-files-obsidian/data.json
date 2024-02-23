@@ -1,20 +1,92 @@
 {
   "recentFiles": [
     {
+      "basename": "생활코딩 머신러닝 실습편 with 파이썬 텐서플로",
+      "path": "머신러닝 딥러닝/생활코딩 머신러닝 실습편 with 파이썬 텐서플로.md"
+    },
+    {
+      "basename": "인공지능",
+      "path": "머신러닝 딥러닝/인공지능.md"
+    },
+    {
+      "basename": "블로그 팁",
+      "path": "공부/블로그/블로그 팁.md"
+    },
+    {
       "basename": "업무자동화 수업",
       "path": "업무자동화/업무자동화 수업.md"
+    },
+    {
+      "basename": "워드프레스",
+      "path": "외주,사업/워드프레스.md"
+    },
+    {
+      "basename": "코딩 동기부여와 면접",
+      "path": "코딩 동기부여와 면접.md"
+    },
+    {
+      "basename": "국비학원",
+      "path": "국비학원.md"
+    },
+    {
+      "basename": "역행자 & 자청",
+      "path": "공부/역행자 & 자청.md"
+    },
+    {
+      "basename": "스프링부트congsong다시",
+      "path": "백엔드/스프링과 스프링부트/스프링부트congsong다시.md"
+    },
+    {
+      "basename": "트래픽을 쓸어담는 검색엔진 최적화",
+      "path": "공부/독후감/IT서적/트래픽을 쓸어담는 검색엔진 최적화.md"
+    },
+    {
+      "basename": "chatGPT",
+      "path": "chatgpt/chatGPT.md"
+    },
+    {
+      "basename": "novelAI 인공지능그림",
+      "path": "머신러닝 딥러닝/novelAI 인공지능그림.md"
+    },
+    {
+      "basename": "딥러닝 텐서플로우 케라스",
+      "path": "머신러닝 딥러닝/딥러닝 텐서플로우 케라스.md"
+    },
+    {
+      "basename": "쿼리공부",
+      "path": "쿼리/쿼리공부.md"
+    },
+    {
+      "basename": "공부법",
+      "path": "공부법.md"
+    },
+    {
+      "basename": "읽을책",
+      "path": "공부/읽을책.md"
     },
     {
       "basename": "왜 책을 읽어야 하는가",
       "path": "공부/왜 책을 읽어야 하는가.md"
     },
     {
-      "basename": "몰입 _황농문",
-      "path": "공부/몰입 _황농문.md"
+      "basename": "한국의 SNS 부자들",
+      "path": "공부/독후감/일반/한국의 SNS 부자들.md"
     },
     {
-      "basename": "읽을책",
-      "path": "공부/읽을책.md"
+      "basename": "노르웨이의 숲",
+      "path": "공부/독후감/일반/노르웨이의 숲.md"
+    },
+    {
+      "basename": "Untitled",
+      "path": "Untitled.loom"
+    },
+    {
+      "basename": "스프링공부",
+      "path": "백엔드/스프링과 스프링부트/스프링공부.md"
+    },
+    {
+      "basename": "몰입 _황농문",
+      "path": "공부/몰입 _황농문.md"
     },
     {
       "basename": "파이썬",
@@ -25,10 +97,6 @@
       "path": "채용혹한기에 대하는 자세.md"
     },
     {
-      "basename": "공부법",
-      "path": "공부법.md"
-    },
-    {
       "basename": "개발자",
       "path": "개발자.md"
     },
@@ -37,36 +105,8 @@
       "path": "백엔드/REST.md"
     },
     {
-      "basename": "스프링공부",
-      "path": "백엔드/스프링과 스프링부트/스프링공부.md"
-    },
-    {
-      "basename": "쿼리공부",
-      "path": "쿼리/쿼리공부.md"
-    },
-    {
-      "basename": "블로그 팁",
-      "path": "공부/블로그/블로그 팁.md"
-    },
-    {
       "basename": "아마존aws",
       "path": "백엔드/아마존aws.md"
-    },
-    {
-      "basename": "코딩 동기부여와 면접",
-      "path": "코딩 동기부여와 면접.md"
-    },
-    {
-      "basename": "스프링부트congsong다시",
-      "path": "백엔드/스프링과 스프링부트/스프링부트congsong다시.md"
-    },
-    {
-      "basename": "역행자 & 자청",
-      "path": "공부/역행자 & 자청.md"
-    },
-    {
-      "basename": "국비학원",
-      "path": "국비학원.md"
     },
     {
       "basename": "20220903 머신러닝 휴먼세미나",
@@ -143,62 +183,6 @@
     {
       "basename": "면접질문 이력서 자소서",
       "path": "프로젝트관리/면접질문 이력서 자소서.md"
-    },
-    {
-      "basename": "원데이 부트캠프",
-      "path": "기획/원데이 부트캠프.md"
-    },
-    {
-      "basename": "개념",
-      "path": "언리얼엔진/개념.md"
-    },
-    {
-      "basename": "유데미 언리얼엔진5 강의",
-      "path": "언리얼엔진/유데미 언리얼엔진5 강의.md"
-    },
-    {
-      "basename": "클라우드",
-      "path": "데브옵스 devops/클라우드.md"
-    },
-    {
-      "basename": "gasil-church",
-      "path": "파이썬/장고/Django를 활용한 쉽고빠른웹개발 파이썬웹프로그래밍(개정판) 소스/ch9/media/photo/2019/08/gasil-church.jpg"
-    },
-    {
-      "basename": "플렉스박스",
-      "path": "프론트엔드/플렉스박스.md"
-    },
-    {
-      "basename": "언리얼5",
-      "path": "언리얼엔진/언리얼5.md"
-    },
-    {
-      "basename": "노하우",
-      "path": "언리얼엔진/노하우.md"
-    },
-    {
-      "basename": "카드게임",
-      "path": "언리얼엔진/카드게임.md"
-    },
-    {
-      "basename": "블루프린트",
-      "path": "언리얼엔진/블루프린트.md"
-    },
-    {
-      "basename": "블루프린트의 씨플플",
-      "path": "언리얼엔진/블루프린트의 씨플플.md"
-    },
-    {
-      "basename": "추천_개발",
-      "path": "추천 & 티어/추천_개발.md"
-    },
-    {
-      "basename": "꿈털이의 추천_네이버웹툰",
-      "path": "추천 & 티어/꿈털이의 추천_네이버웹툰.md"
-    },
-    {
-      "basename": "꿈털이의 추천_유튜브_개발",
-      "path": "추천 & 티어/꿈털이의 추천_유튜브_개발.md"
     }
   ],
   "omittedPaths": [],

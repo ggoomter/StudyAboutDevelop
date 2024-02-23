@@ -172,6 +172,7 @@ url로 확인
 
 # 14. 페이징, 검색 2 (어려움)
 https://congsong.tistory.com/27
+- 핵심은 쿼리스트링에 포함된 모든 데이터를 계속 전달해주기
 - 검색을 했을때는 페이지 번호는 항상1. movePage(1)
 - searchType, keyword
 - movePage변경
@@ -181,27 +182,40 @@ https://congsong.tistory.com/27
 - setQueryStringParams 함수에서 쿼리스트링에 포함된 각 파라미터를 개체화하여 세팅
 - 수정/삭제/뒤로가기에도 페이지 정보유지
 list.html의 list.forEach부분에서 
+```html
 <td class="tl"><a href="/post/view.do?id=${row.id}">${row.title}</a></td>
+```
 를 
-<td class="tl"><a href="javascript:void(0);" onclick="goViewPage(${row.id});"> ${row.title}</a></td> 로 변경
+```html
+<td class="tl"><a href="javascript:void(0);" onclick="goViewPage(${row.id});"> ${row.title}</a></td>
+```
+ 로 변경
 
 view.html의 버튼에 href에서 온클릭에 자바스크립트함수연결
+```html
 <p class="btn_set">
     <a th:href="@{/post/write.do( id=${post.id} )}" class="btns btn_bdr4 btn_mid">수정</a>
     <button type="button" onclick="deletePost()" class="btns btn_bdr1 btn_mid">삭제</button>
     <a th:href="@{/post/list.do}" class="btns btn_bdr3 btn_mid">뒤로</a>
 </p>
+```
 
  에서 
-
-<p class="btn_set">
+ ```html
+ <p class="btn_set">
   <button type="button" onclick="goWritePage();" class="btns btn_bdr4 btn_mid">수정</button>
   <button type="button" onclick="deletePost();" class="btns btn_bdr1 btn_mid">삭제</button>
   <button type="button" onclick="goListPage();" class="btns btn_bdr3 btn_mid">뒤로</button>
 </p>
+```
+그리고 각 함수 정의
+
 
 - 컨트롤러에 queryParamsToMap 함수생성
-하고 MessageDto 생성자 호출할때 마지막 파라미터로 전달
+하고 MessageDto 올아규먼트 생성자로 인스턴스 생성할때 마지막 파라미터로 SearchDto 전달
+
+- 이전페이지 정보 유지 테스트
+	- deletePost함수 수정
 
 # 15. REST API
 https://congsong.tistory.com/28
