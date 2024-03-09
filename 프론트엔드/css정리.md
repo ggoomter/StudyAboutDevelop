@@ -172,8 +172,8 @@ border를 기준으로 바깥으로 여백 = margin
        -  offset 속성(top, left, bottom, right)이 적용
        -  브라우저 창을 기준으로 첫위치 그대로 계속 고정
     - ##### sticky(끈적)
-       - 부모요소를 기준으로 한 위치를 기준으로 top, right, bottom, left의 오프셋이 적용된다.
-       - 최초에는 relative처럼 동작하다가 스크롤이 특정 지점까지 도달하면 fixed속성으로 동작하여 그위치에 끈끈하게 붙어버린다.
+       - 부모요소를 기준으로 top, right, bottom, left의 오프셋이 적용된다.
+       - 최초에는 relative처럼 동작하다가 스크롤이 오프셋에 설정한 지점까지 도달하면 fixed속성으로 동작하여 그 위치에 끈끈하게 붙어버린다.
 - 겹칠때는 z-index 속성으로 지정한다. 양수와 음수 모두 설정할수있으며 크기가 클수록 앞쪽에 위치하게 된다.
 position : relative 일때만 사용가능하다.
 - HTML의 부모자식 관계이며 CSS를 부모요소 Relative, 자식요소 Absolute로 줬으면 자식은 부모의 바운더리 밖을 넘어갈 수 없다.
@@ -252,8 +252,9 @@ https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8
   - clear : 상위요소의 float는 유지하면서 float다음에 오는 일반요소에게 float가 적용되지 않도록 함.
       none, left, right, both
   - text-align : block요소에만 지정할 수 있다. 그러면 block안에있는 inline요소에 적용된다.(텍스트만 적용되는것이 아님)
+		  - div들어 여러개있는 부모에 적용하면 마치 div들이 가운데 정렬된것 처럼보이는데 그건 div가 한행을 다 차지하고 있어서 안의 text만 가운데 정렬되는것이지 div자체는 정렬이 안된다. 확인해보려면 div의 width를 준다음 해보라.
   예) .content > img{ float: left }
-  - 자식을 모두 float해버리면 둥둥떠서 부모컨테이너에서는 담는것이 없어져서 크기가 쪼그라들수 있다. 그럴때는 부모컨테이너에 content:"";  display:block;  clear:both;
+  - 자식을 모두 float해버리면 둥둥 떠서 부모컨테이너에서는 담는것이 없어져서 크기가 쪼그라들수 있다. 그럴때는 부모컨테이너에 content:"";  display:block;  clear:both;
 
 
 - ### 단위

@@ -23,6 +23,7 @@ book_note: ❌
 1,2부통합 :  https://github.com/blackdew/ml-tensorflow
 지식지도 : https://seomal.org/
 유튜브강의 : https://www.youtube.com/playlist?list=PLl1irxoYh2wyLwJutUZx5Q_QEEDZoXBnz
+유튜브 의미지분류 : https://www.youtube.com/playlist?list=PLl1irxoYh2wzOOU9hvJqMYc215wAlxrpp
 머신러닝 사전학습되어있어야함 : https://opentutorials.org/course/4548
 소스목록 : https://github.com/blackdew/tensorflow1/tree/master
 - 내 코랩으로 깃헙 코드 가져오는법
@@ -146,3 +147,27 @@ model.fit(독립, 종속, epochs=10)
 	- 학습이 제대로 되게 하려면 문제 유형에 맞게 손실을 지정해줘야한다. 즉 문제에 따라 loss를 다르게 사용해야 한다는 사실만 알자. 지금은
 	- 분류에 사용하는 loss는 크로스엔트로피 이고, 회귀에 사용하는 loss는 mse인 거다.
 - 정확도(accuracy)
+	- 예측이 정답과 얼마나 정확한가?
+	- 올바르게 예측된 데이터 수 나누기 전체 데이터 수
+	- 학습이 되어 가는 과정에서는 accuracy가 아니라 loss가 떨어지냐를 봐야한다.
+- 정밀도(Precision)
+	- 예측한것중 정답의 비율은?
+	- 모델이 True로 예측한 데이터 중 실제로 True인 데이터 수
+	- 내일 눈이 내릴지 안내릴지에 항상 False로 하면 accuracy는 높음. 높은 정밀도이지만 모델은 전혀 쓸모가 없다.
+- 재현율(Recall)
+	- 찾아야 할 것중에 실제로 찾은 비율은?
+	- 실제로 True인 데이터를 모델이 True로 인식한 데이터의 수
+---
+### hidden layer
+딥러닝. 인공신경망
+퍼셉트론 여러개를 연결
+- 입력과 출력사이에 한 층을 쌓아서 히든레이어의 모든 값들을 입력으로 하는 하나의 퍼셉트론을 추가해줘야한다.
+
+---
+### 데이터를 위한팁 
+- 원핫인코딩을 할 때 변수 데이터타입 때문에 발생하는 문제
+	- 데이터가 숫자만 있다면 원핫 인코딩 안된다.   .dtypes로 데이터타입 확인해보고 수동으로 변환해줘야함. .astype함수를 통해서 category나 object로 변경
+- 데이터 NA값의 처리
+	- 평균값으로 처리하는 것이 일반적
+- 모델의 성능이 안좋을 때
+	- 모델의 구조를 BatchNormalization layer를 사용하여 만든다.
