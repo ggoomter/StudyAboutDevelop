@@ -6,6 +6,7 @@
     "emojiStyle": "none",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "FabGit",
       "FabBuromobelexperte"
     ],
     "recentlyUsedIconsSize": 5,
@@ -19,5 +20,6 @@
     "iconInTabsEnabled": false,
     "iconsBackgroundCheckEnabled": false
   },
-  "추천 & 티어": "FabBuromobelexperte"
+  "추천 & 티어": "FabBuromobelexperte",
+  "깃_공부.md": "FabGit"
 }
