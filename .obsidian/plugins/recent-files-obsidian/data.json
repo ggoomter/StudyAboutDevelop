@@ -1,20 +1,96 @@
 {
   "recentFiles": [
     {
-      "basename": "스프링부트 공부",
-      "path": "백엔드/스프링과 스프링부트/스프링부트 공부.md"
+      "basename": "독서법",
+      "path": "공부/독후감/독서법.md"
     },
     {
-      "basename": "백엔드공부",
-      "path": "백엔드/백엔드공부.md"
+      "basename": "chatGPT 정리",
+      "path": "AI/chatgpt/chatGPT 정리.md"
+    },
+    {
+      "basename": "stable diffusion webui",
+      "path": "AI/stable diffusion webui.md"
+    },
+    {
+      "basename": "프롬프트",
+      "path": "AI/프롬프트.md"
+    },
+    {
+      "basename": "랭체인",
+      "path": "AI/랭체인.md"
+    },
+    {
+      "basename": "개발자 상식",
+      "path": "공부/독후감/IT서적/개발자 상식.md"
+    },
+    {
+      "basename": "2024년",
+      "path": "공부/독후감/IT서적/2024년.md"
+    },
+    {
+      "basename": "육각형 개발자",
+      "path": "공부/독후감/IT서적/육각형 개발자.md"
+    },
+    {
+      "basename": "lion",
+      "path": "파이썬/장고/Django를 활용한 쉽고빠른웹개발 파이썬웹프로그래밍(개정판) 소스/ch5/static/img/lion.jpg"
+    },
+    {
+      "basename": "포트폴리오 작성법",
+      "path": "프로젝트관리/포트폴리오 작성법.md"
+    },
+    {
+      "basename": "파이썬",
+      "path": "파이썬/파이썬.md"
+    },
+    {
+      "basename": "공부해야할 리스트",
+      "path": "공부/공부해야할 리스트.md"
+    },
+    {
+      "basename": "트래픽을 쓸어담는 검색엔진 최적화",
+      "path": "공부/독후감/IT서적/트래픽을 쓸어담는 검색엔진 최적화.md"
+    },
+    {
+      "basename": "2023년",
+      "path": "공부/독후감/IT서적/2023년.md"
+    },
+    {
+      "basename": "인공지능",
+      "path": "머신러닝 딥러닝/인공지능.md"
     },
     {
       "basename": "스프링부트congsong다시",
       "path": "백엔드/스프링과 스프링부트/스프링부트congsong다시.md"
     },
     {
+      "basename": "자바스크립트 정리",
+      "path": "프론트엔드/자바스크립트 정리.md"
+    },
+    {
+      "basename": "PHP 정리",
+      "path": "백엔드/PHP 정리.md"
+    },
+    {
+      "basename": "백엔드공부",
+      "path": "백엔드/백엔드공부.md"
+    },
+    {
+      "basename": "consgong ddl",
+      "path": "백엔드/스프링과 스프링부트/consgong ddl.md"
+    },
+    {
       "basename": "깃_공부",
       "path": "깃_공부.md"
+    },
+    {
+      "basename": "SNS공부",
+      "path": "공부/SNS공부.md"
+    },
+    {
+      "basename": "스프링부트 공부",
+      "path": "백엔드/스프링과 스프링부트/스프링부트 공부.md"
     },
     {
       "basename": "스프링공부",
@@ -53,16 +129,8 @@
       "path": "공부/독후감/일반/한국의 SNS 부자들.md"
     },
     {
-      "basename": "노르웨이의 숲",
-      "path": "공부/독후감/일반/노르웨이의 숲.md"
-    },
-    {
       "basename": "몰입 _황농문",
       "path": "공부/몰입 _황농문.md"
-    },
-    {
-      "basename": "PHP 정리",
-      "path": "백엔드/PHP 정리.md"
     },
     {
       "basename": "css정리",
@@ -75,10 +143,6 @@
     {
       "basename": "워드프레스",
       "path": "외주,사업/워드프레스.md"
-    },
-    {
-      "basename": "SNS",
-      "path": "공부/SNS.md"
     },
     {
       "basename": "자바공부",
@@ -135,70 +199,6 @@
     {
       "basename": "개발자도 궁금한 IT인프라",
       "path": "공부/독후감/IT서적/개발자도 궁금한 IT인프라.md"
-    },
-    {
-      "basename": "면접질문 이력서 자소서",
-      "path": "프로젝트관리/면접질문 이력서 자소서.md"
-    },
-    {
-      "basename": "FLab 무신사백엔드",
-      "path": "샘플/이력서/FLab 무신사백엔드.pdf"
-    },
-    {
-      "basename": "2023년",
-      "path": "공부/독후감/IT서적/2023년.md"
-    },
-    {
-      "basename": "운전면허",
-      "path": "공부/운전면허.md"
-    },
-    {
-      "basename": "우리회사색깔",
-      "path": "외주,사업/우리회사색깔.md"
-    },
-    {
-      "basename": "자바스크립트 정리",
-      "path": "프론트엔드/자바스크립트 정리.md"
-    },
-    {
-      "basename": "배치",
-      "path": "백엔드/배치.md"
-    },
-    {
-      "basename": "로그 로거",
-      "path": "백엔드/로그 로거.md"
-    },
-    {
-      "basename": "꿈털이의 추천_유튜브_일반",
-      "path": "추천 & 티어/꿈털이의 추천_유튜브_일반.md"
-    },
-    {
-      "basename": "추천_개발",
-      "path": "추천 & 티어/추천_개발.md"
-    },
-    {
-      "basename": "꿈털이의 추천_네이버웹툰_룸",
-      "path": "추천 & 티어/꿈털이의 추천_네이버웹툰_룸.loom"
-    },
-    {
-      "basename": "보험",
-      "path": "공부/보험.md"
-    },
-    {
-      "basename": "추천서비스",
-      "path": "추천 & 티어/추천서비스.md"
-    },
-    {
-      "basename": "취업과 창업 신입등급",
-      "path": "취업과 창업 신입등급.md"
-    },
-    {
-      "basename": "인공지능",
-      "path": "머신러닝 딥러닝/인공지능.md"
-    },
-    {
-      "basename": "업무자동화 수업",
-      "path": "업무자동화/업무자동화 수업.md"
     }
   ],
   "omittedPaths": [],

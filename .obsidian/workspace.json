@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "2638d01fe6466e8c",
+        "id": "76ef9eaa5ea04dc5",
         "type": "tabs",
         "children": [
           {
-            "id": "ccb35c45319f4498",
+            "id": "94b8469e25aa28e2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "추천 & 티어/추천등급기준.md",
+                "file": "공부/독후감/독서법.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "02cc95919082ade8",
+            "id": "9c9e3ca71b0281ee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "백엔드/데이터베이스/테이블설계 ERD.md",
+                "file": "공부/독후감/IT서적/2024년.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,189 +34,19 @@
             }
           },
           {
-            "id": "cdaea4645ae54f34",
+            "id": "3a3dd43130ccadeb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "워드프레스/운영.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0b335a4102fe2300",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "워드프레스/까페24 워드프레스.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "981a1c89a8813dfa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "공부/SNS.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2802ae3aaefee620",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "앱/플러터 flutter.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c02b6348eec6b9c0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "깃_공부.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "94371d7229c7241e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "백엔드/스프링과 스프링부트/스프링부트congsong다시.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f6a877322833469e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "백엔드/백엔드공부.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f3e6f0cd75c3f9c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "백엔드/스프링과 스프링부트/스프링부트 공부.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "01fd9a828a1dcc29",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "백엔드/스프링과 스프링부트/스프링부트congsong다시.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "77d5dafe5bd6f86b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "백엔드/스프링과 스프링부트/스프링공부.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c864896611b4606b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "워드프레스/까페24 워드프레스.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "47ba3e5eb16b69ce",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "공부/독후감/일반/한국의 SNS 부자들.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "337783aff799b568",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "추천 & 티어/꿈털이의 추천_유튜브_개발.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1c06d123711f4cd5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "머신러닝 딥러닝/생활코딩 머신러닝 실습편 with 파이썬 텐서플로.md",
+                "file": "공부/독후감/IT서적/개발자 상식.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 9
+        ]
       }
     ],
     "direction": "vertical"
@@ -282,7 +112,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 420.5
   },
   "right": {
     "id": "15c0f6e9cfc0fb04",
@@ -298,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "백엔드/스프링과 스프링부트/스프링부트 공부.md",
+                "file": "공부/독후감/독서법.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -315,7 +145,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "백엔드/스프링과 스프링부트/스프링부트 공부.md",
+                "file": "공부/독후감/독서법.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -338,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "백엔드/스프링과 스프링부트/스프링부트 공부.md"
+                "file": "공부/독후감/독서법.md"
               }
             }
           },
@@ -396,34 +226,35 @@
       "canvas:새 캔버스 만들기": false
     }
   },
-  "active": "6cc5842773af580e",
+  "active": "94b8469e25aa28e2",
   "lastOpenFiles": [
-    "백엔드/백엔드공부.md",
+    "AI/chatgpt/chatGPT 정리.md",
+    "공부/독후감/독서법.md",
+    "AI/stable diffusion webui.md",
+    "AI/프롬프트.md",
+    "AI/AI.md",
+    "AI/랭체인.md",
+    "공부/독후감/IT서적/개발자 상식.md",
+    "공부/독후감/IT서적/2024년.md",
+    "공부/독후감/IT서적/육각형 개발자.md",
+    "파이썬/장고/Django를 활용한 쉽고빠른웹개발 파이썬웹프로그래밍(개정판) 소스/ch5/static/img/lion.jpg",
+    "프로젝트관리/포트폴리오 작성법.md",
+    "파이썬/파이썬.md",
+    "공부/공부해야할 리스트.md",
+    "공부/독후감/IT서적/트래픽을 쓸어담는 검색엔진 최적화.md",
+    "공부/독후감/IT서적/2023년.md",
+    "공부/독후감/일반/노르웨이의 숲.md",
+    "머신러닝 딥러닝/인공지능.md",
     "백엔드/스프링과 스프링부트/스프링부트congsong다시.md",
+    "프론트엔드/자바스크립트 정리.md",
+    "백엔드/PHP 정리.md",
+    "백엔드/백엔드공부.md",
+    "백엔드/스프링과 스프링부트/consgong ddl.md",
     "깃_공부.md",
+    "공부/SNS공부.md",
     "백엔드/스프링과 스프링부트/스프링부트 공부.md",
     "백엔드/스프링과 스프링부트/스프링공부.md",
     "앱/플러터 flutter.md",
-    "옵시디언/옵시디언 정리.md",
-    "옵시디언/옵시디언.md",
-    "옵시디언/제텔카스텐 정리.md",
-    "옵시디언/Pasted image 20230918021126.png.md",
-    "블로그/키워드.md",
-    "블로그/블로그 팁.md",
-    "기획/원데이 부트캠프.md",
-    "공부/독후감/일반/한국의 SNS 부자들.md",
-    "공부/독후감/일반/노르웨이의 숲.md",
-    "공부/몰입 _황농문.md",
-    "백엔드/PHP 정리.md",
-    "프론트엔드/css정리.md",
-    "워드프레스/까페24 워드프레스.md",
-    "외주,사업/워드프레스.md",
-    "공부/SNS.md",
-    "백엔드/자바공부.md",
-    "워드프레스/운영.md",
-    "외주,사업/워드프레스 개발환경.md",
-    "워드프레스/설치.md",
-    "백엔드/데이터베이스/테이블설계 ERD.md",
     "샘플/이력서/FLab 식스샵백엔드.pdf",
     "샘플/이력서/FLab 무신사백엔드.pdf",
     "추천 & 티어/꿈털이의 추천_네이버웹툰_룸.loom",
@@ -443,7 +274,6 @@
     "경력 기술",
     "파이썬/장고/Django를 활용한 쉽고빠른웹개발 파이썬웹프로그래밍(개정판) 소스/ch9/media/photo/2019/08/gasil-church.jpg",
     "Pasted image 20231125213851.png",
-    "Pasted image 20231125213743.png",
     "무제 파일 1.canvas",
     "무제 파일 2.canvas",
     "무제 파일 3.canvas",

@@ -386,7 +386,7 @@ https://congsong.tistory.com/38
 https://congsong.tistory.com/39
 - 파일 테이블 생성 tb_file
 - 파일 정보를 저장(INSERT)하는 용도로 사용할 파일 요청 클래스 FileRequest 
-- 롬복의 @Builder. 빌더 패턴
+	- 롬복의 @Builder. 빌더 패턴
 - FileService 생성
 - 공통파일처리용 유틸클래스 FileUtils  게시글번호를 알필요도 받을필요도 없다.
 ---백엔드끝. 프론트 시작
