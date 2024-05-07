@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "기획/원데이 부트캠프.md",
+                "file": "AI/랭체인.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "37535a906ea3fee5",
+            "id": "8dd6f97191caa208",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "데브옵스 devops/네트워크 공부.md",
+                "file": "AI/프롬프트.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "데브옵스 devops/네트워크 공부.md",
+                "file": "AI/프롬프트.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "데브옵스 devops/네트워크 공부.md",
+                "file": "AI/프롬프트.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "데브옵스 devops/네트워크 공부.md"
+                "file": "AI/프롬프트.md"
               }
             }
           },
@@ -240,36 +240,37 @@
       "canvas:새 캔버스 만들기": false
     }
   },
-  "active": "37535a906ea3fee5",
+  "active": "8dd6f97191caa208",
   "lastOpenFiles": [
-    "기획/원데이 부트캠프.md",
-    "AI/무제 파일.md",
-    "데브옵스 devops/네트워크 공부.md",
+    "AI/chatgpt/chatGPT 정리.md",
+    "AI/LLM.md",
     "AI/랭체인.md",
+    "공부/독후감/IT서적/2024년.md",
+    "쿼리/데이터베이스정리.md",
+    "공부/MBTI/MBTI 정리.md",
+    "AI/프롬프트.md",
+    "공부/MBTI",
+    "기획/원데이 부트캠프.md",
+    "웹개발실력체크.md",
+    "공부/공부해야할 리스트.md",
+    "데브옵스 devops/네트워크 공부.md",
     "공부/독후감/일반/기획은 2형식이다..md",
     "공부/독후감/일반/민태기 소장.md",
     "Context",
     "기획/기획공부.md",
     "공부/독후감/독서법.md",
-    "AI/chatgpt/chatGPT 정리.md",
     "AI/stable diffusion webui.md",
-    "AI/프롬프트.md",
     "AI/AI.md",
     "공부/독후감/IT서적/개발자 상식.md",
-    "공부/독후감/IT서적/2024년.md",
     "공부/독후감/IT서적/육각형 개발자.md",
     "파이썬/장고/Django를 활용한 쉽고빠른웹개발 파이썬웹프로그래밍(개정판) 소스/ch5/static/img/lion.jpg",
     "프로젝트관리/포트폴리오 작성법.md",
     "파이썬/파이썬.md",
-    "공부/공부해야할 리스트.md",
     "공부/독후감/IT서적/트래픽을 쓸어담는 검색엔진 최적화.md",
     "공부/독후감/IT서적/2023년.md",
     "공부/독후감/일반/노르웨이의 숲.md",
     "AI/머신러닝 딥러닝/인공지능.md",
     "백엔드/스프링과 스프링부트/스프링부트congsong다시.md",
-    "프론트엔드/자바스크립트 정리.md",
-    "백엔드/PHP 정리.md",
-    "백엔드/백엔드공부.md",
     "샘플/이력서/FLab 식스샵백엔드.pdf",
     "샘플/이력서/FLab 무신사백엔드.pdf",
     "추천 & 티어/꿈털이의 추천_네이버웹툰_룸.loom",
@@ -281,7 +282,6 @@
     "딥러닝/이미지.PNG",
     "딥러닝/보스톤집값.html",
     "Untitled.loom",
-    "공부/독후감/일반",
     "Pasted image 20240127015335.png",
     "Pasted image 20240127013414.png",
     "Pasted image 20240127013409.png",

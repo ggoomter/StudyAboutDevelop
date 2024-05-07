@@ -1,16 +1,48 @@
 {
   "recentFiles": [
     {
-      "basename": "네트워크 공부",
-      "path": "데브옵스 devops/네트워크 공부.md"
+      "basename": "프롬프트",
+      "path": "AI/프롬프트.md"
+    },
+    {
+      "basename": "chatGPT 정리",
+      "path": "AI/chatgpt/chatGPT 정리.md"
+    },
+    {
+      "basename": "LLM",
+      "path": "AI/LLM.md"
+    },
+    {
+      "basename": "랭체인",
+      "path": "AI/랭체인.md"
+    },
+    {
+      "basename": "2024년",
+      "path": "공부/독후감/IT서적/2024년.md"
+    },
+    {
+      "basename": "데이터베이스정리",
+      "path": "쿼리/데이터베이스정리.md"
+    },
+    {
+      "basename": "MBTI 정리",
+      "path": "공부/MBTI/MBTI 정리.md"
     },
     {
       "basename": "원데이 부트캠프",
       "path": "기획/원데이 부트캠프.md"
     },
     {
-      "basename": "랭체인",
-      "path": "AI/랭체인.md"
+      "basename": "웹개발실력체크",
+      "path": "웹개발실력체크.md"
+    },
+    {
+      "basename": "공부해야할 리스트",
+      "path": "공부/공부해야할 리스트.md"
+    },
+    {
+      "basename": "네트워크 공부",
+      "path": "데브옵스 devops/네트워크 공부.md"
     },
     {
       "basename": "기획은 2형식이다.",
@@ -29,24 +61,12 @@
       "path": "공부/독후감/독서법.md"
     },
     {
-      "basename": "chatGPT 정리",
-      "path": "AI/chatgpt/chatGPT 정리.md"
-    },
-    {
       "basename": "stable diffusion webui",
       "path": "AI/stable diffusion webui.md"
     },
     {
-      "basename": "프롬프트",
-      "path": "AI/프롬프트.md"
-    },
-    {
       "basename": "개발자 상식",
       "path": "공부/독후감/IT서적/개발자 상식.md"
-    },
-    {
-      "basename": "2024년",
-      "path": "공부/독후감/IT서적/2024년.md"
     },
     {
       "basename": "육각형 개발자",
@@ -63,10 +83,6 @@
     {
       "basename": "파이썬",
       "path": "파이썬/파이썬.md"
-    },
-    {
-      "basename": "공부해야할 리스트",
-      "path": "공부/공부해야할 리스트.md"
     },
     {
       "basename": "트래픽을 쓸어담는 검색엔진 최적화",
@@ -183,22 +199,6 @@
     {
       "basename": "추천등급기준",
       "path": "추천 & 티어/추천등급기준.md"
-    },
-    {
-      "basename": "글감-보헤미안랩소디",
-      "path": "블로그/글감-보헤미안랩소디.md"
-    },
-    {
-      "basename": "꿈털이의 추천_유튜브_개발",
-      "path": "추천 & 티어/꿈털이의 추천_유튜브_개발.md"
-    },
-    {
-      "basename": "생활코딩 머신러닝 실습편 with 파이썬 텐서플로",
-      "path": "AI/머신러닝 딥러닝/생활코딩 머신러닝 실습편 with 파이썬 텐서플로.md"
-    },
-    {
-      "basename": "꿈털이의 추천_유튜브_자기계발",
-      "path": "추천 & 티어/꿈털이의 추천_유튜브_자기계발.md"
     }
   ],
   "omittedPaths": [],
