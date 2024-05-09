@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/프롬프트.md",
+                "file": "AI/chatgpt/chatGPT 정리.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AI/프롬프트.md",
+                "file": "AI/chatgpt/chatGPT 정리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AI/프롬프트.md",
+                "file": "AI/chatgpt/chatGPT 정리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AI/프롬프트.md"
+                "file": "AI/chatgpt/chatGPT 정리.md"
               }
             }
           },
@@ -242,13 +242,13 @@
   },
   "active": "8dd6f97191caa208",
   "lastOpenFiles": [
+    "AI/프롬프트.md",
     "AI/chatgpt/chatGPT 정리.md",
     "AI/LLM.md",
     "AI/랭체인.md",
     "공부/독후감/IT서적/2024년.md",
     "쿼리/데이터베이스정리.md",
     "공부/MBTI/MBTI 정리.md",
-    "AI/프롬프트.md",
     "공부/MBTI",
     "기획/원데이 부트캠프.md",
     "웹개발실력체크.md",

@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "프롬프트",
-      "path": "AI/프롬프트.md"
-    },
-    {
       "basename": "chatGPT 정리",
       "path": "AI/chatgpt/chatGPT 정리.md"
+    },
+    {
+      "basename": "프롬프트",
+      "path": "AI/프롬프트.md"
     },
     {
       "basename": "LLM",
