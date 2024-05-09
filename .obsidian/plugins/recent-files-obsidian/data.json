@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "2024년",
+      "path": "공부/독후감/IT서적/2024년.md"
+    },
+    {
+      "basename": "업무자동화 수업",
+      "path": "업무자동화/업무자동화 수업.md"
+    },
+    {
+      "basename": "랭체인",
+      "path": "AI/랭체인.md"
+    },
+    {
+      "basename": "파이썬",
+      "path": "파이썬/파이썬.md"
+    },
+    {
+      "basename": "개발자 상식",
+      "path": "공부/독후감/IT서적/개발자 상식.md"
+    },
+    {
+      "basename": "독서법",
+      "path": "공부/독후감/독서법.md"
+    },
+    {
       "basename": "chatGPT 정리",
       "path": "AI/chatgpt/chatGPT 정리.md"
     },
@@ -11,14 +35,6 @@
     {
       "basename": "LLM",
       "path": "AI/LLM.md"
-    },
-    {
-      "basename": "랭체인",
-      "path": "AI/랭체인.md"
-    },
-    {
-      "basename": "2024년",
-      "path": "공부/독후감/IT서적/2024년.md"
     },
     {
       "basename": "데이터베이스정리",
@@ -57,16 +73,8 @@
       "path": "기획/기획공부.md"
     },
     {
-      "basename": "독서법",
-      "path": "공부/독후감/독서법.md"
-    },
-    {
       "basename": "stable diffusion webui",
       "path": "AI/stable diffusion webui.md"
-    },
-    {
-      "basename": "개발자 상식",
-      "path": "공부/독후감/IT서적/개발자 상식.md"
     },
     {
       "basename": "육각형 개발자",
@@ -79,10 +87,6 @@
     {
       "basename": "포트폴리오 작성법",
       "path": "프로젝트관리/포트폴리오 작성법.md"
-    },
-    {
-      "basename": "파이썬",
-      "path": "파이썬/파이썬.md"
     },
     {
       "basename": "트래픽을 쓸어담는 검색엔진 최적화",
@@ -195,10 +199,6 @@
     {
       "basename": "테이블설계 ERD",
       "path": "백엔드/데이터베이스/테이블설계 ERD.md"
-    },
-    {
-      "basename": "추천등급기준",
-      "path": "추천 & 티어/추천등급기준.md"
     }
   ],
   "omittedPaths": [],
