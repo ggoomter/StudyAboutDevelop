@@ -1,20 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "2024년",
-      "path": "공부/독후감/IT서적/2024년.md"
+      "basename": "에밀",
+      "path": "공부/독후감/일반/에밀.md"
     },
     {
-      "basename": "업무자동화 수업",
-      "path": "업무자동화/업무자동화 수업.md"
+      "basename": "인공지능, 라마",
+      "path": "AI/머신러닝 딥러닝/인공지능, 라마.md"
     },
     {
       "basename": "랭체인",
       "path": "AI/랭체인.md"
     },
     {
+      "basename": "모델",
+      "path": "AI/모델.md"
+    },
+    {
+      "basename": "LLM",
+      "path": "AI/LLM.md"
+    },
+    {
       "basename": "파이썬",
       "path": "파이썬/파이썬.md"
+    },
+    {
+      "basename": "2024년",
+      "path": "공부/독후감/IT서적/2024년.md"
+    },
+    {
+      "basename": "업무자동화 수업",
+      "path": "업무자동화/업무자동화 수업.md"
     },
     {
       "basename": "개발자 상식",
@@ -31,10 +47,6 @@
     {
       "basename": "프롬프트",
       "path": "AI/프롬프트.md"
-    },
-    {
-      "basename": "LLM",
-      "path": "AI/LLM.md"
     },
     {
       "basename": "데이터베이스정리",
@@ -95,10 +107,6 @@
     {
       "basename": "2023년",
       "path": "공부/독후감/IT서적/2023년.md"
-    },
-    {
-      "basename": "인공지능",
-      "path": "AI/머신러닝 딥러닝/인공지능.md"
     },
     {
       "basename": "스프링부트congsong다시",
@@ -191,14 +199,6 @@
     {
       "basename": "워드프레스 개발환경",
       "path": "외주,사업/워드프레스 개발환경.md"
-    },
-    {
-      "basename": "설치",
-      "path": "워드프레스/설치.md"
-    },
-    {
-      "basename": "테이블설계 ERD",
-      "path": "백엔드/데이터베이스/테이블설계 ERD.md"
     }
   ],
   "omittedPaths": [],
