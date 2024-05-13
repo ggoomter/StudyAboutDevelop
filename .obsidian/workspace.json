@@ -4,17 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "603cb72934f47cca",
+        "id": "76ef9eaa5ea04dc5",
         "type": "tabs",
         "children": [
           {
-            "id": "f4e91b358106c3a2",
+            "id": "94b8469e25aa28e2",
             "type": "leaf",
             "state": {
-<<<<<<< HEAD
-              "type": "empty",
-              "state": {}
-=======
               "type": "markdown",
               "state": {
                 "file": "공부/독후감/일반/에밀.md",
@@ -48,7 +44,6 @@
                 "backlinks": true,
                 "source": false
               }
->>>>>>> 992479db70b6636c3dea4a78b7a41df85fe398ac
             }
           }
         ]
@@ -117,11 +112,7 @@
       }
     ],
     "direction": "horizontal",
-<<<<<<< HEAD
-    "width": 200
-=======
     "width": 353.5
->>>>>>> 992479db70b6636c3dea4a78b7a41df85fe398ac
   },
   "right": {
     "id": "15c0f6e9cfc0fb04",
@@ -137,10 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-=======
                 "file": "공부/독후감/일반/에밀.md",
->>>>>>> 992479db70b6636c3dea4a78b7a41df85fe398ac
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,10 +145,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-<<<<<<< HEAD
-=======
                 "file": "공부/독후감/일반/에밀.md",
->>>>>>> 992479db70b6636c3dea4a78b7a41df85fe398ac
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,13 +167,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-<<<<<<< HEAD
-              "state": {}
-=======
               "state": {
                 "file": "공부/독후감/일반/에밀.md"
               }
->>>>>>> 992479db70b6636c3dea4a78b7a41df85fe398ac
             }
           },
           {
@@ -234,44 +215,32 @@
       "command-palette:명령어 팔레트 열기": false,
       "markdown-importer:마크다운 형식 가져오기 열기": false,
       "workspaces:작업 공간 레이아웃 관리": false,
-      "canvas:새 캔버스 만들기": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "kr-book-info-plugin:Add Book Info": false,
       "templater-obsidian:Templater": false,
       "obsidian-advanced-slides:Show Slide Preview": false,
-      "notion-like-tables:Create loom": false
+      "notion-like-tables:Create loom": false,
+      "kr-book-info-plugin:Add Book Info": false,
+      "canvas:새 캔버스 만들기": false
     }
   },
-<<<<<<< HEAD
-  "active": "f4e91b358106c3a2",
-  "lastOpenFiles": [
-    "깃_공부.md",
-    "AI/프롬프트 엔지니어링.md",
-    "AI/chatgpt/chatGPT 정리.md",
-=======
   "active": "94b8469e25aa28e2",
   "lastOpenFiles": [
+    "desktop.ini",
+    "AI/프롬프트 엔지니어링.md",
     "AI/머신러닝 딥러닝/인공지능, 라마.md",
->>>>>>> 992479db70b6636c3dea4a78b7a41df85fe398ac
     "AI/랭체인.md",
     "공부/독후감/일반/에밀.md",
     "AI/모델.md",
     "AI/LLM.md",
     "파이썬/파이썬.md",
     "공부/독후감/IT서적/2024년.md",
-<<<<<<< HEAD
-    "공부/독후감/IT서적/개발자 상식.md",
-    "Context",
-    "AI/LLM.md",
-=======
     "업무자동화/업무자동화 수업.md",
     "공부/독후감/IT서적/개발자 상식.md",
     "공부/독후감/독서법.md",
     "AI/chatgpt/chatGPT 정리.md",
     "AI/프롬프트.md",
->>>>>>> 992479db70b6636c3dea4a78b7a41df85fe398ac
     "쿼리/데이터베이스정리.md",
     "공부/MBTI/MBTI 정리.md",
     "공부/MBTI",
@@ -281,19 +250,12 @@
     "데브옵스 devops/네트워크 공부.md",
     "공부/독후감/일반/기획은 2형식이다..md",
     "공부/독후감/일반/민태기 소장.md",
+    "Context",
     "기획/기획공부.md",
     "AI/stable diffusion webui.md",
     "AI/AI.md",
     "공부/독후감/IT서적/육각형 개발자.md",
     "파이썬/장고/Django를 활용한 쉽고빠른웹개발 파이썬웹프로그래밍(개정판) 소스/ch5/static/img/lion.jpg",
-    "프로젝트관리/포트폴리오 작성법.md",
-    "공부/독후감/IT서적/트래픽을 쓸어담는 검색엔진 최적화.md",
-<<<<<<< HEAD
-    "공부/독후감/IT서적/2023년.md",
-    "공부/독후감/일반/노르웨이의 숲.md",
-    "AI/머신러닝 딥러닝/인공지능.md",
-=======
->>>>>>> 992479db70b6636c3dea4a78b7a41df85fe398ac
     "샘플/이력서/FLab 식스샵백엔드.pdf",
     "샘플/이력서/FLab 무신사백엔드.pdf",
     "추천 & 티어/꿈털이의 추천_네이버웹툰_룸.loom",
