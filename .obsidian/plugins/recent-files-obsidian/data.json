@@ -1,6 +1,7 @@
 {
   "recentFiles": [
     {
+<<<<<<< HEAD
       "basename": "깃_공부",
       "path": "깃_공부.md"
     },
@@ -11,22 +12,62 @@
     {
       "basename": "chatGPT 정리",
       "path": "AI/chatgpt/chatGPT 정리.md"
+=======
+      "basename": "에밀",
+      "path": "공부/독후감/일반/에밀.md"
+    },
+    {
+      "basename": "인공지능, 라마",
+      "path": "AI/머신러닝 딥러닝/인공지능, 라마.md"
+>>>>>>> 992479db70b6636c3dea4a78b7a41df85fe398ac
     },
     {
       "basename": "랭체인",
       "path": "AI/랭체인.md"
     },
     {
-      "basename": "2024년",
-      "path": "공부/독후감/IT서적/2024년.md"
-    },
-    {
-      "basename": "개발자 상식",
-      "path": "공부/독후감/IT서적/개발자 상식.md"
+      "basename": "모델",
+      "path": "AI/모델.md"
     },
     {
       "basename": "LLM",
       "path": "AI/LLM.md"
+    },
+    {
+      "basename": "파이썬",
+      "path": "파이썬/파이썬.md"
+    },
+    {
+      "basename": "2024년",
+      "path": "공부/독후감/IT서적/2024년.md"
+    },
+    {
+<<<<<<< HEAD
+=======
+      "basename": "업무자동화 수업",
+      "path": "업무자동화/업무자동화 수업.md"
+    },
+    {
+>>>>>>> 992479db70b6636c3dea4a78b7a41df85fe398ac
+      "basename": "개발자 상식",
+      "path": "공부/독후감/IT서적/개발자 상식.md"
+    },
+    {
+<<<<<<< HEAD
+      "basename": "LLM",
+      "path": "AI/LLM.md"
+=======
+      "basename": "독서법",
+      "path": "공부/독후감/독서법.md"
+    },
+    {
+      "basename": "chatGPT 정리",
+      "path": "AI/chatgpt/chatGPT 정리.md"
+    },
+    {
+      "basename": "프롬프트",
+      "path": "AI/프롬프트.md"
+>>>>>>> 992479db70b6636c3dea4a78b7a41df85fe398ac
     },
     {
       "basename": "데이터베이스정리",
@@ -65,10 +106,6 @@
       "path": "기획/기획공부.md"
     },
     {
-      "basename": "독서법",
-      "path": "공부/독후감/독서법.md"
-    },
-    {
       "basename": "stable diffusion webui",
       "path": "AI/stable diffusion webui.md"
     },
@@ -85,20 +122,12 @@
       "path": "프로젝트관리/포트폴리오 작성법.md"
     },
     {
-      "basename": "파이썬",
-      "path": "파이썬/파이썬.md"
-    },
-    {
       "basename": "트래픽을 쓸어담는 검색엔진 최적화",
       "path": "공부/독후감/IT서적/트래픽을 쓸어담는 검색엔진 최적화.md"
     },
     {
       "basename": "2023년",
       "path": "공부/독후감/IT서적/2023년.md"
-    },
-    {
-      "basename": "인공지능",
-      "path": "AI/머신러닝 딥러닝/인공지능.md"
     },
     {
       "basename": "스프링부트congsong다시",
@@ -187,18 +216,6 @@
     {
       "basename": "워드프레스 개발환경",
       "path": "외주,사업/워드프레스 개발환경.md"
-    },
-    {
-      "basename": "설치",
-      "path": "워드프레스/설치.md"
-    },
-    {
-      "basename": "테이블설계 ERD",
-      "path": "백엔드/데이터베이스/테이블설계 ERD.md"
-    },
-    {
-      "basename": "추천등급기준",
-      "path": "추천 & 티어/추천등급기준.md"
     }
   ],
   "omittedPaths": [],
